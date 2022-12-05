@@ -1,30 +1,19 @@
 $colors: (
 	primary: (
-		"nileBlue": hsl(213deg 58% 20%),
-		"darkBlueGrey": hsl(213deg 35% 24%),
-		"darkBlueGreyHalfTransparent": hsla(213, 35%, 24%, 0.502),
-		"darkBlueGreyHalfTransparent2": hsla(213, 35%, 24%, 0.4),
-		"nileBlueHalfTransparent": hsla(213, 58%, 20%, 0.15),
-		"nileBlueHalfTransparent2": hsla(213, 58%, 20%, 0.4),
-		"nileBlueHalfTransparent3": hsla(213, 58%, 20%, 0.1)
+		"black": hsl(0, 0%, 0%), // #000000
+		"white": hsl(0, 0%, 100%), // #FFFFFF
 		),
 	secondary: (
-		"whiteSmoke": hsl(240deg 11% 96%),
+		"pattens-blue": hsl(202, 94%, 94%), // #E0F3FE
 		),
 	accent: (
-		"darkTurquoise": hsl(177deg 100% 39%),
-		"lightCyan": hsl(173, 85%, 92%),
-		"viridianGreen": hsl(177, 100%, 30%)
+		"jade-green": hsl(145, 63%, 42%), // #27AE60
+		"medium-sea-green": hsl(145, 55%, 46%), // #35B86C
+		"grey-teal": hsl(145, 18%, 51%), // #6C997F
+		"off-green": hsl(144, 48%, 94%), // #E8F7EE
+		"surf": hsl(144, 35%, 78%), // #B2DAC2
 	),
 	neutral: (
-		"paleGrey": hsl(240deg 100% 100%),
-		"platinum": hsl(0, 0%, 90%),
-		"cultured": hsl(240, 33%, 97%)
+		"baltic-sea": hsl(0, 0%, 17%), // #2B2B2B
 	),
-	background: (
-		"nileBlueTransparent": hsla(213, 58%, 20%, 0.3)
-	),
-	hover: (
-		"darkTurquoiseHover": hsl(177, 100%, 34%)
-	)
 );
