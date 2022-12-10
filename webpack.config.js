@@ -7,7 +7,7 @@
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
-const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const FriendlyErrorsWebpackPlugin = require("@nuxt/friendly-errors-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ObsoleteWebpackPlugin = require("obsolete-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
