@@ -1,2 +1,28 @@
 @use "../abstracts/mixins" as *;
 @use "../vendors/include-media" as *;
+
+.text__main-title {
+	font-family: var(--font-family-normal-700);
+	font-size: max(var(--font-size-mobile-25), 7.8125vw);
+	line-height: 105.5%;
+}
+
+.text__regular-text--text-weight--medium {
+	font-family: var(--font-family-normal-500);
+	font-size: max(var(--font-size-mobile-16), 5vw);
+	line-height: 140%;
+}
+
+.text__regular-text--text-weight--bold {
+	font-family: var(--font-family-normal-700);
+	font-size: max(var(--font-size-mobile-14), 4.375vw);
+	line-height: 140%;
+}
+
+.text__regular-text--text-color--baltic-sea {
+	color: var(--color-neutral-baltic-sea);
+}
+
+.text__regular-text--text-color--white {
+	color: var(--color-primary-white);
+}

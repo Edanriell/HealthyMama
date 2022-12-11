@@ -1,10 +1,20 @@
-$padding-left: 9.8rem;
-$padding-right: 9.8rem;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
 
 .container {
-	// position: relative;
-	max-width: calc(117rem + (9.8rem * 2));
-	margin: 0 auto;
-	padding-left: $padding-left;
-	padding-right: $padding-right;
+	margin-left: 4.375vw;
+	margin-right: 4.375vw;
+}
+
+@include media(">=tablet") {
+
+}
+
+@include media(">=desktop") {
+
 }

@@ -16,5 +16,9 @@ $colors: (
 	neutral: (
 		"baltic-sea": hsl(0, 0%, 17%), // #2B2B2B
 		"pale-slate": hsl(0, 0%, 75%), // #BFBFBF
+		"cyan-cornflower-blue": hsla(202, 77%, 42%, 0.11), // rgba(25, 130, 189, 0.11)
 	),
+	accent-hover: (
+		"medium-aquamarine": hsl(145, 56%, 66%), // #7ad9a2
+	)
 );

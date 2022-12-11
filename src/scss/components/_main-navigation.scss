@@ -1,0 +1,35 @@
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
+
+.main-navigation {
+	display: none;
+}
+
+@include media(">=tablet") {
+	.main-navigation {
+	}
+
+	.main-navigation__item {
+	}
+
+	.main-navigation__link {
+	}
+}
+
+@include media(">=desktop") {
+	.main-navigation {
+	}
+
+	.main-navigation__item {
+	}
+
+	.main-navigation__link {
+	}
+}
+
+

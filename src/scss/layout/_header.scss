@@ -1,0 +1,19 @@
+@use "../abstracts/mixins" as *;
+
+$background-color: var(--color-primary-white);
+$space-top: 10.9375vw;
+$space-bottom: 16.5625vw;
+
+.header {
+	padding-top: $space-top;
+	padding-bottom: $space-bottom;
+	background-color: $background-color;
+	position: relative;
+}
+
+.header__wrapper {
+	@include flex(center, space-between, row);
+}
+
+.header__navigation {
+}

@@ -1,0 +1,77 @@
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
+
+.main-slider--type--universal {
+	display: none;
+}
+
+.main-slider--type--mobile {
+	display: block;
+}
+
+.main-slider {
+}
+
+.main-slider__wrapper {
+}
+
+.main-slider__slide {
+}
+
+.main-slider__slide-image-wrapper {
+}
+
+.main-slider__slide-image {
+}
+
+.main-slider__pagination-wrapper {
+}
+
+.main-slider__pagination {
+}
+
+.main-slider__pagination-item {
+}
+
+.main-slider__pagination-dot {
+}
+
+.main-slider__pagination-text {
+}
+
+.main-slider__previous-slide-button {
+}
+
+.main-slider__previous-slide-button-icon {
+}
+
+.main-slider__next-slide-button {
+}
+
+.main-slider__next-slide-button-icon {
+}
+
+@include media(">=tablet") {
+	.main-slider--type--universal {
+		display: block;
+	}
+
+	.main-slider--type--mobile {
+		display: none;
+	}
+}
+
+@include media(">=desktop") {
+	.main-slider--type--universal {
+		display: block;
+	}
+
+	.main-slider--type--mobile {
+		display: none;
+	}
+}

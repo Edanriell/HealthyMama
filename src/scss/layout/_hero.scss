@@ -1,0 +1,33 @@
+@use "../abstracts/mixins" as *;
+
+.hero {
+}
+
+.hero__wrapper {
+	@include flex(flex-start, flex-start, column);
+}
+
+.hero__main-content {
+	@include flex(flex-start, flex-start, column);
+}
+
+.hero__main-title {
+	text-align: center;
+	margin-bottom: 7.187499999999999vw;
+}
+
+.hero__text {
+	text-align: center;
+	margin-bottom: 11.25vw;
+	padding-left: 9.375vw;
+	padding-right: 9.375vw;
+}
+
+.hero__button {
+}
+
+.hero__main-slider {
+}
+
+.hero__animated-dropping-leafs {
+}

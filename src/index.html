@@ -68,44 +68,46 @@
 				</symbol>
 			</svg>
 		</div>
-		<header>
-			<div>
-				<a href="#">
-					<span>Здоровая мама</span>
+		<header class="header">
+			<div class="header__wrapper container">
+				<a class="logotype logotype__link" href="#">
+					<span class="logotype__text-content logotype__text-color__black">Здоровая мама</span>
 				</a>
-				<nav>
-					<ul>
-						<li>
-							<a href="#">Важность правильного питания</a>
+				<nav class="header__navigation navigation">
+					<ul class="navigation__main-navigation main-navigation">
+						<li class="main-navigation__item">
+							<a class="main-navigation__link" href="#">Важность правильного питания</a>
 						</li>
-						<li>
-							<a href="#">Почему мы?</a>
+						<li class="main-navigation__item">
+							<a class="main-navigation__link" href="#">Почему мы?</a>
 						</li>
-						<li>
-							<a href="#">Где заказать?</a>
+						<li class="main-navigation__item">
+							<a class="main-navigation__link" href="#">Где заказать?</a>
 						</li>
 					</ul>
-					<div class="burger-menu">
-						<div>
-							<svg>
+					<div class="navigation__mobile-navigation-burger">
+						<div class="mobile-navigation-burger">
+							<svg class="mobile-navigation-burger__bar">
 								<use xlink:href="#burger-menu-bar" x="0" y="0"></use>
 							</svg>
-							<svg>
+							<svg class="mobile-navigation-burger__bar">
 								<use xlink:href="#burger-menu-bar" x="0" y="0"></use>
 							</svg>
-							<svg>
+							<svg class="mobile-navigation-burger__bar">
 								<use xlink:href="#burger-menu-bar" x="0" y="0"></use>
 							</svg>
 						</div>
-						<ul>
-							<li>
-								<a href="#">Важность правильного питания</a>
+					</div>
+					<div class="navigation__mobile-navigation">
+						<ul class="mobile-navigation">
+							<li class="mobile-navigation__item">
+								<a class="mobile-navigation__link" href="#">Важность правильного питания</a>
 							</li>
-							<li>
-								<a href="#">Почему мы?</a>
+							<li class="mobile-navigation__item">
+								<a class="mobile-navigation__link" href="#">Почему мы?</a>
 							</li>
-							<li>
-								<a href="#">Где заказать?</a>
+							<li class="mobile-navigation__item">
+								<a class="mobile-navigation__link" href="#">Где заказать?</a>
 							</li>
 						</ul>
 					</div>
@@ -113,22 +115,24 @@
 			</div>
 		</header>
 		<main>
-			<section>
-				<div>
-					<div>
-						<h1>Доставка здорового питания для мам</h1>
-						<p>Правильный и вкусный рацион для Вас и вашего ребенка</p>
-						<button type="button">
-							<span>Оформить заказ</span>
-							<svg>
-								<use xlink:href="#button-arrow" x="0" y="0"></use>
-							</svg>
+			<section class="hero">
+				<div class="hero__wrapper container">
+					<div class="hero__main-content">
+						<h1 class="hero__main-title text__main-title">Доставка здорового питания для мам</h1>
+						<p class="hero__text text__regular-text--text-weight--medium text__regular-text--text-color--baltic-sea">Правильный и вкусный рацион для Вас и вашего ребенка</p>
+						<button class="hero__button button" type="button">
+							<span class="button__text text__regular-text--text-weight--bold text__regular-text--text-color--white">Оформить заказ</span>
+							<div class="button__arrow-icon-wrapper">
+								<svg class="button__arrow-icon">
+									<use xlink:href="#button-arrow" x="0" y="0"></use>
+								</svg>
+							</div>
 						</button>
 					</div>
-					<div class="slider-desktop-tablet">
-						<div class="slider-desktop-tablet-wrapper">
-							<div class="slider-desktop-tablet-slide">
-								<picture>
+					<div class="hero__main-slider main-slider main-slider--type--universal">
+						<div class="main-slider__wrapper">
+							<div class="main-slider__slide">
+								<picture class="main-slider__slide-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:1920px)"
@@ -151,12 +155,13 @@
 									/>
 									<img
 										src="./images/main-slider-slide-image1-desktop@1x.png"
+										class="main-slider__slide-image"
 										alt="Беременная молодая девушка"
 									/>
 								</picture>
 							</div>
-							<div class="slider-desktop-tablet-slide">
-								<picture>
+							<div class="main-slider__slide">
+								<picture class="main-slider__slide-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:1920px)"
@@ -179,12 +184,13 @@
 									/>
 									<img
 										src="./images/main-slider-slide-image2-desktop@1x.png"
+										class="main-slider__slide-image"
 										alt="Молодая девушка держит около груди младенца"
 									/>
 								</picture>
 							</div>
-							<div class="slider-desktop-tablet-slide">
-								<picture>
+							<div class="main-slider__slide">
+								<picture class="main-slider__slide-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:1920px)"
@@ -207,32 +213,33 @@
 									/>
 									<img
 										src="./images/main-slider-slide-image1-desktop@1x.png"
+										class="main-slider__slide-image"
 										alt="Девушка стоит вполоборота и кусает зеленое яблоко"
 									/>
 								</picture>
 							</div>
 						</div>
-						<div class="slider-desktop-tablet-pagination">
-							<ul>
-								<li>
-									<div class="dot"></div>
-									<p>Для беременных</p>
+						<div class="main-slider__pagination-wrapper">
+							<ul class="main-slider__pagination">
+								<li class="main-slider__pagination-item">
+									<div class="main-slider__pagination-dot"></div>
+									<p class="main-slider__pagination-text">Для беременных</p>
 								</li>
-								<li>
-									<div class="dot"></div>
-									<p>Для кормящих</p>
+								<li class="main-slider__pagination-item">
+									<div class="main-slider__pagination-dot"></div>
+									<p class="main-slider__pagination-text">Для кормящих</p>
 								</li>
-								<li>
-									<div class="dot"></div>
-									<p>Безопасные лакомства</p>
+								<li class="main-slider__pagination-item">
+									<div class="main-slider__pagination-dot"></div>
+									<p class="main-slider__pagination-text">Безопасные лакомства</p>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<div class="slider-mobile">
-						<div class="slider-mobile-wrapper">
-							<div class="slider-mobile-slide">
-								<picture>
+					<div class="hero__main-slider main-slider main-slider--type--mobile">
+						<div class="main-slider__wrapper">
+							<div class="main-slider__slide">
+								<picture class="main-slider__slide-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:320px)"
@@ -245,12 +252,13 @@
 									/>
 									<img
 										src="./images/main-slider-slide-image1-mobile@1x.png"
+										class="main-slider__slide-image"
 										alt="Беременная молодая девушка"
 									/>
 								</picture>
 							</div>
-							<div class="slider-mobile-slide">
-								<picture>
+							<div class="main-slider__slide">
+								<picture class="main-slider__slide-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:320px)"
@@ -263,12 +271,13 @@
 									/>
 									<img
 										src="./images/main-slider-slide-image2-mobile@1x.png"
+										class="main-slider__slide-image"
 										alt="Молодая девушка держит около груди младенца"
 									/>
 								</picture>
 							</div>
-							<div class="slider-mobile-slide">
-								<picture>
+							<div class="main-slider__slide">
+								<picture class="main-slider__slide-image-wrapper">
 									<source
 										type="image/webp"
 										media="(min-width:320px)"
@@ -281,27 +290,28 @@
 									/>
 									<img
 										src="./images/main-slider-slide-image3-mobile@1x.png"
+										class="main-slider__slide-image"
 										alt="Девушка стоит вполоборота и кусает зеленое яблоко"
 									/>
 								</picture>
 							</div>
 						</div>
-						<button class="slider-mobile-button-prev">
-							<svg>
+						<button class="main-slider__previous-slide-button">
+							<svg class="main-slider__previous-slide-button-icon">
 								<use xlink:href="#slider-arrow-left" x="0" y="0"></use>
 							</svg>
 							<span class="visually-hidden">Показать предыдущий слайд</span>
 						</button>
-						<button class="slider-mobile-button-next">
-							<svg>
+						<button class="main-slider__next-slide-button">
+							<svg class="main-slider__next-slide-button-icon">
 								<use xlink:href="#slider-arrow-right" x="0" y="0"></use>
 							</svg>
 							<span class="visually-hidden">Показать следующий слайд</span>
 						</button>
 					</div>
 				</div>
-				<div class="leafs-desktop">
-					<picture>
+				<div class="hero__animated-dropping-leafs animated-dropping-leafs animated-dropping-leafs--size--desktop">
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:1920px)"
@@ -312,9 +322,9 @@
 							media="(min-width:1920px)"
 							srcset="./images/animated-leaf1-desktop@1x.png 1x, ./images/animated-leaf1-desktop@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf1-desktop@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf1-desktop@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:1920px)"
@@ -325,9 +335,9 @@
 							media="(min-width:1920px)"
 							srcset="./images/animated-leaf2-desktop@1x.png 1x, ./images/animated-leaf2-desktop@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf2-desktop@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf2-desktop@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:1920px)"
@@ -338,9 +348,9 @@
 							media="(min-width:1920px)"
 							srcset="./images/animated-leaf3-desktop@1x.png 1x, ./images/animated-leaf3-desktop@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf3-desktop@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf3-desktop@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:1920px)"
@@ -351,9 +361,9 @@
 							media="(min-width:1920px)"
 							srcset="./images/animated-leaf4-desktop@1x.png 1x, ./images/animated-leaf4-desktop@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf4-desktop@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf4-desktop@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:1920px)"
@@ -364,9 +374,9 @@
 							media="(min-width:1920px)"
 							srcset="./images/animated-leaf5-desktop@1x.png 1x, ./images/animated-leaf5-desktop@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf5-desktop@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf5-desktop@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:1920px)"
@@ -377,11 +387,11 @@
 							media="(min-width:1920px)"
 							srcset="./images/animated-leaf6-desktop@1x.png 1x, ./images/animated-leaf6-desktop@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf6-desktop@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf6-desktop@1x.png" alt="" />
 					</picture>
 				</div>
-				<div class="leafs-tablet">
-					<picture>
+				<div class="hero__animated-dropping-leafs animated-dropping-leafs animated-dropping-leafs--size--tablet">
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:768px)"
@@ -393,9 +403,9 @@
 							srcset="./images/animated-leaf1-tablet@1x.png 1x, ./images/animated-leaf1-tablet@2x.png 2x
 							"
 						/>
-						<img src="./images/animated-leaf1-tablet@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf1-tablet@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:768px)"
@@ -406,9 +416,9 @@
 							media="(min-width:768px)"
 							srcset="./images/animated-leaf2-tablet@1x.png 1x, ./images/animated-leaf2-tablet@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf2-tablet@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf2-tablet@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:768px)"
@@ -419,9 +429,9 @@
 							media="(min-width:768px)"
 							srcset="./images/animated-leaf3-tablet@1x.png 1x, ./images/animated-leaf3-tablet@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf3-tablet@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf3-tablet@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:768px)"
@@ -432,11 +442,11 @@
 							media="(min-width:768px)"
 							srcset="./images/animated-leaf4-tablet@1x.png 1x, ./images/animated-leaf4-tablet@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf4-tablet@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf4-tablet@1x.png" alt="" />
 					</picture>
 				</div>
-				<div class="leafs-mobile">
-					<picture>
+				<div class="hero__animated-dropping-leafs animated-dropping-leafs animated-dropping-leafs--size--mobile">
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:320px)"
@@ -447,9 +457,9 @@
 							media="(min-width:320px)"
 							srcset="./images/animated-leaf1-mobile@1x.png 1x, ./images/animated-leaf1-mobile@2x.png 2x"
 						/>
-						<img src="./images/animated-leaf1-mobile@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf1-mobile@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:320px)"
@@ -462,9 +472,9 @@
 							srcset="./images/animated-leaf2-mobile@1x.png 1x, ./images/animated-leaf2-mobile@2x.png 2x
 							"
 						/>
-						<img src="./images/animated-leaf2-mobile@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf2-mobile@1x.png" alt="" />
 					</picture>
-					<picture>
+					<picture class="animated-dropping-leafs__animated-leaf-wrapper">
 						<source
 							type="image/webp"
 							media="(min-width:320px)"
@@ -476,7 +486,7 @@
 							srcset="./images/animated-leaf3-mobile@1x.png 1x, ./images/animated-leaf3-mobile@2x.png 2x
 							"
 						/>
-						<img src="./images/animated-leaf3-mobile@1x.png" alt="" />
+						<img class="animated-dropping-leafs__animated-leaf" src="./images/animated-leaf3-mobile@1x.png" alt="" />
 					</picture>
 				</div>
 			</section>

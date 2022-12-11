@@ -1,0 +1,21 @@
+.logotype {
+	display: block;
+}
+
+.logotype__link {
+}
+
+.logotype__text-content {
+	font-family: var(--font-family-normal-700);
+	font-size: max(var(--font-size-mobile-16), 5vw);
+	line-height: 140%;
+	// fix line height everywhere
+}
+
+.logotype__text-color__black {
+	color: var(--color-primary-black);
+}
+
+.logotype__text-color__white {
+	color: var(--color-primary-white);
+}

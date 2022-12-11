@@ -1,0 +1,59 @@
+@use "../abstracts/mixins" as *;
+
+.button {
+	background-color: var(--color-accent-jade-green);
+	width: max(24.5rem, 76.5625vw);
+	min-height: max(6.7rem, 20.9375vw);
+	position: relative;
+	cursor: pointer;
+	border: 0.15625vw solid var(--color-primary-white);
+    border-radius: 20.3125vw;
+    border-width: 1.5625vw;
+	box-shadow: 0 0 0 .1rem var(--color-neutral-cyan-cornflower-blue);
+	word-wrap: break-word;
+	outline: 0;
+	@include center-block;
+
+	&:hover,
+	&:focus {
+		background-color: var(--color-primary-white);
+		border-color: var(--color-accent-jade-green);
+		box-shadow: none;
+
+		.button__text {
+			color: var(--color-accent-jade-green);
+		}
+
+		.button__arrow-icon-wrapper {
+			background-color: var(--color-accent-hover-medium-aquamarine);
+		}
+	}
+
+	&:active {
+		opacity: 0.8;
+	}
+}
+
+.button__text {
+	@include flex(flex-start, flex-start, row);
+	padding-left: max(4.2rem, 13.125vw);
+}
+
+.button__arrow-icon-wrapper {
+	position: absolute;
+	top: 50%;
+	right: max(0.7rem, 2.1875vw);
+	transform: translateY(-50%);
+	width: max(4.3rem, 13.4375vw);
+	height: max(4.3rem, 13.4375vw);
+	border-radius: 50%;
+	background-color: var(--color-accent-medium-sea-green);
+	@include flex(center, center, column);
+}
+
+.button__arrow-icon {
+	display: block;
+	width: max(1.9rem, 5.9375vw);
+	height: max(1.2rem, 3.75vw);
+	color: var(--color-primary-white);
+}

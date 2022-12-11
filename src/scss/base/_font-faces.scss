@@ -2,19 +2,26 @@
 	font-family: Lato-Regular;
 	font-style: normal;
 	font-weight: 400;
-	src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+	src: url("../fonts/Lato/Lato-Regular.woff") format("woff");
 }
 
 @font-face {
 	font-family: Lato-Medium;
 	font-style: normal;
 	font-weight: 500;
-	src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+	src: url("../fonts/Lato/Lato-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: Lato-Semibold;
+	font-style: normal;
+	font-weight: 500;
+	src: url("../fonts/Lato/Lato-Semibold.woff") format("woff");
 }
 
 @font-face {
 	font-family: Lato-Bold;
 	font-style: normal;
 	font-weight: 700;
-	src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+	src: url("../fonts/Lato/Lato-Bold.woff") format("woff");
 }
