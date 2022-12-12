@@ -15,12 +15,25 @@ $breakpoints: (
 }
 
 .main-slider {
+	padding-top: max(9.9rem, 30.9375vw);
 }
+
+// image width
+// background promo color
 
 .main-slider__wrapper {
 }
 
 .main-slider__slide {
+	//Temporary
+	&:nth-child(2),
+	&:nth-child(3) {
+		display: none;
+	}
+	//Temporary
+}
+
+.main-slider__slide-text{
 }
 
 .main-slider__slide-image-wrapper {
