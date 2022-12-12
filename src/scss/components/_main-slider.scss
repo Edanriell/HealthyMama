@@ -1,4 +1,5 @@
 @use "../vendors/include-media" as *;
+@use "../abstracts/mixins" as *;
 
 $breakpoints: (
 	phone: 320px,
@@ -12,14 +13,13 @@ $breakpoints: (
 
 .main-slider--type--mobile {
 	display: block;
+	margin: 0 auto;
+	position: relative;
 }
 
 .main-slider {
 	padding-top: max(9.9rem, 30.9375vw);
 }
-
-// image width
-// background promo color
 
 .main-slider__wrapper {
 }
@@ -33,13 +33,21 @@ $breakpoints: (
 	//Temporary
 }
 
-.main-slider__slide-text{
+.main-slider__slide-text {
+	text-align: center;
+	margin-bottom: max(3rem, 9.375vw);
 }
 
 .main-slider__slide-image-wrapper {
+	width: max(26rem, 81.25vw);
+	height: max(42rem, 131.25vw);
 }
 
 .main-slider__slide-image {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	vertical-align: middle;
 }
 
 .main-slider__pagination-wrapper {
@@ -58,15 +66,47 @@ $breakpoints: (
 }
 
 .main-slider__previous-slide-button {
+	width: max(3.3rem, 10.3125vw);
+	height: max(3.3rem, 10.3125vw);
+	background-color: var(--color-accent-jade-green);
+	border-radius: 50%;
+	cursor: pointer;
+	position: absolute;
+	top: max(31rem, 96.875vw);
+	left: max(-1.6rem, -5vw);
 }
 
 .main-slider__previous-slide-button-icon {
+	width: max(1rem, 3.125vw);
+	height: max(1rem, 3.125vw);
+	color: var(--color-primary-white);
+	fill: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-65%, -50%);
 }
 
 .main-slider__next-slide-button {
+	width: max(3.3rem, 10.3125vw);
+	height: max(3.3rem, 10.3125vw);
+	background-color: var(--color-accent-jade-green);
+	border-radius: 50%;
+	cursor: pointer;
+	position: absolute;
+	top: max(31rem, 96.875vw);
+	right: max(-1.6rem, -5vw);
 }
 
 .main-slider__next-slide-button-icon {
+	width: max(1rem, 3.125vw);
+	height: max(1rem, 3.125vw);
+	color: var(--color-primary-white);
+	fill: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-45%, -50%);
 }
 
 @include media(">=tablet") {

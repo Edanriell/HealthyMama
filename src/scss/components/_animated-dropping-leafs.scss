@@ -27,6 +27,30 @@ $breakpoints: (
 	display: block;
 }
 
+.animated-dropping-leafs--size--mobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
+		position: absolute;
+		top: max(10px, 3.125vw);
+		left: max(270px, 84.375vw);
+	}
+
+	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
+		position: absolute;
+		top: max(230px, 71.875vw);
+		left: max(250px, 78.125vw);
+	}
+
+	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(3) {
+		position: absolute;
+		top: max(240px, 75vw);
+		left: max(-40px, -12.5vw);
+	}
+}
+
 @include media(">=tablet") {
 	.animated-dropping-leafs--size--desktop {
 		display: none;
