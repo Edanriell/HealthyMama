@@ -1,8 +1,18 @@
+$body-background-color: var(--color-primary-white);
+
 body {
+	position: relative;
 	font-family: var(--font-family-normal-400);
 	font-size: var(--font-size-desktop-16);
 	font-weight: 400;
 	font-style: normal;
+	background-image: url("../images/header-background-mobile@1x.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100vw auto;
+	background-color: $body-background-color;
+	// add retina images for image and support for webp
+	// also add sizes for leafs in mobile !
 }
 
 .visually-hidden {

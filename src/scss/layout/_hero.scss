@@ -1,6 +1,7 @@
 @use "../abstracts/mixins" as *;
 
-$hero-section-background-color: var(--color-primary-white);
+// $hero-section-background-color: var(--color-primary-white);
+$hero-section-background-color: transparent;
 
 .hero {
 	background-color: $hero-section-background-color;
