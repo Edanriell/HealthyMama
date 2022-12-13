@@ -82,6 +82,7 @@
 	},
 	"dependencies": {
 		"@types/gsap": "^3.0.0",
+		"@types/modernizr": "^3.5.3",
 		"@types/swiper": "^6.0.0",
 		"gsap": "^3.11.3",
 		"swiper": "^8.4.5"
