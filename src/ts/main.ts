@@ -1,8 +1,9 @@
 import "../scss/style.scss";
-import "../js/vendors/modernizr.js";
+import "./vendors/modernizr";
 
 window.addEventListener("DOMContentLoaded", () => {
 	console.log("works")
+
 	Modernizr.on("webp", result => {
 		if (result) {
 			console.log(result);

@@ -9,17 +9,18 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	background-image: url("../images/header-background-mobile@1x.png");
-	background-image: url("../images/header-background-mobile@1x.webp");
-	// add modernizr https://modernizr.com/download?setclasses&q=web
-	// https://css-tricks.com/using-webp-images/
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-size: 100vw auto;
 	background-color: $body-background-color;
 	@include retina-image("../images/header-background-mobile@2x.png");
-	@include retina-image("../images/header-background-mobile@2x.webp");
-	// add retina images for image and support for webp
+
 	// also add sizes for leafs in mobile !
+}
+
+.webp body {
+	background-image: url("../images/header-background-mobile@1x.webp");
+	@include retina-image("../images/header-background-mobile@2x.webp");
 }
 
 .visually-hidden {
