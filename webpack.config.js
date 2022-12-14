@@ -28,15 +28,15 @@ const jsLoaders = () => {
 	return loaders;
 };
 
-const plugins = (devMode) => {
+const plugins = devMode => {
 	const mainPlugins = [
 		new MiniCssExtractPlugin({
 			filename: devMode ? "[name].css" : "[name].[contenthash].css",
-			chunkFilename: devMode ? "[id].css" : "[id].[contenthash].css",
+			chunkFilename: devMode ? "[id].css" : "[id].[contenthash].css"
 		}),
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
-			filename: devMode ? "index.html" : "index.[contenthash].html",
+			filename: devMode ? "index.html" : "index.[contenthash].html"
 		}),
 		new ProgressPlugin(),
 		new CleanWebpackPlugin(), // it cleans output folder before extracting files
@@ -80,20 +80,20 @@ const optimization = () => {
 			// for avoiding duplicated dependencies across modules
 			minChunks: 1, // Minimum number of chunks that must share a module before splitting.
 			cacheGroups: {
-			  defaultVendors: {
-				name: "chunk-vendors", // move js-files from node_modules into splitted file [chunk-vendors].js
-				test: /[\\/]node_modules[\\/]/, // filtering files that should be included
-				priority: -10, // a module can belong to multiple cache groups. The optimization will prefer the cache group with a higher priority
-				chunks: "initial", // type of optimization: [initial | async | all]
-			  },
-			  common: {
-				name: "chunk-common", // move reusable nested js-files into splitted file [chunk-common].js
-				minChunks: 2, // minimum number of chunks that must share a module before splitting
-				priority: -20,
-				chunks: "initial",
-				reuseExistingChunk: true, // If the current chunk contains modules already split out from the main bundle, it will be reused instead of a new one being generated. This can impact the resulting file name of the chunk
-			  },
-			},
+				defaultVendors: {
+					name: "chunk-vendors", // move js-files from node_modules into splitted file [chunk-vendors].js
+					test: /[\\/]node_modules[\\/]/, // filtering files that should be included
+					priority: -10, // a module can belong to multiple cache groups. The optimization will prefer the cache group with a higher priority
+					chunks: "initial" // type of optimization: [initial | async | all]
+				},
+				common: {
+					name: "chunk-common", // move reusable nested js-files into splitted file [chunk-common].js
+					minChunks: 2, // minimum number of chunks that must share a module before splitting
+					priority: -20,
+					chunks: "initial",
+					reuseExistingChunk: true // If the current chunk contains modules already split out from the main bundle, it will be reused instead of a new one being generated. This can impact the resulting file name of the chunk
+				}
+			}
 		},
 		minimize: true,
 		minimizer: [
@@ -116,7 +116,7 @@ const optimization = () => {
 	return config;
 };
 
-module.exports = function(env, argv) {
+module.exports = function (env, argv) {
 	const isDevServer = env.WEBPACK_SERVE;
 	const mode = argv.mode || (isDevServer ? "development" : "production");
 	const isDevMode = mode !== "production";
@@ -191,8 +191,21 @@ module.exports = function(env, argv) {
 					test: /\.tsx?$/,
 					use: "ts-loader",
 					exclude: /node_modules/
+				},
+				{
+					test: /\.modernizrrc.js$/,
+					use: ["@sect/modernizr-loader"]
+				},
+				{
+					test: /\.modernizrrc(\.json)?$/,
+					use: ["@sect/modernizr-loader", "json-loader"]
 				}
 			]
+		},
+		resolve: {
+			alias: {
+				modernizr$: path.resolve(__dirname, "./.modernizrrc")
+			}
 		},
 		devtool: mode === "development" ? "source-map" : false,
 		optimization: optimization(),
@@ -208,10 +221,10 @@ module.exports = function(env, argv) {
 		stats: "none",
 		performance: {
 			maxEntrypointSize: 1000000,
-			maxAssetSize: 1000000,
+			maxAssetSize: 1000000
 			// hints: "warning"
 		}
-	}
+	};
 
 	return config;
-}
+};

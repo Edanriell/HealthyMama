@@ -14,10 +14,9 @@ body {
 	background-size: 100vw auto;
 	background-color: $body-background-color;
 	@include retina-image("../images/header-background-mobile@2x.png");
-
-	// also add sizes for leafs in mobile !
 }
 
+// If browser supports webp images, we use them instead of png images.
 .webp body {
 	background-image: url("../images/header-background-mobile@1x.webp");
 	@include retina-image("../images/header-background-mobile@2x.webp");
