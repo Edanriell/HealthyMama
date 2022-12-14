@@ -34,20 +34,38 @@ $breakpoints: (
 
 	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
 		position: absolute;
-		top: max(10px, 3.125vw);
-		left: max(270px, 84.375vw);
+		top: max(20px, 6.25vw);
+		left: max(280px, 87.5vw);
+
+		.animated-dropping-leafs__animated-leaf {
+			height: max(4.975rem, 15.546874999999998vw);
+			width: max(3.906rem, 12.20625vw);
+			object-fit: cover;
+		}
 	}
 
 	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
 		position: absolute;
-		top: max(230px, 71.875vw);
-		left: max(250px, 78.125vw);
+		top: max(260px, 81.25vw);
+		left: max(270px, 84.375vw);
+
+		.animated-dropping-leafs__animated-leaf {
+			height: max(3.84rem, 12vw);
+			width: max(3.15rem, 9.84375vw);
+			object-fit: cover;
+		}
 	}
 
 	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(3) {
 		position: absolute;
-		top: max(240px, 75vw);
-		left: max(-40px, -12.5vw);
+		top: max(260px, 81.25vw);
+		left: max(-30px, -9.375vw);
+
+		.animated-dropping-leafs__animated-leaf {
+			height: max(5.68rem, 17.75vw);
+			width: max(7.235rem, 22.609375vw);
+			object-fit: cover;
+		}
 	}
 }
 
