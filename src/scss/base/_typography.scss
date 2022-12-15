@@ -1,6 +1,9 @@
 @use "../abstracts/mixins" as *;
 @use "../vendors/include-media" as *;
 
+.text {
+}
+
 .text__main-title {
 	font-family: var(--font-family-normal-700);
 	font-size: max(var(--font-size-mobile-25), 7.8125vw);
@@ -31,4 +34,10 @@
 
 .text__regular-text--text-color--white {
 	color: var(--color-primary-white);
+}
+
+.text__section-title {
+}
+
+.text__section-title--text-color--white {
 }
