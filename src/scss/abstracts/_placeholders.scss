@@ -1,8 +1,8 @@
-%darkTurquoise-dot {
-    content: "";
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 50%;
-    background-color: var(--clr-accent-darkTurquoise);
-    margin-right: 1rem;
+@use "mixins" as *;
+
+%checkmark-icon {
+	fill: none;
+	color: var(--color-secondary-pattens-blue);
+	@include minimum-size(width, 1.1rem, 3.4375000000000004vw);
+	@include minimum-size(height, 0.8rem, 2.5vw);
 }

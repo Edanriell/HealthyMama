@@ -1,20 +1,44 @@
+@use "../abstracts/mixins" as *;
+
+$image-description-background-color: var(--color-primary-white);
+
 .lead-nutritionist {
+	@include minimum-size(margin-bottom, -8.3rem, -25.937500000000004vw);
 }
 
 .lead-nutritionist__wrapper {
+	@include flex(center, center, column);
 }
 
 .lead-nutritionist__image-wrapper {
+	@include minimum-size(width, 32rem, 100vw);
+	@include minimum-size(height, 31rem, 96.875vw);
 }
 
 .lead-nutritionist__image {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	vertical-align: middle;
 }
 
 .lead-nutritionist__image-description {
+	position: relative;
+	@include minimum-size(width, 26.8rem, 83.75vw);
+	@include minimum-size(height, 7.1rem, 22.1875vw);
+	background-color: $image-description-background-color;
+	@include minimum-size(border-radius, 6.5rem, 20.3125vw);
+	box-shadow: 0rem 2.1rem 13.3rem var(--color-neutral-pewter-blue);
+	@include flex(center, center, column);
+	outline: 0.1rem dashed var(--color-accent-medium-sea-green-transparent);
+	outline-offset: -4px;
+	z-index: 2;
 }
 
 .lead-nutritionist__initials {
+	text-align: center;
 }
 
 .lead-nutritionist__specialization {
+	@include minimum-size(padding-top, 0.6rem, 1.875vw);
 }

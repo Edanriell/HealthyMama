@@ -12,11 +12,13 @@ $colors: (
 		"grey-teal": hsl(145, 18%, 51%), // #6C997F
 		"off-green": hsl(144, 48%, 94%), // #E8F7EE
 		"surf": hsl(144, 35%, 78%), // #B2DAC2
+		"medium-sea-green-transparent": hsla(145, 63%, 42%, 0.2), // rgba(40, 175, 96, 0.2)
 	),
 	neutral: (
 		"baltic-sea": hsl(0, 0%, 17%), // #2B2B2B
 		"pale-slate": hsl(0, 0%, 75%), // #BFBFBF
 		"cyan-cornflower-blue": hsla(202, 77%, 42%, 0.11), // rgba(25, 130, 189, 0.11)
+		"pewter-blue": hsla(109, 100%, 19%, 0.212), // rgba(18, 97, 0, 0.212)
 	),
 	accent-hover: (
 		"medium-aquamarine": hsl(145, 56%, 66%), // #7ad9a2

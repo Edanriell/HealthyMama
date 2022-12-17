@@ -1,14 +1,22 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
 .reasons-list {
+	@include flex(flex-start, flex-start, column);
+	@include minimum-size(row-gap, 2rem, 6.25vw);
 }
 
 .reasons-list__item {
+	@include flex(flex-start, flex-start, row);
+	@include minimum-size(column-gap, 2rem, 6.25vw);
 }
 
 .reasons-list__checkmark {
+	@extend %checkmark-icon;
+	@include minimum-size(margin-top, 1.2rem, 3.75vw);
 }
 
 .reasons-list__reason-text {
+	text-align: left;
 }
 
-.reasons-list__animated-dropping-leafs {
-}

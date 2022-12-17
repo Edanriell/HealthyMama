@@ -1,17 +1,57 @@
+@use "../abstracts/mixins" as *;
+
+$background-color-section-reasons-eat-properly: var(--color-accent-jade-green);
+
 .reasons-eat-properly {
+	background-color: $background-color-section-reasons-eat-properly;
+	@include minimum-size(padding-top, 5.7rem, 17.8125vw);
+	position: relative;
 }
 
 .reasons-eat-properly__wrapper {
+	@include flex(center, center, column-reverse);
 }
 
 .reasons-eat-properly__lead-nutritionist {
 }
 
 .reasons-eat-properly__main-reasons {
+	@include minimum-size(padding-bottom, 2.9rem, 9.0625vw);
 }
 
 .reasons-eat-properly__section-title {
+	@include minimum-size(padding-bottom, 3.9rem, 12.1875vw);
+	@include minimum-size(padding-left, 2.2rem, 6.875000000000001vw);
+	text-align: left;
 }
 
 .reasons-eat-properly__reasons-list {
+	@include minimum-size(padding-left, 1.5rem, 4.6875vw);
+}
+
+.reasons-eat-properly__animated-dropping-leafs-mobile {
+	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
+		position: absolute;
+		@include minimum-size(top, 69rem, 215.625vw);
+		@include minimum-size(left, 26rem, 81.25vw);
+
+		.animated-dropping-leafs__animated-leaf {
+			@include minimum-size(height, 4.708rem, 14.7125vw);
+			@include minimum-size(width, 3.696rem, 11.55vw);
+			object-fit: cover;
+		}
+	}
+
+	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
+		position: absolute;
+		@include minimum-size(top, 74rem);
+		@include minimum-size(left, -2rem);
+		z-index: 1;
+
+		.animated-dropping-leafs__animated-leaf {
+			@include minimum-size(height, 7.004rem, 21.887500000000003vw);
+			@include minimum-size(width, 8.921rem, 27.878124999999997vw);
+			object-fit: cover;
+		}
+	}
 }
