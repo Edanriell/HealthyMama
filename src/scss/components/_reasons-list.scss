@@ -14,6 +14,7 @@
 .reasons-list__checkmark {
 	@extend %checkmark-icon;
 	@include minimum-size(margin-top, 1.2rem, 3.75vw);
+	flex-shrink: 0;
 }
 
 .reasons-list__reason-text {

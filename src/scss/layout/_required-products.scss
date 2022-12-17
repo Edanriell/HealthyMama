@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as *;
+
+$required-products-section-background-color: var(--color-primary-white);
+
+.required-products {
+	background-color: $required-products-section-background-color;
+	@include minimum-size(padding-top, 14.3rem, 44.6875vw);
+	@include minimum-size(padding-bottom, 5.7rem, 17.8125vw);
+}
+
+.required-products__wrapper {
+}
+
+.required-products__title {
+	text-align: center;
+}
+
+.required-products__slider {
+}
+

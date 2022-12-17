@@ -69,3 +69,17 @@
 .text__section-title--text-color--white {
 	color: var(--color-primary-white);
 }
+
+.text__section-title--text-color--jade-green {
+	color: var(--color-accent-jade-green);
+}
+
+.text__subsection-title {
+	font-family: var(--font-family-normal-700);
+	@include minimum-size(font-size, var(--font-size-mobile-16), 5vw);
+	@include minimum-size(line-height, 1.9rem, 5.9375vw);
+}
+
+.text__subsection-title--text-color--black {
+	color: var(--color-primary-black);
+}
