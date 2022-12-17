@@ -22,11 +22,12 @@
 	}
 }
 
-@mixin container($width, $padding-left, $padding-right) {
-	max-width: $width;
-	padding-left: $padding-left;
-	padding-right: $padding-right;
-	margin: 0 auto;
+@mixin minimum-size($property, $minimum-size, $maximum-size: false) {
+	@if $maximum-size {
+		#{$property}: max($minimum-size, $maximum-size);
+	} @else {
+		#{$property}: $minimum-size;
+	}
 }
 
 @mixin flex($align-items, $justify-content, $flex-direction) {
@@ -34,6 +35,13 @@
 	align-items: $align-items;
 	justify-content: $justify-content;
 	flex-direction: $flex-direction;
+}
+
+@mixin container($width, $padding-left, $padding-right) {
+	max-width: $width;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	margin: 0 auto;
 }
 
 @mixin border-radius($radius) {

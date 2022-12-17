@@ -18,7 +18,7 @@ $breakpoints: (
 }
 
 .main-slider {
-	padding-top: max(9.9rem, 30.9375vw);
+	@include minimum-size(padding-top, 9.9rem, 30.9375vw);
 }
 
 .main-slider__wrapper {
@@ -35,12 +35,12 @@ $breakpoints: (
 
 .main-slider__slide-text {
 	text-align: center;
-	margin-bottom: max(3rem, 9.375vw);
+	@include minimum-size(margin-bottom, 3rem, 9.375vw);
 }
 
 .main-slider__slide-image-wrapper {
-	width: max(26rem, 81.25vw);
-	height: max(42rem, 131.25vw);
+	@include minimum-size(width, 26rem, 81.25vw);
+	@include minimum-size(height, 42rem, 131.25vw);
 }
 
 .main-slider__slide-image {
@@ -66,16 +66,14 @@ $breakpoints: (
 }
 
 .main-slider__previous-slide-button {
-	// width: max(3.3rem, 10.3125vw);
-	// height: max(3.3rem, 10.3125vw);
-	width: max(4.3rem, 13.4375vw);
-	height: max(4.3rem, 13.4375vw);
+	@include minimum-size(width, 4.3rem, 13.4375vw);
+	@include minimum-size(height, 4.3rem, 13.4375vw);
 	background-color: var(--color-accent-jade-green);
 	border-radius: 50%;
 	cursor: pointer;
 	position: absolute;
-	top: max(31rem, 96.875vw);
-	left: max(-1.6rem, -5vw);
+	@include minimum-size(top, 31rem, 96.875vw);
+	@include minimum-size(left, -1.6rem, -5vw);
 	border: 0.15625vw solid var(--color-primary-white);
     border-radius: 20.3125vw;
     border-width: 1.5625vw;
@@ -96,8 +94,8 @@ $breakpoints: (
 }
 
 .main-slider__previous-slide-button-icon {
-	width: max(1rem, 3.125vw);
-	height: max(1rem, 3.125vw);
+	@include minimum-size(width, 1rem, 3.125vw);
+	@include minimum-size(height, 1rem, 3.125vw);
 	color: var(--color-primary-white);
 	fill: none;
 	position: absolute;
@@ -107,16 +105,14 @@ $breakpoints: (
 }
 
 .main-slider__next-slide-button {
-	// width: max(3.3rem, 10.3125vw);
-	// height: max(3.3rem, 10.3125vw);
-	width: max(4.3rem, 13.4375vw);
-	height: max(4.3rem, 13.4375vw);
+	@include minimum-size(width, 4.3rem, 13.4375vw);
+	@include minimum-size(height, 4.3rem, 13.4375vw);
 	background-color: var(--color-accent-jade-green);
 	border-radius: 50%;
 	cursor: pointer;
 	position: absolute;
-	top: max(31rem, 96.875vw);
-	right: max(-1.6rem, -5vw);
+	@include minimum-size(top, 31rem, 96.875vw);
+	@include minimum-size(right, -1.6rem, -5vw);
 	border: 0.15625vw solid var(--color-primary-white);
     border-radius: 20.3125vw;
     border-width: 0.5rem;
@@ -137,8 +133,8 @@ $breakpoints: (
 }
 
 .main-slider__next-slide-button-icon {
-	width: max(1rem, 3.125vw);
-	height: max(1rem, 3.125vw);
+	@include minimum-size(width, 1rem, 3.125vw);
+	@include minimum-size(height, 1rem, 3.125vw);
 	color: var(--color-primary-white);
 	fill: none;
 	position: absolute;

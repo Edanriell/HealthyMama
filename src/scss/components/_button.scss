@@ -2,8 +2,8 @@
 
 .button {
 	background-color: var(--color-accent-jade-green);
-	width: max(24.5rem, 76.5625vw);
-	min-height: max(6.7rem, 20.9375vw);
+	@include minimum-size(width, 24.5rem, 76.5625vw);
+	@include minimum-size(min-height, 6.7rem, 20.9375vw);
 	position: relative;
 	cursor: pointer;
 	border: 0.15625vw solid var(--color-primary-white);
@@ -36,16 +36,16 @@
 
 .button__text {
 	@include flex(flex-start, flex-start, row);
-	padding-left: max(4.2rem, 13.125vw);
+	@include minimum-size(padding-left, 4.2rem, 13.125vw);
 }
 
 .button__arrow-icon-wrapper {
 	position: absolute;
 	top: 50%;
-	right: max(0.7rem, 2.1875vw);
+	@include minimum-size(right, 0.7rem, 2.1875vw);
 	transform: translateY(-50%);
-	width: max(4.3rem, 13.4375vw);
-	height: max(4.3rem, 13.4375vw);
+	@include minimum-size(width, 4.3rem, 13.4375vw);
+	@include minimum-size(height, 4.3rem, 13.4375vw);
 	border-radius: 50%;
 	background-color: var(--color-accent-medium-sea-green);
 	@include flex(center, center, column);
@@ -53,7 +53,7 @@
 
 .button__arrow-icon {
 	display: block;
-	width: max(1.9rem, 5.9375vw);
-	height: max(1.2rem, 3.75vw);
+	@include minimum-size(width, 1.9rem, 5.9375vw);
+	@include minimum-size(height, 1.2rem, 3.75vw);
 	color: var(--color-primary-white);
 }

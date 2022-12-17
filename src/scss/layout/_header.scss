@@ -1,13 +1,10 @@
 @use "../abstracts/mixins" as *;
 
-// $header-background-color: var(--color-primary-white);
 $header-background-color: transparent;
-$space-top: 10.9375vw;
-$space-bottom: 16.5625vw;
 
 .header {
-	padding-top: $space-top;
-	padding-bottom: $space-bottom;
+	@include minimum-size(padding-top, 3.5rem, 10.9375vw);
+	@include minimum-size(padding-bottom, 5.3rem, 16.5625vw);
 	background-color: $header-background-color;
 	position: relative;
 }

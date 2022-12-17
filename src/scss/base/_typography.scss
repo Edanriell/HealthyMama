@@ -6,26 +6,26 @@
 
 .text__main-title {
 	font-family: var(--font-family-normal-700);
-	font-size: max(var(--font-size-mobile-25), 7.8125vw);
-	line-height: max(2.6rem, 8.125vw);
+	@include minimum-size(font-size, var(--font-size-mobile-25), 7.8125vw);
+	@include minimum-size(line-height, 2.6rem, 8.125vw);
 }
 
 .text__regular-text--text-weight--medium {
 	font-family: var(--font-family-normal-500);
-	font-size: max(var(--font-size-mobile-16), 5vw);
-	line-height: max(2.2rem, 6.875vw);
+	@include minimum-size(font-size, var(--font-size-mobile-16), 5vw);
+	@include minimum-size(line-height, 2.2rem, 6.875vw);
 }
 
 .text__regular-text--text-weight--bold {
 	font-family: var(--font-family-normal-700);
-	font-size: max(var(--font-size-mobile-14), 4.375vw);
-	line-height: max(2rem, 6.25vw);
+	@include minimum-size(font-size, var(--font-size-mobile-14), 4.375vw);
+	@include minimum-size(line-height, 2rem, 6.25vw);
 }
 
 .text__medium-text--text-weight--bold {
 	font-family: var(--font-family-normal-700);
-	font-size: max(var(--font-size-mobile-18), 5.625vw);
-	line-height: max(1.9rem, 5.9375vw);
+	@include minimum-size(font-size, var(--font-size-mobile-18), 5.625vw);
+	@include minimum-size(line-height, 1.9rem, 5.9375vw);
 }
 
 .text__regular-text--text-color--baltic-sea {

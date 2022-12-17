@@ -1,11 +1,11 @@
 @use "../abstracts/mixins" as *;
 
-// $hero-section-background-color: var(--color-primary-white);
 $hero-section-background-color: transparent;
 
 .hero {
 	background-color: $hero-section-background-color;
 	position: relative;
+	@include minimum-size(padding-bottom, 3rem, 9.375vw);
 }
 
 .hero__wrapper {
@@ -18,14 +18,14 @@ $hero-section-background-color: transparent;
 
 .hero__main-title {
 	text-align: center;
-	margin-bottom: 7.187499999999999vw;
+	@include minimum-size(margin-bottom, 2.3rem, 7.187499999999999vw);
 }
 
 .hero__text {
 	text-align: center;
-	margin-bottom: 11.25vw;
-	padding-left: 9.375vw;
-	padding-right: 9.375vw;
+	@include minimum-size(margin-bottom, 3.6rem, 11.25vw);
+	@include minimum-size(padding-left, 3rem, 9.375vw);
+	@include minimum-size(padding-right, 3rem, 9.375vw);
 }
 
 .hero__button {

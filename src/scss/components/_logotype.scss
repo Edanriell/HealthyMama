@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as *;
+
 .logotype {
 	display: block;
 }
@@ -7,8 +9,8 @@
 
 .logotype__text-content {
 	font-family: var(--font-family-normal-700);
-	font-size: max(var(--font-size-mobile-16), 5vw);
-	line-height: max(2.2rem, 6.875vw);
+	@include minimum-size(font-size, var(--font-size-mobile-16), 5vw);
+	@include minimum-size(line-height, 2.2rem, 6.875vw);
 }
 
 .logotype__text-color__black {
