@@ -10,6 +10,12 @@
 	@include minimum-size(line-height, 2.6rem, 8.125vw);
 }
 
+.text__regular-text--text-weight--regular {
+	font-family: var(--font-family-normal-400);
+	@include minimum-size(font-size, var(--font-size-mobile-14), 4.375vw);
+	@include minimum-size(line-height, 1.7rem, 5.3125vw);
+}
+
 .text__regular-text--text-weight--medium {
 	font-family: var(--font-family-normal-500);
 	@include minimum-size(font-size, var(--font-size-mobile-16), 5vw);
@@ -28,18 +34,6 @@
 	@include minimum-size(line-height, 2rem, 6.25vw);
 }
 
-.text__medium-text--text-weight--bold {
-	font-family: var(--font-family-normal-700);
-	@include minimum-size(font-size, var(--font-size-mobile-18), 5.625vw);
-	@include minimum-size(line-height, 1.9rem, 5.9375vw);
-}
-
-.text__medium-text--text-weight--medium {
-	font-family: var(--font-family-normal-500);
-	@include minimum-size(font-size, var(--font-size-mobile-20), 6.25vw);
-	@include minimum-size(line-height, 2.8rem, 8.75vw);
-}
-
 .text__regular-text--text-color--baltic-sea {
 	color: var(--color-neutral-baltic-sea);
 }
@@ -56,8 +50,30 @@
 	color: var(--color-accent-grey-teal);
 }
 
+.text__medium-text--text-weight--bold {
+	font-family: var(--font-family-normal-700);
+	@include minimum-size(font-size, var(--font-size-mobile-18), 5.625vw);
+	@include minimum-size(line-height, 1.9rem, 5.9375vw);
+}
+
+.text__medium-text--text-weight--medium {
+	font-family: var(--font-family-normal-500);
+	@include minimum-size(font-size, var(--font-size-mobile-20), 6.25vw);
+	@include minimum-size(line-height, 2.8rem, 8.75vw);
+}
+
 .text__medium-text--text-color--white {
 	color: var(--color-primary-white);
+}
+
+.text__bold-text--text-weight--bold {
+	font-family: var(--font-family-normal-700);
+	@include minimum-size(font-size, var(--font-size-mobile-16), 5vw);
+	@include minimum-size(line-height, 1.9rem, 5.9375vw);
+}
+
+.text__bold-text--text-color--black {
+	color: var(--color-primary-black);
 }
 
 .text__section-title {
@@ -83,3 +99,4 @@
 .text__subsection-title--text-color--black {
 	color: var(--color-primary-black);
 }
+

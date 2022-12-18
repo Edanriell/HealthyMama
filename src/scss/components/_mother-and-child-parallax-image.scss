@@ -1,0 +1,53 @@
+@use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
+
+.mother-and-child-parallax-image {
+	position: relative;
+}
+
+.mother-and-child-parallax-image__main-image-wrapper {
+	width: 100vw;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.mother-and-child-parallax-image__main-image {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+}
+
+.mother-and-child-parallax-image__background-image-wrapper {
+	width: 100vw;
+	height: auto;
+}
+
+.mother-and-child-parallax-image__background-image {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	vertical-align: middle;
+}
+
+.mother-and-child-parallax-image__tree-image-wrapper {
+	display: none;
+}
+
+.mother-and-child-parallax-image__tree-image {
+}
+
+@include media(">=tablet") {
+
+}
+
+@include media(">=desktop") {
+
+}

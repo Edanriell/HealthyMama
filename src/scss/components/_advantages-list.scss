@@ -1,0 +1,94 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
+
+.advantages-list {
+	@include minimum-size(margin-top, 3.8rem, 11.875vw);
+}
+
+.advantages-list__item {
+	display: grid;
+	grid-template-columns: minmax(3.6rem, 11.25vw) auto;
+	@include minimum-size(column-gap, 1.2rem, 3.75vw);
+	position: relative;
+}
+
+.advantages-list__leaf-icon-wrapper {
+	grid-column: 1 / 2;
+	@extend %icon-circle;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.advantages-list__leaf-icon {
+	@include minimum-size(width, 1.9rem, 5.9375vw);
+	@include minimum-size(height, 1.5rem, 4.6875vw);
+	color: var(--color-accent-jade-green);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.advantages-list__checkmark-icon-wrapper {
+	grid-column: 1 / 2;
+	@extend %icon-circle;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.advantages-list__checkmark-icon {
+	@include minimum-size(width, 1.9rem, 5.9375vw);
+	@include minimum-size(height, 1.9rem, 5.9375vw);
+	color: var(--color-accent-jade-green);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.advantages-list__arrow-icon-wrapper {
+	grid-column: 1 / 2;
+	@extend %icon-circle;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.advantages-list__arrow-icon {
+	@include minimum-size(width, 1.9rem, 5.9375vw);
+	@include minimum-size(height, 1.8rem, 5.625vw);
+	color: var(--color-accent-jade-green);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.advantages-list__heart-icon-wrapper {
+	grid-column: 1 / 2;
+	@extend %icon-circle;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.advantages-list__heart-icon {
+	@include minimum-size(width, 1.9rem, 5.9375vw);
+	@include minimum-size(height, 1.9rem, 5.9375vw);
+	color: var(--color-accent-jade-green);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.advantages-list__advantage-name {
+	grid-column: 2 / -1;
+	@include minimum-size(margin-bottom, 0.5rem, 1.5625vw);
+}
+
+.advantages-list__advantage-description {
+	grid-column: 2 / -1;
+}

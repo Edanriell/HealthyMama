@@ -1,0 +1,29 @@
+@use "../abstracts/mixins" as *;
+
+$delivery-advantages-section-background-color: var(--color-primary-white);
+
+.delivery-advantages {
+	background-color: $delivery-advantages-section-background-color;
+}
+
+.delivery-advantages__wrapper {
+}
+
+.delivery-advantages__title {
+	text-align: left;
+}
+
+.delivery-advantages__mother-and-child-parallax-image {
+	z-index: 1;
+}
+
+.delivery-advantages__content {
+	position: relative;
+	z-index: 2;
+	@include minimum-size(margin-top, -4rem, -12.5vw);
+}
+
+.delivery-advantages__advantages-list {
+	@include flex(flex-start, flex-start, column);
+	@include minimum-size(row-gap, 2.5rem, 7.8125vw);
+}

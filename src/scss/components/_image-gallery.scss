@@ -1,0 +1,73 @@
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
+
+.image-gallery {
+	position: relative;
+}
+
+.image-gallery__image1-wrapper {
+}
+
+.image-gallery__image1 {
+}
+
+.image-gallery__image2-wrapper {
+}
+
+.image-gallery__image2 {
+}
+
+.image-gallery__image3-wrapper {
+}
+
+.image-gallery__image3 {
+}
+
+.image-gallery__image4-wrapper {
+}
+
+.image-gallery__image4 {
+}
+
+.image-gallery__image5-wrapper {
+}
+
+.image-gallery__image5 {
+}
+
+.image-gallery__image6-wrapper {
+}
+
+.image-gallery__image6 {
+}
+
+.image-gallery__image7-wrapper {
+}
+
+.image-gallery__image7 {
+}
+
+.image-gallery__image8-wrapper {
+}
+
+.image-gallery__image8 {
+}
+
+.image-gallery__image9-wrapper {
+}
+
+.image-gallery__image9 {
+}
+
+@include media(">=tablet") {
+
+}
+
+@include media(">=desktop") {
+
+}

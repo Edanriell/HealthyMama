@@ -6,3 +6,12 @@
 	@include minimum-size(width, 1.3rem, 4.0625vw);
 	@include minimum-size(height, 1.1rem, 3.4375000000000004vw);
 }
+
+%icon-circle {
+	position: relative;
+	@include minimum-size(width, 3.6rem, 11.25vw);
+	@include minimum-size(height, 3.6rem, 11.25vw);
+	background-color: var(--color-primary-white);
+	border-radius: 50%;
+	box-shadow: 0 0.4rem 3.5rem var(--color-neutral-cyan-cornflower-blue-transparent);
+}

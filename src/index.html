@@ -910,11 +910,10 @@
 					</div>
 				</div>
 			</section>
-			<section>
-				<div>
-					<h2>Почему мамы выбирают нашу доставку?</h2>
-					<div>
-						<picture>
+			<section class="delivery-advantages">
+				<div class="delivery-advantages__wrapper">
+					<div class="delivery-advantages__mother-and-child-parallax-image mother-and-child-parallax-image">
+						<picture class="mother-and-child-parallax-image__main-image-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -947,10 +946,11 @@
 							/>
 							<img
 								src="./images/parallax-image-desktop@1x.png"
+								class="mother-and-child-parallax-image__main-image"
 								alt="Женщина держит ребенка на руках"
 							/>
 						</picture>
-						<picture>
+						<picture class="mother-and-child-parallax-image__background-image-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -981,9 +981,9 @@
 								media="(min-width:320px)"
 								srcset="./images/parallax-background-image-mobile@1x.png 1x, ./images/parallax-background-image-mobile@2x.png 2x"
 							/>
-							<img src="./images/parallax-background-image-desktop@1x.png" alt="" />
+							<img src="./images/parallax-background-image-desktop@1x.png" class="mother-and-child-parallax-image__background-image" alt="" />
 						</picture>
-						<picture>
+						<picture class="mother-and-child-parallax-image__tree-image-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -994,62 +994,65 @@
 								media="(min-width:1920px)"
 								srcset="./images/parallax-image-tree-desktop@1x.png 1x, ./images/parallax-image-tree-desktop@2x.png 2x"
 							/>
-							<img src="./images/parallax-image-tree-desktop@1x.png" alt="" />
+							<img src="./images/parallax-image-tree-desktop@1x.png" class="mother-and-child-parallax-image__tree-image" alt="" />
 						</picture>
 					</div>
-					<dl>
-						<div>
-							<dt>
-								<svg>
-									<use xlink:href="#leaf-icon" x="0" y="0"></use>
-								</svg>
-							</dt>
-							<dt>Экологичность:</dt>
-							<dd>продукты выращиваются без применения химии</dd>
-						</div>
-						<div>
-							<dt>
-								<svg>
-									<use xlink:href="#checkmark-icon" x="0" y="0"></use>
-								</svg>
-							</dt>
-							<dt>Сбалансированность:</dt>
-							<dd>наши блюда составляют ведущие диетологи по уникальной рецептуре</dd>
-						</div>
-						<div>
-							<dt>
-								<svg>
-									<use xlink:href="#arrow-icon" x="0" y="0"></use>
-								</svg>
-							</dt>
-							<dt>Индивидуальность:</dt>
-							<dd>
-								для вашего выбора мы предоставляем большое кол-во вариантов блюд
-							</dd>
-						</div>
-						<div>
-							<dt>
-								<svg>
-									<use xlink:href="#heart-icon" x="0" y="0"></use>
-								</svg>
-							</dt>
-							<dt>Польза:</dt>
-							<dd>
-								питаясь нашими продуктами, Вы можете быть уверены в своем здоровье и
-								здоровье ребенка/dd>
-							</dd>
-						</div>
-					</dl>
+					<div class="delivery-advantages__content container">
+						<h2 class="delivery-advantages__title text__section-title text__section-title--text-color--jade-green">Почему мамы <br /> выбирают нашу доставку?</h2>
+						<dl class="delivery-advantages__advantages-list advantages-list">
+							<div class="advantages-list__item">
+								<dt class="advantages-list__leaf-icon-wrapper">
+									<svg class="advantages-list__leaf-icon">
+										<use xlink:href="#leaf-icon" x="0" y="0"></use>
+									</svg>
+								</dt>
+								<dt class="advantages-list__advantage-name text__bold-text--text-weight--bold text__bold-text--text-color--black">Экологичность:</dt>
+								<dd class="advantages-list__advantage-description text__regular-text--text-weight--regular text__regular-text--text-color--black">продукты выращиваются без применения химии</dd>
+							</div>
+							<div class="advantages-list__item">
+								<dt class="advantages-list__checkmark-icon-wrapper">
+									<svg class="advantages-list__checkmark-icon">
+										<use xlink:href="#checkmark-icon" x="0" y="0"></use>
+									</svg>
+								</dt>
+								<dt class="advantages-list__advantage-name text__bold-text--text-weight--bold text__bold-text--text-color--black">Сбалансированность:</dt>
+								<dd class="advantages-list__advantage-description text__regular-text--text-weight--regular text__regular-text--text-color--black">наши блюда составляют ведущие диетологи по уникальной рецептуре</dd>
+							</div>
+							<div class="advantages-list__item">
+								<dt class="advantages-list__arrow-icon-wrapper">
+									<svg class="advantages-list__arrow-icon">
+										<use xlink:href="#arrow-icon" x="0" y="0"></use>
+									</svg>
+								</dt>
+								<dt class="advantages-list__advantage-name text__bold-text--text-weight--bold text__bold-text--text-color--black">Индивидуальность:</dt>
+								<dd class="advantages-list__advantage-description text__regular-text--text-weight--regular text__regular-text--text-color--black">
+									для вашего выбора мы предоставляем большое кол-во вариантов блюд
+								</dd>
+							</div>
+							<div class="advantages-list__item">
+								<dt class="advantages-list__heart-icon-wrapper">
+									<svg class="advantages-list__heart-icon">
+										<use xlink:href="#heart-icon" x="0" y="0"></use>
+									</svg>
+								</dt>
+								<dt class="advantages-list__advantage-name text__bold-text--text-weight--bold text__bold-text--text-color--black">Польза:</dt>
+								<dd class="advantages-list__advantage-description text__regular-text--text-weight--regular text__regular-text--text-color--black">
+									питаясь нашими продуктами, Вы можете быть уверены в своем здоровье и
+									здоровье ребенка
+								</dd>
+							</div>
+						</dl>
+					</div>
 				</div>
 			</section>
-			<section>
-				<div>
-					<header>
-						<h2>Наш Instagram</h2>
-						<p><span>Подписывайтесь</span>, чтобы быть в курсе последних новостей</p>
+			<section class="instagram-images">
+				<div class="instagram-images__wrapper">
+					<header class="instagram-images__section-header section-header">
+						<h2 class="section-header__title">Наш Instagram</h2>
+						<p class="section-header__text"><span>Подписывайтесь</span>, чтобы быть в курсе последних новостей</p>
 					</header>
-					<div>
-						<picture>
+					<div class="instagram-images__image-gallery image-gallery">
+						<picture class="image-gallery__image1-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -1080,9 +1083,9 @@
 								media="(min-width:320px)"
 								srcset="./images/instagram-image1-mobile@1x.jpg 1x, ./images/instagram-image1-mobile@2x.jpg 2x"
 							/>
-							<img src="./images/instagram-image1-desktop@1x.jpg" alt="" />
+							<img class="image-gallery__image1" src="./images/instagram-image1-desktop@1x.jpg" alt="" />
 						</picture>
-						<picture>
+						<picture class="image-gallery__image2-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -1113,9 +1116,9 @@
 								media="(min-width:320px)"
 								srcset="./images/instagram-image2-mobile@1x.jpg 1x, ./images/instagram-image2-mobile@2x.jpg 2x"
 							/>
-							<img src="./images/instagram-image2-desktop@1x.jpg" alt="" />
+							<img class="image-gallery__image2" src="./images/instagram-image2-desktop@1x.jpg" alt="" />
 						</picture>
-						<picture>
+						<picture class="image-gallery__image3-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -1146,9 +1149,9 @@
 								media="(min-width:320px)"
 								srcset="./images/instagram-image3-mobile@1x.jpg 1x, ./images/instagram-image3-mobile@2x.jpg 2x"
 							/>
-							<img src="./images/instagram-image3-desktop@1x.jpg" alt="" />
+							<img class="image-gallery__image3" src="./images/instagram-image3-desktop@1x.jpg" alt="" />
 						</picture>
-						<picture>
+						<picture class="image-gallery__image4-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -1179,9 +1182,9 @@
 								media="(min-width:320px)"
 								srcset="./images/instagram-image4-mobile@1x.jpg 1x, ./images/instagram-image4-mobile@2x.jpg 2x"
 							/>
-							<img src="./images/instagram-image4-desktop@1x.jpg" alt="" />
+							<img class="image-gallery__image4" src="./images/instagram-image4-desktop@1x.jpg" alt="" />
 						</picture>
-						<picture>
+						<picture class="image-gallery__image5-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -1214,9 +1217,9 @@
 								srcset="./images/instagram-image5-mobile@1x.jpg 1x, ./images/instagram-image5-mobile@2x.jpg 2x
 								"
 							/>
-							<img src="./images/instagram-image5-desktop@1x.jpg" alt="" />
+							<img class="image-gallery__image5" src="./images/instagram-image5-desktop@1x.jpg" alt="" />
 						</picture>
-						<picture>
+						<picture class="image-gallery__image6-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -1247,9 +1250,9 @@
 								media="(min-width:320px)"
 								srcset="./images/instagram-image6-mobile@1x.jpg 1x, ./images/instagram-image6-mobile@2x.jpg 2x"
 							/>
-							<img src="./images/instagram-image6-desktop@1x.jpg" alt="" />
+							<img class="image-gallery__image6" src="./images/instagram-image6-desktop@1x.jpg" alt="" />
 						</picture>
-						<picture>
+						<picture class="image-gallery__image7-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -1270,9 +1273,9 @@
 								media="(min-width:768px)"
 								srcset="./images/instagram-image7-tablet@1x.jpg 1x, ./images/instagram-image7-tablet@2x.jpg 2x"
 							/>
-							<img src="./images/instagram-image7-desktop@1x.jpg" alt="" />
+							<img class="image-gallery__image7" src="./images/instagram-image7-desktop@1x.jpg" alt="" />
 						</picture>
-						<picture>
+						<picture class="image-gallery__image8-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -1293,9 +1296,9 @@
 								media="(min-width:768px)"
 								srcset="./images/instagram-image8-tablet@1x.jpg 1x, ./images/instagram-image8-tablet@2x.jpg 2x"
 							/>
-							<img src="./images/instagram-image8-desktop@1x.jpg" alt="" />
+							<img class="image-gallery__image8" src="./images/instagram-image8-desktop@1x.jpg" alt="" />
 						</picture>
-						<picture>
+						<picture class="image-gallery__image9-wrapper">
 							<source
 								type="image/webp"
 								media="(min-width:1920px)"
@@ -1316,7 +1319,7 @@
 								media="(min-width:768px)"
 								srcset="./images/instagram-image9-tablet@1x.jpg 1x, ./images/instagram-image9-tablet@2x.jpg 2x"
 							/>
-							<img src="./images/instagram-image9-desktop@1x.jpg" alt="" />
+							<img class="image-gallery__image9" src="./images/instagram-image9-desktop@1x.jpg" alt="" />
 						</picture>
 					</div>
 				</div>
