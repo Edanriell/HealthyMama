@@ -100,3 +100,17 @@
 	color: var(--color-primary-black);
 }
 
+.text--style--underlined {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		border-bottom: 0.1rem solid var(--color-primary-black);
+		display: block;
+		bottom: -0.2rem;
+		left: 0;
+		width: 100%;
+		height: auto;
+	}
+}

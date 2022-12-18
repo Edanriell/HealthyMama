@@ -1,12 +1,19 @@
+@use "../abstracts/mixins" as *;
+
+$instagram-images-section-background-color: var(--color-primary-white);
+
 .instagram-images {
-	background-color: red;
+	background-color: $instagram-images-section-background-color;
+	@include minimum-size(padding-top, 10.8rem, 33.75vw);
 }
 
 .instagram-images__wrapper {
 }
 
 .instagram-images__section-header {
+	text-align: center;
 }
 
 .instagram-images__image-gallery {
+	position: relative;
 }

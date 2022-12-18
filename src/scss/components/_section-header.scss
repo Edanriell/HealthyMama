@@ -1,7 +1,11 @@
+@use "../abstracts/mixins" as *;
+
 .section-header {
+	position: relative;
 }
 
 .section-header__title {
+	@include minimum-size(margin-bottom, 1.6rem, 5vw);
 }
 
 .section-header__text {
