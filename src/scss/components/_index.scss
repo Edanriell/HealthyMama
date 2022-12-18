@@ -1,5 +1,4 @@
 // header
-@forward "logotype";
 @forward "main-navigation";
 @forward "mobile-navigation-burger";
 @forward "mobile-navigation";
@@ -26,6 +25,11 @@
 // personalized-menu-request
 @forward "request-form";
 
+// footer
+@forward "secondary-navigation";
+@forward "politics-and-agreement";
+
 // misc components
+@forward "logotype";
 @forward "button";
 @forward "section-header";

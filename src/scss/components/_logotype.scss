@@ -13,10 +13,16 @@
 	@include minimum-size(line-height, 2.2rem, 6.875vw);
 }
 
-.logotype__text-color__black {
+.logotype--text-color--black {
 	color: var(--color-primary-black);
 }
 
-.logotype__text-color__white {
+.logotype--text-color--white {
 	color: var(--color-primary-white);
+}
+
+.logotype--text-size--big {
+	font-family: var(--font-family-normal-700);
+	@include minimum-size(font-size, var(--font-size-mobile-18), 5.625vw);
+	@include minimum-size(line-height, 2.5rem, 7.8125vw);
 }

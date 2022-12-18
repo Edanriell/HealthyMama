@@ -16,6 +16,12 @@
 	@include minimum-size(line-height, 1.7rem, 5.3125vw);
 }
 
+.text__regular-text--text-weight--regular-small {
+	font-family: var(--font-family-normal-400);
+	@include minimum-size(font-size, var(--font-size-mobile-12), 3.75vw);
+	@include minimum-size(line-height, 1.4rem, 4.375vw);
+}
+
 .text__regular-text--text-weight--medium {
 	font-family: var(--font-family-normal-500);
 	@include minimum-size(font-size, var(--font-size-mobile-16), 5vw);
@@ -102,6 +108,7 @@
 
 .text--style--underlined {
 	position: relative;
+	cursor: pointer;
 
 	&::after {
 		content: "";

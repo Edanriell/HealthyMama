@@ -1,0 +1,27 @@
+@use "../abstracts/mixins" as *;
+
+$footer-background-color: var(--color-accent-jade-green);
+
+.footer {
+	background-color: $footer-background-color;
+	@include minimum-size(padding-top, 4rem, 12.5vw);
+	@include minimum-size(padding-bottom, 5rem, 15.625vw);
+}
+
+.footer__wrapper {
+}
+
+.footer__logotype {
+	@include minimum-size(margin-bottom, 3rem, 9.375vw);
+}
+
+.footer__secondary-navigation {
+	@include flex(flex-start, flex-start, column);
+	@include minimum-size(row-gap, 1.5rem, 4.6875vw);
+	@include minimum-size(margin-bottom, 4.4rem, 13.750000000000002vw);
+}
+
+.footer__politics-and-agreement {
+	@include flex(flex-start, flex-start, column);
+	@include minimum-size(row-gap, 2.3rem, 7.187499999999999vw);
+}
