@@ -1,0 +1,21 @@
+@use "../abstracts/mixins" as *;
+
+$personalized-menu-request-section-background-color: var(--color-primary-white);
+
+.personalized-menu-request {
+	background-color: $personalized-menu-request-section-background-color;
+	@include minimum-size(padding-top, 9.4rem, 29.375vw);
+	@include minimum-size(padding-bottom, 7.6rem, 23.75vw);
+}
+
+.personalized-menu-request__wrapper {
+}
+
+.personalized-menu-request__section-header {
+	text-align: center;
+}
+
+.personalized-menu-request__request-form {
+	@include flex(center, center, column);
+	@include minimum-size(row-gap, 1rem, 3.125vw);
+}

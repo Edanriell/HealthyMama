@@ -136,11 +136,11 @@
 						<p class="hero__text text__regular-text--text-weight--medium text__regular-text--text-color--baltic-sea">Правильный и вкусный рацион для Вас и вашего ребенка</p>
 						<button class="hero__button button" type="button">
 							<span class="button__text text__regular-text--text-weight--bold text__regular-text--text-color--white">Оформить заказ</span>
-							<div class="button__arrow-icon-wrapper">
+							<span class="button__arrow-icon-wrapper">
 								<svg class="button__arrow-icon">
 									<use xlink:href="#button-arrow" x="0" y="0"></use>
 								</svg>
-							</div>
+							</span>
 						</button>
 					</div>
 					<div class="hero__main-slider main-slider main-slider--type--universal">
@@ -1326,68 +1326,74 @@
 					</div>
 				</div>
 			</section>
-			<section>
-				<div>
-					<header>
-						<h2>Хотите получить персональное меню?</h2>
-						<p>Оставьте заявку и наш оператор свяжется с Вами для уточнения деталей</p>
+			<section class="personalized-menu-request">
+				<div class="personalized-menu-request__wrapper container">
+					<header class="personalized-menu-request__section-header section-header">
+						<h2 class="section-header__title text__section-title text__section-title--text-color--jade-green">Хотите получить персональное меню?</h2>
+						<p class="section-header__text text__regular-text--text-weight--regular text__regular-text--text-color--black">Оставьте заявку и наш оператор свяжется с Вами для уточнения деталей</p>
 					</header>
-					<form action="#" method="POST">
-						<div>
-							<label for="person-name">Ваше имя</label>
+					<form action="#" method="POST" class="personalized-menu-request__request-form request-form">
+						<div class="request-form__form-field">
+							<label class="request-form__input-label request-form__person-name-input-label visually-hidden" for="person-name">Ваше имя</label>
 							<input
 								type="text"
 								autocomplete="on"
 								required
 								name="person-name"
+								placeholder="Ваше имя"
+								class="request-form__input request-form__person-name-input"
 								id="person-name"
 							/>
 						</div>
-						<div>
-							<label for="person-phone-number">Ваш телефон</label>
+						<div class="request-form__form-field">
+							<label class="request-form__input-label request-form__person-phone-number-input-label visually-hidden" for="person-phone-number">Ваш телефон</label>
 							<input
 								type="text"
 								autocomplete="on"
 								required
 								name="person-phone-number"
+								placeholder="Ваш телефон"
+								class="request-form__input request-form__person-phone-number-input"
 								id="person-phone-number"
 							/>
 						</div>
-						<button type="submit">
-							<span>Оформить заказ</span>
-							<svg>
-								<use xlink:href="#button-arrow" x="0" y="0"></use>
-							</svg>
+						<button class="request-form__button button" type="submit">
+							<span class="button__text text__regular-text--text-weight--bold text__regular-text--text-color--white">Оформить заказ</span>
+							<span class="button__arrow-icon-wrapper">
+								<svg class="button__arrow-icon">
+									<use xlink:href="#button-arrow" x="0" y="0"></use>
+								</svg>
+							</span>
 						</button>
 					</form>
 				</div>
 			</section>
 		</main>
-		<footer>
-			<div>
-				<a href="#">
-					<span>Здоровая мама</span>
+		<footer class="footer">
+			<div class="footer__wrapper container">
+				<a class="footer__logotype logotype logotype__link" href="#">
+					<span class="logotype__text-content logotype__text-color__white">Здоровая мама</span>
 				</a>
-				<ul>
-					<li>
-						<a href="#">Важность правильного питания</a>
+				<ul class="footer__secondary-navigation secondary-navigation">
+					<li class="secondary-navigation__item">
+						<a class="secondary-navigation__link" href="#">Важность правильного питания</a>
 					</li>
-					<li>
-						<a href="#">Почему мы?</a>
+					<li class="secondary-navigation__item">
+						<a class="secondary-navigation__link" href="#">Почему мы?</a>
 					</li>
-					<li>
-						<a href="#">Где заказать?</a>
+					<li class="secondary-navigation__item">
+						<a class="secondary-navigation__link" href="#">Где заказать?</a>
 					</li>
 				</ul>
-				<ul>
-					<li>
-						<a href="#">
-							<small>Политика конфиденциальности</small>
+				<ul class="footer__politics-and-agreement politics-and-agreement">
+					<li class="politics-and-agreement__item">
+						<a class="politics-and-agreement__link" href="#">
+							<small class="politics-and-agreement__link-text">Политика конфиденциальности</small>
 						</a>
 					</li>
-					<li>
-						<a href="#">
-							<small>Условия онлайн-успользования</small>
+					<li class="politics-and-agreement__item">
+						<a class="politics-and-agreement__link" href="#">
+							<small class="politics-and-agreement__link-text">Условия онлайн-успользования</small>
 						</a>
 					</li>
 				</ul>

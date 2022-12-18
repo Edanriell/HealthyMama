@@ -1,0 +1,65 @@
+@use "../abstracts/mixins" as *;
+
+.request-form {
+	@include minimum-size(margin-top, 3.8rem, 11.875vw);
+}
+
+.request-form__form-field {
+}
+
+.request-form__input-label {
+}
+
+.request-form__person-name-input-label {
+}
+
+.request-form__input {
+	font-family: var(--font-family-normal-400);
+	@include minimum-size(font-size, var(--font-size-mobile-14), 4.375vw);
+	@include minimum-size(line-height, 2rem, 6.25vw);
+	@include minimum-size(width, 27.9rem, 87.1875vw);
+	@include minimum-size(height, 5.1rem, 15.937499999999998vw);
+	background-color: var(--color-accent-off-green);
+	border-radius: 6.5rem;
+	@include minimum-size(padding-left, 3.115rem, 9.734375vw);
+	@include minimum-size(padding-right, 3.115rem, 9.734375vw);
+	border: 0.15625vw solid var(--color-primary-white);
+    border-width: 1.5625vw;
+	appearance: none;
+	outline: none;
+
+	&::placeholder {
+		margin: 0;
+		font-family: var(--font-family-normal-600);
+		@include minimum-size(font-size, var(--font-size-mobile-14), 4.375vw);
+		@include minimum-size(line-height, 2rem, 6.25vw);
+		color: var(--color-accent-surf);
+		opacity: 1;
+	}
+
+	&:hover {
+		background-color: var(--color-primary-white);
+		border-color: var(--color-accent-jade-green);
+	}
+
+	&:focus {
+		border-color: var(--color-accent-jade-green);
+	}
+
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+.request-form__person-name-input {
+}
+
+.request-form__person-phone-number-input-label {
+}
+
+.request-form__person-phone-number-input {
+}
+
+.request-form__button {
+	@include minimum-size(margin-top, 2.1rem, 6.5625vw);
+}
