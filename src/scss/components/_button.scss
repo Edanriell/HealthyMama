@@ -53,7 +53,8 @@
 
 .button__arrow-icon {
 	display: block;
-	@include minimum-size(width, 1.9rem, 5.9375vw);
-	@include minimum-size(height, 1.2rem, 3.75vw);
+	@include minimum-size(width, 2.1rem, 6.5625vw);
+	@include minimum-size(height, 1.4rem, 4.375vw);
 	color: var(--color-primary-white);
+	fill: none;
 }

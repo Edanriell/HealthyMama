@@ -93,8 +93,8 @@ $breakpoints: (
 	}
 
 	.main-slider__previous-slide-button-icon {
-		@include minimum-size(width, 1rem, 3.125vw);
-		@include minimum-size(height, 1rem, 3.125vw);
+		@include minimum-size(width, 0.8rem, 2.5vw);
+		@include minimum-size(height, 1.1rem, 3.4375000000000004vw);
 		color: var(--color-primary-white);
 		fill: none;
 		position: absolute;
@@ -132,8 +132,8 @@ $breakpoints: (
 	}
 
 	.main-slider__next-slide-button-icon {
-		@include minimum-size(width, 1rem, 3.125vw);
-		@include minimum-size(height, 1rem, 3.125vw);
+		@include minimum-size(width, 0.8rem, 2.5vw);
+		@include minimum-size(height, 1.1rem, 3.4375000000000004vw);
 		color: var(--color-primary-white);
 		fill: none;
 		position: absolute;

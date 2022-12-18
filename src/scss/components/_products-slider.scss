@@ -93,8 +93,8 @@ $breakpoints: (
 	.products-slider__arrow-left-icon {
 		fill: none;
 		color: var(--color-accent-jade-green);
-		@include minimum-size(width, 1.15rem, 3.5937499999999996vw);
-		@include minimum-size(height, 2.3rem, 7.187499999999999vw);
+		@include minimum-size(width, 1.7rem, 5.3125vw);
+		@include minimum-size(height, 2.7rem, 8.4375vw);
 	}
 
 	.products-slider__next-slide-button {
@@ -107,8 +107,8 @@ $breakpoints: (
 	.products-slider__arrow-right-icon {
 		fill: none;
 		color: var(--color-accent-jade-green);
-		@include minimum-size(width, 1.15rem, 3.5937499999999996vw);
-		@include minimum-size(height, 2.3rem, 7.187499999999999vw);
+		@include minimum-size(width, 1.7rem, 5.3125vw);
+		@include minimum-size(height, 2.7rem, 8.4375vw);
 	}
 }
 
