@@ -12,7 +12,10 @@ $breakpoints: (
 }
 
 @include media(">=tablet") {
-
+	.container {
+		margin-left: 14.453125vw;
+		margin-right: 14.453125vw;
+	}
 }
 
 @include media(">=desktop") {

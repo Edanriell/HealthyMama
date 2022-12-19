@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
 
 $header-background-color: transparent;
 
@@ -14,4 +21,19 @@ $header-background-color: transparent;
 }
 
 .header__navigation {
+}
+
+@include media(">=tablet") {
+	.header {
+		@include minimum-size(padding-top, 4.4rem, 5.729166666666666vw);
+		padding-bottom: 0;
+	}
+
+	.header__wrapper {
+		@include flex(flex-start, space-between, row);
+	}
+}
+
+@include media(">=desktop") {
+
 }
