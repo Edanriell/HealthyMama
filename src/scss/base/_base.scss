@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
 
 $body-background-color: var(--color-primary-white);
 
@@ -33,4 +40,21 @@ body {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+@include media(">=tablet") {
+	body {
+		background-image: url("../images/header-background-tablet@1x.png");
+		@include retina-image("../images/header-background-tablet@2x.png");
+	}
+
+	// If browser supports webp images, we use them instead of png images.
+	.webp body {
+		background-image: url("../images/header-background-tablet@1x.webp");
+		@include retina-image("../images/header-background-tablet@2x.webp");
+	}
+}
+
+@include media(">=desktop") {
+
 }

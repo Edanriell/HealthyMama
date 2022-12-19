@@ -1,6 +1,8 @@
 @use "../vendors/include-media" as *;
 @use "../abstracts/mixins" as *;
 
+// Fix leafs on mobile version
+
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
