@@ -32,6 +32,7 @@ $breakpoints: (
 	font-family: var(--font-family-normal-500);
 	@include minimum-size(font-size, var(--font-size-mobile-16), 5vw);
 	@include minimum-size(line-height, 2.2rem, 6.875vw);
+	font-weight: 500;
 }
 
 .text__regular-text--text-weight--semibold {
@@ -131,6 +132,21 @@ $breakpoints: (
 @include media(">=tablet") {
 	// used in main navigation
 	.text__regular-text--text-weight--semibold {
+		@include minimum-size(font-size, var(--font-size-tablet-14), 1.8229166666666667vw);
+		@include minimum-size(line-height, 2rem, 2.604166666666667vw);
+	}
+
+	.text__main-title {
+		@include minimum-size(font-size, var(--font-size-tablet-32), 4.166666666666666vw);
+		@include minimum-size(line-height, 3.4rem, 4.427083333333334vw);
+	}
+
+	.text__regular-text--text-weight--medium {
+		@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
+		@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
+	}
+
+	.text__regular-text--text-weight--bold {
 		@include minimum-size(font-size, var(--font-size-tablet-14), 1.8229166666666667vw);
 		@include minimum-size(line-height, 2rem, 2.604166666666667vw);
 	}

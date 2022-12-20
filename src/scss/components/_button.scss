@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
 
 .button {
 	background-color: var(--color-accent-jade-green);
@@ -57,4 +64,34 @@
 	@include minimum-size(height, 1.4rem, 4.375vw);
 	color: var(--color-primary-white);
 	fill: none;
+}
+
+@include media(">=tablet") {
+	.button {
+		@include minimum-size(width, 24.5rem, 31.901041666666668vw);
+		@include minimum-size(min-height, 6.7rem, 8.723958333333332vw);
+		border: 0.06510416666666666vw solid var(--color-primary-white);
+		border-radius: 8.463541666666668vw;
+		border-width: 0.6510416666666667vw;
+	}
+
+	.button__text {
+		@include minimum-size(padding-left, 4.2rem, 5.46875vw);
+	}
+
+	.button__arrow-icon-wrapper {
+		@include minimum-size(right, 0.7rem, 0.9114583333333334vw);
+		@include minimum-size(width, 4.3rem, 5.598958333333334vw);
+		@include minimum-size(height, 4.3rem, 5.598958333333334vw);
+	}
+
+	.button__arrow-icon {
+		display: block;
+		@include minimum-size(width, 2.1rem, 2.734375vw);
+		@include minimum-size(height, 1.4rem, 1.8229166666666667vw);
+	}
+}
+
+@include media(">=desktop") {
+
 }
