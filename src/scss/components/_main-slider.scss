@@ -201,7 +201,7 @@ $breakpoints: (
 
 		.main-slider__pagination {
 		}
-
+		// add @include minimum-size to all rems and reposition leafs on mobile screen !
 		.main-slider__pagination-item {
 			cursor: pointer;
 			@include flex(center, flex-start, row-reverse);
@@ -243,40 +243,40 @@ $breakpoints: (
 
 		.main-slider__pagination-item-0 {
 			position: absolute;
-			top: -17rem;
-			left: -12.1rem;
-			min-width: 20.5rem;
+			@include minimum-size(top, -17rem, -22.135416666666664vw);
+			@include minimum-size(left, -12rem, -15.625vw);
+			@include minimum-size(min-width, 20.5rem, 26.692708333333332vw);
 
 			&:hover {
-				top: -17rem;
-				left: -12rem;
-				min-width: 20.5rem;
+				@include minimum-size(top, -17rem, -22.135416666666664vw);
+				@include minimum-size(left, -12rem, -15.625vw);
+				@include minimum-size(min-width, 20.5rem, 26.692708333333332vw);
 			}
 		}
 
 		.main-slider__pagination-item-1 {
 			position: absolute;
-			top: 0rem;
-			left: -13.5rem;
-			min-width: 15rem;
+			@include minimum-size(top, 0rem, 0vw);
+			@include minimum-size(left, -13.5rem, -17.578125vw);
+			@include minimum-size(min-width, 15rem, 19.53125vw);
 
 			&:hover {
-				top: 0rem;
-				left: -12rem;
-				min-width: 9rem;
+				@include minimum-size(top, 0rem, 0vw);
+				@include minimum-size(left, -12rem, -15.625vw);
+				@include minimum-size(min-width, 9rem, 11.71875vw);
 			}
 		}
 
 		.main-slider__pagination-item-2 {
 			position: absolute;
-			top: 17rem;
-			left: -11rem;
-			min-width: 19rem;
+			@include minimum-size(top, 17rem, 22.135416666666664vw);
+			@include minimum-size(left, -11rem, -14.322916666666666vw);
+			@include minimum-size(min-width, 19rem, 24.739583333333336vw);
 
 			&:hover {
-				top: 17rem;
-				left: -6rem;
-				min-width: 10rem;
+				@include minimum-size(top, 17rem, 22.135416666666664vw);
+				@include minimum-size(left, -6rem, -7.8125vw);
+				@include minimum-size(min-width, 10rem, 13.020833333333334vw);
 			}
 		}
 
@@ -314,23 +314,23 @@ $breakpoints: (
 
 			.main-slider__pagination-item-0 {
 				position: absolute;
-				top: -17rem;
-				left: -12rem;
-				min-width: 20.5rem;
+				@include minimum-size(top, -17rem, -22.135416666666664vw);
+				@include minimum-size(left, -12rem, -15.625vw);
+				@include minimum-size(min-width, 20.5rem, 26.692708333333332vw);
 			}
 
 			.main-slider__pagination-item-1 {
 				position: absolute;
-				top: 0rem;
-				left: -12rem;
-				min-width: 9rem;
+				@include minimum-size(top, 0rem, 0vw);
+				@include minimum-size(left, -12rem, -15.625vw);
+				@include minimum-size(min-width, 9rem, 11.71875vw);
 			}
 
 			.main-slider__pagination-item-2 {
 				position: absolute;
-				top: 17rem;
-				left: -6rem;
-				min-width: 10rem;
+				@include minimum-size(top, 17rem, 22.135416666666664vw);
+				@include minimum-size(left, -6rem, -7.8125vw);
+				@include minimum-size(min-width, 10rem, 13.020833333333334vw);
 			}
 		}
 
