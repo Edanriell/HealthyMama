@@ -157,17 +157,18 @@ $breakpoints: (
 		display: block;
 		position: relative;
 		@include flex(center, flex-start, row-reverse);
+		min-width: 100%;
 
 		.main-slider__wrapper {
-			// @include minimum-size(width, 50.2rem, 65.36458333333334vw);
-			// @include minimum-size(height, 62.9rem, 81.90104166666666vw);
-			@include minimum-size(width, 50.2rem);
-			@include minimum-size(height, 62.9rem);
+			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
+			@include minimum-size(height, 62.9rem, 81.90104166666666vw);
+			// @include minimum-size(width, 50.2rem);
+			// @include minimum-size(height, 62.9rem);
 			background-image: url("../images/main-slider-background-image.svg");
 			background-position: 0 50%;
 			background-repeat: no-repeat;
-			// background-size: 65.36458333333334vw auto;
-			background-size: 50.2rem auto;
+			background-size: 65.36458333333334vw auto;
+			// background-size: 50.2rem auto;
 		}
 
 		.main-slider__slide {
@@ -183,10 +184,10 @@ $breakpoints: (
 		}
 
 		.main-slider__slide-image-wrapper {
-			// @include minimum-size(width, 50.2rem, 65.36458333333334vw);
-			// @include minimum-size(height, 62.9rem, 81.90104166666666vw);
-			@include minimum-size(width, 50.2rem);
-			@include minimum-size(height, 62.9rem);
+			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
+			@include minimum-size(height, 62.9rem, 81.90104166666666vw);
+			// @include minimum-size(width, 50.2rem);
+			// @include minimum-size(height, 62.9rem);
 			// height: auto;
 		}
 
@@ -198,14 +199,15 @@ $breakpoints: (
 		}
 
 		.main-slider__pagination-wrapper {
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
+			// position: absolute;
+			// top: 50%;
+			// left: 0;
+			// transform: translateY(-50%);
 			// position: relative;
 		}
 
 		.main-slider__pagination {
+			// position: relative;
 			// position: absolute;
 			// top: 50%;
 			// left: 0;
@@ -214,26 +216,26 @@ $breakpoints: (
 		// add @include minimum-size to all rems and reposition leafs on mobile screen !
 		.main-slider__pagination-item {
 			cursor: pointer;
-			@include flex(center, flex-start, row-reverse);
-			// @include minimum-size(column-gap, 1rem, 1.3020833333333335vw);
-			@include minimum-size(column-gap, 1rem);
+			@include flex(center, flex-end, row-reverse);
+			@include minimum-size(column-gap, 1rem, 1.3020833333333335vw);
+			// @include minimum-size(column-gap, 1rem);
 			text-align: center;
 
 			&:hover {
 				.main-slider__pagination-text {
 					font-family: var(--font-family-normal-600);
-					@include minimum-size(font-size, var(--font-size-tablet-18));
-					// @include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
-					@include minimum-size(line-height, 2.5rem);
-					// @include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
+					// @include minimum-size(font-size, var(--font-size-tablet-18));
+					@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
+					// @include minimum-size(line-height, 2.5rem);
+					@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
 					color: var(--color-neutral-baltic-sea);
 				}
 
 				.main-slider__pagination-dot {
-					@include minimum-size(width, 5.055rem);
-					// @include minimum-size(width, 5.055rem, 6.582031249999999vw);
-					// @include minimum-size(height, 5.055rem, 6.582031249999999vw);
-					@include minimum-size(height, 5.055rem);
+					// @include minimum-size(width, 5.055rem);
+					@include minimum-size(width, 5.055rem, 6.582031249999999vw);
+					@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+					// @include minimum-size(height, 5.055rem);
 					background-color: transparent;
 					border-radius: 50%;
 					border: 0.1rem solid var(--color-accent-jade-green);
@@ -247,10 +249,10 @@ $breakpoints: (
 						left: 50%;
 						transform: translate(-50%, -50%);
 						display: block;
-						// @include minimum-size(width, 3.297rem, 4.29296875vw);
-						// @include minimum-size(height, 3.297rem, 4.29296875vw);
-						@include minimum-size(width, 3.297rem);
-						@include minimum-size(height, 3.297rem);
+						@include minimum-size(width, 3.297rem, 4.29296875vw);
+						@include minimum-size(height, 3.297rem, 4.29296875vw);
+						// @include minimum-size(width, 3.297rem);
+						// @include minimum-size(height, 3.297rem);
 						background-color: var(--color-accent-jade-green);
 						border-radius: 50%;
 					}
@@ -260,49 +262,66 @@ $breakpoints: (
 
 		.main-slider__pagination-item-0 {
 			position: absolute;
-			@include minimum-size(top, -17rem);
-			@include minimum-size(left, -12rem);
+			@include minimum-size(top, 30rem, 39.0625vw);
+			@include minimum-size(left, -8rem);
 			// @include minimum-size(top, -17rem, -22.135416666666664vw);
 			// @include minimum-size(left, -12rem, -15.625vw);
-			// @include minimum-size(min-width, 20.5rem, 26.692708333333332vw);
-			@include minimum-size(min-width, 20.5rem);
+
+			// @include minimum-size(min-width, 16rem);
+			@include minimum-size(min-width, 16rem, 20.833333333333336vw);
+
+			// @include minimum-size(min-width, 20.5rem);
+			right: auto;
 
 			&:hover {
 				@include minimum-size(top, -17rem, -22.135416666666664vw);
-				@include minimum-size(left, -12rem, -15.625vw);
+				@include minimum-size(left, -7.5rem, -9.765625vw);
+				// @include minimum-size(min-width, 14rem);
+				// @include minimum-size(top, -17rem, -22.135416666666664vw);
+				// @include minimum-size(left, -12rem, -15.625vw);
+
 				@include minimum-size(min-width, 20.5rem, 26.692708333333332vw);
+				// @include minimum-size(min-width, 20.5rem);
 			}
 		}
 
 		.main-slider__pagination-item-1 {
 			position: absolute;
-			@include minimum-size(top, 0rem);
-			@include minimum-size(left, -13.5rem);
-			// @include minimum-size(top, 0rem, 0vw);
+			// @include minimum-size(top, 0rem);
+			@include minimum-size(left, -9.1rem, -11.848958333333332vw);
+			@include minimum-size(top, 0rem, 0vw);
 			// @include minimum-size(left, -13.5rem, -17.578125vw);
 			@include minimum-size(min-width, 15rem);
 			// @include minimum-size(min-width, 15rem, 19.53125vw);
+			right: auto;
 
 			&:hover {
+				// @include minimum-size(top, 0rem);
+				@include minimum-size(left, -7.5rem, -9.765625vw);
+				@include minimum-size(min-width, 9rem);
 				@include minimum-size(top, 0rem, 0vw);
-				@include minimum-size(left, -12rem, -15.625vw);
-				@include minimum-size(min-width, 9rem, 11.71875vw);
+				// @include minimum-size(left, -12rem, -15.625vw);
+				// @include minimum-size(min-width, 9rem, 11.71875vw);
 			}
 		}
 
 		.main-slider__pagination-item-2 {
 			position: absolute;
-			@include minimum-size(top, 17rem);
-			@include minimum-size(left, -11rem);
-			// @include minimum-size(top, 17rem, 22.135416666666664vw);
+			// @include minimum-size(top, 17rem);
+			@include minimum-size(left, -7rem, -9.114583333333332vw);
+			@include minimum-size(top, 17rem, 22.135416666666664vw);
 			// @include minimum-size(left, -11rem, -14.322916666666666vw);
 			@include minimum-size(min-width, 19rem);
 			// @include minimum-size(min-width, 19rem, 24.739583333333336vw);
+			right: auto;
 
 			&:hover {
+				// @include minimum-size(top, 17rem);
+				@include minimum-size(left, -2rem, -2.604166666666667vw);
+				@include minimum-size(min-width, 10rem);
 				@include minimum-size(top, 17rem, 22.135416666666664vw);
-				@include minimum-size(left, -6rem, -7.8125vw);
-				@include minimum-size(min-width, 10rem, 13.020833333333334vw);
+				// @include minimum-size(left, -6rem, -7.8125vw);
+				// @include minimum-size(min-width, 10rem, 13.020833333333334vw);
 			}
 		}
 
@@ -310,18 +329,18 @@ $breakpoints: (
 
 			.main-slider__pagination-text {
 				font-family: var(--font-family-normal-600);
-				@include minimum-size(font-size, var(--font-size-tablet-18));
-				@include minimum-size(line-height, 2.5rem);
-				// @include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
-				// @include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
+				// @include minimum-size(font-size, var(--font-size-tablet-18));
+				// @include minimum-size(line-height, 2.5rem);
+				@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
+				@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
 				color: var(--color-neutral-baltic-sea);
 			}
 
 			.main-slider__pagination-dot {
-				@include minimum-size(width, 5.055rem);
-				@include minimum-size(height, 5.055rem);
-				// @include minimum-size(width, 5.055rem, 6.582031249999999vw);
-				// @include minimum-size(height, 5.055rem, 6.582031249999999vw);
+				// @include minimum-size(width, 5.055rem);
+				// @include minimum-size(height, 5.055rem);
+				@include minimum-size(width, 5.055rem, 6.582031249999999vw);
+				@include minimum-size(height, 5.055rem, 6.582031249999999vw);
 				background-color: transparent;
 				border-radius: 50%;
 				border: 0.1rem solid var(--color-accent-jade-green);
@@ -335,10 +354,10 @@ $breakpoints: (
 					left: 50%;
 					transform: translate(-50%, -50%);
 					display: block;
-					@include minimum-size(width, 3.297rem);
-					@include minimum-size(height, 3.297rem);
-					// @include minimum-size(width, 3.297rem, 4.29296875vw);
-					// @include minimum-size(height, 3.297rem, 4.29296875vw);
+					// @include minimum-size(width, 3.297rem);
+					// @include minimum-size(height, 3.297rem);
+					@include minimum-size(width, 3.297rem, 4.29296875vw);
+					@include minimum-size(height, 3.297rem, 4.29296875vw);
 					background-color: var(--color-accent-jade-green);
 					border-radius: 50%;
 				}
@@ -346,28 +365,51 @@ $breakpoints: (
 
 			.main-slider__pagination-item-0 {
 				position: absolute;
+				// @include minimum-size(top, -17rem, -22.135416666666664vw);
+				// @include minimum-size(left, -12rem, -15.625vw);
+				// @include minimum-size(min-width, 20.5rem, 26.692708333333332vw);
+				// @include minimum-size(top, -17rem);
+				// @include minimum-size(left, -12rem);
+				// @include minimum-size(min-width, 20.5rem);
 				@include minimum-size(top, -17rem, -22.135416666666664vw);
-				@include minimum-size(left, -12rem, -15.625vw);
-				@include minimum-size(min-width, 20.5rem, 26.692708333333332vw);
+				@include minimum-size(left, -7.5rem, -9.765625vw);
+				@include minimum-size(min-width, 20.5rem);
+				right: auto;
 			}
 
 			.main-slider__pagination-item-1 {
 				position: absolute;
+				// @include minimum-size(top, 0rem, 0vw);
+				// @include minimum-size(left, -12rem, -15.625vw);
+				// @include minimum-size(min-width, 9rem, 11.71875vw);
+				// @include minimum-size(top, 0rem);
+				// @include minimum-size(left, -12rem);
+				// @include minimum-size(min-width, 9rem);
+				@include minimum-size(left, -7.5rem, -9.765625vw);
+				@include minimum-size(min-width, 9rem);
 				@include minimum-size(top, 0rem, 0vw);
-				@include minimum-size(left, -12rem, -15.625vw);
-				@include minimum-size(min-width, 9rem, 11.71875vw);
+				right: auto;
 			}
 
 			.main-slider__pagination-item-2 {
 				position: absolute;
+				// @include minimum-size(top, 17rem, 22.135416666666664vw);
+				// @include minimum-size(left, -6rem, -7.8125vw);
+				// @include minimum-size(min-width, 10rem, 13.020833333333334vw);
+				// @include minimum-size(top, 17rem);
+				// @include minimum-size(left, -6rem);
+				// @include minimum-size(min-width, 10rem);
+				@include minimum-size(left, -2rem, -2.604166666666667vw);
+				@include minimum-size(min-width, 10rem);
 				@include minimum-size(top, 17rem, 22.135416666666664vw);
-				@include minimum-size(left, -6rem, -7.8125vw);
-				@include minimum-size(min-width, 10rem, 13.020833333333334vw);
+				right: auto;
 			}
 		}
 
 		.main-slider__pagination-dot {
 			flex-shrink: 0;
+			// @include minimum-size(width, 2.857rem);
+			// @include minimum-size(height, 2.857rem);
 			@include minimum-size(width, 2.857rem, 3.7200520833333335vw);
 			@include minimum-size(height, 2.857rem, 3.7200520833333335vw);
 			background-color: transparent;
@@ -385,6 +427,8 @@ $breakpoints: (
 				display: block;
 				@include minimum-size(width, 1.758rem, 2.2890625vw);
 				@include minimum-size(height, 1.758rem, 2.2890625vw);
+				// @include minimum-size(width, 1.758rem);
+				// @include minimum-size(height, 1.758rem);
 				background-color: var(--color-accent-jade-green);
 				border-radius: 50%;
 			}
@@ -392,10 +436,10 @@ $breakpoints: (
 
 		.main-slider__pagination-text {
 			font-family: var(--font-family-normal-600);
-			// @include minimum-size(font-size, var(--font-size-tablet-14), 1.8229166666666667vw);
-			// @include minimum-size(line-height, 2rem, 2.604166666666667vw);
-			@include minimum-size(font-size, var(--font-size-tablet-14));
-			@include minimum-size(line-height, 2rem);
+			@include minimum-size(font-size, var(--font-size-tablet-14), 1.8229166666666667vw);
+			@include minimum-size(line-height, 2rem, 2.604166666666667vw);
+			// @include minimum-size(font-size, var(--font-size-tablet-14));
+			// @include minimum-size(line-height, 2rem);
 			color: var(--color-neutral-pale-slate);
 			position: relative;
 		}
