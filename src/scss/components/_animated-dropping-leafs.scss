@@ -1,8 +1,6 @@
 @use "../vendors/include-media" as *;
 @use "../abstracts/mixins" as *;
 
-// Fix leafs on mobile version
-
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
@@ -28,9 +26,6 @@ $breakpoints: (
 
 .animated-dropping-leafs--size--mobile {
 	display: block;
-}
-
-.animated-dropping-leafs--size--mobile {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -38,7 +33,7 @@ $breakpoints: (
 	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
 		position: absolute;
 		@include minimum-size(top, 2rem, 6.25vw);
-		@include minimum-size(left, 28rem, 87.5vw);
+		@include minimum-size(left, 29.5rem, 92.1875vw);
 
 		.animated-dropping-leafs__animated-leaf {
 			@include minimum-size(height, 4.975rem, 15.546874999999998vw);
@@ -85,48 +80,48 @@ $breakpoints: (
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
 			position: absolute;
-			@include minimum-size(top, 2rem, 6.25vw);
-			@include minimum-size(left, 28rem, 87.5vw);
+			@include minimum-size(top, -12rem, -15.625vw);
+			@include minimum-size(left, 68rem, 88.54166666666666vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 4.975rem, 15.546874999999998vw);
-				@include minimum-size(width, 3.906rem, 12.20625vw);
+				@include minimum-size(height, 9.514rem, 12.388020833333334vw);
+				@include minimum-size(width, 12.118rem, 15.778645833333336vw);
 				object-fit: cover;
 			}
 		}
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
 			position: absolute;
-			@include minimum-size(top, 26rem, 81.25vw);
-			@include minimum-size(left, 27rem, 84.375vw);
+			@include minimum-size(top, 29.5rem, 38.41145833333333vw);
+			@include minimum-size(left, 5rem, 6.510416666666667vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 3.84rem, 12vw);
-				@include minimum-size(width, 3.15rem, 9.84375vw);
+				@include minimum-size(height, 7.108rem, 9.255208333333332vw);
+				@include minimum-size(width, 9.053rem, 11.787760416666666vw);
 				object-fit: cover;
 			}
 		}
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(3) {
 			position: absolute;
-			@include minimum-size(top, 26rem, 81.25vw);
-			@include minimum-size(left, -3rem, -9.375vw);
+			@include minimum-size(top, 20rem, 26.041666666666668vw);
+			@include minimum-size(left, 65rem, 84.63541666666666vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 5.68rem, 17.75vw);
-				@include minimum-size(width, 7.235rem, 22.609375vw);
+				@include minimum-size(height, 3.999rem, 5.20703125vw);
+				@include minimum-size(width, 5.093rem, 6.631510416666667vw);
 				object-fit: cover;
 			}
 		}
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(4) {
 			position: absolute;
-			@include minimum-size(top, 25rem, 81.25vw);
-			@include minimum-size(left, -3rem, -9.375vw);
+			@include minimum-size(top, 43rem, 55.989583333333336vw);
+			@include minimum-size(left, 64rem, 83.33333333333334vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 5.68rem, 17.75vw);
-				@include minimum-size(width, 7.235rem, 22.609375vw);
+				@include minimum-size(height, 8.448rem, 11vw);
+				@include minimum-size(width, 8.03rem, 10.455729166666666vw);
 				object-fit: cover;
 			}
 		}
