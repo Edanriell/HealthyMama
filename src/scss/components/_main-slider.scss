@@ -199,14 +199,21 @@ $breakpoints: (
 		}
 
 		.main-slider__pagination-wrapper {
-			// position: absolute;
-			// top: 50%;
-			// left: 0;
-			// transform: translateY(-50%);
-			// position: relative;
+			// add code here
+			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
+			@include minimum-size(height, 50.2rem, 65.36458333333334vw);
+
+
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-46%, -46%);
 		}
 
 		.main-slider__pagination {
+			width: inherit;
+			height: inherit;
 			// position: relative;
 			// position: absolute;
 			// top: 50%;
@@ -262,8 +269,8 @@ $breakpoints: (
 
 		.main-slider__pagination-item-0 {
 			position: absolute;
-			@include minimum-size(top, 30rem, 39.0625vw);
-			@include minimum-size(left, -8rem);
+			@include minimum-size(top, 7rem); // FIXED ISSUE
+			@include minimum-size(left, -7rem); // FIXED ISSUE !!
 			// @include minimum-size(top, -17rem, -22.135416666666664vw);
 			// @include minimum-size(left, -12rem, -15.625vw);
 
