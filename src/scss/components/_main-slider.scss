@@ -269,66 +269,76 @@ $breakpoints: (
 
 		.main-slider__pagination-item-0 {
 			position: absolute;
-			@include minimum-size(top, 7rem); // FIXED ISSUE
-			@include minimum-size(left, -7rem); // FIXED ISSUE !!
+			@include minimum-size(top, 6.5rem); // FIXED ISSUE
+			@include minimum-size(left, -6.7rem); // FIXED ISSUE !!
 			// @include minimum-size(top, -17rem, -22.135416666666664vw);
 			// @include minimum-size(left, -12rem, -15.625vw);
 
 			// @include minimum-size(min-width, 16rem);
-			@include minimum-size(min-width, 16rem, 20.833333333333336vw);
+			@include minimum-size(width, 16rem, 20.833333333333336vw);
 
 			// @include minimum-size(min-width, 20.5rem);
 			right: auto;
 
 			&:hover {
-				@include minimum-size(top, -17rem, -22.135416666666664vw);
-				@include minimum-size(left, -7.5rem, -9.765625vw);
+				@include minimum-size(top, 6.5rem); // FIXED ISSUE
+				@include minimum-size(left, -12rem); // FIXED ISSUE !!
+				// @include minimum-size(top, -17rem, -22.135416666666664vw);
+				// @include minimum-size(left, -7.5rem, -9.765625vw);
 				// @include minimum-size(min-width, 14rem);
 				// @include minimum-size(top, -17rem, -22.135416666666664vw);
 				// @include minimum-size(left, -12rem, -15.625vw);
 
-				@include minimum-size(min-width, 20.5rem, 26.692708333333332vw);
+				@include minimum-size(width, 20.5rem, 26.692708333333332vw);
 				// @include minimum-size(min-width, 20.5rem);
 			}
 		}
 
 		.main-slider__pagination-item-1 {
 			position: absolute;
+			@include minimum-size(top, 23rem); // FIXED ISSUE
+			@include minimum-size(left, -11.8rem); // FIXED ISSUE !!
 			// @include minimum-size(top, 0rem);
-			@include minimum-size(left, -9.1rem, -11.848958333333332vw);
-			@include minimum-size(top, 0rem, 0vw);
+			// @include minimum-size(left, -9.1rem, -11.848958333333332vw);
+			// @include minimum-size(top, 0rem, 0vw);
 			// @include minimum-size(left, -13.5rem, -17.578125vw);
-			@include minimum-size(min-width, 15rem);
-			// @include minimum-size(min-width, 15rem, 19.53125vw);
+			// @include minimum-size(min-width, 15rem);
+			@include minimum-size(width, 14rem, 18.229166666666664vw);
 			right: auto;
 
 			&:hover {
+				@include minimum-size(top, 23rem); // FIXED ISSUE
+				@include minimum-size(left, -11.8rem); // FIXED ISSUE !!
 				// @include minimum-size(top, 0rem);
-				@include minimum-size(left, -7.5rem, -9.765625vw);
-				@include minimum-size(min-width, 9rem);
-				@include minimum-size(top, 0rem, 0vw);
+				// @include minimum-size(left, -7.5rem, -9.765625vw);
+				// @include minimum-size(min-width, 9rem);
+				// @include minimum-size(top, 0rem, 0vw);
 				// @include minimum-size(left, -12rem, -15.625vw);
-				// @include minimum-size(min-width, 9rem, 11.71875vw);
+				@include minimum-size(width, 14.5rem, 18.880208333333336vw);
 			}
 		}
 
 		.main-slider__pagination-item-2 {
 			position: absolute;
 			// @include minimum-size(top, 17rem);
-			@include minimum-size(left, -7rem, -9.114583333333332vw);
-			@include minimum-size(top, 17rem, 22.135416666666664vw);
+			@include minimum-size(left, -11.5rem);
+			@include minimum-size(top, 39.5rem);
+			// @include minimum-size(left, -7rem, -9.114583333333332vw);
+			// @include minimum-size(top, 17rem, 22.135416666666664vw);
 			// @include minimum-size(left, -11rem, -14.322916666666666vw);
-			@include minimum-size(min-width, 19rem);
-			// @include minimum-size(min-width, 19rem, 24.739583333333336vw);
+			// @include minimum-size(min-width, 19rem);
+			@include minimum-size(width, 19rem, 24.739583333333336vw);
 			right: auto;
 
 			&:hover {
 				// @include minimum-size(top, 17rem);
-				@include minimum-size(left, -2rem, -2.604166666666667vw);
-				@include minimum-size(min-width, 10rem);
-				@include minimum-size(top, 17rem, 22.135416666666664vw);
+				// @include minimum-size(left, -2rem, -2.604166666666667vw);
+				// @include minimum-size(min-width, 10rem);
+				// @include minimum-size(top, 17rem, 22.135416666666664vw);
 				// @include minimum-size(left, -6rem, -7.8125vw);
-				// @include minimum-size(min-width, 10rem, 13.020833333333334vw);
+				@include minimum-size(left, -8rem);
+				@include minimum-size(top, 39.5rem);
+				@include minimum-size(width, 16.9rem, 22.005208333333336vw);
 			}
 		}
 
