@@ -150,6 +150,16 @@ $breakpoints: (
 		@include minimum-size(font-size, var(--font-size-tablet-14), 1.8229166666666667vw);
 		@include minimum-size(line-height, 2rem, 2.604166666666667vw);
 	}
+
+	.text__section-title {
+		@include minimum-size(font-size, var(--font-size-tablet-41), 5.338541666666666vw);
+		@include minimum-size(line-height, 4.8rem, 6.25vw);
+	}
+
+	.text__medium-text--text-weight--medium {
+		@include minimum-size(font-size, var(--font-size-tablet-20), 2.604166666666667vw);
+		@include minimum-size(line-height, 2.8rem, 3.6458333333333335vw);
+	}
 }
 
 @include media(">=desktop") {

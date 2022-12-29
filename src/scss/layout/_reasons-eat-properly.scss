@@ -1,6 +1,13 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
 
 $background-color-section-reasons-eat-properly: var(--color-accent-jade-green);
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
 
 .reasons-eat-properly {
 	background-color: $background-color-section-reasons-eat-properly;
@@ -30,6 +37,7 @@ $background-color-section-reasons-eat-properly: var(--color-accent-jade-green);
 }
 
 .reasons-eat-properly__animated-dropping-leafs-mobile {
+
 	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
 		position: absolute;
 		@include minimum-size(top, 69rem, 215.625vw);
@@ -44,8 +52,8 @@ $background-color-section-reasons-eat-properly: var(--color-accent-jade-green);
 
 	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
 		position: absolute;
-		@include minimum-size(top, 74rem);
-		@include minimum-size(left, -2rem);
+		@include minimum-size(top, 74rem, 231.25vw);
+		@include minimum-size(left, -2rem, -6.25vw);
 		z-index: 1;
 
 		.animated-dropping-leafs__animated-leaf {
@@ -54,4 +62,57 @@ $background-color-section-reasons-eat-properly: var(--color-accent-jade-green);
 			object-fit: cover;
 		}
 	}
+}
+
+@include media(">=tablet") {
+	.reasons-eat-properly {
+		@include minimum-size(padding-top, 5rem, 6.510416666666667vw);
+	}
+
+	.reasons-eat-properly__main-reasons {
+		padding-bottom: 0;
+	}
+
+	.reasons-eat-properly__section-title {
+		@include minimum-size(padding-bottom, 4rem, 5.208333333333334vw);
+		@include minimum-size(padding-left, 7.9rem, 10.286458333333332vw);
+	}
+
+	.reasons-eat-properly__reasons-list {
+		@include minimum-size(padding-left, 9.8rem, 12.760416666666666vw);
+	}
+
+	.reasons-eat-properly__animated-dropping-leafs-mobile {
+
+
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
+			position: absolute;
+			@include minimum-size(top, 69rem, 215.625vw);
+			@include minimum-size(left, 26rem, 81.25vw);
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 4.708rem, 14.7125vw);
+				@include minimum-size(width, 3.696rem, 11.55vw);
+				object-fit: cover;
+			}
+		}
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
+			position: absolute;
+			@include minimum-size(top, 74rem, 231.25vw);
+			@include minimum-size(left, -2rem, -6.25vw);
+			z-index: 1;
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 7.004rem, 21.887500000000003vw);
+				@include minimum-size(width, 8.921rem, 27.878124999999997vw);
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+@include media(">=desktop") {
+
 }
