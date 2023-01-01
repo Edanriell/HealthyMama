@@ -64,9 +64,21 @@ $breakpoints: (
 	}
 }
 
+.reasons-eat-properly__animated-dropping-leafs-desktop {
+	display: none;
+}
+
+.reasons-eat-properly__animated-dropping-tablet {
+	display: none;
+}
+
 @include media(">=tablet") {
 	.reasons-eat-properly {
 		@include minimum-size(padding-top, 5rem, 6.510416666666667vw);
+		background-image: url("../images/reasons-eat-properly-section-decorative-background-image-circle1.svg");
+		background-position: 55.338541666666664vw 72.265625vw;
+		background-repeat: no-repeat;
+		background-size: 65.625vw 65.625vw;
 	}
 
 	.reasons-eat-properly__main-reasons {
@@ -83,30 +95,37 @@ $breakpoints: (
 	}
 
 	.reasons-eat-properly__animated-dropping-leafs-mobile {
+		display: none;
+	}
 
-		// Fix leafs and add decorative circle !
+	.reasons-eat-properly__animated-dropping-leafs-desktop {
+		display: none;
+	}
+
+	.reasons-eat-properly__animated-dropping-tablet {
+		display: block;
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
 			position: absolute;
-			@include minimum-size(top, 69rem, 215.625vw);
-			@include minimum-size(left, 26rem, 81.25vw);
+			@include minimum-size(top, 79rem, 102.86458333333333vw);
+			@include minimum-size(left, 51rem, 66.40625vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 4.708rem, 14.7125vw);
-				@include minimum-size(width, 3.696rem, 11.55vw);
+				@include minimum-size(height, 5.309rem, 6.912760416666668vw);
+				@include minimum-size(width, 6.762rem, 8.804687500000002vw);
 				object-fit: cover;
 			}
 		}
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
 			position: absolute;
-			@include minimum-size(top, 74rem, 231.25vw);
-			@include minimum-size(left, -2rem, -6.25vw);
+			@include minimum-size(top, 85rem, 110.67708333333333vw);
+			@include minimum-size(left, 14rem, 18.229166666666664vw);
 			z-index: 1;
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 7.004rem, 21.887500000000003vw);
-				@include minimum-size(width, 8.921rem, 27.878124999999997vw);
+				@include minimum-size(height, 10.06rem, 13.098958333333332vw);
+				@include minimum-size(width, 12.813rem, 16.68359375vw);
 				object-fit: cover;
 			}
 		}
