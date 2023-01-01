@@ -113,8 +113,63 @@ $breakpoints: (
 }
 
 @include media(">=tablet") {
+	.products-slider {
+		@include minimum-size(padding-top, 4.8rem, 6.25vw);
+	}
+
 	.products-slider--type--universal {
 		display: block;
+		position: relative;
+
+		.products-slider__wrapper {
+			@include flex(center, center, row);
+			@include minimum-size(column-gap, 1.7rem, 2.213541666666667vw); // will delete when hook up real slider
+		}
+
+		.products-slider__slide {
+		}
+
+		.products-slider__slide-content {
+		}
+
+		.products-slider__slide-image-wrapper {
+		}
+
+		.products-slider__slide-image {
+		}
+
+		.products-slider__slide-title {
+		}
+
+		.text__subsection-title {
+		}
+
+		.text__subsection-title--text-color--black {
+		}
+
+		.products-slider__slide-description {
+		}
+
+		.text__regular-text--text-weight--semibold {
+		}
+
+		.text__regular-text--text-color--grey-teal {
+		}
+
+		.products-slider__slider-controls {
+		}
+
+		.products-slider__previous-slide-button {
+		}
+
+		.products-slider__arrow-left-icon {
+		}
+
+		.products-slider__next-slide-button {
+		}
+
+		.products-slider__arrow-right-icon {
+		}
 	}
 
 	.products-slider--type--mobile {

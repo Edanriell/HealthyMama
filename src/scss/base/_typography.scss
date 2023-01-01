@@ -130,7 +130,6 @@ $breakpoints: (
 }
 
 @include media(">=tablet") {
-	// used in main navigation
 	.text__regular-text--text-weight--semibold {
 		@include minimum-size(font-size, var(--font-size-tablet-14), 1.8229166666666667vw);
 		@include minimum-size(line-height, 2rem, 2.604166666666667vw);
