@@ -176,6 +176,10 @@ $breakpoints: (
 		}
 
 		.products-slider__slider-controls {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 
 		.products-slider__previous-slide-button {
@@ -185,17 +189,35 @@ $breakpoints: (
 			border-radius: 50%;
 			background-color: var(--color-accent-jade-green);
 			cursor: pointer;
+			border: 0.15625vw solid var(--color-primary-white); // FIX border width ! make border green and box-sizing border-box
+			border-radius: 20.3125vw;
+			border-width: 0.5rem;
+			box-sizing: content-box;
+
+			&:hover,
+			&:focus {
+				background-color: var(--color-primary-white);
+				border-color: var(--color-accent-jade-green);
+
+				.products-slider__arrow-left-icon {
+					color: var(--color-accent-jade-green);
+				}
+			}
+
+			&:active {
+				opacity: 0.8;
+			}
 		}
 
 		.products-slider__arrow-left-icon {
 			fill: none;
-			@include minimum-size(width, 1.7rem, 2.213541666666667vw);
-			@include minimum-size(height, 2.7rem, 3.515625vw);
+			@include minimum-size(width, 1.1rem, 1.4322916666666665vw);
+			@include minimum-size(height, 1.7rem, 2.213541666666667vw);
 			color: var(--color-primary-white);
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-55%, -50%);
+			transform: translate(-60%, -50%);
 		}
 
 		.products-slider__next-slide-button {
@@ -209,13 +231,13 @@ $breakpoints: (
 
 		.products-slider__arrow-right-icon {
 			fill: none;
-			@include minimum-size(width, 1.7rem, 2.213541666666667vw);
-			@include minimum-size(height, 2.7rem, 3.515625vw);
+			@include minimum-size(width, 1.1rem, 1.4322916666666665vw);
+			@include minimum-size(height, 1.7rem, 2.213541666666667vw);
 			color: var(--color-primary-white);
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-45%, -50%);
+			transform: translate(-40%, -50%);
 		}
 	}
 
