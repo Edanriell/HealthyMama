@@ -178,21 +178,21 @@ $breakpoints: (
 		.products-slider__slider-controls {
 			position: absolute;
 			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			left: 0;
 		}
 
 		.products-slider__previous-slide-button {
-			position: relative;
+			position: absolute;
+			top: 0;
+			@include minimum-size(right, 3.2rem, 4.166666666666666vw);
 			@include minimum-size(width, 5.3rem, 6.901041666666667vw);
 			@include minimum-size(height, 5.3rem, 6.901041666666667vw);
 			border-radius: 50%;
 			background-color: var(--color-accent-jade-green);
 			cursor: pointer;
-			border: 0.15625vw solid var(--color-primary-white); // FIX border width ! make border green and box-sizing border-box
+			border: 0.15625vw solid var(--color-accent-jade-green);
 			border-radius: 20.3125vw;
 			border-width: 0.5rem;
-			box-sizing: content-box;
 
 			&:hover,
 			&:focus {
@@ -221,12 +221,31 @@ $breakpoints: (
 		}
 
 		.products-slider__next-slide-button {
-			position: relative;
+			position: absolute;
+			top: 0;
+			@include minimum-size(left, 57.8rem, 75.26041666666666vw);
 			@include minimum-size(width, 5.3rem, 6.901041666666667vw);
 			@include minimum-size(height, 5.3rem, 6.901041666666667vw);
 			border-radius: 50%;
 			background-color: var(--color-accent-jade-green);
 			cursor: pointer;
+			border: 0.15625vw solid var(--color-accent-jade-green);
+			border-radius: 20.3125vw;
+			border-width: 0.5rem;
+
+			&:hover,
+			&:focus {
+				background-color: var(--color-primary-white);
+				border-color: var(--color-accent-jade-green);
+
+				.products-slider__arrow-right-icon {
+					color: var(--color-accent-jade-green);
+				}
+			}
+
+			&:active {
+				opacity: 0.8;
+			}
 		}
 
 		.products-slider__arrow-right-icon {
