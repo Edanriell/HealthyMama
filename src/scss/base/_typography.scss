@@ -159,6 +159,11 @@ $breakpoints: (
 		@include minimum-size(font-size, var(--font-size-tablet-20), 2.604166666666667vw);
 		@include minimum-size(line-height, 2.8rem, 3.6458333333333335vw);
 	}
+
+	.text__subsection-title {
+		@include minimum-size(font-size, var(--font-size-tablet-20), 2.604166666666667vw);
+		@include minimum-size(line-height, 2.4rem, 3.125vw);
+	}
 }
 
 @include media(">=desktop") {

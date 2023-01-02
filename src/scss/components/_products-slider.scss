@@ -1,5 +1,6 @@
 @use "../vendors/include-media" as *;
 @use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
 
 $products-slider-mobile-slide-background-color: var(--color-primary-white);
 
@@ -127,48 +128,94 @@ $breakpoints: (
 		}
 
 		.products-slider__slide {
+			background-color: var(--color-primary-white);
+			border-radius: 1rem;
+			box-shadow: 0 0.4rem 8.3rem var(--color-neutral-eerie-black-transparent);
+			@include minimum-size(width, 66.3rem, 86.328125vw);
+			// @include minimum-size(min-height, 40rem, 52.083333333333336vw);
+
+			// Temporarily, will be removed when real slider will be hooked up.
+			&:nth-child(1),
+			&:nth-child(3) {
+				opacity: 0.3;
+			}
+			// Temporarily, will be removed when real slider will be hooked up.
 		}
 
 		.products-slider__slide-content {
+			@include minimum-size(padding-bottom, 3rem, 3.90625vw);
 		}
 
 		.products-slider__slide-image-wrapper {
+			@include minimum-size(width, 66.3rem, 86.328125vw);
+			@include minimum-size(height, 26.1rem, 33.984375vw);
 		}
 
 		.products-slider__slide-image {
+			border-radius: 1rem 1rem 0 0;
+			width: inherit;
+			height: inherit;
+			object-fit: cover;
+			vertical-align: middle;
 		}
 
 		.products-slider__slide-title {
-		}
-
-		.text__subsection-title {
-		}
-
-		.text__subsection-title--text-color--black {
+			@include minimum-size(padding-left, 3rem, 3.90625vw);
+			@include minimum-size(padding-right, 3rem, 3.90625vw);
+			@include minimum-size(padding-top, 3rem, 3.90625vw);
+			text-align: center;
 		}
 
 		.products-slider__slide-description {
-		}
-
-		.text__regular-text--text-weight--semibold {
-		}
-
-		.text__regular-text--text-color--grey-teal {
+			@include minimum-size(padding-left, 3rem, 3.90625vw);
+			@include minimum-size(padding-right, 3rem, 3.90625vw);
+			@include minimum-size(padding-top, 1.2rem, 1.5625vw);
+			@include minimum-size(font-size, var(--font-size-tablet-16), 2.083333333333333vw);
+			@include minimum-size(line-height, 2.4rem, 3.125vw);
+			text-align: center;
 		}
 
 		.products-slider__slider-controls {
 		}
 
 		.products-slider__previous-slide-button {
+			position: relative;
+			@include minimum-size(width, 5.3rem, 6.901041666666667vw);
+			@include minimum-size(height, 5.3rem, 6.901041666666667vw);
+			border-radius: 50%;
+			background-color: var(--color-accent-jade-green);
+			cursor: pointer;
 		}
 
 		.products-slider__arrow-left-icon {
+			fill: none;
+			@include minimum-size(width, 1.7rem, 2.213541666666667vw);
+			@include minimum-size(height, 2.7rem, 3.515625vw);
+			color: var(--color-primary-white);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-55%, -50%);
 		}
 
 		.products-slider__next-slide-button {
+			position: relative;
+			@include minimum-size(width, 5.3rem, 6.901041666666667vw);
+			@include minimum-size(height, 5.3rem, 6.901041666666667vw);
+			border-radius: 50%;
+			background-color: var(--color-accent-jade-green);
+			cursor: pointer;
 		}
 
 		.products-slider__arrow-right-icon {
+			fill: none;
+			@include minimum-size(width, 1.7rem, 2.213541666666667vw);
+			@include minimum-size(height, 2.7rem, 3.515625vw);
+			color: var(--color-primary-white);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-45%, -50%);
 		}
 	}
 

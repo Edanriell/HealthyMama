@@ -15,3 +15,10 @@
 	border-radius: 50%;
 	box-shadow: 0 0.4rem 3.5rem var(--color-neutral-cyan-cornflower-blue-transparent);
 }
+
+%green-circle {
+	@include minimum-size(width, 5.3rem, 6.901041666666667vw);
+	@include minimum-size(height, 5.3rem, 6.901041666666667vw);
+	border-radius: 50%;
+	background-color: var(--color-accent-jade-green);
+}
