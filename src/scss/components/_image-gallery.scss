@@ -147,8 +147,137 @@ $breakpoints: (
 }
 
 @include media(">=tablet") {
+	.image-gallery {
+		@include minimum-size(padding-top, 8.4rem, 10.9375vw);
+	}
+
+	.image-gallery__content {
+		width: 100vw;
+		@include minimum-size(min-height, 55rem, 71.61458333333334vw);
+	}
+	// Work on image sizes first then positioning
+	.image-gallery__image1-wrapper {
+		@include minimum-size(width, 20.239rem, 63.24687499999999vw);
+		@include minimum-size(height, 17.254rem, 53.918749999999996vw);
+	}
+
+	.image-gallery__image1 {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+		vertical-align: middle;
+		border-radius: 1rem;
+		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
+		position: absolute;
+		top: 0;
+		@include minimum-size(left, -10.5rem, -32.8125vw);
+		z-index: 1;
+	}
+
+	.image-gallery__image2-wrapper {
+		@include minimum-size(width, 17.099rem, 53.434375vw);
+		@include minimum-size(height, 14.578rem, 45.55625vw);
+	}
+
+	.image-gallery__image2 {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+		vertical-align: middle;
+		border-radius: 1rem;
+		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
+		position: absolute;
+		@include minimum-size(top, 1.35rem, 4.21875vw);
+		@include minimum-size(left, 11.7rem, 36.5625vw);
+		z-index: 1;
+	}
+
+	.image-gallery__image3-wrapper {
+		@include minimum-size(width, 12.562rem, 39.25625vw);
+		@include minimum-size(height, 10.74rem, 33.5625vw);
+	}
+
+	.image-gallery__image3 {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+		vertical-align: middle;
+		border-radius: 1rem;
+		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
+		position: absolute;
+		@include minimum-size(top, 11.9rem, 37.1875vw);
+		@include minimum-size(left, 3.7rem, 11.5625vw);
+		z-index: 2;
+	}
+
+	.image-gallery__image4-wrapper {
+		@include minimum-size(width, 21.441rem, 67.003125vw);
+		@include minimum-size(height, 18.3rem, 57.1875vw);
+	}
+
+	.image-gallery__image4 {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+		vertical-align: middle;
+		border-radius: 1rem;
+		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
+		position: absolute;
+		@include minimum-size(top, 10.2rem, 31.874999999999996vw);
+		@include minimum-size(left, 23.1rem, 72.1875vw);
+		z-index: 2;
+	}
+
+	.image-gallery__image5-wrapper {
+		@include minimum-size(width, 15.431rem, 48.221875000000004vw);
+		@include minimum-size(height, 13.144rem, 41.075vw);
+	}
+
+	.image-gallery__image5 {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+		vertical-align: middle;
+		border-radius: 1rem;
+		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
+		position: absolute;
+		@include minimum-size(top, 1.9rem, 59.375vw);
+		@include minimum-size(left, -4.1rem, -12.812499999999998vw);
+		z-index: 1;
+	}
+
+	.image-gallery__image6-wrapper {
+		@include minimum-size(width, 13.338rem, 41.68125vw);
+		@include minimum-size(height, 11.36rem, 35.5vw);
+	}
+
+	.image-gallery__image6 {
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+		vertical-align: middle;
+		border-radius: 1rem;
+		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
+		position: absolute;
+		@include minimum-size(top, 20.8rem, 65vw);
+		@include minimum-size(left, 19.1rem, 59.68750000000001vw);
+		z-index: 2;
+	}
+
+	.image-gallery__image7-wrapper {
+	}
+
 	.image-gallery__image7 {
 		display: block;
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+		border-radius: 1rem;
+		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
+		position: absolute;
+		top: 0;
+		@include minimum-size(left, -10.5rem, -32.8125vw);
+		z-index: 1;
 	}
 
 	.image-gallery__image8-wrapper {
@@ -156,6 +285,15 @@ $breakpoints: (
 
 	.image-gallery__image8 {
 		display: block;
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+		border-radius: 1rem;
+		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
+		position: absolute;
+		top: 0;
+		@include minimum-size(left, -10.5rem, -32.8125vw);
+		z-index: 1;
 	}
 
 	.image-gallery__image9-wrapper {
@@ -163,6 +301,15 @@ $breakpoints: (
 
 	.image-gallery__image9 {
 		display: block;
+		width: inherit;
+		height: inherit;
+		object-fit: cover;
+		border-radius: 1rem;
+		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
+		position: absolute;
+		top: 0;
+		@include minimum-size(left, -10.5rem, -32.8125vw);
+		z-index: 1;
 	}
 
 }
