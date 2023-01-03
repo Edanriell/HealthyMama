@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
 
 $instagram-images-section-background-color: var(--color-primary-white);
 
@@ -16,4 +23,14 @@ $instagram-images-section-background-color: var(--color-primary-white);
 
 .instagram-images__image-gallery {
 	position: relative;
+}
+
+@include media(">=tablet") {
+	.instagram-images {
+		@include minimum-size(padding-top, 22.6rem, 29.427083333333332vw);
+	}
+}
+
+@include media(">=desktop") {
+
 }
