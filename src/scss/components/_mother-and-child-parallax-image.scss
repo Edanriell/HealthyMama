@@ -45,7 +45,9 @@ $breakpoints: (
 }
 
 @include media(">=tablet") {
-
+	.mother-and-child-parallax-image__tree-image-wrapper {
+		display: none;
+	}
 }
 
 @include media(">=desktop") {

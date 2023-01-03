@@ -164,6 +164,16 @@ $breakpoints: (
 		@include minimum-size(font-size, var(--font-size-tablet-20), 2.604166666666667vw);
 		@include minimum-size(line-height, 2.4rem, 3.125vw);
 	}
+
+	.text__bold-text--text-weight--bold {
+		@include minimum-size(font-size, var(--font-size-tablet-20), 2.604166666666667vw);
+		@include minimum-size(line-height, 2.4rem, 3.125vw);
+	}
+
+	.text__regular-text--text-weight--regular {
+		@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
+		@include minimum-size(line-height, 2.1rem, 2.734375vw);
+	}
 }
 
 @include media(">=desktop") {
