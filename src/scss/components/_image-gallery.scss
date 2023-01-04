@@ -155,10 +155,10 @@ $breakpoints: (
 		width: 100vw;
 		@include minimum-size(min-height, 55rem, 71.61458333333334vw);
 	}
-	// Work on image sizes first then positioning
+
 	.image-gallery__image1-wrapper {
-		@include minimum-size(width, 20.239rem, 63.24687499999999vw);
-		@include minimum-size(height, 17.254rem, 53.918749999999996vw);
+		@include minimum-size(width, 31.68rem, 41.25vw);
+		@include minimum-size(height, 27.007rem, 35.16536458333333vw);
 	}
 
 	.image-gallery__image1 {
@@ -175,8 +175,8 @@ $breakpoints: (
 	}
 
 	.image-gallery__image2-wrapper {
-		@include minimum-size(width, 17.099rem, 53.434375vw);
-		@include minimum-size(height, 14.578rem, 45.55625vw);
+		@include minimum-size(width, 26.764rem, 34.84895833333333vw);
+		@include minimum-size(height, 22.819rem, 29.712239583333332vw);
 	}
 
 	.image-gallery__image2 {
@@ -193,8 +193,8 @@ $breakpoints: (
 	}
 
 	.image-gallery__image3-wrapper {
-		@include minimum-size(width, 12.562rem, 39.25625vw);
-		@include minimum-size(height, 10.74rem, 33.5625vw);
+		@include minimum-size(width, 31.68rem, 41.25vw);
+		@include minimum-size(height, 20.513rem, 26.709635416666664vw);
 	}
 
 	.image-gallery__image3 {
@@ -211,8 +211,8 @@ $breakpoints: (
 	}
 
 	.image-gallery__image4-wrapper {
-		@include minimum-size(width, 21.441rem, 67.003125vw);
-		@include minimum-size(height, 18.3rem, 57.1875vw);
+		@include minimum-size(width, 16.872rem, 21.96875vw);
+		@include minimum-size(height, 14.383rem, 18.727864583333336vw);
 	}
 
 	.image-gallery__image4 {
@@ -229,8 +229,8 @@ $breakpoints: (
 	}
 
 	.image-gallery__image5-wrapper {
-		@include minimum-size(width, 15.431rem, 48.221875000000004vw);
-		@include minimum-size(height, 13.144rem, 41.075vw);
+		@include minimum-size(width, 19.663rem, 25.602864583333336vw);
+		@include minimum-size(height, 16.811rem, 21.889322916666668vw);
 	}
 
 	.image-gallery__image5 {
@@ -247,8 +247,8 @@ $breakpoints: (
 	}
 
 	.image-gallery__image6-wrapper {
-		@include minimum-size(width, 13.338rem, 41.68125vw);
-		@include minimum-size(height, 11.36rem, 35.5vw);
+		@include minimum-size(width, 33.561rem, 43.69921875vw);
+		@include minimum-size(height, 28.645rem, 37.298177083333336vw);
 	}
 
 	.image-gallery__image6 {
@@ -265,6 +265,8 @@ $breakpoints: (
 	}
 
 	.image-gallery__image7-wrapper {
+		@include minimum-size(width, 24.154rem, 31.450520833333336vw);
+		@include minimum-size(height, 20.574rem, 26.7890625vw);
 	}
 
 	.image-gallery__image7 {
@@ -276,11 +278,13 @@ $breakpoints: (
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
 		top: 0;
-		@include minimum-size(left, -10.5rem, -32.8125vw);
+		@include minimum-size(left, 20.5rem, 32.8125vw);
 		z-index: 1;
 	}
 
 	.image-gallery__image8-wrapper {
+		@include minimum-size(width, 20.877rem, 27.18359375vw);
+		@include minimum-size(height, 17.782rem, 23.153645833333332vw);
 	}
 
 	.image-gallery__image8 {
@@ -292,11 +296,13 @@ $breakpoints: (
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
 		top: 0;
-		@include minimum-size(left, -10.5rem, -32.8125vw);
+		@include minimum-size(left, 10.5rem, 32.8125vw);
 		z-index: 1;
 	}
 
 	.image-gallery__image9-wrapper {
+		@include minimum-size(width, 31.68rem, 41.25vw);
+		@include minimum-size(height, 27.007rem, 35.16536458333333vw);
 	}
 
 	.image-gallery__image9 {
@@ -308,7 +314,7 @@ $breakpoints: (
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
 		top: 0;
-		@include minimum-size(left, -10.5rem, -32.8125vw);
+		@include minimum-size(left, 10.5rem, 32.8125vw);
 		z-index: 1;
 	}
 
