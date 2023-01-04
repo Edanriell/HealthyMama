@@ -170,7 +170,7 @@ $breakpoints: (
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
 		top: 0;
-		@include minimum-size(left, -10.5rem, -32.8125vw);
+		@include minimum-size(left, -15rem, -19.53125vw);
 		z-index: 1;
 	}
 
@@ -187,8 +187,8 @@ $breakpoints: (
 		border-radius: 1rem;
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
-		@include minimum-size(top, 1.35rem, 4.21875vw);
-		@include minimum-size(left, 11.7rem, 36.5625vw);
+		@include minimum-size(top, 2rem, 2.604166666666667vw);
+		@include minimum-size(left, 19rem, 24.739583333333336vw);
 		z-index: 1;
 	}
 
@@ -205,8 +205,8 @@ $breakpoints: (
 		border-radius: 1rem;
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
-		@include minimum-size(top, 11.9rem, 37.1875vw);
-		@include minimum-size(left, 3.7rem, 11.5625vw);
+		@include minimum-size(top, 1.5rem, 1.953125vw);
+		@include minimum-size(left, 65rem, 84.63541666666666vw);
 		z-index: 2;
 	}
 
@@ -223,9 +223,9 @@ $breakpoints: (
 		border-radius: 1rem;
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
-		@include minimum-size(top, 10.2rem, 31.874999999999996vw);
-		@include minimum-size(left, 23.1rem, 72.1875vw);
-		z-index: 2;
+		@include minimum-size(top, 12rem, 15.625vw);
+		@include minimum-size(left, 58.5rem, 76.171875vw);
+		z-index: 4;
 	}
 
 	.image-gallery__image5-wrapper {
@@ -241,9 +241,9 @@ $breakpoints: (
 		border-radius: 1rem;
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
-		@include minimum-size(top, 1.9rem, 59.375vw);
-		@include minimum-size(left, -4.1rem, -12.812499999999998vw);
-		z-index: 1;
+		@include minimum-size(top, 18.5rem, 24.088541666666664vw);
+		@include minimum-size(left, 6rem, 7.8125vw);
+		z-index: 4;
 	}
 
 	.image-gallery__image6-wrapper {
@@ -259,8 +259,8 @@ $breakpoints: (
 		border-radius: 1rem;
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
-		@include minimum-size(top, 20.8rem, 65vw);
-		@include minimum-size(left, 19.1rem, 59.68750000000001vw);
+		@include minimum-size(top, 16rem, 20.833333333333336vw);
+		@include minimum-size(left, 36rem, 46.875vw);
 		z-index: 2;
 	}
 
@@ -278,8 +278,9 @@ $breakpoints: (
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
 		top: 0;
-		@include minimum-size(left, 20.5rem, 32.8125vw);
-		z-index: 1;
+		@include minimum-size(top, 30rem, 39.0625vw);
+		@include minimum-size(left, -6rem, -7.8125vw);
+		z-index: 3;
 	}
 
 	.image-gallery__image8-wrapper {
@@ -296,8 +297,9 @@ $breakpoints: (
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
 		top: 0;
-		@include minimum-size(left, 10.5rem, 32.8125vw);
-		z-index: 1;
+		@include minimum-size(top, 32rem, 41.66666666666667vw);
+		@include minimum-size(left, 30.5rem, 39.71354166666667vw);
+		z-index: 3;
 	}
 
 	.image-gallery__image9-wrapper {
@@ -314,7 +316,8 @@ $breakpoints: (
 		box-shadow: 0 2.1rem 1.33rem var(--color-neutral-royal-green-transparent);
 		position: absolute;
 		top: 0;
-		@include minimum-size(left, 10.5rem, 32.8125vw);
+		@include minimum-size(top, 28rem, 36.45833333333333vw);
+		@include minimum-size(left, 62rem, 80.72916666666666vw);
 		z-index: 1;
 	}
 
