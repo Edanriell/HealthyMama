@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
 
 $personalized-menu-request-section-background-color: var(--color-primary-white);
 
@@ -18,4 +25,25 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 .personalized-menu-request__request-form {
 	@include flex(center, center, column);
 	@include minimum-size(row-gap, 1rem, 3.125vw);
+}
+
+@include media(">=tablet") {
+	.personalized-menu-request {
+		@include minimum-size(padding-top, 14.1rem, 18.359375vw);
+		@include minimum-size(padding-bottom, 31.4rem, 40.88541666666667vw);
+	}
+
+	.personalized-menu-request__wrapper {
+	}
+
+	.personalized-menu-request__section-header {
+	}
+
+	.personalized-menu-request__request-form {
+		@include minimum-size(row-gap, 2.2rem, 2.864583333333333vw);
+	}
+}
+
+@include media(">=desktop") {
+
 }
