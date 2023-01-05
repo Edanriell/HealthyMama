@@ -31,6 +31,16 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 	.personalized-menu-request {
 		@include minimum-size(padding-top, 14.1rem, 18.359375vw);
 		@include minimum-size(padding-bottom, 31.4rem, 40.88541666666667vw);
+		background-image: url("../images/personalized-menu-request-section-background-image-tablet@1x.png");
+		background-position: 0 180%;
+		background-repeat: no-repeat;
+		background-size: 100vw auto;
+		@include retina-image("../images/personalized-menu-request-section-background-image-tablet@2x.png");
+	}
+
+	.webp .personalized-menu-request {
+		background-image: url("../images/personalized-menu-request-section-background-image-tablet@1x.webp");
+		@include retina-image("../images/personalized-menu-request-section-background-image-tablet@2x.webp");
 	}
 
 	.personalized-menu-request__wrapper {
