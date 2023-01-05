@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
 
 .section-header {
 	position: relative;
@@ -9,4 +16,22 @@
 }
 
 .section-header__text {
+}
+
+@include media(">=tablet") {
+	.section-header {
+	}
+
+	.section-header__title {
+		@include minimum-size(margin-bottom, 2.2rem, 2.864583333333333vw);
+	}
+
+	.section-header__text {
+		@include minimum-size(font-size, var(--font-size-tablet-16), 2.083333333333333vw);
+		@include minimum-size(line-height, 1.9rem, 2.473958333333333vw);
+	}
+}
+
+@include media(">=desktop") {
+
 }
