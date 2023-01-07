@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
 
 $footer-background-color: var(--color-accent-jade-green);
 
@@ -24,4 +31,35 @@ $footer-background-color: var(--color-accent-jade-green);
 .footer__politics-and-agreement {
 	@include flex(flex-start, flex-start, column);
 	@include minimum-size(row-gap, 2.3rem, 7.187499999999999vw);
+}
+
+@include media(">=tablet") {
+	.footer {
+		@include minimum-size(padding-top, 5rem, 6.510416666666667vw);
+		@include minimum-size(padding-bottom, 7.1rem, 9.244791666666668vw);
+	}
+
+	.footer__wrapper {
+	}
+
+	.footer__logotype {
+		@include minimum-size(margin-bottom, 4rem, 5.208333333333334vw);
+	}
+
+	.footer__secondary-navigation {
+		@include flex(flex-start, flex-start, row);
+		@include minimum-size(row-gap, 0);
+		@include minimum-size(margin-bottom, 4rem, 5.208333333333334vw);
+		@include minimum-size(column-gap, 8.6rem, 11.197916666666668vw);
+	}
+
+	.footer__politics-and-agreement {
+		@include flex(flex-start, flex-start, row);
+		@include minimum-size(row-gap, 0);
+		@include minimum-size(column-gap, 3.8rem, 4.947916666666666vw);
+	}
+}
+
+@include media(">=desktop") {
+
 }
