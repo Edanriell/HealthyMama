@@ -1,3 +1,11 @@
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1920px
+);
+
 .politics-and-agreement {
 }
 
@@ -9,4 +17,23 @@
 
 .politics-and-agreement__link-text {
 	opacity: 45%;
+}
+
+@include media(">=tablet") {
+	.politics-and-agreement {
+	}
+
+	.politics-and-agreement__item {
+	}
+
+	.politics-and-agreement__link {
+	}
+
+	.politics-and-agreement__link-text {
+		opacity: 100%;
+	}
+}
+
+@include media(">=desktop") {
+
 }

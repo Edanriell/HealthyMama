@@ -39,6 +39,11 @@ $breakpoints: (
 		@include minimum-size(font-size, var(--font-size-tablet-16), 2.083333333333333vw);
 		@include minimum-size(line-height, 2.2rem, 2.864583333333333vw);
 	}
+
+	.logotype--text-size--big {
+		@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
+		@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
+	}
 }
 
 @include media(">=desktop") {
