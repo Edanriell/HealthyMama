@@ -3,7 +3,8 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px,
+	desktop-large: 1550px
 );
 
 .main-navigation {
@@ -44,6 +45,8 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.main-navigation {
+		// padding-right: 13.483870967741934vw;
+		padding-right: 10.885416666666666vw;
 	}
 
 	.main-navigation__item {
@@ -53,4 +56,14 @@ $breakpoints: (
 	}
 }
 
+@include media(">=desktop-large") {
+	.main-navigation {
+		padding-right: 10.885416666666666vw;
+	}
 
+	.main-navigation__item {
+	}
+
+	.main-navigation__link {
+	}
+}

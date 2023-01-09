@@ -4,7 +4,8 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1024px
+	desktop: 1024px,
+	desktop-large: 1550px
 );
 
 .logotype {
@@ -47,6 +48,18 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
+	.logotype__text-content {
+		@include minimum-size(font-size, 1.1612903225806452vw);
+		@include minimum-size(line-height, 1.6129032258064515vw);
+	}
+
+	.logotype--text-size--big {
+		@include minimum-size(font-size, 1.1612903225806452vw);
+		@include minimum-size(line-height, 1.6129032258064515vw);
+	}
+}
+
+@include media(">=desktop-large") {
 	.logotype__text-content {
 		@include minimum-size(font-size, 0.9375vw);
 		@include minimum-size(line-height, 1.3020833333333335vw);

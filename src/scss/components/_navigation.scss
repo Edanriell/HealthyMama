@@ -4,7 +4,8 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1024px
+	desktop: 1024px,
+	desktop-large: 1550px
 );
 
 .navigation {
@@ -38,7 +39,14 @@ $breakpoints: (
 	.navigation__main-navigation {
 		@include flex(flex-start, flex-start, row);
 		flex-wrap: wrap;
+		// @include minimum-size(column-gap, 7.096774193548387vw);
 		@include minimum-size(column-gap, 5.729166666666666vw);
 		@include minimum-size(row-gap, 0);
+	}
+}
+
+@include media(">=desktop-large") {
+	.navigation__main-navigation {
+		@include minimum-size(column-gap, 5.729166666666666vw);
 	}
 }

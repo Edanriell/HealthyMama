@@ -3,7 +3,8 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1024px
+	desktop: 1024px,
+	desktop-large: 1550px
 );
 
 .container {
@@ -19,6 +20,15 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
+	.container {
+		// margin-left: 25.161290322580644vw;
+		// margin-right: 25.161290322580644vw;
+		margin-left: 20.3125vw;
+		margin-right: 20.3125vw;
+	}
+}
+
+@include media(">=desktop-large") {
 	.container {
 		margin-left: 20.3125vw;
 		margin-right: 20.3125vw;
