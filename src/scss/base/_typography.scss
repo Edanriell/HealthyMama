@@ -4,7 +4,7 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
 .text {
@@ -182,5 +182,8 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
-
+	.text__regular-text--text-weight--semibold {
+		@include minimum-size(font-size, 0.7291666666666666vw);
+		@include minimum-size(line-height, 1.0416666666666665vw);
+	}
 }

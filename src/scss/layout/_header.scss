@@ -35,5 +35,7 @@ $header-background-color: transparent;
 }
 
 @include media(">=desktop") {
-
+	.header {
+		@include minimum-size(padding-top, 4.1rem, 2.1354166666666665vw);
+	}
 }
