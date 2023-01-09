@@ -403,14 +403,14 @@ $breakpoints: (
 		position: relative;
 		@include flex(center, flex-start, row-reverse);
 		min-width: 100%;
-		// change
+		// change //
 		.main-slider__wrapper {
-			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
-			@include minimum-size(height, 62.9rem, 81.90104166666666vw);
+			@include minimum-size(width, 32.387096774193544vw); //
+			@include minimum-size(height, 46.70967741935484vw); // 72.4 change
 			background-image: url("../images/main-slider-background-image.svg");
 			background-position: 0 50%;
 			background-repeat: no-repeat;
-			background-size: 65.36458333333334vw auto;
+			background-size: 32.387096774193544vw auto; //
 		}
 
 		.main-slider__slide {
@@ -426,8 +426,8 @@ $breakpoints: (
 		}
 
 		.main-slider__slide-image-wrapper {
-			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
-			@include minimum-size(height, 62.9rem, 81.90104166666666vw);
+			@include minimum-size(width, 32.387096774193544vw); //
+			@include minimum-size(height, 46.70967741935484vw); // 72.4 change
 		}
 
 		.main-slider__slide-image {
@@ -438,9 +438,8 @@ $breakpoints: (
 		}
 
 		.main-slider__pagination-wrapper {
-
-			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
-			@include minimum-size(height, 50.2rem, 65.36458333333334vw);
+			@include minimum-size(width, 32.387096774193544vw); //
+			@include minimum-size(height, 32.387096774193544vw); //
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -455,7 +454,7 @@ $breakpoints: (
 		.main-slider__pagination-item {
 			cursor: pointer;
 			@include flex(center, flex-end, row-reverse);
-			@include minimum-size(column-gap, 1rem, 1.3020833333333335vw);
+			@include minimum-size(column-gap, 1.2258064516129032vw); //
 			text-align: center;
 
 			&:hover {
@@ -467,8 +466,8 @@ $breakpoints: (
 				}
 
 				.main-slider__pagination-dot {
-					@include minimum-size(width, 5.055rem, 6.582031249999999vw);
-					@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+					@include minimum-size(width, 3.2612903225806447vw); //
+					@include minimum-size(height, 3.2612903225806447vw); //
 					background-color: transparent;
 					border-radius: 50%;
 					border: 0.1rem solid var(--color-accent-jade-green);
@@ -482,8 +481,8 @@ $breakpoints: (
 						left: 50%;
 						transform: translate(-50%, -50%);
 						display: block;
-						@include minimum-size(width, 3.297rem, 4.29296875vw);
-						@include minimum-size(height, 3.297rem, 4.29296875vw);
+						@include minimum-size(width, 2.1270967741935483vw); //
+						@include minimum-size(height, 2.1270967741935483vw); //
 						background-color: var(--color-accent-jade-green);
 						border-radius: 50%;
 					}
