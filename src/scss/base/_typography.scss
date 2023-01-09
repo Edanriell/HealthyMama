@@ -187,11 +187,31 @@ $breakpoints: (
 		@include minimum-size(font-size, 0.903225806451613vw);
 		@include minimum-size(line-height, 1.2903225806451613vw);
 	}
+
+	.text__main-title {
+		@include minimum-size(font-size, 3.225806451612903vw);
+		@include minimum-size(line-height, 3.4193548387096775vw);
+	}
+
+	.text__regular-text--text-weight--medium {
+		@include minimum-size(font-size, 1.4838709677419355vw);
+		@include minimum-size(line-height, 2.064516129032258vw);
+	}
 }
 
 @include media(">=desktop-large") {
 	.text__regular-text--text-weight--semibold {
 		@include minimum-size(font-size, 0.7291666666666666vw);
 		@include minimum-size(line-height, 1.0416666666666665vw);
+	}
+
+	.text__main-title {
+		@include minimum-size(font-size, 2.604166666666667vw);
+		@include minimum-size(line-height, 2.7604166666666665vw);
+	}
+
+	.text__regular-text--text-weight--medium {
+		@include minimum-size(font-size, 1.1979166666666667vw);
+		@include minimum-size(line-height, 1.6666666666666667vw);
 	}
 }
