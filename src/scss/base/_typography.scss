@@ -6,6 +6,7 @@ $breakpoints: (
 	tablet: 768px,
 	desktop: 1024px,
 	desktop-large: 1550px
+	// get rid off desktop large, and make all sizes relative to 1920 !
 );
 
 .text {

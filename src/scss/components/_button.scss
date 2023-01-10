@@ -97,9 +97,9 @@ $breakpoints: (
 	.button {
 		@include minimum-size(width, 15.806451612903224vw); //
 		@include minimum-size(min-height, 4.322580645161291vw); //
-		border: 0.03225806451612903vw solid var(--color-primary-white);
-		border-radius: 3.3854166666666665vw;
-		border-width: 0.3225806451612903vw;
+		border: 0.03225806451612903vw solid var(--color-primary-white);//
+		border-radius: 4.193548387096775vw;  //
+		border-width: 0.3225806451612903vw; //
 	}
 
 	.button__text {
@@ -107,18 +107,40 @@ $breakpoints: (
 	}
 
 	.button__arrow-icon-wrapper {
-		@include minimum-size(right, 0.7rem, 0.04516129032258064vw);
-		@include minimum-size(width, 2.7741935483870965vw);
-		@include minimum-size(height, 2.7741935483870965vw);
+		@include minimum-size(right, 0.7rem, 0.04516129032258064vw); //
+		@include minimum-size(width, 2.7741935483870965vw); //
+		@include minimum-size(height, 2.7741935483870965vw); //
 	}
 
 	.button__arrow-icon {
-		display: block;
-		@include minimum-size(width, 1.3548387096774193vw);
-		@include minimum-size(height, 0.903225806451613vw);
+		display: block; //
+		@include minimum-size(width, 1.3548387096774193vw); //
+		@include minimum-size(height, 0.903225806451613vw); //
 	}
 }
 
 @include media(">=desktop-large") {
+	.button {
+		@include minimum-size(width, 12.760416666666666vw); //
+		@include minimum-size(min-height, 3.489583333333334vw); //
+		border: 0.026041666666666668vw solid var(--color-primary-white);  //
+		border-radius: 3.385416666666667vw;  //
+		border-width: 0.26041666666666663vw; //
+	}
 
+	.button__text {
+		@include minimum-size(padding-left, 2.1875vw); //
+	}
+
+	.button__arrow-icon-wrapper {
+		@include minimum-size(right, 0.7rem, 0.03645833333333333vw); //
+		@include minimum-size(width, 2.2395833333333335vw); //
+		@include minimum-size(height, 2.2395833333333335vw); //
+	}
+
+	.button__arrow-icon {
+		display: block;
+		@include minimum-size(width, 1.09375vw); //
+		@include minimum-size(height, 0.7291666666666667vw); //
+	}
 }
