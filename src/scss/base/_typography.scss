@@ -197,6 +197,11 @@ $breakpoints: (
 		@include minimum-size(font-size, 1.4838709677419355vw);
 		@include minimum-size(line-height, 2.064516129032258vw);
 	}
+
+	.text__regular-text--text-weight--bold {
+		@include minimum-size(font-size, 0.903225806451613vw);
+		@include minimum-size(line-height, 1.2903225806451613vw);
+	}
 }
 
 @include media(">=desktop-large") {
@@ -213,5 +218,10 @@ $breakpoints: (
 	.text__regular-text--text-weight--medium {
 		@include minimum-size(font-size, 1.1979166666666667vw);
 		@include minimum-size(line-height, 1.6666666666666667vw);
+	}
+
+	.text__regular-text--text-weight--bold {
+		@include minimum-size(font-size, 0.7291666666666666vw);
+		@include minimum-size(line-height, 1.0416666666666665vw);
 	}
 }

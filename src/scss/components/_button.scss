@@ -94,7 +94,29 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
+	.button {
+		@include minimum-size(width, 15.806451612903224vw); //
+		@include minimum-size(min-height, 4.322580645161291vw); //
+		border: 0.03225806451612903vw solid var(--color-primary-white);
+		border-radius: 3.3854166666666665vw;
+		border-width: 0.3225806451612903vw;
+	}
 
+	.button__text {
+		@include minimum-size(padding-left, 2.7096774193548385vw); //
+	}
+
+	.button__arrow-icon-wrapper {
+		@include minimum-size(right, 0.7rem, 0.04516129032258064vw);
+		@include minimum-size(width, 2.7741935483870965vw);
+		@include minimum-size(height, 2.7741935483870965vw);
+	}
+
+	.button__arrow-icon {
+		display: block;
+		@include minimum-size(width, 1.3548387096774193vw);
+		@include minimum-size(height, 0.903225806451613vw);
+	}
 }
 
 @include media(">=desktop-large") {
