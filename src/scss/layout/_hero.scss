@@ -4,8 +4,7 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1024px,
-	desktop-large: 1550px
+	desktop: 1024px
 );
 
 $hero-section-background-color: transparent;
@@ -75,49 +74,6 @@ $hero-section-background-color: transparent;
 }
 
 @include media(">=desktop") {
-	.hero__wrapper {
-		// @include flex(center, center, row);
-		display: grid; //
-		grid-template-columns: 30.7vw 1fr; //
-		// justify-items: center;
-		align-items: center; //
-		justify-items: center; //
-		column-gap: 14.838709677419354vw; //
-	}
-
-	.hero {
-		@include minimum-size(padding-top, 5.741935483870968vw); //
-		@include minimum-size(padding-bottom, 12.645161290322582vw); //
-	}
-
-	.hero__main-title {
-		@include minimum-size(margin-bottom, 1.870967741935484vw); //
-		@include minimum-size(padding-left, 0); //
-		@include minimum-size(padding-right, 0); //
-		text-align: left;
-	}
-
-	.hero__text {
-		@include minimum-size(margin-bottom, 3.1612903225806455vw); //
-		@include minimum-size(padding-left, 0); //
-		@include minimum-size(padding-right, 0); //
-		text-align: left;
-		max-width: 21.41935483870968vw;
-	}
-
-	.hero__button {
-		margin-right: auto;
-		margin-left: 0;
-	}
-
-	.hero__main-slider {
-	}
-
-	.hero__animated-dropping-leafs {
-	}
-}
-
-@include media(">=desktop-large") {
 	.hero__wrapper {
 		// @include flex(center, center, row);
 		display: grid; //

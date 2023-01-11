@@ -405,12 +405,12 @@ $breakpoints: (
 		min-width: 100%;
 		// change //
 		.main-slider__wrapper {
-			@include minimum-size(width, 32.387096774193544vw); //
-			@include minimum-size(height, 46.70967741935484vw); // 72.4 change
+			@include minimum-size(width, 26.145833333333336vw); //
+			@include minimum-size(height, 37.708333333333336vw); // 72.4 change
 			background-image: url("../images/main-slider-background-image.svg");
 			background-position: 0 50%;
 			background-repeat: no-repeat;
-			background-size: 32.387096774193544vw auto; //
+			background-size: 26.145833333333336vw auto; //
 		}
 
 		.main-slider__slide {
@@ -426,8 +426,8 @@ $breakpoints: (
 		}
 
 		.main-slider__slide-image-wrapper {
-			@include minimum-size(width, 32.387096774193544vw); //
-			@include minimum-size(height, 46.70967741935484vw); // 72.4 change
+			@include minimum-size(width, 26.145833333333336vw); //
+			@include minimum-size(height, 37.708333333333336vw); // 72.4 change
 		}
 
 		.main-slider__slide-image {
@@ -438,8 +438,8 @@ $breakpoints: (
 		}
 
 		.main-slider__pagination-wrapper {
-			@include minimum-size(width, 32.387096774193544vw); //
-			@include minimum-size(height, 32.387096774193544vw); //
+			@include minimum-size(width, 26.145833333333336vw); //
+			@include minimum-size(height, 26.145833333333336vw); //
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -454,20 +454,20 @@ $breakpoints: (
 		.main-slider__pagination-item {
 			cursor: pointer;
 			@include flex(center, flex-end, row-reverse);
-			@include minimum-size(column-gap, 1.2258064516129032vw); //
+			@include minimum-size(column-gap, 0.9895833333333333vw); // fix
 			text-align: center;
 
 			&:hover {
 				.main-slider__pagination-text {
 					font-family: var(--font-family-normal-600);
-					@include minimum-size(font-size, 1.1612903225806452vw); //
-					@include minimum-size(line-height, 1.6129032258064515vw); //
+					@include minimum-size(font-size, 0.9375vw); //
+					@include minimum-size(line-height, 1.3020833333333335vw); //
 					color: var(--color-neutral-baltic-sea);
 				}
 
 				.main-slider__pagination-dot {
-					@include minimum-size(width, 3.2612903225806447vw); //
-					@include minimum-size(height, 3.2612903225806447vw); //
+					@include minimum-size(width, 2.6328124999999996vw); //
+					@include minimum-size(height, 2.6328124999999996vw); //
 					background-color: transparent;
 					border-radius: 50%;
 					border: 0.1rem solid var(--color-accent-jade-green);
@@ -481,8 +481,8 @@ $breakpoints: (
 						left: 50%;
 						transform: translate(-50%, -50%);
 						display: block;
-						@include minimum-size(width, 2.1270967741935483vw); //
-						@include minimum-size(height, 2.1270967741935483vw); //
+						@include minimum-size(width, 1.7171874999999999vw); //
+						@include minimum-size(height, 1.7171874999999999vw); //
 						background-color: var(--color-accent-jade-green);
 						border-radius: 50%;
 					}
@@ -492,43 +492,43 @@ $breakpoints: (
 
 		.main-slider__pagination-item-0 {
 			position: absolute;
-			@include minimum-size(top, 4.193548387096775vw); //
-			@include minimum-size(right, 26.322580645161292vw); //
-			@include minimum-size(width, 10.32258064516129vw); //
+			@include minimum-size(top, 3.385416666666667vw); //
+			@include minimum-size(right, 21.25vw); //
+			@include minimum-size(width, 8.333333333333332vw); //
 			left: auto;
 
 			&:hover {
-				@include minimum-size(top, 4.193548387096775vw); //
-				@include minimum-size(right, 26.7741935483871vw); //
-				@include minimum-size(width, 13.225806451612904vw); //
+				@include minimum-size(top, 3.385416666666667vw); //
+				@include minimum-size(right, 21.614583333333336vw); //
+				@include minimum-size(width, 10.677083333333332vw); //
 			}
 		}
 
 		.main-slider__pagination-item-1 {
 			position: absolute;
-			@include minimum-size(top, 14.838709677419354vw); //
-			@include minimum-size(right, 31.032258064516128vw); //
-			@include minimum-size(width, 9.032258064516128vw); //
+			@include minimum-size(top, 11.979166666666666vw); //
+			@include minimum-size(right, 25.052083333333336vw); //
+			@include minimum-size(width, 7.291666666666667vw); //
 			left: auto;
 
 			&:hover {
-				@include minimum-size(top, 14.838709677419354vw); //
-				@include minimum-size(right, 30.64516129032258vw); //
-				@include minimum-size(width, 9.35483870967742vw); //
+				@include minimum-size(top, 11.979166666666666vw); //
+				@include minimum-size(right, 24.739583333333336vw); //
+				@include minimum-size(width, 7.552083333333333vw); //
 			}
 		}
 
 		.main-slider__pagination-item-2 {
 			position: absolute;
-			@include minimum-size(right, 27.419354838709676vw); //
-			@include minimum-size(top, 25.483870967741932vw); //
-			@include minimum-size(width, 12.258064516129032vw); //
+			@include minimum-size(right, 22.135416666666664vw); //
+			@include minimum-size(top, 20.572916666666664vw); //
+			@include minimum-size(width, 9.895833333333332vw); //
 			left: auto;
 
 			&:hover {
-				@include minimum-size(right, 26.129032258064516vw); //
-				@include minimum-size(top, 25.483870967741932vw); //
-				@include minimum-size(width, 10.903225806451614vw); //
+				@include minimum-size(right, 21.09375vw); //
+				@include minimum-size(top, 20.572916666666664vw); //
+				@include minimum-size(width, 8.802083333333334vw); //
 			}
 		}
 
@@ -536,14 +536,14 @@ $breakpoints: (
 
 			.main-slider__pagination-text {
 				font-family: var(--font-family-normal-600);
-				@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
-				@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
+				@include minimum-size(font-size, 0.9375vw); //
+				@include minimum-size(line-height, 1.3020833333333335vw); //
 				color: var(--color-neutral-baltic-sea);
 			}
 
 			.main-slider__pagination-dot {
-				@include minimum-size(width, 5.055rem, 6.582031249999999vw);
-				@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+				@include minimum-size(width, 2.6328124999999996vw); //
+				@include minimum-size(height, 2.6328124999999996vw); //
 				background-color: transparent;
 				border-radius: 50%;
 				border: 0.1rem solid var(--color-accent-jade-green);
@@ -557,8 +557,8 @@ $breakpoints: (
 					left: 50%;
 					transform: translate(-50%, -50%);
 					display: block;
-					@include minimum-size(width, 3.297rem, 4.29296875vw);
-					@include minimum-size(height, 3.297rem, 4.29296875vw);
+					@include minimum-size(width, 1.7171874999999999vw); //
+					@include minimum-size(height, 1.7171874999999999vw); //
 					background-color: var(--color-accent-jade-green);
 					border-radius: 50%;
 				}
@@ -566,33 +566,33 @@ $breakpoints: (
 
 			.main-slider__pagination-item-0 {
 				position: absolute;
-				@include minimum-size(top, 6.5rem, 8.463541666666668vw);
-				@include minimum-size(right, 41.5rem, 54.036458333333336vw);
-				@include minimum-size(width, 20.5rem, 26.692708333333332vw);
+				@include minimum-size(top, 3.3854166666666665vw); //
+				@include minimum-size(right, 21.614583333333336vw); //
+				@include minimum-size(width, 10.677083333333332vw); //
 				left: auto;
 			}
 
 			.main-slider__pagination-item-1 {
 				position: absolute;
-				@include minimum-size(top, 23rem, 29.947916666666668vw);
-				@include minimum-size(right, 47.5rem, 61.848958333333336vw);
-				@include minimum-size(width, 14.5rem, 18.880208333333336vw);
+				@include minimum-size(top, 11.979166666666668vw);
+				@include minimum-size(right, 24.739583333333336vw);
+				@include minimum-size(width, 7.552083333333333vw);
 				left: auto;
 			}
 
 			.main-slider__pagination-item-2 {
 				position: absolute;
-				@include minimum-size(right, 40.5rem, 52.734375vw);
-				@include minimum-size(top, 39.5rem, 51.432291666666664vw);
-				@include minimum-size(width, 16.9rem, 22.005208333333336vw);
+				@include minimum-size(right, 21.09375vw); //
+				@include minimum-size(top, 20.572916666666664vw); //
+				@include minimum-size(width, 8.802083333333334vw); //
 				left: auto;
 			}
 		}
 
 		.main-slider__pagination-dot {
 			flex-shrink: 0;
-			@include minimum-size(width, 1.843225806451613vw); //
-			@include minimum-size(height, 1.843225806451613vw); //
+			@include minimum-size(width, 1.4880208333333333vw); //
+			@include minimum-size(height, 1.4880208333333333vw); //
 			background-color: transparent;
 			border-radius: 50%;
 			border: 0.1rem solid var(--color-accent-jade-green);
@@ -606,8 +606,8 @@ $breakpoints: (
 				left: 50%;
 				transform: translate(-50%, -50%);
 				display: block;
-				@include minimum-size(width, 1.1341935483870966vw); //
-				@include minimum-size(height, 1.1341935483870966vw); //
+				@include minimum-size(width, 0.9156249999999999vw); //
+				@include minimum-size(height, 0.9156249999999999vw); //
 				background-color: var(--color-accent-jade-green);
 				border-radius: 50%;
 			}
@@ -615,8 +615,8 @@ $breakpoints: (
 
 		.main-slider__pagination-text {
 			font-family: var(--font-family-normal-600);
-			@include minimum-size(font-size, 0.903225806451613vw); //
-			@include minimum-size(line-height, 1.2903225806451613vw); //
+			@include minimum-size(font-size, 0.7291666666666667vw); //
+			@include minimum-size(line-height, 1.0416666666666665vw); //
 			color: var(--color-neutral-pale-slate);
 			position: relative;
 		}
@@ -633,8 +633,4 @@ $breakpoints: (
 		.main-slider__next-slide-button-icon {
 		}
 	}
-}
-
-@include media(">=desktop-large") {
-
 }
