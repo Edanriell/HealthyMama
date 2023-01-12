@@ -191,7 +191,6 @@ $breakpoints: (
 		}
 
 		.main-slider__pagination-wrapper {
-
 			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
 			@include minimum-size(height, 50.2rem, 65.36458333333334vw);
 			position: absolute;
@@ -217,6 +216,19 @@ $breakpoints: (
 					@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
 					@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
 					color: var(--color-neutral-baltic-sea);
+
+					&::after {
+						/////////////////////////////////////////////////////
+						position: relative;
+						content: "";
+						@include minimum-size(width, 5.055rem, 6.582031249999999vw);
+						@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+						display: block;
+						background-image: url("../images/main-slider-dot.svg");
+						background-size: 6.582031249999999vw 6.582031249999999vw;
+						z-index: 2;
+						opacity: 1;
+					}
 				}
 			}
 		}
@@ -238,14 +250,14 @@ $breakpoints: (
 		.main-slider__pagination-item-1 {
 			position: absolute;
 			@include minimum-size(top, 23rem, 29.947916666666668vw);
-			@include minimum-size(right, 48.1rem, 62.630208333333336vw);
+			@include minimum-size(right, 48rem, 6.25vw);
 			@include minimum-size(width, 14rem, 18.229166666666664vw);
 			left: auto;
 
 			&:hover {
 				@include minimum-size(top, 23rem, 29.947916666666668vw);
-				@include minimum-size(right, 47.5rem, 61.848958333333336vw);
-				@include minimum-size(width, 14.5rem, 18.880208333333336vw);
+				@include minimum-size(right, 47.3rem, 61.588541666666664vw);
+				@include minimum-size(width, 18.5rem, 24.088541666666664vw);
 			}
 		}
 
@@ -259,17 +271,33 @@ $breakpoints: (
 			&:hover {
 				@include minimum-size(right, 40.5rem, 52.734375vw);
 				@include minimum-size(top, 39.5rem, 51.432291666666664vw);
-				@include minimum-size(width, 16.9rem, 22.005208333333336vw);
+				@include minimum-size(width, 25rem, 32.55208333333333vw);
+
+				// > p::after {
+				// 	margin-left: -2rem;
+				// }
 			}
 		}
 
 		.main-slider__pagination-item--state--active {
-
 			.main-slider__pagination-text {
 				font-family: var(--font-family-normal-600);
 				@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
 				@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
 				color: var(--color-neutral-baltic-sea);
+
+				&::after {
+					/////////////////////////////////////////////////////
+					position: relative;
+					content: "";
+					@include minimum-size(width, 5.055rem, 6.582031249999999vw);
+					@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 6.582031249999999vw 6.582031249999999vw;
+					z-index: 2;
+					opacity: 1;
+				}
 			}
 
 			.main-slider__pagination-item-0 {
@@ -305,16 +333,17 @@ $breakpoints: (
 			position: relative;
 			// Fix tablet buttons
 			@include flex(center, center, row);
-			column-gap: 0.7291666666666666vw;
+			column-gap: 1.3020833333333335vw;
 
-			&::after { /////////////////////////////////////////////////////
+			&::after {
+				/////////////////////////////////////////////////////
 				position: relative;
 				content: "";
-				width: 1.4880208333333333vw;
-				height: 1.4880208333333333vw;
+				@include minimum-size(width, 2.857rem, 3.7200520833333335vw);
+				@include minimum-size(height, 2.857rem, 3.7200520833333335vw);
 				display: block;
 				background-image: url("../images/main-slider-dot.svg");
-				background-size: 1.4880208333333333vw 1.4880208333333333vw;
+				background-size: 3.7200520833333335vw 3.7200520833333335vw;
 				z-index: 2;
 				opacity: 0.53;
 			}
@@ -409,7 +438,8 @@ $breakpoints: (
 					@include minimum-size(line-height, 1.3020833333333335vw); //
 					color: var(--color-neutral-baltic-sea);
 
-					&::after { /////////////////////////////////////////////////////
+					&::after {
+						/////////////////////////////////////////////////////
 						position: relative;
 						content: "";
 						width: 2.6328124999999996vw;
@@ -454,7 +484,7 @@ $breakpoints: (
 
 		.main-slider__pagination-item-2 {
 			position: absolute;
-			@include minimum-size(right, 22.30vw); //
+			@include minimum-size(right, 22.3vw); //
 			@include minimum-size(top, 20.572916666666664vw); //
 			@include minimum-size(width, 10.1vw); //
 			left: auto;
@@ -467,14 +497,14 @@ $breakpoints: (
 		}
 
 		.main-slider__pagination-item--state--active {
-
 			.main-slider__pagination-text {
 				font-family: var(--font-family-normal-600);
 				@include minimum-size(font-size, 0.9375vw); //
 				@include minimum-size(line-height, 1.3020833333333335vw); //
 				color: var(--color-neutral-baltic-sea);
 
-				&::after { /////////////////////////////////////////////////////
+				&::after {
+					/////////////////////////////////////////////////////
 					position: relative;
 					content: "";
 					width: 2.6328124999999996vw;
@@ -520,7 +550,8 @@ $breakpoints: (
 			@include flex(center, center, row);
 			column-gap: 0.7291666666666666vw;
 
-			&::after { /////////////////////////////////////////////////////
+			&::after {
+				/////////////////////////////////////////////////////
 				position: relative;
 				content: "";
 				width: 1.4880208333333333vw;
