@@ -4,7 +4,7 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
 .animated-dropping-leafs {
@@ -135,6 +135,81 @@ $breakpoints: (
 @include media(">=desktop") {
 	.animated-dropping-leafs--size--desktop {
 		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
+			position: absolute;
+			@include minimum-size(top, -5.427083333333334vw);
+			@include minimum-size(left, 89.86458333333333vw);
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 10.232291666666667vw);
+				@include minimum-size(width, 13.038020833333333vw);
+				object-fit: cover;
+			}
+		}
+		// FIX leafs add decorative circles
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
+			position: absolute;
+			@include minimum-size(top, 29.5rem, 38.41145833333333vw);
+			@include minimum-size(left, 5rem, 6.510416666666667vw);
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 7.108rem, 9.255208333333332vw);
+				@include minimum-size(width, 9.053rem, 11.787760416666666vw);
+				object-fit: cover;
+			}
+		}
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(3) {
+			position: absolute;
+			@include minimum-size(top, 20rem, 26.041666666666668vw);
+			@include minimum-size(left, 65rem, 84.63541666666666vw);
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 3.999rem, 5.20703125vw);
+				@include minimum-size(width, 5.093rem, 6.631510416666667vw);
+				object-fit: cover;
+			}
+		}
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(4) {
+			position: absolute;
+			@include minimum-size(top, 43rem, 55.989583333333336vw);
+			@include minimum-size(left, 64rem, 83.33333333333334vw);
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 8.448rem, 11vw);
+				@include minimum-size(width, 8.03rem, 10.455729166666666vw);
+				object-fit: cover;
+			}
+		}
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(5) {
+			position: absolute;
+			@include minimum-size(top, 0);
+			@include minimum-size(left, 0);
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 8.448rem, 11vw);
+				@include minimum-size(width, 8.03rem, 10.455729166666666vw);
+				object-fit: cover;
+			}
+		}
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(6) {
+			position: absolute;
+			@include minimum-size(top, 0);
+			@include minimum-size(left, 0);
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 8.448rem, 11vw);
+				@include minimum-size(width, 8.03rem, 10.455729166666666vw);
+				object-fit: cover;
+			}
+		}
 	}
 
 	.animated-dropping-leafs--size--tablet {

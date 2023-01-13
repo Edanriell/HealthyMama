@@ -4,8 +4,7 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1024px,
-	desktop-large: 1550px
+	desktop: 1024px
 );
 
 $header-background-color: transparent;
@@ -37,12 +36,7 @@ $header-background-color: transparent;
 
 @include media(">=desktop") {
 	.header {
-		@include minimum-size(padding-top, 2.6451612903225805vw);
-	}
-}
-
-@include media(">=desktop-large") {
-	.header {
 		@include minimum-size(padding-top, 2.1354166666666665vw);
 	}
 }
+

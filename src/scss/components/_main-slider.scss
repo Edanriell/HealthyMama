@@ -263,7 +263,7 @@ $breakpoints: (
 		.main-slider__pagination-item-0 {
 			position: absolute;
 			@include minimum-size(top, 6.5rem, 8.463541666666668vw);
-			@include minimum-size(right, 40.8rem, 53.125vw);
+			@include minimum-size(right, 41.8rem, 54.427083333333336vw);
 			// @include minimum-size(width, 16rem, 20.833333333333336vw);
 			left: auto;
 			width: unset;
@@ -287,7 +287,7 @@ $breakpoints: (
 		.main-slider__pagination-item-1 {
 			position: absolute;
 			@include minimum-size(top, 23rem, 29.947916666666668vw);
-			@include minimum-size(right, 48rem, 6.25vw);
+			@include minimum-size(right, 48.4rem, 63.020833333333336vw);
 			// @include minimum-size(width, 14rem, 18.229166666666664vw);
 			left: auto;
 			width: unset;
@@ -538,7 +538,7 @@ $breakpoints: (
 		.main-slider__pagination-item-0 {
 			position: absolute;
 			@include minimum-size(top, 3.385416666666667vw); //
-			@include minimum-size(right, 21vw); //
+			@include minimum-size(right, 21.666666666666668vw); //
 			// @include minimum-size(width, 8.802083333333334vw); //
 			left: auto;
 			width: unset;
@@ -549,7 +549,7 @@ $breakpoints: (
 
 			&:hover {
 				@include minimum-size(top, 3.385416666666667vw); //
-				@include minimum-size(right, 21.45vw); //
+				@include minimum-size(right, 21.614583333333336vw); //
 				// @include minimum-size(width, 10.9375vw); //
 				width: unset;
 
@@ -562,7 +562,7 @@ $breakpoints: (
 		.main-slider__pagination-item-1 {
 			position: absolute;
 			@include minimum-size(top, 11.979166666666666vw); //
-			@include minimum-size(right, 25.25vw); //
+			@include minimum-size(right, 25.3125vw); //
 			// @include minimum-size(width, 7.34375vw); //
 			left: auto;
 			width: unset;
@@ -573,7 +573,7 @@ $breakpoints: (
 
 			&:hover {
 				@include minimum-size(top, 11.979166666666666vw); //
-				@include minimum-size(right, 24.4vw); //
+				@include minimum-size(right, 24.739583333333336vw); //
 				// @include minimum-size(width, 10.208333333333334vw); //
 				width: unset;
 
@@ -585,7 +585,7 @@ $breakpoints: (
 
 		.main-slider__pagination-item-2 {
 			position: absolute;
-			@include minimum-size(right, 22.3vw); //
+			@include minimum-size(right, 22.5vw); //
 			@include minimum-size(top, 20.572916666666664vw); //
 			// @include minimum-size(width, 10.1vw); //
 			left: auto;
@@ -596,7 +596,7 @@ $breakpoints: (
 			}
 
 			&:hover {
-				@include minimum-size(right, 21.7vw); //
+				@include minimum-size(right, 21.4vw); //
 				@include minimum-size(top, 20.572916666666664vw); //
 				// @include minimum-size(width, 13.4vw); //
 				width: unset;
