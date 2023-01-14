@@ -34,6 +34,8 @@ $breakpoints: (
 	}
 
 	.main-navigation__link {
+		position: relative;
+		z-index: 2;
 
 		&:hover,
 		&:focus {

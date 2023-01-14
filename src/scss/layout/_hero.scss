@@ -16,6 +16,18 @@ $hero-section-background-color: transparent;
 	@include minimum-size(padding-bottom, 3rem, 9.375vw);
 }
 
+.hero-circle-1 {
+	display: none;
+}
+
+.hero-circle-2 {
+	display: none;
+}
+
+.hero-circle-3 {
+	display: none;
+}
+
 .hero__wrapper {
 	@include flex(flex-start, flex-start, column);
 }
@@ -74,6 +86,33 @@ $hero-section-background-color: transparent;
 }
 
 @include media(">=desktop") {
+	.hero-circle-1 {
+		display: block;
+		position: absolute;
+		top: -3.4895833333333335vw;
+		left: 40vw;
+		width: 55.00000000000001vw;
+		height: 55.00000000000001vw;
+	}
+
+	.hero-circle-2 {
+		display: block;
+		position: absolute;
+		top: -3.4895833333333335vw;
+		left: 30.15625vw;
+		width: 74.84375vw;
+		height: 74.84375vw;
+	}
+
+	.hero-circle-3 {
+		display: block;
+		position: absolute;
+		top: -3.4895833333333335vw;
+		left: 17.03125vw;
+		width: 101.09375vw;
+		height: 101.09375vw;
+	}
+
 	.hero__wrapper {
 		// @include flex(center, center, row);
 		display: grid; //

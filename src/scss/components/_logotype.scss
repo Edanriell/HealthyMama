@@ -12,6 +12,8 @@ $breakpoints: (
 }
 
 .logotype__link {
+	position: relative;
+	z-index: 2;
 }
 
 .logotype__text-content {
