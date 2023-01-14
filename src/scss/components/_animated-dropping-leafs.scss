@@ -150,63 +150,63 @@ $breakpoints: (
 				object-fit: cover;
 			}
 		}
-		// FIX leafs add decorative circles
+
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
 			position: absolute;
-			@include minimum-size(top, 29.5rem, 38.41145833333333vw);
-			@include minimum-size(left, 5rem, 6.510416666666667vw);
+			@include minimum-size(top, 9.0625vw);
+			@include minimum-size(left, 41.041666666666664vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 7.108rem, 9.255208333333332vw);
-				@include minimum-size(width, 9.053rem, 11.787760416666666vw);
+				@include minimum-size(height, 1.240625vw);
+				@include minimum-size(width, 1.5802083333333334vw);
 				object-fit: cover;
 			}
 		}
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(3) {
 			position: absolute;
-			@include minimum-size(top, 20rem, 26.041666666666668vw);
-			@include minimum-size(left, 65rem, 84.63541666666666vw);
+			@include minimum-size(top, 19.53125vw);
+			@include minimum-size(left, 10.729166666666666vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 3.999rem, 5.20703125vw);
-				@include minimum-size(width, 5.093rem, 6.631510416666667vw);
+				@include minimum-size(height, 3.0796875000000004vw);
+				@include minimum-size(width, 3.922916666666666vw);
 				object-fit: cover;
 			}
 		}
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(4) {
 			position: absolute;
-			@include minimum-size(top, 43rem, 55.989583333333336vw);
-			@include minimum-size(left, 64rem, 83.33333333333334vw);
+			@include minimum-size(top, 23.541666666666668vw);
+			@include minimum-size(left, 95.98958333333333vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 8.448rem, 11vw);
-				@include minimum-size(width, 8.03rem, 10.455729166666666vw);
+				@include minimum-size(height, 2.6526041666666664vw);
+				@include minimum-size(width, 2.0828124999999997vw);
 				object-fit: cover;
 			}
 		}
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(5) {
 			position: absolute;
-			@include minimum-size(top, 0);
-			@include minimum-size(left, 0);
+			@include minimum-size(top, 41.09375vw);
+			@include minimum-size(left, 34.739583333333336vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 8.448rem, 11vw);
-				@include minimum-size(width, 8.03rem, 10.455729166666666vw);
+				@include minimum-size(height, 5.216145833333333vw);
+				@include minimum-size(width, 6.643229166666667vw);
 				object-fit: cover;
 			}
 		}
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(6) {
 			position: absolute;
-			@include minimum-size(top, 0);
-			@include minimum-size(left, 0);
+			@include minimum-size(top, 46.197916666666664vw);
+			@include minimum-size(left, 86.30208333333333vw);
 
 			.animated-dropping-leafs__animated-leaf {
-				@include minimum-size(height, 8.448rem, 11vw);
-				@include minimum-size(width, 8.03rem, 10.455729166666666vw);
+				@include minimum-size(height, 4.182291666666667vw);
+				@include minimum-size(width, 3.2838541666666665vw);
 				object-fit: cover;
 			}
 		}
