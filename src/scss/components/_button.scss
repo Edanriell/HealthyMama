@@ -14,9 +14,9 @@ $breakpoints: (
 	position: relative;
 	cursor: pointer;
 	border: 0.15625vw solid var(--color-primary-white);
-    border-radius: 20.3125vw;
-    border-width: 1.5625vw;
-	box-shadow: 0 0 0 .1rem var(--color-neutral-cyan-cornflower-blue);
+	border-radius: 20.3125vw;
+	border-width: 1.5625vw;
+	box-shadow: 0 0 0 0.1rem var(--color-neutral-cyan-cornflower-blue);
 	word-wrap: break-word;
 	outline: 0;
 	@include center-block;
@@ -94,26 +94,26 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.button {
-		@include minimum-size(width, 12.760416666666666vw); //
-		@include minimum-size(min-height, 3.4895833333333335vw); //
-		border: 0.026041666666666668vw solid var(--color-primary-white); //
-		border-radius: 3.3854166666666665vw; //
-		border-width: 0.26041666666666663vw; //
+		@include minimum-size(width, 12.760416666666666vw);
+		@include minimum-size(min-height, 3.4895833333333335vw);
+		border: 0.026041666666666668vw solid var(--color-primary-white);
+		border-radius: 3.3854166666666665vw;
+		border-width: 0.26041666666666663vw;
 	}
 
 	.button__text {
-		@include minimum-size(padding-left, 2.1875vw); //
+		@include minimum-size(padding-left, 2.1875vw);
 	}
 
 	.button__arrow-icon-wrapper {
-		@include minimum-size(right, 0.3645833333333333vw); //
-		@include minimum-size(width, 2.2395833333333335vw); //
-		@include minimum-size(height, 2.2395833333333335vw); //
+		@include minimum-size(right, 0.3645833333333333vw);
+		@include minimum-size(width, 2.2395833333333335vw);
+		@include minimum-size(height, 2.2395833333333335vw);
 	}
 
 	.button__arrow-icon {
 		display: block;
-		@include minimum-size(width, 1.09375vw); //
-		@include minimum-size(height, 0.7291666666666666vw); //
+		@include minimum-size(width, 1.09375vw);
+		@include minimum-size(height, 0.7291666666666666vw);
 	}
 }

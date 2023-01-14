@@ -12,11 +12,10 @@ $breakpoints: (
 
 @include media(">=tablet") {
 	.main-navigation {
-		display: grid
+		display: grid;
 	}
 
 	.main-navigation__item {
-
 		&:nth-child(1) {
 			grid-column: 1 / 2;
 			grid-row: 1 / 2;
@@ -55,4 +54,3 @@ $breakpoints: (
 	.main-navigation__link {
 	}
 }
-

@@ -418,8 +418,8 @@ $breakpoints: (
 		}
 
 		.main-slider__pagination-wrapper {
-			@include minimum-size(width, 26.145833333333336vw); //
-			@include minimum-size(height, 26.145833333333336vw); //
+			@include minimum-size(width, 26.145833333333336vw);
+			@include minimum-size(height, 26.145833333333336vw);
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -435,7 +435,7 @@ $breakpoints: (
 		.main-slider__pagination-item {
 			cursor: pointer;
 			@include flex(center, flex-end, row);
-			@include minimum-size(column-gap, 0.9895833333333333vw); // fix
+			@include minimum-size(column-gap, 0.9895833333333333vw);
 			text-align: center;
 
 			&::after {
@@ -453,8 +453,8 @@ $breakpoints: (
 			&:hover {
 				.main-slider__pagination-text {
 					font-family: var(--font-family-normal-600);
-					@include minimum-size(font-size, 0.9375vw); //
-					@include minimum-size(line-height, 1.3020833333333335vw); //
+					@include minimum-size(font-size, 0.9375vw);
+					@include minimum-size(line-height, 1.3020833333333335vw);
 					color: var(--color-neutral-baltic-sea);
 				}
 
@@ -559,9 +559,9 @@ $breakpoints: (
 
 			.main-slider__pagination-item-0 {
 				position: absolute;
-				@include minimum-size(top, 3.3854166666666665vw); //
-				@include minimum-size(right, 21.614583333333336vw); //
-				@include minimum-size(width, 10.677083333333332vw); //
+				@include minimum-size(top, 3.3854166666666665vw);
+				@include minimum-size(right, 21.614583333333336vw);
+				@include minimum-size(width, 10.677083333333332vw);
 				left: auto;
 			}
 
@@ -575,17 +575,17 @@ $breakpoints: (
 
 			.main-slider__pagination-item-2 {
 				position: absolute;
-				@include minimum-size(right, 21.09375vw); //
-				@include minimum-size(top, 20.572916666666664vw); //
-				@include minimum-size(width, 8.802083333333334vw); //
+				@include minimum-size(right, 21.09375vw);
+				@include minimum-size(top, 20.572916666666664vw);
+				@include minimum-size(width, 8.802083333333334vw);
 				left: auto;
 			}
 		}
 
 		.main-slider__pagination-text {
 			font-family: var(--font-family-normal-600);
-			@include minimum-size(font-size, 0.7291666666666667vw); //
-			@include minimum-size(line-height, 1.0416666666666665vw); //
+			@include minimum-size(font-size, 0.7291666666666667vw);
+			@include minimum-size(line-height, 1.0416666666666665vw);
 			color: var(--color-neutral-pale-slate);
 			position: relative;
 			@include flex(center, center, row);
