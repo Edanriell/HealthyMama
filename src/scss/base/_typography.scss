@@ -201,4 +201,14 @@ $breakpoints: (
 		@include minimum-size(font-size, 0.7291666666666666vw);
 		@include minimum-size(line-height, 1.0416666666666665vw);
 	}
+
+	.text__section-title {
+		@include minimum-size(font-size, 2.1354166666666665vw);
+		@include minimum-size(line-height, 2.5vw);
+	}
+
+	.text__medium-text--text-weight--medium {
+		@include minimum-size(font-size, 1.0416666666666665vw);
+		@include minimum-size(line-height, 1.4583333333333333vw);
+	}
 }

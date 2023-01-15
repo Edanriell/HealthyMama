@@ -6,7 +6,7 @@ $background-color-section-reasons-eat-properly: var(--color-accent-jade-green);
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
 .reasons-eat-properly {
@@ -133,5 +133,65 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
+	.reasons-eat-properly {
+		@include minimum-size(padding-top, 5rem, 6.510416666666667vw);
+		background-image: url("../images/reasons-eat-properly-section-decorative-background-image-circle1.svg");
+		background-position: 55.338541666666664vw 72.265625vw;
+		background-repeat: no-repeat;
+		background-size: 65.625vw 65.625vw;
+	}
 
+	.reasons-eat-properly__wrapper {
+		@include flex(center, center, row);
+	}
+
+	.reasons-eat-properly__main-reasons {
+		padding-bottom: 0;
+	}
+
+	.reasons-eat-properly__section-title {
+		@include minimum-size(padding-bottom, 4rem, 5.208333333333334vw);
+		@include minimum-size(padding-left, 7.9rem, 10.286458333333332vw);
+	}
+
+	.reasons-eat-properly__reasons-list {
+		@include minimum-size(padding-left, 9.8rem, 12.760416666666666vw);
+	}
+
+	.reasons-eat-properly__animated-dropping-leafs-mobile {
+		display: none;
+	}
+
+	.reasons-eat-properly__animated-dropping-leafs-desktop {
+		display: none;
+	}
+
+	.reasons-eat-properly__animated-dropping-tablet {
+		display: block;
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
+			position: absolute;
+			@include minimum-size(top, 79rem, 102.86458333333333vw);
+			@include minimum-size(left, 51rem, 66.40625vw);
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 5.309rem, 6.912760416666668vw);
+				@include minimum-size(width, 6.762rem, 8.804687500000002vw);
+				object-fit: cover;
+			}
+		}
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
+			position: absolute;
+			@include minimum-size(top, 85rem, 110.67708333333333vw);
+			@include minimum-size(left, 14rem, 18.229166666666664vw);
+			z-index: 1;
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 10.06rem, 13.098958333333332vw);
+				@include minimum-size(width, 12.813rem, 16.68359375vw);
+				object-fit: cover;
+			}
+		}
+	}
 }
