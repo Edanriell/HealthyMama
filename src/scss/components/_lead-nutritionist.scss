@@ -80,28 +80,28 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.lead-nutritionist {
-		@include minimum-size(margin-bottom, -10.8rem, -14.0625vw);
+		@include minimum-size(margin-bottom, -10.8rem, -14.0625vw); // FIX VALUE FOR DESKTOP
 	}
 
 	.lead-nutritionist__image-wrapper {
-		@include minimum-size(width, 53.8rem, 70.05208333333334vw);
-		@include minimum-size(height, 50rem, 65.10416666666666vw);
+		@include minimum-size(width, 32.604166666666664vw); // **
+		@include minimum-size(height, 30.312499999999996vw); // **
 	}
 
 	.lead-nutritionist__image-description {
-		@include minimum-size(width, 29.822rem, 38.83072916666667vw);
-		@include minimum-size(height, 6.188rem, 8.057291666666668vw);
-		@include minimum-size(border-radius, 6.5rem, 8.463541666666668vw);
-		outline-offset: -0.43rem;
-		@include minimum-size(margin-top, -2.7rem, -3.515625vw);
+		@include minimum-size(width, 18.072916666666668vw); // **
+		@include minimum-size(height, 3.75vw); // **
+		@include minimum-size(border-radius, 3.3854166666666665vw); // **
+		outline-offset: -0.5rem; // **
+		@include minimum-size(margin-top, -1.6145833333333335vw); // **
 	}
 
 	.lead-nutritionist__specialization {
-		@include minimum-size(padding-top, 0.4rem, 0.5208333333333333vw);
+		@include minimum-size(padding-top, 0.26041666666666663vw); // **
 	}
 
 	.lead-nutritionist__initials {
-		@include minimum-size(font-size, var(--font-size-tablet-15), 1.953125vw);
-		@include minimum-size(line-height, 2.1rem, 2.734375vw);
+		@include minimum-size(font-size, 0.8333333333333334vw); // **
+		@include minimum-size(line-height, 1.1458333333333333vw); // **
 	}
 }

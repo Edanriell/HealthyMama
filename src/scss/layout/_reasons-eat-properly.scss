@@ -142,7 +142,7 @@ $breakpoints: (
 	}
 
 	.reasons-eat-properly__wrapper {
-		@include flex(center, center, row);
+		@include flex(center, center, row); // **
 	}
 
 	.reasons-eat-properly__main-reasons {
