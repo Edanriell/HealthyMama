@@ -46,16 +46,21 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.reasons-list {
-		@include minimum-size(row-gap, 2rem, 2.604166666666667vw);
+		@include minimum-size(row-gap, 0); // **
+		@include minimum-size(column-gap, 1.09375vw); // **
+		@include flex(flex-start, flex-start, row); // **
+		flex-wrap: wrap; // **
+		width: 41.197916666666664vw; // **
 	}
 
 	.reasons-list__item {
-		@include minimum-size(column-gap, 2rem, 2.604166666666667vw);
+		@include minimum-size(column-gap, 0);
+		width: 19.791666666666664vw; // **
 	}
 
 	.reasons-list__checkmark {
-		@include minimum-size(width, 1.3rem, 1.6927083333333333vw);
-		@include minimum-size(height, 1.1rem, 1.4322916666666665vw);
+		@include minimum-size(width, 1.3020833333333335vw); // **
+		@include minimum-size(height, 0.9375vw); // **
 		@include minimum-size(margin-top, 1rem, 1.3020833333333335vw);
 	}
 }

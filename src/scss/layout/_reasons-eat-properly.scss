@@ -155,7 +155,7 @@ $breakpoints: (
 	}
 
 	.reasons-eat-properly__reasons-list {
-		@include minimum-size(padding-left, 9.8rem, 12.760416666666666vw);
+		@include minimum-size(padding-left, 0); // **
 	}
 
 	.reasons-eat-properly__animated-dropping-leafs-mobile {
