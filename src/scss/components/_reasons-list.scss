@@ -24,6 +24,10 @@ $breakpoints: (
 	flex-shrink: 0;
 }
 
+.reasons-list__checkmark--type--desktop {
+	display: none;
+}
+
 .reasons-list__reason-text {
 	text-align: left;
 }
@@ -59,8 +63,14 @@ $breakpoints: (
 	}
 
 	.reasons-list__checkmark {
+		display: none; // **
+	}
+
+	.reasons-list__checkmark--type--desktop {
+		display: block; // **
 		@include minimum-size(width, 1.3020833333333335vw); // **
 		@include minimum-size(height, 0.9375vw); // **
-		@include minimum-size(margin-top, 1rem, 1.3020833333333335vw);
+		@include minimum-size(margin-top, 0.15625vw); // **
+		fill: none; // **
 	}
 }
