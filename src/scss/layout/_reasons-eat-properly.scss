@@ -136,10 +136,57 @@ $breakpoints: (
 	.reasons-eat-properly {
 		@include minimum-size(padding-top, 0); // **
 		background-image: unset; // **
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: pink;
+			background-image: url("../images/reasons-eat-properly-section-background.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 35vw;
+			height: 19.6875vw;
+			z-index: 2;
+		}
 	}
 
 	.reasons-eat-properly__wrapper {
 		@include flex(center, center, row); // **
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 6.5625vw;
+			right: -32.03125vw;
+			background-color: green;
+			background-image: url("../images/half-circle-bottom.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 26.25vw;
+			height: 26.25vw;
+			z-index: 1;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 5.9375vw;
+			left: -29.5vw;
+			background-color: green;
+			background-image: url("../images/half-circle-top.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 26.25vw;
+			height: 26.25vw;
+			z-index: 1;
+		}
 	}
 
 	.reasons-eat-properly__main-reasons {

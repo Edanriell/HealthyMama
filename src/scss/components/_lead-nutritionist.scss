@@ -82,6 +82,7 @@ $breakpoints: (
 	.lead-nutritionist {
 		@include minimum-size(margin-bottom, -2.1354166666666665vw); // FIX VALUE FOR DESKTOP
 		@include minimum-size(margin-top, -10.625vw); // FIX VALUE FOR DESKTOP
+		z-index: 2;
 	}
 
 	.lead-nutritionist__image-wrapper {

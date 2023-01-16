@@ -50,16 +50,38 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.reasons-list {
-		@include minimum-size(row-gap, 0); // **
+		@include minimum-size(row-gap, 1.0416666666666665vw); // **
 		@include minimum-size(column-gap, 1.09375vw); // **
 		@include flex(flex-start, flex-start, row); // **
 		flex-wrap: wrap; // **
 		width: 41.197916666666664vw; // **
+		z-index: 2;
+		position: relative;
 	}
 
 	.reasons-list__item {
-		@include minimum-size(column-gap, 0);
+		@include minimum-size(column-gap, 0.625vw); // **
 		width: 19.791666666666664vw; // **
+
+		&:nth-child(1) {
+			order: 1;
+		}
+
+		&:nth-child(2) {
+			order: 4;
+		}
+
+		&:nth-child(3) {
+			order: 5;
+		}
+
+		&:nth-child(4) {
+			order: 2;
+		}
+
+		&:nth-child(5) {
+			order: 3;
+		}
 	}
 
 	.reasons-list__checkmark {
