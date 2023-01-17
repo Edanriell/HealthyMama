@@ -135,7 +135,7 @@ $breakpoints: (
 @include media(">=desktop") {
 	.reasons-eat-properly {
 		@include minimum-size(padding-top, 0); // **
-		background-image: unset; // **
+		background-image: unset; // *
 		position: relative;
 
 		&::after {
@@ -195,11 +195,11 @@ $breakpoints: (
 
 	.reasons-eat-properly__section-title {
 		@include minimum-size(padding-bottom, 2.96875vw); // **
-		@include minimum-size(padding-left, 0); // **
+		@include minimum-size(padding-left, 0); // *
 	}
 
 	.reasons-eat-properly__reasons-list {
-		@include minimum-size(padding-left, 0); // **
+		@include minimum-size(padding-left, 0); // *
 	}
 
 	.reasons-eat-properly__animated-dropping-leafs-mobile {
