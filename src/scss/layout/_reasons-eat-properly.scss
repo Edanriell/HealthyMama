@@ -135,22 +135,26 @@ $breakpoints: (
 @include media(">=desktop") {
 	.reasons-eat-properly {
 		@include minimum-size(padding-top, 0); // **
-		background-image: unset; // *
+		background-image: unset; // **
 		position: relative;
 
+		// add suppoort for 2x images and webp also
 		&::after {
 			content: "";
 			display: block;
 			position: absolute;
 			top: 0;
 			right: 0;
-			background-color: pink;
-			background-image: url("../images/reasons-eat-properly-section-background.png");
+			background-color: transparent;
+			background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern.png");
 			background-repeat: no-repeat;
 			background-size: contain;
 			width: 35vw;
 			height: 19.6875vw;
-			z-index: 2;
+			mix-blend-mode: multiply;
+			opacity: 0.1;
+			height: 100%;
+			z-index: 3;
 		}
 	}
 
@@ -164,7 +168,6 @@ $breakpoints: (
 			position: absolute;
 			top: 6.5625vw;
 			right: -32.03125vw;
-			background-color: green;
 			background-image: url("../images/half-circle-bottom.svg");
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -179,7 +182,6 @@ $breakpoints: (
 			position: absolute;
 			bottom: 5.9375vw;
 			left: -29.5vw;
-			background-color: green;
 			background-image: url("../images/half-circle-top.svg");
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -195,11 +197,11 @@ $breakpoints: (
 
 	.reasons-eat-properly__section-title {
 		@include minimum-size(padding-bottom, 2.96875vw); // **
-		@include minimum-size(padding-left, 0); // *
+		@include minimum-size(padding-left, 0); // **
 	}
 
 	.reasons-eat-properly__reasons-list {
-		@include minimum-size(padding-left, 0); // *
+		@include minimum-size(padding-left, 0); // **
 	}
 
 	.reasons-eat-properly__animated-dropping-leafs-mobile {
