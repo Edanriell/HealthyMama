@@ -138,10 +138,6 @@ $breakpoints: (
 		background-image: unset; // **
 		position: relative;
 
-		// add suppoort for 2x images and webp also
-		// fix leafs
-		// add suppoort for 2x images and webp also
-		// fix leafs
 		&::after {
 			content: "";
 			display: block;
@@ -149,7 +145,7 @@ $breakpoints: (
 			top: 0;
 			right: 0;
 			background-color: transparent;
-			background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern.png");
+			background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern@1x.png");
 			background-repeat: no-repeat;
 			background-size: contain;
 			width: 35vw;
@@ -158,7 +154,28 @@ $breakpoints: (
 			opacity: 0.1;
 			height: 100%;
 			z-index: 3;
+			@media (min--moz-device-pixel-ratio: 1.5),
+			(-moz-device-pixel-ratio: 1.5),
+			(-webkit-min-device-pixel-ratio: 1.5),
+			(min-device-pixel-ratio: 1.5),
+			(min-resolution: 1.5dppx),
+			(min-resolution: 144dpi),
+			(resolution: 144dpi) {
+			background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern@2x.png");
 		}
+	}
+
+	.webp .reasons-eat-properly::after {
+		background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern@1x.webp");
+		@media (min--moz-device-pixel-ratio: 1.5),
+			(-moz-device-pixel-ratio: 1.5),
+			(-webkit-min-device-pixel-ratio: 1.5),
+			(min-device-pixel-ratio: 1.5),
+			(min-resolution: 1.5dppx),
+			(min-resolution: 144dpi),
+			(resolution: 144dpi) {
+			background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern@2x.webp");
+
 	}
 
 	.reasons-eat-properly__wrapper {
