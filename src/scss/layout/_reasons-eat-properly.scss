@@ -37,7 +37,6 @@ $breakpoints: (
 }
 
 .reasons-eat-properly__animated-dropping-leafs-mobile {
-
 	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
 		position: absolute;
 		@include minimum-size(top, 69rem, 215.625vw);
@@ -68,7 +67,7 @@ $breakpoints: (
 	display: none;
 }
 
-.reasons-eat-properly__animated-dropping-tablet {
+.reasons-eat-properly__animated-dropping-leafs-tablet {
 	display: none;
 }
 
@@ -102,7 +101,7 @@ $breakpoints: (
 		display: none;
 	}
 
-	.reasons-eat-properly__animated-dropping-tablet {
+	.reasons-eat-properly__animated-dropping-leafs-tablet {
 		display: block;
 
 		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
@@ -145,7 +144,8 @@ $breakpoints: (
 			top: 0;
 			right: 0;
 			background-color: transparent;
-			background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern@1x.png");
+			background-image: linear-gradient(79.46deg, #f6f9ff 8.32%, rgba(255, 255, 255, 0) 82.9%),
+				url("../images/reasons-eat-properly-section-background-pattern@1x.png");
 			background-repeat: no-repeat;
 			background-size: contain;
 			width: 35vw;
@@ -155,18 +155,25 @@ $breakpoints: (
 			height: 100%;
 			z-index: 3;
 			@media (min--moz-device-pixel-ratio: 1.5),
-			(-moz-device-pixel-ratio: 1.5),
-			(-webkit-min-device-pixel-ratio: 1.5),
-			(min-device-pixel-ratio: 1.5),
-			(min-resolution: 1.5dppx),
-			(min-resolution: 144dpi),
-			(resolution: 144dpi) {
-			background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern@2x.png");
+				(-moz-device-pixel-ratio: 1.5),
+				(-webkit-min-device-pixel-ratio: 1.5),
+				(min-device-pixel-ratio: 1.5),
+				(min-resolution: 1.5dppx),
+				(min-resolution: 144dpi),
+				(resolution: 144dpi) {
+				background-image: linear-gradient(
+						79.46deg,
+						#f6f9ff 8.32%,
+						rgba(255, 255, 255, 0) 82.9%
+					),
+					url("../images/reasons-eat-properly-section-background-pattern@2x.png");
+			}
 		}
 	}
 
 	.webp .reasons-eat-properly::after {
-		background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern@1x.webp");
+		background-image: linear-gradient(79.46deg, #f6f9ff 8.32%, rgba(255, 255, 255, 0) 82.9%),
+			url("../images/reasons-eat-properly-section-background-pattern@1x.webp");
 		@media (min--moz-device-pixel-ratio: 1.5),
 			(-moz-device-pixel-ratio: 1.5),
 			(-webkit-min-device-pixel-ratio: 1.5),
@@ -174,8 +181,9 @@ $breakpoints: (
 			(min-resolution: 1.5dppx),
 			(min-resolution: 144dpi),
 			(resolution: 144dpi) {
-			background-image: linear-gradient(79.46deg, #F6F9FF 8.32%, rgba(255, 255, 255, 0) 82.9%), url("../images/reasons-eat-properly-section-background-pattern@2x.webp");
-
+			background-image: linear-gradient(79.46deg, #f6f9ff 8.32%, rgba(255, 255, 255, 0) 82.9%),
+				url("../images/reasons-eat-properly-section-background-pattern@2x.webp");
+		}
 	}
 
 	.reasons-eat-properly__wrapper {
@@ -229,10 +237,36 @@ $breakpoints: (
 	}
 
 	.reasons-eat-properly__animated-dropping-leafs-desktop {
-		display: block; // **
+		display: block;
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
+			position: absolute;
+			@include minimum-size(top, 16.25vw);
+			@include minimum-size(left, -5.208333333333334vw);
+			z-index: 2;
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 6.096875vw);
+				@include minimum-size(width, 7.765104166666667vw);
+				object-fit: cover;
+			}
+		}
+
+		.animated-dropping-leafs__animated-leaf-wrapper:nth-child(2) {
+			position: absolute;
+			@include minimum-size(top, 11.458333333333332vw);
+			@include minimum-size(left, 17.708333333333336vw);
+			z-index: 2;
+
+			.animated-dropping-leafs__animated-leaf {
+				@include minimum-size(height, 3.2171875vw);
+				@include minimum-size(width, 4.097916666666667vw);
+				object-fit: cover;
+			}
+		}
 	}
 
-	.reasons-eat-properly__animated-dropping-tablet {
-		display: none; // **
+	.reasons-eat-properly__animated-dropping-leafs-tablet {
+		display: none;
 	}
 }
