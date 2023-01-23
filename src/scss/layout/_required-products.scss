@@ -4,7 +4,7 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
 $required-products-section-background-color: var(--color-primary-white);
@@ -43,5 +43,19 @@ $required-products-section-background-color: var(--color-primary-white);
 }
 
 @include media(">=desktop") {
+	.required-products {
+		@include minimum-size(padding-top, 8.072916666666668vw);
+		@include minimum-size(padding-bottom, 9.166666666666666vw);
+	}
 
+	.required-products__wrapper {
+	}
+
+	.required-products__title {
+		max-width: 24.947916666666668vw;
+		margin: 0 auto;
+	}
+
+	.required-products__slider {
+	}
 }

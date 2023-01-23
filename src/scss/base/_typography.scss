@@ -211,4 +211,9 @@ $breakpoints: (
 		@include minimum-size(font-size, 1.0416666666666665vw);
 		@include minimum-size(line-height, 1.4583333333333333vw);
 	}
+
+	.text__subsection-title {
+		@include minimum-size(font-size, 1.0416666666666665vw);
+		@include minimum-size(line-height, 1.25vw);
+	}
 }
