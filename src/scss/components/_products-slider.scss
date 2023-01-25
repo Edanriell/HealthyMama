@@ -374,8 +374,8 @@ $breakpoints: (
 
 		.products-slider__next-slide-button {
 			position: absolute;
-			top: 0; // ** // **
-			@include minimum-size(left, 0); // ** // **
+			top: 0; // ** // ** // ** // **
+			@include minimum-size(left, 0); // ** // ** // ** // **
 			@include minimum-size(width, 5.3rem, 6.901041666666667vw);
 			@include minimum-size(height, 5.3rem, 6.901041666666667vw);
 			border-radius: 50%;
