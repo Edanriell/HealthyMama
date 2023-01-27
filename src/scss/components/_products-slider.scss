@@ -373,10 +373,10 @@ $breakpoints: (
 		}
 
 		.products-slider__next-slide-button {
-			position: absolute;
-			top: 0;
-			@include minimum-size(left, 48.645833333333336vw);
-			@include minimum-size(width, 2.7604166666666665vw);
+			position: absolute; //**
+			top: 0; //**
+			@include minimum-size(left, 48.645833333333336vw); //**
+			@include minimum-size(width, 2.7604166666666665vw); //**
 			@include minimum-size(height, 2.7604166666666665vw);
 			border-radius: 50%;
 			background-color: var(--color-accent-jade-green);
