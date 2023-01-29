@@ -5,7 +5,7 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
 .advantages-list {
@@ -156,5 +156,56 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
+	.advantages-list {
+		@include minimum-size(margin-top, 0); // FIX
+	}
 
+	.advantages-list__item {
+		grid-template-columns: minmax(6rem, 7.8125vw) auto;
+		@include minimum-size(column-gap, 2.1rem, 2.734375vw);
+	}
+
+	.advantages-list__leaf-icon-wrapper {
+		@include minimum-size(width, 6rem, 7.8125vw);
+		@include minimum-size(height, 6rem, 7.8125vw);
+	}
+
+	.advantages-list__leaf-icon {
+		@include minimum-size(width, 3rem, 3.90625vw);
+		@include minimum-size(height, 3rem, 3.90625vw);
+	}
+
+	.advantages-list__checkmark-icon-wrapper {
+		@include minimum-size(width, 6rem, 7.8125vw);
+		@include minimum-size(height, 6rem, 7.8125vw);
+	}
+
+	.advantages-list__checkmark-icon {
+		@include minimum-size(width, 3rem, 3.90625vw);
+		@include minimum-size(height, 3rem, 3.90625vw);
+	}
+
+	.advantages-list__arrow-icon-wrapper {
+		@include minimum-size(width, 6rem, 7.8125vw);
+		@include minimum-size(height, 6rem, 7.8125vw);
+	}
+
+	.advantages-list__arrow-icon {
+		@include minimum-size(width, 3rem, 3.90625vw);
+		@include minimum-size(height, 3rem, 3.90625vw);
+	}
+
+	.advantages-list__heart-icon-wrapper {
+		@include minimum-size(width, 6rem, 7.8125vw);
+		@include minimum-size(height, 6rem, 7.8125vw);
+	}
+
+	.advantages-list__heart-icon {
+		@include minimum-size(width, 3rem, 3.90625vw);
+		@include minimum-size(height, 3rem, 3.90625vw);
+	}
+
+	.advantages-list__advantage-name {
+		@include minimum-size(margin-bottom, 1.1rem, 1.4322916666666665vw);
+	}
 }
