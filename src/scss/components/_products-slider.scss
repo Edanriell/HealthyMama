@@ -124,7 +124,11 @@ $breakpoints: (
 
 		.products-slider__wrapper {
 			@include flex(center, center, row);
-			@include minimum-size(column-gap, 1.7rem, 2.213541666666667vw); // will delete when hook up real slider
+			@include minimum-size(
+				column-gap,
+				1.7rem,
+				2.213541666666667vw
+			); // will delete when hook up real slider
 		}
 
 		.products-slider__slide {
@@ -132,7 +136,6 @@ $breakpoints: (
 			border-radius: 1rem;
 			box-shadow: 0 0.4rem 8.3rem var(--color-neutral-eerie-black-transparent);
 			@include minimum-size(width, 66.3rem, 86.328125vw);
-			// @include minimum-size(min-height, 40rem, 52.083333333333336vw);
 
 			// Temporarily, will be removed when real slider will be hooked up.
 			&:nth-child(1),
@@ -267,24 +270,23 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.products-slider {
-		@include minimum-size(padding-top, 4.427083333333334vw); // **
+		@include minimum-size(padding-top, 4.427083333333334vw);
 	}
 
 	.products-slider--type--universal {
-		display: block; // **
-		position: relative; // **
+		display: block;
+		position: relative;
 
 		.products-slider__wrapper {
-			@include flex(center, center, row); // **
-			@include minimum-size(column-gap, 1.7rem, 0.8854166666666666vw); // **
+			@include flex(center, center, row);
+			@include minimum-size(column-gap, 1.7rem, 0.8854166666666666vw);
 		}
-		// Fix here
+
 		.products-slider__slide {
 			background-color: var(--color-primary-white);
 			border-radius: 1rem;
 			box-shadow: 0 0.4rem 8.3rem var(--color-neutral-eerie-black-transparent);
-			@include minimum-size(width, 34.583333333333336vw); // **
-			// @include minimum-size(min-height, 40rem, 52.083333333333336vw);
+			@include minimum-size(width, 34.583333333333336vw);
 
 			// Temporarily, will be removed when real slider will be hooked up.
 			&:nth-child(1),
@@ -299,8 +301,8 @@ $breakpoints: (
 		}
 
 		.products-slider__slide-image-wrapper {
-			@include minimum-size(width, 34.53125vw); // **
-			@include minimum-size(height, 13.593749999999998vw); // **
+			@include minimum-size(width, 34.53125vw);
+			@include minimum-size(height, 13.593749999999998vw);
 		}
 
 		.products-slider__slide-image {
@@ -312,18 +314,18 @@ $breakpoints: (
 		}
 
 		.products-slider__slide-title {
-			@include minimum-size(padding-left, 1.5625vw); // **
-			@include minimum-size(padding-right, 1.5625vw); // **
-			@include minimum-size(padding-top, 1.5625vw); // **
+			@include minimum-size(padding-left, 1.5625vw);
+			@include minimum-size(padding-right, 1.5625vw);
+			@include minimum-size(padding-top, 1.5625vw);
 			text-align: center;
 		}
 
 		.products-slider__slide-description {
-			@include minimum-size(padding-left, 1.5625vw); // **
-			@include minimum-size(padding-right, 1.5625vw); // **
-			@include minimum-size(padding-top, 0.625vw); // **
-			@include minimum-size(font-size, 0.8333333333333334vw); // **
-			@include minimum-size(line-height, 1.25vw); // **
+			@include minimum-size(padding-left, 1.5625vw);
+			@include minimum-size(padding-right, 1.5625vw);
+			@include minimum-size(padding-top, 0.625vw);
+			@include minimum-size(font-size, 0.8333333333333334vw);
+			@include minimum-size(line-height, 1.25vw);
 			text-align: center;
 		}
 
@@ -344,7 +346,7 @@ $breakpoints: (
 			cursor: pointer;
 			border: 0.0625vw solid var(--color-accent-jade-green);
 			border-radius: 8.125vw;
-			border-width: 0.026041666666666668rem;
+			border-width: 0.2604166667vw;
 
 			&:hover,
 			&:focus {
@@ -373,17 +375,17 @@ $breakpoints: (
 		}
 
 		.products-slider__next-slide-button {
-			position: absolute; //**
-			top: 0; //**
-			@include minimum-size(left, 48.645833333333336vw); //**
-			@include minimum-size(width, 2.7604166666666665vw); //**
+			position: absolute;
+			top: 0;
+			@include minimum-size(left, 48.645833333333336vw);
+			@include minimum-size(width, 2.7604166666666665vw);
 			@include minimum-size(height, 2.7604166666666665vw);
 			border-radius: 50%;
 			background-color: var(--color-accent-jade-green);
 			cursor: pointer;
 			border: 0.15625vw solid var(--color-accent-jade-green);
 			border-radius: 8.125vw;
-			border-width: 0.026041666666666668rem;
+			border-width: 0.2604166667vw;
 
 			&:hover,
 			&:focus {

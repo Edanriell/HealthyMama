@@ -25,7 +25,6 @@ $required-products-section-background-color: var(--color-primary-white);
 .required-products__slider {
 }
 
-
 @include media(">=tablet") {
 	.required-products {
 		@include minimum-size(padding-top, 22.1rem, 28.776041666666668vw);
@@ -46,6 +45,29 @@ $required-products-section-background-color: var(--color-primary-white);
 	.required-products {
 		@include minimum-size(padding-top, 8.072916666666668vw);
 		@include minimum-size(padding-bottom, 9.166666666666666vw);
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 34.583333333333336vw;
+			height: 34.739583333333336vw;
+			background-image: linear-gradient(
+					314.5deg,
+					#f6f9ff 35.34%,
+					rgba(246, 249, 255, 0) 99.32%
+				),
+				url("../images/required-products-section-background-pattern@1x.png");
+			background-repeat: no-repeat;
+			top: 0;
+			left: 0;
+			position: absolute;
+			z-index: 1;
+			mix-blend-mode: multiply;
+			opacity: 0.1;
+			background-color: transparent;
+			background-size: contain;
+		}
 	}
 
 	.required-products__wrapper {
@@ -57,5 +79,6 @@ $required-products-section-background-color: var(--color-primary-white);
 	}
 
 	.required-products__slider {
+		z-index: 2;
 	}
 }
