@@ -46,5 +46,7 @@ $delivery-advantages-section-background-color: var(--color-primary-white);
 }
 
 @include media(">=desktop") {
-
+	.delivery-advantages__advantages-list {
+		@include minimum-size(row-gap, 1.9270833333333335vw);
+	}
 }

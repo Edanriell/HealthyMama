@@ -157,55 +157,55 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.advantages-list {
-		@include minimum-size(margin-top, 0); // FIX
+		@include minimum-size(margin-top, 4.53125vw); // FIX
 	}
 
 	.advantages-list__item {
-		grid-template-columns: minmax(6rem, 7.8125vw) auto;
-		@include minimum-size(column-gap, 2.1rem, 2.734375vw);
+		grid-template-columns: 3.125vw 21.354166666666664vw; // FIX // FIX
+		@include minimum-size(column-gap, 1.09375vw); // FIX // FIX
 	}
 
 	.advantages-list__leaf-icon-wrapper {
-		@include minimum-size(width, 6rem, 7.8125vw);
-		@include minimum-size(height, 6rem, 7.8125vw);
+		@include minimum-size(width, 3.125vw);
+		@include minimum-size(height, 3.125vw);
 	}
 
 	.advantages-list__leaf-icon {
-		@include minimum-size(width, 3rem, 3.90625vw);
-		@include minimum-size(height, 3rem, 3.90625vw);
+		@include minimum-size(width, 1.5625vw);
+		@include minimum-size(height, 1.5625vw);
 	}
 
 	.advantages-list__checkmark-icon-wrapper {
-		@include minimum-size(width, 6rem, 7.8125vw);
-		@include minimum-size(height, 6rem, 7.8125vw);
+		@include minimum-size(width, 3.125vw);
+		@include minimum-size(height, 3.125vw);
 	}
 
 	.advantages-list__checkmark-icon {
-		@include minimum-size(width, 3rem, 3.90625vw);
-		@include minimum-size(height, 3rem, 3.90625vw);
+		@include minimum-size(width, 1.5625vw);
+		@include minimum-size(height, 1.5625vw);
 	}
 
 	.advantages-list__arrow-icon-wrapper {
-		@include minimum-size(width, 6rem, 7.8125vw);
-		@include minimum-size(height, 6rem, 7.8125vw);
+		@include minimum-size(width, 3.125vw);
+		@include minimum-size(height, 3.125vw);
 	}
 
 	.advantages-list__arrow-icon {
-		@include minimum-size(width, 3rem, 3.90625vw);
-		@include minimum-size(height, 3rem, 3.90625vw);
+		@include minimum-size(width, 1.5625vw);
+		@include minimum-size(height, 1.5625vw);
 	}
 
 	.advantages-list__heart-icon-wrapper {
-		@include minimum-size(width, 6rem, 7.8125vw);
-		@include minimum-size(height, 6rem, 7.8125vw);
+		@include minimum-size(width, 3.125vw);
+		@include minimum-size(height, 3.125vw);
 	}
 
 	.advantages-list__heart-icon {
-		@include minimum-size(width, 3rem, 3.90625vw);
-		@include minimum-size(height, 3rem, 3.90625vw);
+		@include minimum-size(width, 1.5625vw);
+		@include minimum-size(height, 1.5625vw);
 	}
 
 	.advantages-list__advantage-name {
-		@include minimum-size(margin-bottom, 1.1rem, 1.4322916666666665vw);
+		@include minimum-size(margin-bottom, 0.5729166666666666vw);
 	}
 }
