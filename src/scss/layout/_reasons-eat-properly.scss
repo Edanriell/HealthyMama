@@ -256,7 +256,7 @@ $breakpoints: (
 			position: absolute;
 			@include minimum-size(top, 11.458333333333332vw);
 			@include minimum-size(left, 17.708333333333336vw);
-			z-index: 2;
+			z-index: 4;
 
 			.animated-dropping-leafs__animated-leaf {
 				@include minimum-size(height, 3.2171875vw);

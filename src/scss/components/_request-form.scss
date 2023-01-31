@@ -31,7 +31,7 @@ $breakpoints: (
 	@include minimum-size(padding-left, 3.115rem, 9.734375vw);
 	@include minimum-size(padding-right, 3.115rem, 9.734375vw);
 	border: 0.15625vw solid var(--color-primary-white);
-    border-width: 1.5625vw;
+	border-width: 1.5625vw;
 	appearance: none;
 	outline: none;
 
@@ -125,5 +125,4 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
-
 }

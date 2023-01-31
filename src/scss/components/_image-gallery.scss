@@ -320,9 +320,7 @@ $breakpoints: (
 		@include minimum-size(left, 62rem, 80.72916666666666vw);
 		z-index: 1;
 	}
-
 }
 
 @include media(">=desktop") {
-
 }

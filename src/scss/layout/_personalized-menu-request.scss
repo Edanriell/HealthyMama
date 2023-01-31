@@ -35,12 +35,16 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 		background-position: 0 180%;
 		background-repeat: no-repeat;
 		background-size: 100vw auto;
-		@include retina-image("../images/personalized-menu-request-section-background-image-tablet@2x.png");
+		@include retina-image(
+			"../images/personalized-menu-request-section-background-image-tablet@2x.png"
+		);
 	}
 
 	.webp .personalized-menu-request {
 		background-image: url("../images/personalized-menu-request-section-background-image-tablet@1x.webp");
-		@include retina-image("../images/personalized-menu-request-section-background-image-tablet@2x.webp");
+		@include retina-image(
+			"../images/personalized-menu-request-section-background-image-tablet@2x.webp"
+		);
 	}
 
 	.personalized-menu-request__wrapper {
@@ -55,5 +59,4 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 }
 
 @include media(">=desktop") {
-
 }
