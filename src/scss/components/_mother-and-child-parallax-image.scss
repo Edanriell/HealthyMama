@@ -55,7 +55,7 @@ $breakpoints: (
 	.mother-and-child-parallax-image__tree-image-wrapper {
 		display: block;
 		position: absolute;
-		top: 21.09375vw;
+		top: 17vw;
 		left: -61.9rem;
 		width: 60.3125vw;
 		height: auto;
@@ -72,5 +72,8 @@ $breakpoints: (
 	.mother-and-child-parallax-image__background-image-wrapper {
 		width: 100vw;
 		height: auto;
+		// position: absolute;
+		// top: 0;
+		// left: 0;
 	}
 }

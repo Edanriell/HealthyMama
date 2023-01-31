@@ -14,6 +14,7 @@ $delivery-advantages-section-background-color: var(--color-primary-white);
 }
 
 .delivery-advantages__wrapper {
+	position: relative;
 }
 
 .delivery-advantages__title {
@@ -46,7 +47,26 @@ $delivery-advantages-section-background-color: var(--color-primary-white);
 }
 
 @include media(">=desktop") {
+	.delivery-advantages__content {
+		margin-top: 7.291666666666667vw;
+		display: grid;
+		grid-template-columns: 32.29166666666667vw auto;
+		grid-template-rows: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 4;
+	}
+
 	.delivery-advantages__advantages-list {
 		@include minimum-size(row-gap, 1.9270833333333335vw);
+		grid-column: 2 / 3;
+	}
+
+	.delivery-advantages__title {
+		grid-column: 2 / 3;
 	}
 }
+
+// Fix everywhere in HTML images 1920 to 1024 picture element
+// also fix all images to normal quality ! Important my images are broken
