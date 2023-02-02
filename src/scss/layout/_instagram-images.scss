@@ -4,7 +4,7 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
 $instagram-images-section-background-color: var(--color-primary-white);
@@ -32,4 +32,7 @@ $instagram-images-section-background-color: var(--color-primary-white);
 }
 
 @include media(">=desktop") {
+	.instagram-images {
+		@include minimum-size(padding-top, 6.5625vw);
+	}
 }
