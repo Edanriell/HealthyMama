@@ -42,6 +42,10 @@ $breakpoints: (
 }
 
 .mother-and-child-parallax-image__tree-image {
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	vertical-align: middle;
 }
 
 @include media(">=tablet") {
@@ -51,12 +55,11 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
-	// FIX Images
 	.mother-and-child-parallax-image__tree-image-wrapper {
 		display: block;
 		position: absolute;
-		top: 17vw;
-		left: -61.9rem;
+		top: 11vw;
+		left: -32.239583333333336vw;
 		width: 60.3125vw;
 		height: auto;
 	}
@@ -66,14 +69,11 @@ $breakpoints: (
 		height: auto;
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: 3.125vw;
 	}
 
 	.mother-and-child-parallax-image__background-image-wrapper {
 		width: 100vw;
 		height: auto;
-		// position: absolute;
-		// top: 0;
-		// left: 0;
 	}
 }

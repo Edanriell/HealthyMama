@@ -157,12 +157,12 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.advantages-list {
-		@include minimum-size(margin-top, 4.53125vw); // FIX
+		@include minimum-size(margin-top, 4.53125vw);
 	}
 
 	.advantages-list__item {
-		grid-template-columns: 3.125vw 21.354166666666664vw; // FIX // FIX
-		@include minimum-size(column-gap, 1.09375vw); // FIX // FIX
+		grid-template-columns: 3.125vw 21.354166666666664vw;
+		@include minimum-size(column-gap, 1.09375vw);
 	}
 
 	.advantages-list__leaf-icon-wrapper {
