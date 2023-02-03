@@ -226,4 +226,9 @@ $breakpoints: (
 		@include minimum-size(font-size, 0.9375vw);
 		@include minimum-size(line-height, 1.09375vw);
 	}
+
+	.text__regular-text--text-weight--regular-small {
+		@include minimum-size(font-size, 0.625vw);
+		@include minimum-size(line-height, 0.7291666666666666vw);
+	}
 }
