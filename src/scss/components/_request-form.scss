@@ -4,11 +4,13 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
 .request-form {
 	@include minimum-size(margin-top, 3.8rem, 11.875vw);
+	z-index: 2;
+	position: relative;
 }
 
 .request-form__form-field {
@@ -125,4 +127,54 @@ $breakpoints: (
 }
 
 @include media(">=desktop") {
+	.request-form {
+		@include minimum-size(margin-top, 3.3854166666666665vw);
+	}
+
+	.request-form__form-field {
+	}
+
+	.request-form__input-label {
+	}
+
+	.request-form__person-name-input-label {
+	}
+
+	.request-form__input {
+		@include minimum-size(font-size, 0.7291666666666666vw); //
+		@include minimum-size(line-height, 1.0416666666666665vw); //
+		@include minimum-size(width, 20.989583333333332vw); //
+		@include minimum-size(height, 3.4895833333333335vw); //
+		@include minimum-size(padding-left, 2.34375vw); //
+		@include minimum-size(padding-right, 2.34375vw); //
+		border: 0.026041666666666668vw solid var(--color-primary-white); //
+		border-width: 0.26041666666666663vw; //
+
+		&::placeholder {
+			@include minimum-size(font-size, 0.7291666666666666vw); //
+			@include minimum-size(line-height, 1.0416666666666665vw); //
+		}
+
+		&:hover {
+		}
+
+		&:focus {
+		}
+
+		&:focus::placeholder {
+		}
+	}
+
+	.request-form__person-name-input {
+	}
+
+	.request-form__person-phone-number-input-label {
+	}
+
+	.request-form__person-phone-number-input {
+	}
+
+	.request-form__button {
+		margin: 0 !important;
+	}
 }

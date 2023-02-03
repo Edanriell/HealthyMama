@@ -4,7 +4,7 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
 $personalized-menu-request-section-background-color: var(--color-primary-white);
@@ -31,20 +31,61 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 	.personalized-menu-request {
 		@include minimum-size(padding-top, 14.1rem, 18.359375vw);
 		@include minimum-size(padding-bottom, 31.4rem, 40.88541666666667vw);
-		background-image: url("../images/personalized-menu-request-section-background-image-tablet@1x.png");
-		background-position: 0 180%;
-		background-repeat: no-repeat;
-		background-size: 100vw auto;
-		@include retina-image(
-			"../images/personalized-menu-request-section-background-image-tablet@2x.png"
-		);
+		// background-position: 0 180%;
+		// background-repeat: no-repeat;
+		// background-size: 100vw auto;
+		// @include retina-image(
+		// 	"../images/personalized-menu-request-section-background-image-tablet@2x.png"
+		// );
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -18vw;
+			left: 0;
+			z-index: 1;
+			background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
+				linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
+				url("../images/personalized-menu-request-section-background-pattern-tablet@1x.png");
+			mix-blend-mode: multiply;
+			opacity: 0.13;
+			transform: rotate(-180deg);
+			width: 100vw;
+			height: 127.34375vw;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-size: contain;
+			@media (min--moz-device-pixel-ratio: 1.5),
+				(-moz-device-pixel-ratio: 1.5),
+				(-webkit-min-device-pixel-ratio: 1.5),
+				(min-device-pixel-ratio: 1.5),
+				(min-resolution: 1.5dppx),
+				(min-resolution: 144dpi),
+				(resolution: 144dpi) {
+				background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
+					linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
+					url("../images/personalized-menu-request-section-background-pattern-tablet@2x.png");
+			}
+		}
 	}
 
-	.webp .personalized-menu-request {
-		background-image: url("../images/personalized-menu-request-section-background-image-tablet@1x.webp");
-		@include retina-image(
-			"../images/personalized-menu-request-section-background-image-tablet@2x.webp"
-		);
+	.webp .personalized-menu-request::after {
+		background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
+			linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
+			url("../images/personalized-menu-request-section-background-pattern-tablet@1x.webp");
+		@media (min--moz-device-pixel-ratio: 1.5),
+			(-moz-device-pixel-ratio: 1.5),
+			(-webkit-min-device-pixel-ratio: 1.5),
+			(min-device-pixel-ratio: 1.5),
+			(min-resolution: 1.5dppx),
+			(min-resolution: 144dpi),
+			(resolution: 144dpi) {
+			background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
+				linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
+				url("../images/personalized-menu-request-section-background-pattern-tablet@2x.webp");
+		}
 	}
 
 	.personalized-menu-request__wrapper {
@@ -59,4 +100,66 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 }
 
 @include media(">=desktop") {
+	.personalized-menu-request {
+		@include minimum-size(padding-top, 8.333333333333332vw);
+		@include minimum-size(padding-bottom, 8.958333333333334vw);
+
+		&::after {
+			top: -33.5vw;
+			left: 51.979166666666664vw;
+			background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
+				linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
+				url("../images/personalized-menu-request-section-background-pattern-desktop@1x.png");
+			// background: url("../images/personalized-menu-request-section-background-pattern-desktop@1x.png");
+			mix-blend-mode: multiply;
+			opacity: 0.13;
+			// opacity: 1;
+			transform: rotate(-180deg);
+			width: 48.020833333333336vw;
+			height: 50.9375vw;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-size: contain;
+			@media (min--moz-device-pixel-ratio: 1.5),
+				(-moz-device-pixel-ratio: 1.5),
+				(-webkit-min-device-pixel-ratio: 1.5),
+				(min-device-pixel-ratio: 1.5),
+				(min-resolution: 1.5dppx),
+				(min-resolution: 144dpi),
+				(resolution: 144dpi) {
+				background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
+					linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
+					url("../images/personalized-menu-request-section-background-pattern-desktop@2x.png");
+			}
+		}
+	}
+
+	.webp .personalized-menu-request::after {
+		background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
+			linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
+			url("../images/personalized-menu-request-section-background-pattern-desktop@1x.webp");
+		@media (min--moz-device-pixel-ratio: 1.5),
+			(-moz-device-pixel-ratio: 1.5),
+			(-webkit-min-device-pixel-ratio: 1.5),
+			(min-device-pixel-ratio: 1.5),
+			(min-resolution: 1.5dppx),
+			(min-resolution: 144dpi),
+			(resolution: 144dpi) {
+			background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
+				linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
+				url("../images/personalized-menu-request-section-background-pattern-desktop@2x.webp");
+		}
+	}
+
+	.personalized-menu-request__wrapper {
+	}
+
+	.personalized-menu-request__section-header {
+	}
+
+	.personalized-menu-request__request-form {
+		@include flex(center, center, row);
+		@include minimum-size(row-gap, 0);
+		@include minimum-size(column-gap, 0.8854166666666666vw);
+	}
 }

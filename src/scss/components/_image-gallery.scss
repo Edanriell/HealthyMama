@@ -9,6 +9,7 @@ $breakpoints: (
 
 .image-gallery {
 	@include minimum-size(padding-top, 4.2rem, 13.125vw);
+	z-index: 2;
 }
 
 .image-gallery__content {
