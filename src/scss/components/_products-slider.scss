@@ -330,15 +330,15 @@ $breakpoints: (
 		}
 
 		.products-slider__slider-controls {
-			position: absolute;
-			top: 50%;
-			left: 0;
+			position: relative;
+			// top: 50%;
+			// left: 0;
 		}
 
 		.products-slider__previous-slide-button {
 			position: absolute;
 			top: 0;
-			@include minimum-size(right, -10.78125vw);
+			@include minimum-size(left, 28vw); // fix
 			@include minimum-size(width, 2.7604166666666665vw);
 			@include minimum-size(height, 2.7604166666666665vw);
 			border-radius: 50%;
@@ -377,7 +377,8 @@ $breakpoints: (
 		.products-slider__next-slide-button {
 			position: absolute;
 			top: 0;
-			@include minimum-size(left, 48.645833333333336vw);
+			// @include minimum-size(left, 48.645833333333336vw); // fix
+			@include minimum-size(left, 28vw); // fix
 			@include minimum-size(width, 2.7604166666666665vw);
 			@include minimum-size(height, 2.7604166666666665vw);
 			border-radius: 50%;
