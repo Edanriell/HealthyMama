@@ -1,4 +1,4 @@
 import "../scss/style.scss";
-import Modernizr from "modernizr";
+import "./helpers/WebpCheck.ts";
 
 window.addEventListener("DOMContentLoaded", () => {});

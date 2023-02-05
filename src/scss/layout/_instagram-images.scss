@@ -67,6 +67,9 @@ $instagram-images-section-background-color: var(--color-primary-white);
 	.webp .instagram-images::after {
 		background-image: linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
 			url("../images/instagram-section-background-pattern@1x.webp");
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-size: contain;
 		@media (min--moz-device-pixel-ratio: 1.5),
 			(-moz-device-pixel-ratio: 1.5),
 			(-webkit-min-device-pixel-ratio: 1.5),

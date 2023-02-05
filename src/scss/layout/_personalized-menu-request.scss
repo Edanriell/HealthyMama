@@ -69,6 +69,9 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 		background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
 			linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
 			url("../images/personalized-menu-request-section-background-pattern-tablet@1x.webp");
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-size: contain;
 		@media (min--moz-device-pixel-ratio: 1.5),
 			(-moz-device-pixel-ratio: 1.5),
 			(-webkit-min-device-pixel-ratio: 1.5),
@@ -130,6 +133,9 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 		background: linear-gradient(180deg, #f6f9ff 0%, rgba(246, 249, 255, 0) 17.59%),
 			linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
 			url("../images/personalized-menu-request-section-background-pattern-desktop@1x.webp");
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-size: contain;
 		@media (min--moz-device-pixel-ratio: 1.5),
 			(-moz-device-pixel-ratio: 1.5),
 			(-webkit-min-device-pixel-ratio: 1.5),
