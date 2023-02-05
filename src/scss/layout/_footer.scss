@@ -62,8 +62,8 @@ $footer-background-color: var(--color-accent-jade-green);
 
 @include media(">=desktop") {
 	.footer {
-		@include minimum-size(padding-top, 2.604166666666667vw); //
-		@include minimum-size(padding-bottom, 3.6979166666666665vw); //
+		@include minimum-size(padding-top, 2.604166666666667vw);
+		@include minimum-size(padding-bottom, 3.6979166666666665vw);
 	}
 
 	.footer__wrapper {
@@ -72,19 +72,15 @@ $footer-background-color: var(--color-accent-jade-green);
 	}
 
 	.footer__logotype {
-		@include minimum-size(margin-bottom, 2.083333333333333vw); //
+		@include minimum-size(margin-bottom, 2.083333333333333vw);
 	}
 
 	.footer__secondary-navigation {
-		// @include flex(flex-start, flex-start, row);
-		// @include minimum-size(row-gap, 0);
-		@include minimum-size(margin-bottom, 2.083333333333333vw); //
-		@include minimum-size(column-gap, 5.729166666666666vw); //
+		@include minimum-size(margin-bottom, 2.083333333333333vw);
+		@include minimum-size(column-gap, 5.729166666666666vw);
 	}
 
 	.footer__politics-and-agreement {
-		// @include flex(flex-start, flex-start, row);
-		// @include minimum-size(row-gap, 0);
-		@include minimum-size(column-gap, 1.9791666666666665vw); //
+		@include minimum-size(column-gap, 1.9791666666666665vw);
 	}
 }

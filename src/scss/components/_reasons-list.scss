@@ -50,18 +50,18 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.reasons-list {
-		@include minimum-size(row-gap, 1.0416666666666665vw); // **
-		@include minimum-size(column-gap, 1.09375vw); // **
-		@include flex(flex-start, flex-start, row); // **
-		flex-wrap: wrap; // **
-		width: 41.197916666666664vw; // **
+		@include minimum-size(row-gap, 1.0416666666666665vw);
+		@include minimum-size(column-gap, 1.09375vw);
+		@include flex(flex-start, flex-start, row);
+		flex-wrap: wrap;
+		width: 41.197916666666664vw;
 		z-index: 2;
 		position: relative;
 	}
 
 	.reasons-list__item {
-		@include minimum-size(column-gap, 0.625vw); // **
-		width: 19.791666666666664vw; // **
+		@include minimum-size(column-gap, 0.625vw);
+		width: 19.791666666666664vw;
 
 		&:nth-child(1) {
 			order: 1;
@@ -85,14 +85,14 @@ $breakpoints: (
 	}
 
 	.reasons-list__checkmark {
-		display: none; // **
+		display: none;
 	}
 
 	.reasons-list__checkmark--type--desktop {
-		display: block; // **
-		@include minimum-size(width, 1.3020833333333335vw); // **
-		@include minimum-size(height, 0.9375vw); // **
-		@include minimum-size(margin-top, 0.15625vw); // **
-		fill: none; // **
+		display: block;
+		@include minimum-size(width, 1.3020833333333335vw);
+		@include minimum-size(height, 0.9375vw);
+		@include minimum-size(margin-top, 0.15625vw);
+		fill: none;
 	}
 }

@@ -141,18 +141,18 @@ $breakpoints: (
 	}
 
 	.request-form__input {
-		@include minimum-size(font-size, 0.7291666666666666vw); //
-		@include minimum-size(line-height, 1.0416666666666665vw); //
-		@include minimum-size(width, 20.989583333333332vw); //
-		@include minimum-size(height, 3.4895833333333335vw); //
-		@include minimum-size(padding-left, 2.34375vw); //
-		@include minimum-size(padding-right, 2.34375vw); //
-		border: 0.026041666666666668vw solid var(--color-primary-white); //
-		border-width: 0.26041666666666663vw; //
+		@include minimum-size(font-size, 0.7291666666666666vw);
+		@include minimum-size(line-height, 1.0416666666666665vw);
+		@include minimum-size(width, 20.989583333333332vw);
+		@include minimum-size(height, 3.4895833333333335vw);
+		@include minimum-size(padding-left, 2.34375vw);
+		@include minimum-size(padding-right, 2.34375vw);
+		border: 0.026041666666666668vw solid var(--color-primary-white);
+		border-width: 0.26041666666666663vw;
 
 		&::placeholder {
-			@include minimum-size(font-size, 0.7291666666666666vw); //
-			@include minimum-size(line-height, 1.0416666666666665vw); //
+			@include minimum-size(font-size, 0.7291666666666666vw);
+			@include minimum-size(line-height, 1.0416666666666665vw);
 		}
 
 		&:hover {
