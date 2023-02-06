@@ -12,13 +12,14 @@ $breakpoints: (
 }
 
 .navigation__main-navigation {
+	position: relative;
 }
 
 .navigation__mobile-navigation-burger {
+	position: relative;
 }
 
 .navigation__mobile-navigation {
-	display: none;
 }
 
 @include media(">=tablet") {

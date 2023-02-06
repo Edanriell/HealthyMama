@@ -191,21 +191,8 @@ module.exports = function (env, argv) {
 					test: /\.tsx?$/,
 					use: "ts-loader",
 					exclude: /node_modules/
-				},
-				{
-					test: /\.modernizrrc.js$/,
-					use: ["@sect/modernizr-loader"]
-				},
-				{
-					test: /\.modernizrrc(\.json)?$/,
-					use: ["@sect/modernizr-loader", "json-loader"]
 				}
 			]
-		},
-		resolve: {
-			alias: {
-				modernizr$: path.resolve(__dirname, "./.modernizrrc")
-			}
 		},
 		devtool: mode === "development" ? "source-map" : false,
 		optimization: optimization(),

@@ -1,13 +1,49 @@
 @use "../vendors/include-media" as *;
+@use "../abstracts/mixins" as *;
 
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
+// FIx logotype color, fix burger menu color and background color
+
 .mobile-navigation {
-	display: none;
+	display: block;
+	margin-top: 50vw;
+}
+
+.mobile-navigation__underlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background-color: var(--color-accent-jade-green);
+    background-color: brown;
+    width: 100vw;
+    height: 100vh;
+    z-index: 90;
+    display: none;
+}
+
+.mobile-navigation__content {
+	position: relative;
+    background-color: var(--clr-secondary-snow-white2);
+    z-index: 90;
+    padding-top: 7.5rem;
+    padding-bottom: 3.5rem;
+    display: none;
+}
+
+.mobile-navigation {
+}
+
+.mobile-navigation__item {
+	text-align: center;
+	padding-top: 5vw;
+}
+
+.mobile-navigation__link {
 }
 
 @include media(">=tablet") {

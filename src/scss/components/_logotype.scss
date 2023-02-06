@@ -9,11 +9,12 @@ $breakpoints: (
 
 .logotype {
 	display: block;
+	position: relative;
 }
 
 .logotype__link {
 	position: relative;
-	z-index: 2;
+	z-index: 100;
 }
 
 .logotype__text-content {

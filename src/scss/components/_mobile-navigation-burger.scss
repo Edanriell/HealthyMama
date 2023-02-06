@@ -4,7 +4,7 @@
 $breakpoints: (
 	phone: 320px,
 	tablet: 768px,
-	desktop: 1920px
+	desktop: 1024px
 );
 
 $bar-color: var(--color-accent-jade-green);
@@ -20,6 +20,8 @@ $bar-color: var(--color-accent-jade-green);
 	color: $bar-color;
 	@include minimum-size(width, 3.8rem, 11.875vw);
 	@include minimum-size(height, 0.6rem, 1.875vw);
+	z-index: 100;
+	position: relative;
 }
 
 @include media(">=tablet") {
