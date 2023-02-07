@@ -52,7 +52,7 @@ export class BurgerMenuView implements IBurgerMenuView {
 		this.mobileNavigation.innerHTML = `
 			<div class="mobile-navigation__underlay">
 				<div class="mobile-navigation__content container">
-					<ul class="mobile-navigation container">
+					<ul class="mobile-navigation">
 						<li class="mobile-navigation__item">
 							<a class="mobile-navigation__link text__regular-text--text-weight--semibold text__regular-text--text-color--white" href="#">Важность правильного питания</a>
 						</li>

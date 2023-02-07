@@ -1,6 +1,20 @@
 import { gsap } from "gsap";
 
-export class BurgerMenuModel {
+interface IBurgerMenu {
+	trigger: HTMLElement | null;
+	burgerMenuContent: HTMLElement | null;
+	burgerMenuUnderlay: HTMLElement | null;
+	burgerMenuElements: Array<string> | undefined;
+	initialBurgerColor: string;
+	activeBurgerColor: string;
+	overflow: boolean | undefined;
+	timeline: gsap.core.Timeline;
+	init(): void;
+	openMenu(state: string): void;
+	closeMenu(state: string): void;
+}
+
+export class BurgerMenu implements IBurgerMenu {
 	trigger: HTMLElement | null;
 
 	burgerMenuContent: HTMLElement | null;
@@ -11,45 +25,62 @@ export class BurgerMenuModel {
 
 	initialBurgerColor: string;
 
-	activeBurgerColor: string; // ok
+	activeBurgerColor: string;
 
 	overflow: boolean | undefined;
 
 	timeline: gsap.core.Timeline;
 
-	burgerSelector: string;
-
-	constructor() {
-		this.trigger = null;
-		this.burgerMenuContent = null;
-		this.burgerMenuUnderlay = null;
-		this.burgerMenuElements = [".mobile-navigation__item"];
-		this.initialBurgerColor = "rgb(40, 175, 96)"; // ok
-		this.activeBurgerColor = "#FFF"; // ok
-		this.burgerSelector = ".mobile-navigation-burger"; // ok
-		this.overflow = true;
+	constructor({
+		triggerSelector,
+		burgerMenuContentSelector,
+		burgerMenuUnderlaySelector,
+		burgerMenuElementSelectors,
+		initialBurgerMenuColor,
+		activeBurgerMenuColor,
+		toggleOverflow
+	}: {
+		triggerSelector: string;
+		burgerMenuContentSelector: string;
+		burgerMenuUnderlaySelector: string;
+		burgerMenuElementSelectors?: Array<string> | undefined;
+		initialBurgerMenuColor?: string;
+		activeBurgerMenuColor?: string;
+		toggleOverflow?: boolean;
+	}) {
+		this.trigger = document.querySelector(triggerSelector);
+		this.burgerMenuContent = document.querySelector(burgerMenuContentSelector);
+		this.burgerMenuUnderlay = document.querySelector(burgerMenuUnderlaySelector);
+		this.burgerMenuElements = burgerMenuElementSelectors;
+		this.initialBurgerColor = initialBurgerMenuColor || "#122659";
+		this.activeBurgerColor = activeBurgerMenuColor || "#A90E46";
+		this.overflow = toggleOverflow;
 		this.timeline = gsap.timeline({ delay: 0.1 });
-
-		this.configureBurgerMenu();
 	}
 
-	configureBurgerMenu() {
-		setTimeout(() => {
-			this.trigger = document.querySelector(".navigation__mobile-navigation-burger"); //
-			this.burgerMenuContent = document.querySelector(".mobile-navigation__content");
-			this.burgerMenuUnderlay = document.querySelector(".mobile-navigation__underlay"); //
-			this.burgerMenuElements = [".mobile-navigation__item"];
-			// this.initialBurgerColor = "#122659";
-			// this.activeBurgerColor = "#A90E46";
-			this.overflow = true;
-			this.timeline = gsap.timeline({ delay: 0.1 });
-		}, 0)
+	public init(): void {
+		this.trigger?.addEventListener("click", event => {
+			const menu: unknown = event.currentTarget;
+			const menuState: string | null = (menu as HTMLElement).getAttribute("data-menu-open");
+
+			switch (menuState) {
+				case "false":
+					this.openMenu(menuState);
+					this.#animateMenuContent();
+					(menu as HTMLElement).setAttribute("data-menu-open", "true");
+					break;
+				case "true":
+					this.closeMenu(menuState);
+					(menu as HTMLElement).setAttribute("data-menu-open", "false");
+					break;
+				default:
+					throw new Error("Unknown menu state, should be true or false.");
+			}
+		});
 	}
 
 	public openMenu(state: string): void {
-		this.animateBurgerMenu(state);
-		// const burgerMenuUnderlay = document.querySelector(".mobile-navigation__underlay");
-		// work on underlay
+		// this.animateBurgerMenu(state);
 		if (this.burgerMenuUnderlay) {
 			this.toggleBurgerMenuUnderlay(state);
 		}
@@ -65,7 +96,6 @@ export class BurgerMenuModel {
 	}
 
 	private toggleBurgerMenuUnderlay(burgerMenuState: string): void {
-		// const trigger = document.querySelector(".navigation__mobile-navigation-burger");
 		if (burgerMenuState === "false") {
 			this.#toggleZIndex(burgerMenuState, [
 				this.trigger,
@@ -83,9 +113,9 @@ export class BurgerMenuModel {
 
 	private animateBurgerMenu(burgerMenuState: string): void {
 		if (burgerMenuState === "false") {
-			this.closeBurgerMenuAnimation();
+			this.#closeBurgerMenuAnimation();
 		} else {
-			this.openBurgerMenuAnimation();
+			this.#openBurgerMenuAnimation();
 		}
 	}
 
@@ -98,8 +128,6 @@ export class BurgerMenuModel {
 	}
 
 	#showBurgerMenuUnderlay(): void {
-		// const burgerMenuUnderlay = document.querySelector(".mobile-navigation__underlay");
-		// console.log(`${this.fuuuu} fuuuu`);
 		this.timeline.fromTo(
 			this.burgerMenuUnderlay,
 			{ opacity: 0, display: "none" },
@@ -113,8 +141,6 @@ export class BurgerMenuModel {
 	}
 
 	#hideBurgerMenuUnderlay(): void {
-		// console.log(this.burgerMenuUnderlay);
-		// const burgerMenuUnderlay = document.querySelector(".mobile-navigation__underlay");
 		this.timeline.fromTo(
 			this.burgerMenuUnderlay,
 			{ opacity: 1, display: "block" },
@@ -127,16 +153,16 @@ export class BurgerMenuModel {
 		);
 	}
 
-	private closeBurgerMenuAnimation(): void { /////// ok
-		const burger = document.querySelector(this.burgerSelector);
-		const [burgerBar1, burgerBar2, burgerBar3] = burger?.children as unknown as Array<HTMLElement>;
+	#closeBurgerMenuAnimation(): void {
+		const [bar1, bar2, bar3] = this.trigger?.children as unknown as Array<HTMLElement>;
 
-		const rotateBars = (burgerBar: HTMLElement, rotateDegrees: number): void => {
+		const rotateBars = (bar: HTMLElement, rotateDegrees: number): void => {
 			gsap.fromTo(
-				burgerBar,
-				{ rotate: 0 },
+				bar,
+				{ rotate: 0, backgroundColor: this.initialBurgerColor },
 				{
 					rotate: rotateDegrees,
+					backgroundColor: this.activeBurgerColor,
 					duration: 0.6,
 					ease: "power4.out"
 				}
@@ -144,22 +170,20 @@ export class BurgerMenuModel {
 		};
 
 		gsap.fromTo(
-			burgerBar1,
+			bar1,
 			{ rotate: 0, translateY: 0 },
 			{
 				rotate: 0,
-				translateY: 11,
-				color: this.activeBurgerColor,
+				translateY: 6,
 				duration: 0.6,
 				ease: "power4.out",
 				onComplete: () => {
-					rotateBars(burgerBar1, 45);
+					rotateBars(bar1, 45);
 				}
 			}
 		);
-
 		gsap.fromTo(
-			burgerBar2,
+			bar2,
 			{ opacity: 1, scale: 1 },
 			{
 				opacity: 0,
@@ -168,30 +192,27 @@ export class BurgerMenuModel {
 				ease: "power4.out"
 			}
 		);
-
 		gsap.fromTo(
-			burgerBar3,
+			bar3,
 			{ rotate: 0, translateY: 0 },
 			{
 				rotate: 0,
-				translateY: -11,
-				color: this.activeBurgerColor,
+				translateY: -6,
 				duration: 0.6,
 				ease: "power4.out",
 				onComplete: () => {
-					rotateBars(burgerBar3, -45);
+					rotateBars(bar3, -45);
 				}
 			}
 		);
 	}
 
-	private openBurgerMenuAnimation(): void { ///////////// ok
-		const burger = document.querySelector(this.burgerSelector);
-		const [burgerBar1, burgerBar2, burgerBar3] = burger?.children as unknown as Array<HTMLElement>;
+	#openBurgerMenuAnimation(): void {
+		const [bar1, bar2, bar3] = this.trigger?.children as unknown as Array<HTMLElement>;
 
-		const expandBars = (burgerBar: HTMLElement, yCoordinate: number): void => {
+		const expandBars = (bar: HTMLElement, yCoordinate: number): void => {
 			gsap.fromTo(
-				burgerBar,
+				bar,
 				{ translateY: yCoordinate },
 				{
 					translateY: 0,
@@ -202,54 +223,45 @@ export class BurgerMenuModel {
 		};
 
 		gsap.fromTo(
-			burgerBar1,
-			{ rotate: 45, color: this.activeBurgerColor },
+			bar1,
+			{ rotate: 45, backgroundColor: this.activeBurgerColor },
 			{
 				rotate: 0,
 				duration: 0.6,
-				color: this.initialBurgerColor,
+				backgroundColor: this.initialBurgerColor,
 				ease: "power4.out",
 				onComplete: () => {
-					expandBars(burgerBar1, 6);
+					expandBars(bar1, 6);
 				}
 			}
 		);
-
 		gsap.fromTo(
-			burgerBar2,
-			{ opacity: 0, scale: 1, color: this.initialBurgerColor },
+			bar2,
+			{ opacity: 0, scale: 0, backgroundColor: this.initialBurgerColor },
 			{
 				opacity: 1,
 				scale: 1,
 				duration: 0.6,
-				color: this.initialBurgerColor,
+				backgroundColor: this.initialBurgerColor,
 				ease: "power4.out"
 			}
 		);
-
 		gsap.fromTo(
-			burgerBar3,
-			{ rotate: -45, color: this.activeBurgerColor },
+			bar3,
+			{ rotate: -45, backgroundColor: this.activeBurgerColor },
 			{
 				rotate: 0,
 				duration: 0.6,
-				color: this.initialBurgerColor,
+				backgroundColor: this.initialBurgerColor,
 				ease: "power4.out",
 				onComplete: () => {
-					expandBars(burgerBar3, -6);
+					expandBars(bar3, -6);
 				}
 			}
 		);
 	}
 
 	#showBurgerMenu(state: string): void {
-		// FIX
-		// console.log(this.burgerMenuContent);
-		// copy all styles and html structure from old project
-		// triggers in constructor are not working or pass trigger from  upper
-		// const burgerMenuContent = document.querySelector(".mobile-navigation__content");
-		// console.log(burgerMenuContent);
-		// (burgerMenuContent as HTMLElement).style.display = "block";
 		this.timeline.fromTo(
 			this.burgerMenuContent,
 			{ display: "none", translateY: "-100vw" },
@@ -315,10 +327,8 @@ export class BurgerMenuModel {
 		return scrollbarWidth;
 	}
 
-	animateMenuContent(): void {
-
+	#animateMenuContent(): void {
 		if (this.burgerMenuElements) this.#showMenuElements(this.burgerMenuElements);
-		console.log(this.burgerMenuElements);
 	}
 
 	#showMenuElements(menuElements: Array<string>): void {
