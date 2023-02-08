@@ -1,6 +1,5 @@
 import { BurgerMenuController } from "./BurgerMenuController";
 import { IBurgerMenuView } from "./BurgerMenuTypes";
-// import "./BurgerMenu.scss";
 
 export class BurgerMenuView implements IBurgerMenuView {
 	controller: BurgerMenuController;
@@ -9,7 +8,7 @@ export class BurgerMenuView implements IBurgerMenuView {
 	private mobileNavigation!: HTMLDivElement;
 	private mobileNavigationBurger!: HTMLDivElement;
 
-	constructor(root: HTMLElement, controller: BurgerMenuController) {
+	constructor({root, controller} : {root: HTMLElement, controller: BurgerMenuController}) {
 		this.root = root;
 		this.controller = controller;
 

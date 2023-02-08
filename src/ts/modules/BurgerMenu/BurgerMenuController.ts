@@ -13,8 +13,7 @@ export class BurgerMenuController implements IBurgerMenuController {
 		const menuState: string | null = (menu as HTMLElement).getAttribute("data-menu-open");
 		switch (menuState) {
 			case "false":
-				this.model.openMenu(menuState);
-				this.model.animateMenuContent();
+				this.model.openMenu(menuState).animateMenuContent([".mobile-navigation__item"]);
 				(menu as HTMLElement).setAttribute("data-menu-open", "true");
 				break;
 			case "true":

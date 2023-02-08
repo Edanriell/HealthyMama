@@ -7,8 +7,6 @@ $breakpoints: (
 	desktop: 1024px
 );
 
-// FIx logotype color, fix burger menu color and background color
-
 .mobile-navigation {
 	display: block;
 	margin-top: 50vw;
@@ -18,8 +16,7 @@ $breakpoints: (
     position: absolute;
     top: 0;
     left: 0;
-    // background-color: var(--color-accent-jade-green);
-    background-color: brown;
+    background-color: var(--color-accent-jade-green);
     width: 100vw;
     height: 100vh;
     z-index: 90;

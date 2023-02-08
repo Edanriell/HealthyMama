@@ -1,83 +1,125 @@
 import { gsap } from "gsap";
+import { IBurgerMenuModel } from "./BurgerMenuTypes";
 
-export class BurgerMenuModel {
-	trigger: HTMLElement | null;
-
-	burgerMenuContent: HTMLElement | null;
-
-	burgerMenuUnderlay: HTMLElement | null;
-
-	burgerMenuElements: Array<string> | undefined;
+export class BurgerMenuModel implements IBurgerMenuModel {
+	burgerMenuElements:
+		| Array<{ selector: string; initialColor: string; activeColor: string }>
+		| undefined;
 
 	initialBurgerColor: string;
 
-	activeBurgerColor: string; // ok
+	activeBurgerColor: string;
 
-	overflow: boolean | undefined;
+	toggleOverflow: boolean | undefined;
 
 	timeline: gsap.core.Timeline;
 
 	burgerSelector: string;
 
-	constructor() {
-		this.trigger = null;
-		this.burgerMenuContent = null;
-		this.burgerMenuUnderlay = null;
-		this.burgerMenuElements = [".mobile-navigation__item"];
-		this.initialBurgerColor = "rgb(40, 175, 96)"; // ok
-		this.activeBurgerColor = "#FFF"; // ok
-		this.burgerSelector = ".mobile-navigation-burger"; // ok
-		this.overflow = true;
-		this.timeline = gsap.timeline({ delay: 0.1 });
+	burgerMenuUnderlaySelector: string;
 
-		this.configureBurgerMenu();
+	websiteLogotypeSelector: string;
+
+	toggleElementsZIndex: boolean;
+
+	burgerMenuContentSelector: string;
+
+	easeType: string;
+
+	constructor({
+		burgerMenuElements,
+		initialBurgerColor,
+		activeBurgerColor,
+		burgerSelector,
+		burgerMenuUnderlaySelector,
+		toggleElementsZIndex,
+		websiteLogotypeSelector,
+		burgerMenuContentSelector,
+		toggleOverflow,
+		timeline,
+		easeType
+	}: {
+		burgerMenuElements?: Array<{ selector: string; initialColor: string; activeColor: string }>; //
+		initialBurgerColor?: string;
+		activeBurgerColor?: string;
+		burgerSelector?: string;
+		burgerMenuUnderlaySelector?: string;
+		toggleElementsZIndex?: boolean;
+		websiteLogotypeSelector?: string;
+		burgerMenuContentSelector?: string;
+		toggleOverflow?: boolean;
+		timeline?: gsap.core.Timeline;
+		easeType?: string;
+	}) {
+		this.burgerMenuElements = burgerMenuElements || [
+			{
+				selector: ".logotype__text-content",
+				initialColor: "black",
+				activeColor: "white"
+			}
+		];
+		this.initialBurgerColor = initialBurgerColor || "rgb(40, 175, 96)";
+		this.activeBurgerColor = activeBurgerColor || "#FFF";
+		this.burgerSelector = burgerSelector || ".mobile-navigation-burger";
+		this.burgerMenuUnderlaySelector =
+			burgerMenuUnderlaySelector || ".mobile-navigation__underlay";
+		this.toggleElementsZIndex = toggleElementsZIndex || false;
+		this.websiteLogotypeSelector = websiteLogotypeSelector || ".logotype";
+		this.burgerMenuContentSelector = burgerMenuContentSelector || ".mobile-navigation__content";
+		this.toggleOverflow = toggleOverflow || true;
+		this.timeline = timeline || gsap.timeline({ delay: 0.1 });
+		this.easeType = easeType || "power2.out";
 	}
 
-	configureBurgerMenu() {
-		setTimeout(() => {
-			this.trigger = document.querySelector(".navigation__mobile-navigation-burger"); //
-			this.burgerMenuContent = document.querySelector(".mobile-navigation__content");
-			this.burgerMenuUnderlay = document.querySelector(".mobile-navigation__underlay"); //
-			this.burgerMenuElements = [".mobile-navigation__item"];
-			// this.initialBurgerColor = "#122659";
-			// this.activeBurgerColor = "#A90E46";
-			this.overflow = true;
-			this.timeline = gsap.timeline({ delay: 0.1 });
-		}, 0)
-	}
+	public openMenu(state: string): this {
+		const burgerMenuUnderlay = document.querySelector(this.burgerMenuUnderlaySelector);
+		const burger = document.querySelector(this.burgerSelector);
+		const websiteLogotype = document.querySelector(this.websiteLogotypeSelector);
 
-	public openMenu(state: string): void {
+		if (this.toggleElementsZIndex) {
+			this.toggleZIndex("false", [burger as HTMLElement, websiteLogotype as HTMLElement]);
+		}
+
+		if (this.burgerMenuElements) {
+			this.toggleBurgerMenuElementsColor(state, this.burgerMenuElements);
+		}
+
 		this.animateBurgerMenu(state);
-		// const burgerMenuUnderlay = document.querySelector(".mobile-navigation__underlay");
-		// work on underlay
-		if (this.burgerMenuUnderlay) {
+		if (burgerMenuUnderlay) {
 			this.toggleBurgerMenuUnderlay(state);
 		}
-		this.toggleBurgerMenu(state);
+		this.toggleBurgerMenuContent(state);
+
+		return this;
 	}
 
-	public closeMenu(state: string): void {
+	public closeMenu(state: string): this {
+		const burgerMenuUnderlay = document.querySelector(this.burgerMenuUnderlaySelector);
+		const burger = document.querySelector(this.burgerSelector);
+		const websiteLogotype = document.querySelector(this.websiteLogotypeSelector);
+
+		if (this.burgerMenuElements) {
+			this.toggleBurgerMenuElementsColor(state, this.burgerMenuElements);
+		}
+
 		this.animateBurgerMenu(state);
-		this.toggleBurgerMenu(state);
-		if (this.burgerMenuUnderlay) {
+		this.toggleBurgerMenuContent(state);
+		if (burgerMenuUnderlay) {
 			this.toggleBurgerMenuUnderlay(state);
 		}
+
+		if (this.toggleElementsZIndex) {
+			this.toggleZIndex("true", [burger as HTMLElement, websiteLogotype as HTMLElement]);
+		}
+
+		return this;
 	}
 
 	private toggleBurgerMenuUnderlay(burgerMenuState: string): void {
-		// const trigger = document.querySelector(".navigation__mobile-navigation-burger");
 		if (burgerMenuState === "false") {
-			this.#toggleZIndex(burgerMenuState, [
-				this.trigger,
-				document.querySelector(".logotype")
-			]);
-			this.#showBurgerMenuUnderlay();
+			this.showBurgerMenuUnderlay();
 		} else {
-			this.#toggleZIndex(burgerMenuState, [
-				this.trigger,
-				document.querySelector(".logotype")
-			]);
-			this.#hideBurgerMenuUnderlay();
+			this.hideBurgerMenuUnderlay();
 		}
 	}
 
@@ -89,47 +131,50 @@ export class BurgerMenuModel {
 		}
 	}
 
-	private toggleBurgerMenu(burgerMenuState: string): void {
+	private toggleBurgerMenuContent(burgerMenuState: string): void {
 		if (burgerMenuState === "false") {
-			this.#showBurgerMenu(burgerMenuState);
+			this.showBurgerMenuContent(burgerMenuState);
 		} else {
-			this.#hideBurgerMenu(burgerMenuState);
+			this.hideBurgerMenuContent(burgerMenuState);
 		}
 	}
 
-	#showBurgerMenuUnderlay(): void {
-		// const burgerMenuUnderlay = document.querySelector(".mobile-navigation__underlay");
-		// console.log(`${this.fuuuu} fuuuu`);
+	private showBurgerMenuUnderlay(): void {
+		const burgerMenuUnderlay = document.querySelector(this.burgerMenuUnderlaySelector);
+
 		this.timeline.fromTo(
-			this.burgerMenuUnderlay,
-			{ opacity: 0, display: "none" },
+			burgerMenuUnderlay,
+			{ opacity: 1, translateX: 600, display: "none" },
 			{
 				opacity: 1,
 				display: "block",
-				duration: 0.3,
-				ease: "power4.out"
+				duration: 0.5,
+				translateX: 0,
+				ease: this.easeType
 			}
 		);
 	}
 
-	#hideBurgerMenuUnderlay(): void {
-		// console.log(this.burgerMenuUnderlay);
-		// const burgerMenuUnderlay = document.querySelector(".mobile-navigation__underlay");
+	private hideBurgerMenuUnderlay(): void {
+		const burgerMenuUnderlay = document.querySelector(this.burgerMenuUnderlaySelector);
+
 		this.timeline.fromTo(
-			this.burgerMenuUnderlay,
-			{ opacity: 1, display: "block" },
+			burgerMenuUnderlay,
+			{ opacity: 1, translateX: 0, display: "block" },
 			{
-				opacity: 0,
+				opacity: 1,
 				display: "none",
-				duration: 0.3,
-				ease: "power4.out"
+				duration: 1.2,
+				translateX: 600,
+				ease: this.easeType
 			}
 		);
 	}
 
-	private closeBurgerMenuAnimation(): void { /////// ok
+	private closeBurgerMenuAnimation(): void {
 		const burger = document.querySelector(this.burgerSelector);
-		const [burgerBar1, burgerBar2, burgerBar3] = burger?.children as unknown as Array<HTMLElement>;
+		const [burgerBar1, burgerBar2, burgerBar3] =
+			burger?.children as unknown as Array<HTMLElement>;
 
 		const rotateBars = (burgerBar: HTMLElement, rotateDegrees: number): void => {
 			gsap.fromTo(
@@ -138,7 +183,7 @@ export class BurgerMenuModel {
 				{
 					rotate: rotateDegrees,
 					duration: 0.6,
-					ease: "power4.out"
+					ease: this.easeType
 				}
 			);
 		};
@@ -151,7 +196,7 @@ export class BurgerMenuModel {
 				translateY: 11,
 				color: this.activeBurgerColor,
 				duration: 0.6,
-				ease: "power4.out",
+				ease: this.easeType,
 				onComplete: () => {
 					rotateBars(burgerBar1, 45);
 				}
@@ -165,7 +210,7 @@ export class BurgerMenuModel {
 				opacity: 0,
 				scale: 1,
 				duration: 0.6,
-				ease: "power4.out"
+				ease: this.easeType
 			}
 		);
 
@@ -177,7 +222,7 @@ export class BurgerMenuModel {
 				translateY: -11,
 				color: this.activeBurgerColor,
 				duration: 0.6,
-				ease: "power4.out",
+				ease: this.easeType,
 				onComplete: () => {
 					rotateBars(burgerBar3, -45);
 				}
@@ -185,9 +230,10 @@ export class BurgerMenuModel {
 		);
 	}
 
-	private openBurgerMenuAnimation(): void { ///////////// ok
+	private openBurgerMenuAnimation(): void {
 		const burger = document.querySelector(this.burgerSelector);
-		const [burgerBar1, burgerBar2, burgerBar3] = burger?.children as unknown as Array<HTMLElement>;
+		const [burgerBar1, burgerBar2, burgerBar3] =
+			burger?.children as unknown as Array<HTMLElement>;
 
 		const expandBars = (burgerBar: HTMLElement, yCoordinate: number): void => {
 			gsap.fromTo(
@@ -196,7 +242,7 @@ export class BurgerMenuModel {
 				{
 					translateY: 0,
 					duration: 0.6,
-					ease: "power4.out"
+					ease: this.easeType
 				}
 			);
 		};
@@ -208,7 +254,7 @@ export class BurgerMenuModel {
 				rotate: 0,
 				duration: 0.6,
 				color: this.initialBurgerColor,
-				ease: "power4.out",
+				ease: this.easeType,
 				onComplete: () => {
 					expandBars(burgerBar1, 6);
 				}
@@ -223,7 +269,7 @@ export class BurgerMenuModel {
 				scale: 1,
 				duration: 0.6,
 				color: this.initialBurgerColor,
-				ease: "power4.out"
+				ease: this.easeType
 			}
 		);
 
@@ -234,7 +280,7 @@ export class BurgerMenuModel {
 				rotate: 0,
 				duration: 0.6,
 				color: this.initialBurgerColor,
-				ease: "power4.out",
+				ease: this.easeType,
 				onComplete: () => {
 					expandBars(burgerBar3, -6);
 				}
@@ -242,49 +288,44 @@ export class BurgerMenuModel {
 		);
 	}
 
-	#showBurgerMenu(state: string): void {
-		// FIX
-		// console.log(this.burgerMenuContent);
-		// copy all styles and html structure from old project
-		// triggers in constructor are not working or pass trigger from  upper
-		// const burgerMenuContent = document.querySelector(".mobile-navigation__content");
-		// console.log(burgerMenuContent);
-		// (burgerMenuContent as HTMLElement).style.display = "block";
+	private showBurgerMenuContent(state: string): void {
+		const burgerMenuContent = document.querySelector(this.burgerMenuContentSelector);
+
 		this.timeline.fromTo(
-			this.burgerMenuContent,
-			{ display: "none", translateY: "-100vw" },
+			burgerMenuContent,
+			{ display: "none" },
 			{
 				display: "block",
-				translateY: 0,
-				duration: 0.6,
-				ease: "power4.out",
+				duration: 0.1,
+				ease: this.easeType,
 				onStart: () => {
-					this.#toggleBodyOverflow(state);
+					this.toggleBodyOverflow(state);
 				}
 			}
 		);
 	}
 
-	#hideBurgerMenu(state: string): void {
+	private hideBurgerMenuContent(state: string): void {
+		const burgerMenuContent = document.querySelector(this.burgerMenuContentSelector);
+
 		this.timeline.fromTo(
-			this.burgerMenuContent,
-			{ display: "block", translateY: 0 },
+			burgerMenuContent,
+			{ display: "block" },
 			{
 				display: "none",
-				translateY: "-112vw",
-				duration: 0.6,
-				ease: "power4.out",
+				duration: 0.1,
+				ease: this.easeType,
 				onComplete: () => {
-					this.#toggleBodyOverflow(state);
+					this.toggleBodyOverflow(state);
 				}
 			}
 		);
 	}
 
-	#toggleBodyOverflow(burgerMenuState: string): void {
-		if (!this.overflow) return;
+	private toggleBodyOverflow(burgerMenuState: string): void {
+		if (!this.toggleOverflow) return;
 		const body = document.querySelector("body");
-		const scrollbarWidth = this.#calculateScrollBarWidth();
+		const scrollbarWidth = this.calculateScrollBarWidth();
 
 		if (burgerMenuState === "false") {
 			(body as HTMLElement).style.cssText = `
@@ -293,13 +334,13 @@ export class BurgerMenuModel {
 			`;
 		} else {
 			(body as HTMLElement).style.cssText = `
-				overflow: auto;
+				overflow-x: hidden;
 				padding-right: 0px;
 			`;
 		}
 	}
 
-	#calculateScrollBarWidth(): number {
+	private calculateScrollBarWidth(): number {
 		const outerDiv = document.createElement("div");
 		outerDiv.style.visibility = "hidden";
 		outerDiv.style.overflow = "scroll";
@@ -315,23 +356,7 @@ export class BurgerMenuModel {
 		return scrollbarWidth;
 	}
 
-	animateMenuContent(): void {
-
-		if (this.burgerMenuElements) this.#showMenuElements(this.burgerMenuElements);
-		console.log(this.burgerMenuElements);
-	}
-
-	#showMenuElements(menuElements: Array<string>): void {
-		menuElements.forEach(element => {
-			this.timeline.fromTo(
-				element,
-				{ opacity: 0, translateX: 50 },
-				{ opacity: 1, translateX: 0, duration: 1, ease: "power4.out", stagger: 0.2 }
-			);
-		});
-	}
-
-	#toggleZIndex(state: string, elements: (HTMLElement | null)[]): void {
+	private toggleZIndex(state: string, elements: (HTMLElement | null)[]): void {
 		if (state === "false") {
 			elements.forEach(element => {
 				if (element) element.style.zIndex = "100";
@@ -341,5 +366,42 @@ export class BurgerMenuModel {
 				if (element) element.style.zIndex = "1";
 			});
 		}
+	}
+
+	private toggleBurgerMenuElementsColor(
+		state: string,
+		menuElements: Array<{ selector: string; initialColor: string; activeColor: string }>
+	): void {
+		if (state === "false") {
+			menuElements.forEach(element => {
+				gsap.fromTo(
+					element.selector,
+					{ color: element.initialColor },
+					{ color: element.activeColor, duration: 1, ease: this.easeType }
+				);
+			});
+		} else {
+			menuElements.forEach(element => {
+				gsap.fromTo(
+					element.selector,
+					{ color: element.activeColor },
+					{ color: element.initialColor, duration: 1, ease: this.easeType }
+				);
+			});
+		}
+	}
+
+	public animateMenuContent(burgerMenuElementsSelectors: Array<string>): void {
+		this.showMenuElements(burgerMenuElementsSelectors);
+	}
+
+	private showMenuElements(menuElements: Array<string>): void {
+		menuElements.forEach(element => {
+			this.timeline.fromTo(
+				element,
+				{ opacity: 0, translateX: 50 },
+				{ opacity: 1, translateX: 0, duration: 1, ease: this.easeType, stagger: 0.2 }
+			);
+		});
 	}
 }
