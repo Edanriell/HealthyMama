@@ -28,8 +28,9 @@ export interface IBurgerMenuModel {
 	toggleElementsZIndex: boolean;
 	burgerMenuContentSelector: string;
 	easeType: string;
+	isBurgerMenuLocked: boolean;
 
-	openMenu(state: string): this;
-	closeMenu(state: string): this;
-	animateMenuContent(burgerMenuElementsSelectors: Array<string>): void;
+	openMenu(state: string): this | undefined;
+	closeMenu(state: string): this | undefined;
+	animateMenuContent(burgerMenuElementsSelectors: Array<string>): this;
 }

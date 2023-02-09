@@ -1,5 +1,6 @@
 import { BurgerMenuController } from "./BurgerMenuController";
 import { IBurgerMenuView } from "./BurgerMenuTypes";
+import "./burger-menu.scss";
 
 export class BurgerMenuView implements IBurgerMenuView {
 	controller: BurgerMenuController;

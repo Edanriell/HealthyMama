@@ -26,6 +26,8 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 
 	easeType: string;
 
+	isBurgerMenuLocked: boolean;
+
 	constructor({
 		burgerMenuElements,
 		initialBurgerColor,
@@ -69,9 +71,16 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 		this.toggleOverflow = toggleOverflow || true;
 		this.timeline = timeline || gsap.timeline({ delay: 0.1 });
 		this.easeType = easeType || "power2.out";
+		this.isBurgerMenuLocked = false;
 	}
 
-	public openMenu(state: string): this {
+	public openMenu(state: string): this | undefined {
+		if (this.isBurgerMenuLocked) {
+			return;
+		}
+
+		this.isBurgerMenuLocked = true;
+
 		const burgerMenuUnderlay = document.querySelector(this.burgerMenuUnderlaySelector);
 		const burger = document.querySelector(this.burgerSelector);
 		const websiteLogotype = document.querySelector(this.websiteLogotypeSelector);
@@ -90,10 +99,21 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 		}
 		this.toggleBurgerMenuContent(state);
 
+		setTimeout(() => {
+			this.#changeMenuState();
+			this.isBurgerMenuLocked = false;
+		}, 1900);
+
 		return this;
 	}
 
-	public closeMenu(state: string): this {
+	public closeMenu(state: string): this | undefined {
+		if (this.isBurgerMenuLocked) {
+			return;
+		}
+
+		this.isBurgerMenuLocked = true;
+
 		const burgerMenuUnderlay = document.querySelector(this.burgerMenuUnderlaySelector);
 		const burger = document.querySelector(this.burgerSelector);
 		const websiteLogotype = document.querySelector(this.websiteLogotypeSelector);
@@ -111,6 +131,11 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 		if (this.toggleElementsZIndex) {
 			this.toggleZIndex("true", [burger as HTMLElement, websiteLogotype as HTMLElement]);
 		}
+
+		setTimeout(() => {
+			this.#changeMenuState();
+			this.isBurgerMenuLocked = false;
+		}, 1200);
 
 		return this;
 	}
@@ -300,7 +325,7 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 				ease: this.easeType,
 				onStart: () => {
 					this.toggleBodyOverflow(state);
-				}
+				},
 			}
 		);
 	}
@@ -391,8 +416,21 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 		}
 	}
 
-	public animateMenuContent(burgerMenuElementsSelectors: Array<string>): void {
+	#changeMenuState(): this | undefined {
+		const menu = document.querySelector(".navigation__mobile-navigation-burger");
+		const state: string | null = (menu as HTMLElement).getAttribute("data-menu-open");
+
+			if (state === "false") {
+				(menu as HTMLElement).setAttribute("data-menu-open", "true");
+			} else {
+				(menu as HTMLElement).setAttribute("data-menu-open", "false");
+			}
+			return this;
+	}
+
+	public animateMenuContent(burgerMenuElementsSelectors: Array<string>): this {
 		this.showMenuElements(burgerMenuElementsSelectors);
+		return this;
 	}
 
 	private showMenuElements(menuElements: Array<string>): void {
