@@ -5,27 +5,16 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 	burgerMenuElements:
 		| Array<{ selector: string; initialColor: string; activeColor: string }>
 		| undefined;
-
 	initialBurgerColor: string;
-
 	activeBurgerColor: string;
-
 	toggleOverflow: boolean | undefined;
-
 	timeline: gsap.core.Timeline;
-
 	burgerSelector: string;
-
 	burgerMenuUnderlaySelector: string;
-
 	websiteLogotypeSelector: string;
-
 	toggleElementsZIndex: boolean;
-
 	burgerMenuContentSelector: string;
-
 	easeType: string;
-
 	isBurgerMenuLocked: boolean;
 
 	constructor({

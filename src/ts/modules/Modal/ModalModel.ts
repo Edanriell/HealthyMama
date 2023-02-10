@@ -50,11 +50,11 @@ export class ModalModel {
 	constructor({
 		// triggerSelector,
 		timeout = null,
-		scrollTriggerPoint = null,
-		// modalSelector,
-		// modalUnderlaySelector,
-		// closeModalButtonSelector
-	}: {
+		scrollTriggerPoint = null
+	}: // modalSelector,
+	// modalUnderlaySelector,
+	// closeModalButtonSelector
+	{
 		// triggerSelector?: string;
 		// modalSelector?: string;
 		// modalUnderlaySelector?: string;
@@ -71,63 +71,72 @@ export class ModalModel {
 	}
 
 	// openModal(): void {
-		// this.triggerButton.forEach(button => {
-		// 	button.addEventListener("click", event => {
-		// 		event.preventDefault();
-		// 		this.#showModal();
-		// 	});
-		// });
-		// this.modalUnderlay?.addEventListener("click", event => {
-		// 	if (this.modalUnderlay === event.target) {
-		// 		this.#hideModal();
-		// 	} else if (this.closeModalButton === event.target) {
-		// 		this.#hideModal();
-		// 	}
-		// });
-		// if (this.timeout && this.timeout.action === ModalTimeoutAction.Show && !this.isShowed)
-		// 	this.#modalTimeout({ action: this.timeout.action, timeout: this.timeout.delay });
-		// window.addEventListener("scroll", () => {
-		// 	if (this.scrollTrigger && window.scrollY >= this.scrollTrigger) {
-		// 		this.#scrollModal();
-		// 	}
-		// });
+	// this.triggerButton.forEach(button => {
+	// 	button.addEventListener("click", event => {
+	// 		event.preventDefault();
+	// 		this.#showModal();
+	// 	});
+	// });
+	// this.modalUnderlay?.addEventListener("click", event => {
+	// 	if (this.modalUnderlay === event.target) {
+	// 		this.#hideModal();
+	// 	} else if (this.closeModalButton === event.target) {
+	// 		this.#hideModal();
+	// 	}
+	// });
+	// if (this.timeout && this.timeout.action === ModalTimeoutAction.Show && !this.isShowed)
+	// 	this.#modalTimeout({ action: this.timeout.action, timeout: this.timeout.delay });
+	// window.addEventListener("scroll", () => {
+	// 	if (this.scrollTrigger && window.scrollY >= this.scrollTrigger) {
+	// 		this.#scrollModal();
+	// 	}
+	// });
 	// }
 
 	public openModal(): void {
 		const modal = document.querySelector("[data-modal]");
-		const modalUnderlay = document.querySelector("[data-modal-underlay]")
-		console.log(modal);
-		console.log(modalUnderlay);
+		const modalUnderlay = document.querySelector("[data-modal-underlay]");
 
 		this.isShowed = true;
 		this.modalState = ModalState.Shown;
 		this.toggleBodyOverflow({ modalState: this.modalState });
 		gsap.set(modalUnderlay, { display: "block" });
-		this.timeline.fromTo(modalUnderlay, { opacity: 0 }, { opacity: 1, duration: 0.3 });
+		this.timeline.fromTo(
+			modalUnderlay,
+			{ opacity: 0 },
+			{ opacity: 1, duration: 0.3, ease: "power2.out" }
+		);
 		this.timeline.fromTo(
 			modal,
 			{ opacity: 0, scale: 0.8 },
-			{ opacity: 1, scale: 1, duration: 1.5, ease: "elastic.out(2.5, 0.75)" }
+			{ opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" }
 		);
 		// if (this.timeout && this.timeout.action === ModalTimeoutAction.Hide)
 		// 	this.#modalTimeout({ action: this.timeout.action, timeout: this.timeout.delay });
 	}
 
-	// #hideModal(): void {
-	// 	this.modalState = ModalState.Hidden;
-	// 	this.timeline.fromTo(
-	// 		this.modal,
-	// 		{ opacity: 1, scale: 1 },
-	// 		{ opacity: 0, scale: 0.8, duration: 0.2 }
-	// 	);
-	// 	this.timeline.fromTo(this.modalUnderlay, { opacity: 1 }, { opacity: 0, duration: 0.3 });
-	// 	this.timeline.set(this.modalUnderlay, {
-	// 		display: "none",
-	// 		onComplete: () => {
-	// 			this.#toggleBodyOverflow({ modalState: this.modalState });
-	// 		}
-	// 	});
-	// }
+	public closeModal(): void {
+		const modal = document.querySelector("[data-modal]");
+		const modalUnderlay = document.querySelector("[data-modal-underlay]");
+
+		this.modalState = ModalState.Hidden;
+		this.timeline.fromTo(
+			modal,
+			{ opacity: 1, scale: 1 },
+			{ opacity: 0, scale: 0.8, duration: 0.2, ease: "power2.out" }
+		);
+		this.timeline.fromTo(
+			modalUnderlay,
+			{ opacity: 1 },
+			{ opacity: 0, duration: 0.3, ease: "power2.out" }
+		);
+		this.timeline.set(modalUnderlay, {
+			display: "none",
+			onComplete: () => {
+				this.toggleBodyOverflow({ modalState: this.modalState });
+			}
+		});
+	}
 
 	// #modalTimeout({ action, timeout }: { action: ModalTimeoutAction; timeout: number }): void {
 	// 	switch (action) {
@@ -153,18 +162,18 @@ export class ModalModel {
 
 	private toggleBodyOverflow({ modalState }: { modalState: ModalState }): void {
 		const body = document.querySelector("body");
-		const scrollbarWidth = this.#calculateScrollBarWidth();
+		const scrollbarWidth = this.calculateScrollBarWidth();
 
 		switch (modalState) {
 			case "hidden":
 				(body as HTMLElement).style.cssText = `
-					overflow: auto;
+					overflow-x: hidden;
 					padding-right: 0px;
 				`;
 				break;
 			case "shown":
 				(body as HTMLElement).style.cssText = `
-					overflow-x: hidden;
+					overflow: hidden;
 					padding-right: ${scrollbarWidth}px;
 				`;
 				break;
@@ -173,7 +182,7 @@ export class ModalModel {
 		}
 	}
 
-	#calculateScrollBarWidth(): number {
+	private calculateScrollBarWidth(): number {
 		const outerDiv = document.createElement("div");
 		outerDiv.style.visibility = "hidden";
 		outerDiv.style.overflow = "scroll";

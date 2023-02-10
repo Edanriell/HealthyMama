@@ -1,18 +1,18 @@
+import { IModalController } from "./ModalTypes";
 import { ModalModel } from "./ModalModel";
 
-export class ModalController {
+export class ModalController implements IModalController {
 	model: ModalModel;
 
 	constructor(model: ModalModel) {
 		this.model = model;
-		// console.log("controller");
 	}
 
-	public handleCloseModal() {
-
+	public handleCloseModal(): void {
+		this.model.closeModal();
 	}
 
-	public handleOpenModal() {
+	public handleOpenModal(): void {
 		this.model.openModal();
 	}
 }
