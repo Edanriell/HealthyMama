@@ -13,19 +13,38 @@ export class ModalView implements IModalView {
 	private modalMainContent!: HTMLDivElement;
 	private modalForm!: HTMLFormElement;
 	private modalTrigger!: NodeListOf<Element>;
+	private openModalOnScroll: {
+		windowScrollY: number;
+		openOnce: boolean;
+		logWindowScrollY?: boolean | undefined;
+	} | null;
+	private openModalOnTimeout: {
+		delay: number;
+		openOnce: boolean;
+	} | null;
 
 	constructor({
 		root,
 		controller,
-		modalTriggerSelector
+		modalTriggerSelector,
+		openModalOnScroll,
+		openModalOnTimeout
 	}: {
 		root: HTMLElement;
 		controller: ModalController;
 		modalTriggerSelector: string;
+		openModalOnScroll?: {
+			windowScrollY: number;
+			openOnce: boolean;
+			logWindowScrollY?: boolean;
+		};
+		openModalOnTimeout?: { delay: number; openOnce: boolean };
 	}) {
 		this.root = root;
 		this.controller = controller;
 		this.modalTrigger = document.querySelectorAll(modalTriggerSelector);
+		this.openModalOnScroll = openModalOnScroll || null;
+		this.openModalOnTimeout = openModalOnTimeout || null;
 
 		this.createModal();
 
@@ -40,6 +59,22 @@ export class ModalView implements IModalView {
 		this.controller.handleCloseModal();
 	};
 
+	private onOpenScroll = (): void => {
+		if (this.openModalOnScroll?.openOnce) {
+			this.controller.handleOpenModalOnce();
+		} else {
+			this.controller.handleOpenModal();
+		}
+	};
+
+	private onOpenTimeout = (): void => {
+		if (this.openModalOnTimeout?.openOnce) {
+			this.controller.handleOpenModalOnce();
+		} else {
+			this.controller.handleOpenModal();
+		}
+	};
+
 	private bindListeners(): void {
 		this.modalTrigger.forEach(trigger => {
 			trigger.addEventListener("click", this.onOpenClick);
@@ -48,6 +83,20 @@ export class ModalView implements IModalView {
 		this.modalUnderlay.addEventListener("click", event => {
 			if (event.currentTarget === event.target) this.onCloseClick();
 		});
+		if (this.openModalOnScroll) {
+			window.addEventListener("scroll", () => {
+				if (this.openModalOnScroll?.logWindowScrollY) console.log(window.scrollY);
+				if (
+					this.openModalOnScroll?.windowScrollY &&
+					window.scrollY >= this.openModalOnScroll?.windowScrollY
+				) {
+					this.onOpenScroll();
+				}
+			});
+		}
+		if (this.openModalOnTimeout) {
+			setTimeout(() => this.onOpenTimeout(), this.openModalOnTimeout.delay);
+		}
 	}
 
 	private createModal(): void {

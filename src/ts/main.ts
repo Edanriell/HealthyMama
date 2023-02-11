@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		controller: burgerMenuController
 	});
 
-	const modalModel: ModalModel = new ModalModel({});
+	const modalModel: ModalModel = new ModalModel();
 	const modalController: ModalController = new ModalController(modalModel);
 	const modalView: ModalView = new ModalView({
 		root: document.querySelector("body")!,

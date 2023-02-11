@@ -2,20 +2,20 @@ import { gsap } from "gsap";
 import { IBurgerMenuModel } from "./BurgerMenuTypes";
 
 export class BurgerMenuModel implements IBurgerMenuModel {
-	burgerMenuElements:
+	private burgerMenuElements:
 		| Array<{ selector: string; initialColor: string; activeColor: string }>
 		| undefined;
-	initialBurgerColor: string;
-	activeBurgerColor: string;
-	toggleOverflow: boolean | undefined;
-	timeline: gsap.core.Timeline;
-	burgerSelector: string;
-	burgerMenuUnderlaySelector: string;
-	websiteLogotypeSelector: string;
-	toggleElementsZIndex: boolean;
-	burgerMenuContentSelector: string;
-	easeType: string;
-	isBurgerMenuLocked: boolean;
+	private initialBurgerColor: string;
+	private activeBurgerColor: string;
+	private toggleOverflow: boolean | undefined;
+	private timeline: gsap.core.Timeline;
+	private burgerSelector: string;
+	private burgerMenuUnderlaySelector: string;
+	private websiteLogotypeSelector: string;
+	private toggleElementsZIndex: boolean;
+	private burgerMenuContentSelector: string;
+	private easeType: string;
+	private isBurgerMenuLocked: boolean;
 
 	constructor({
 		burgerMenuElements,
@@ -30,7 +30,7 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 		timeline,
 		easeType
 	}: {
-		burgerMenuElements?: Array<{ selector: string; initialColor: string; activeColor: string }>; //
+		burgerMenuElements?: Array<{ selector: string; initialColor: string; activeColor: string }>;
 		initialBurgerColor?: string;
 		activeBurgerColor?: string;
 		burgerSelector?: string;

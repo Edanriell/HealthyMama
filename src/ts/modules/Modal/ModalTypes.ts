@@ -13,3 +13,9 @@ export interface IModalController {
 	handleCloseModal(): void;
 	handleOpenModal(): void;
 }
+
+export interface IModalModel {
+	openModal(): void;
+	closeModal(): void;
+	openModalOnce(): void;
+}

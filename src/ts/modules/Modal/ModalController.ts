@@ -15,4 +15,8 @@ export class ModalController implements IModalController {
 	public handleOpenModal(): void {
 		this.model.openModal();
 	}
+
+	public handleOpenModalOnce(): void {
+		this.model.openModalOnce();
+	}
 }
