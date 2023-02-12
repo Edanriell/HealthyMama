@@ -11,7 +11,8 @@ $breakpoints: (
 );
 
 .products-slider {
-	@include minimum-size(padding-top, 4.2rem, 13.125vw);
+	// @include minimum-size(padding-top, 4.2rem, 13.125vw);
+	padding-top: max(4.2rem, 13.125vw) !important;
 }
 
 .products-slider--type--universal {
@@ -22,17 +23,22 @@ $breakpoints: (
 	position: relative;
 	display: block;
 	@include flex(center, center, column);
+	overflow: visible !important;
+	width: max(22.5rem, 70.3125vw) !important;
 
 	.products-slider__wrapper {
+		// width: max(22.5rem, 70.3125vw) !important;
 	}
 
 	.products-slider__slide {
 		@include minimum-size(width, 22.5rem, 70.3125vw);
+		border-radius: 1rem;
+		// width: max(22.5rem, 70.3125vw) !important;
 		// Temporary stuff
-		&:nth-child(1),
-		&:nth-child(3) {
-			display: none;
-		}
+		// &:nth-child(1),
+		// &:nth-child(3) {
+		// 	display: none;
+		// }
 		// Temporary stuff
 	}
 
@@ -75,13 +81,17 @@ $breakpoints: (
 	.products-slider__slider-controls-previous-slide {
 		position: absolute;
 		top: 51%;
-		left: -1.5%;
+		// left: -1.5%;
+		left: -9.375vw;
+		z-index: 100;
 	}
 
 	.products-slider__slider-controls-next-slide {
 		position: absolute;
 		top: 51%;
-		right: -1.5%;
+		// right: -1.5%;
+		right: -9.375vw;
+		z-index: 100;
 	}
 
 	.products-slider__previous-slide-button {

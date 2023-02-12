@@ -29,7 +29,8 @@ $hero-section-background-color: transparent;
 }
 
 .hero__wrapper {
-	@include flex(flex-start, flex-start, column);
+	// @include flex(flex-start, flex-start, column);
+	// This line breaks slider
 }
 
 .hero__main-content {
@@ -44,8 +45,8 @@ $hero-section-background-color: transparent;
 .hero__text {
 	text-align: center;
 	@include minimum-size(margin-bottom, 3.6rem, 11.25vw);
-	@include minimum-size(padding-left, 3rem, 9.375vw);
-	@include minimum-size(padding-right, 3rem, 9.375vw);
+	@include minimum-size(padding-left, 2.2rem, 6.875000000000001vw);
+	@include minimum-size(padding-right, 2.2rem, 6.875000000000001vw);
 }
 
 .hero__button {
@@ -71,8 +72,8 @@ $hero-section-background-color: transparent;
 
 	.hero__text {
 		@include minimum-size(margin-bottom, 5.2rem, 6.770833333333333vw);
-		@include minimum-size(padding-left, 14rem, 18.229166666666664vw);
-		@include minimum-size(padding-right, 14rem, 18.229166666666664vw);
+		@include minimum-size(padding-left, 13.4rem, 17.447916666666664vw);
+		@include minimum-size(padding-right, 13.4rem, 17.447916666666664vw);
 	}
 
 	.hero__button {

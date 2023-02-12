@@ -8,7 +8,8 @@ $breakpoints: (
 );
 
 .main-slider {
-	@include minimum-size(padding-top, 9.9rem, 30.9375vw);
+	// @include minimum-size(padding-top, 9.9rem, 30.9375vw);
+	padding-top: max(9.9rem, 30.9375vw) !important;
 }
 
 .main-slider--type--universal {
@@ -19,17 +20,25 @@ $breakpoints: (
 	display: block;
 	margin: 0 auto;
 	position: relative;
+	overflow: visible !important;
 
 	.main-slider__wrapper {
+		position: relative;
 	}
 
 	.main-slider__slide {
+		// background-color: red;
 		//Temporary
-		&:nth-child(2),
+		&:nth-child(2) {
+			// background-color: blue;
+		}
 		&:nth-child(3) {
-			display: none;
+			// background-color: green;
 		}
 		//Temporary
+		// display: block;
+		// @include minimum-size(width, 26rem, 81.25vw);
+		// @include minimum-size(height, 42rem, 131.25vw);
 	}
 
 	.main-slider__slide-text {
@@ -39,7 +48,10 @@ $breakpoints: (
 
 	.main-slider__slide-image-wrapper {
 		@include minimum-size(width, 26rem, 81.25vw);
+		// width: 100%;
 		@include minimum-size(height, 42rem, 131.25vw);
+		margin: 0 auto;
+		display: block;
 	}
 
 	.main-slider__slide-image {
@@ -69,10 +81,13 @@ $breakpoints: (
 		cursor: pointer;
 		position: absolute;
 		@include minimum-size(top, 31rem, 96.875vw);
-		@include minimum-size(left, -1.6rem, -5vw);
+		// @include minimum-size(left, -1.6rem, -5vw);
+		@include minimum-size(left, -1.2rem, -3.75vw);
+		// left: -1.2rem;
 		border: 0.15625vw solid var(--color-primary-white);
 		border-radius: 20.3125vw;
 		border-width: 1.5625vw;
+		z-index: 100;
 
 		&:hover,
 		&:focus {
@@ -108,10 +123,13 @@ $breakpoints: (
 		cursor: pointer;
 		position: absolute;
 		@include minimum-size(top, 31rem, 96.875vw);
-		@include minimum-size(right, -1.6rem, -5vw);
+		// @include minimum-size(right, -1.6rem, -5vw);
+		@include minimum-size(right, -1.2rem, -3.75vw);
+		// right: -1.2rem;
 		border: 0.15625vw solid var(--color-primary-white);
 		border-radius: 20.3125vw;
-		border-width: 0.5rem;
+		border-width: 1.5625vw;
+		z-index: 100;
 
 		&:hover,
 		&:focus {
@@ -142,8 +160,9 @@ $breakpoints: (
 
 @include media(">=tablet") {
 	.main-slider {
-		@include minimum-size(padding-top, 3.6rem, 4.6875vw);
+		// @include minimum-size(padding-top, 3.6rem, 4.6875vw);
 		margin-left: auto;
+		padding-top: max(3.6rem, 4.6875vw) !important;
 	}
 
 	.main-slider--type--mobile {
@@ -372,7 +391,8 @@ $breakpoints: (
 
 @include media(">=desktop") {
 	.main-slider {
-		@include minimum-size(padding-top, 0);
+		// @include minimum-size(padding-top, 0);
+		padding-top: 0 !important;
 		margin-left: 0;
 	}
 

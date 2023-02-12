@@ -1,5 +1,6 @@
 import { ModalController } from "./ModalController";
 import { ModalModel } from "./ModalModel";
+
 export interface IModalView {
 	root: HTMLElement;
 	controller: ModalController;
@@ -19,3 +20,5 @@ export interface IModalModel {
 	closeModal(): void;
 	openModalOnce(): void;
 }
+
+export type ModalState = "opened" | "closed";

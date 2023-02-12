@@ -1,10 +1,5 @@
-import { IModalModel } from "./ModalTypes";
+import { IModalModel, ModalState } from "./ModalTypes";
 import { gsap } from "gsap";
-
-enum ModalState {
-	Hidden = "hidden",
-	Shown = "shown"
-}
 export class ModalModel implements IModalModel {
 	private timeline: gsap.core.Timeline;
 	private isModalOpenedOnce: boolean;
@@ -13,7 +8,7 @@ export class ModalModel implements IModalModel {
 
 	constructor() {
 		this.timeline = gsap.timeline({ deleay: 0.4, ease: "power2.out" });
-		this.modalState = ModalState.Hidden;
+		this.modalState = "closed";
 		this.isModalOpenedOnce = false;
 		this.isModalLocked = false;
 	}
@@ -24,7 +19,7 @@ export class ModalModel implements IModalModel {
 		const modal = document.querySelector("[data-modal]");
 		const modalUnderlay = document.querySelector("[data-modal-underlay]");
 
-		this.modalState = ModalState.Shown;
+		this.modalState = "opened";
 		this.toggleBodyOverflow({ modalState: this.modalState });
 		gsap.set(modalUnderlay, { display: "block" });
 		this.timeline.fromTo(
@@ -54,7 +49,7 @@ export class ModalModel implements IModalModel {
 		const modal = document.querySelector("[data-modal]");
 		const modalUnderlay = document.querySelector("[data-modal-underlay]");
 
-		this.modalState = ModalState.Hidden;
+		this.modalState = "closed";
 		this.timeline.fromTo(
 			modal,
 			{ opacity: 1, scale: 1 },
@@ -88,13 +83,13 @@ export class ModalModel implements IModalModel {
 		const scrollbarWidth = this.calculateScrollBarWidth();
 
 		switch (modalState) {
-			case "hidden":
+			case "closed":
 				(body as HTMLElement).style.cssText = `
 					overflow-x: hidden;
 					padding-right: 0px;
 				`;
 				break;
-			case "shown":
+			case "opened":
 				(body as HTMLElement).style.cssText = `
 					overflow: hidden;
 					padding-right: ${scrollbarWidth}px;
