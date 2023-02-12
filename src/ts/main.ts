@@ -13,6 +13,10 @@ import { ModalView } from "./modules/Modal";
 import { ModalController } from "./modules/Modal";
 import { ModalModel } from "./modules/Modal";
 
+import { FormView } from "./modules/Form";
+import { FormController } from "./modules/Form";
+import { FormModel } from "./modules/Form";
+
 import { MainSliderMobile } from "./modules/MainSlider";
 import { ProductsSliderMobile } from "./modules/ProductsSlider";
 
@@ -34,8 +38,20 @@ window.addEventListener("DOMContentLoaded", () => {
 		modalTriggerSelector: "[data-modal-trigger]"
 	});
 
+	const formModel: FormModel = new FormModel({
+		databaseName: "personalized-menu-request"
+	});
+	const formController: FormController = new FormController(formModel);
+	const formView: FormView = new FormView({
+		root: document.querySelector(".request-form")!,
+		controller: formController,
+		formSubmitButton: document.querySelector(".request-form__button")!
+	});
+
 	burgerMenuView.mount();
 	modalView.mount();
+
+	formView.mount();
 });
 
 window.addEventListener("load", () => {
