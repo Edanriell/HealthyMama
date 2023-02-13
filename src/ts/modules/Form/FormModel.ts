@@ -64,4 +64,10 @@ export class FormModel {
 		}
 		return true;
 	}
+
+	public clearValidationResult() {
+		// takes all inputs.length
+		// and creates the object
+		// and returns it
+	}
 }

@@ -57,6 +57,12 @@ export class FormView implements IFormView {
 
 		if (this.isFormLocked) return;
 		// another formController method !
+		// this.formController.lockForm
+		// returns true
+		// this.formController.unlockForm
+		// returns isFormLocked false
+		// in controller will set proper styles pointerEvents
+		// also we can use !! to reverse boolean value
 		this.isFormLocked = true;
 		this.formSubmitButton.style.pointerEvents = "none";
 
@@ -74,6 +80,7 @@ export class FormView implements IFormView {
 		console.log("end");
 
 		// another inputController method
+		// this.inputController.clearInputsValidationResults
 		this.inputsValidationResults[0] = { isInputValid: false, inputIndex: 0 };
 
 		this.unmountSpinner();
@@ -162,6 +169,7 @@ export class FormView implements IFormView {
 								duration: 0.5,
 								ease: "power2.out",
 								onComplete: () => {
+									// unlock form here
 									this.isFormLocked = false;
 									this.formSubmitButton.style.pointerEvents = "auto";
 								}
@@ -182,6 +190,11 @@ export class FormView implements IFormView {
 			<use xlink:href="#spinner" x="0" y="0"></use>
 		</svg>
 		`;
+	}
+
+	private createSnackBar(): void {
+		// creating snackbar
+		// this.snackBar
 	}
 
 	public mount(): void {}
