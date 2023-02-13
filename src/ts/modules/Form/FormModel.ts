@@ -21,10 +21,6 @@ export class FormModel {
 		this.database = databaseName;
 	}
 
-	public async getResponseReport(): Promise<Response> {
-		return await this.responseReport;
-	}
-
 	public async sendData({ form }: { form: HTMLFormElement }): Promise<void> {
 		const formData = new FormData(form);
 		const data = Object.fromEntries(formData.entries());
@@ -46,5 +42,26 @@ export class FormModel {
 			.finally(() => {
 				(form as HTMLFormElement).reset();
 			});
+	}
+
+	public async getResponseReport(): Promise<Response> {
+		return await this.responseReport;
+	}
+
+	public validateInput(
+		inputValue: string,
+		inputIndex: number
+	): { isInputValid: boolean; inputIndex: number } {
+		if (inputValue.length > 4) return { isInputValid: true, inputIndex: inputIndex };
+		return { isInputValid: false, inputIndex: inputIndex };
+	}
+
+	public checkValidationResults(
+		inputsValidationResults: Array<{ isInputValid: boolean; inputIndex: number }>
+	): boolean {
+		for (const validationResult of inputsValidationResults) {
+			if (validationResult.isInputValid === false) return false;
+		}
+		return true;
 	}
 }

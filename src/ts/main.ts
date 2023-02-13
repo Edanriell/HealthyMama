@@ -15,6 +15,7 @@ import { ModalModel } from "./modules/Modal";
 
 import { FormView } from "./modules/Form";
 import { FormController } from "./modules/Form";
+import { InputController } from "./modules/Form";
 import { FormModel } from "./modules/Form";
 
 import { MainSliderMobile } from "./modules/MainSlider";
@@ -42,15 +43,20 @@ window.addEventListener("DOMContentLoaded", () => {
 		databaseName: "personalized-menu-request"
 	});
 	const formController: FormController = new FormController(formModel);
+	const inputController: InputController = new InputController(formModel);
 	const formView: FormView = new FormView({
 		root: document.querySelector(".request-form")!,
-		controller: formController,
-		formSubmitButton: document.querySelector(".request-form__button")!
+		formController: formController,
+		inputController: inputController,
+		formSubmitButton: document.querySelector(".request-form__button")!,
+		formInputs: [
+			document.querySelector(".request-form__person-name-input")!,
+			document.querySelector(".request-form__person-phone-number-input")!
+		]
 	});
 
 	burgerMenuView.mount();
 	modalView.mount();
-
 	formView.mount();
 });
 

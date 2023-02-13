@@ -20,6 +20,7 @@ $breakpoints: (
 	word-wrap: break-word;
 	outline: 0;
 	@include center-block;
+	overflow: hidden;
 
 	&:hover,
 	&:focus {
@@ -33,6 +34,10 @@ $breakpoints: (
 
 		.button__arrow-icon-wrapper {
 			background-color: var(--color-accent-hover-medium-aquamarine);
+		}
+
+		.spinner__image {
+			color: #28af60;
 		}
 	}
 

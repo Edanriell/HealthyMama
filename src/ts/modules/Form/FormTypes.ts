@@ -1,7 +1,8 @@
 import { FormController } from "./FormController";
-
+import { InputController } from "./InputController";
 export interface IFormView {
-	controller: FormController;
+	formController: FormController;
+	inputController: InputController;
 	root: HTMLFormElement;
 
 	mount(): void;
