@@ -16,6 +16,8 @@ export class FormView implements IFormView {
 	private formInputs: Array<HTMLInputElement>;
 	private inputsValidationResults: Array<{ isInputValid: boolean; inputIndex: number }>;
 	private spinner!: HTMLDivElement;
+	private snackBar!: HTMLDivElement;
+	private snackBarToast!: HTMLDivElement;
 
 	constructor({
 		root,
@@ -38,6 +40,7 @@ export class FormView implements IFormView {
 		this.formInputs = formInputs;
 
 		this.createSpinner();
+		this.createSnackBar();
 
 		this.bindListeners();
 
@@ -54,6 +57,12 @@ export class FormView implements IFormView {
 		);
 
 		this.renderInvalidInputs(this.inputsValidationResults);
+		// Trash code here need to fix
+		for (let i = 0; i < 3; i++) {
+			this.renderToasts(`${i}`);
+		}
+		this.bindToastListeners();
+		// Trash code here need to fix
 
 		if (!isAllInputsValid || this.isFormLocked) return;
 
@@ -189,10 +198,52 @@ export class FormView implements IFormView {
 		`;
 	}
 
+	// render method should be here somewhere
 	private createSnackBar(): void {
-		// creating snackbar
-		// this.snackBar
+		this.snackBar = document.createElement("div");
+		this.snackBar.classList.add("snack-bar");
 	}
 
-	public mount(): void {}
+	private createSnackBarToast({ index, text }: { index: number; text: string }): string {
+		// this.snackBarToast = document.createElement("div");
+		// this.snackBarToast.classList.add("snack-bar__toast");
+		// this.snackBarToast.setAttribute("data-toast-index", `${index}`);
+		return `
+			<div class="snack-bar__toast" data-toast-index="${index}">
+				<p>${text}</p>
+				<button type="button">Close</button>
+			</div>
+		`;
+	}
+
+	private bindToastListeners(): void {
+		const toasts = document.querySelectorAll(".snack-bar__toast");
+		if (!toasts) return;
+		toasts.forEach(toast => {
+			toast.addEventListener("click", (event) => {
+				this.removeToastOnClick(event, toast)
+			})
+		})
+	}
+
+	private removeToastOnClick(event: unknown, toast: Element) {
+		console.log((event as Event).target);
+		const toastParent = toast.parentElement;
+		const toastCloseButton = toast.querySelector("button");
+		if ((event as Event).target === toastCloseButton) {
+			toastParent?.remove();
+		}
+	}
+
+	// some parameters missing
+	private renderToasts(text: string): void {
+		const toastWrapper = document.createElement("div");
+		toastWrapper.innerHTML = this.createSnackBarToast({ index: 0, text });
+
+		this.snackBar.append(toastWrapper);
+	}
+
+	public mount(): void {
+		document.body.append(this.snackBar);
+	}
 }
