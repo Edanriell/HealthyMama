@@ -11,12 +11,10 @@ export class FormView implements IFormView {
 	inputController: InputController;
 	root: HTMLFormElement;
 
-	private isFormLocked!: boolean;
+	private isFormLocked: boolean = false;
 	private formSubmitButton: HTMLButtonElement;
 	private formInputs: Array<HTMLInputElement>;
-	private inputsValidationResults: Array<{ isInputValid: boolean; inputIndex: number }> = [
-		{ isInputValid: false, inputIndex: 0 }
-	];
+	private inputsValidationResults: Array<{ isInputValid: boolean; inputIndex: number }>;
 	private spinner!: HTMLDivElement;
 
 	constructor({
@@ -42,6 +40,10 @@ export class FormView implements IFormView {
 		this.createSpinner();
 
 		this.bindListeners();
+
+		this.inputsValidationResults = this.inputController.clearInputsValidationResults(
+			this.formInputs.length
+		);
 	}
 
 	private onSubmitClick = async (event: unknown): Promise<void> => {
@@ -53,18 +55,12 @@ export class FormView implements IFormView {
 
 		this.renderInvalidInputs(this.inputsValidationResults);
 
-		if (!isAllInputsValid) return;
+		if (!isAllInputsValid || this.isFormLocked) return;
 
-		if (this.isFormLocked) return;
-		// another formController method !
-		// this.formController.lockForm
-		// returns true
-		// this.formController.unlockForm
-		// returns isFormLocked false
-		// in controller will set proper styles pointerEvents
-		// also we can use !! to reverse boolean value
-		this.isFormLocked = true;
-		this.formSubmitButton.style.pointerEvents = "none";
+		this.isFormLocked = this.formController.lockForm({
+			isFormLocked: this.isFormLocked,
+			submitButton: this.formSubmitButton
+		});
 
 		console.log("start");
 
@@ -79,9 +75,9 @@ export class FormView implements IFormView {
 		console.log(responseReport);
 		console.log("end");
 
-		// another inputController method
-		// this.inputController.clearInputsValidationResults
-		this.inputsValidationResults[0] = { isInputValid: false, inputIndex: 0 };
+		this.inputsValidationResults = this.inputController.clearInputsValidationResults(
+			this.formInputs.length
+		);
 
 		this.unmountSpinner();
 	};
@@ -169,9 +165,10 @@ export class FormView implements IFormView {
 								duration: 0.5,
 								ease: "power2.out",
 								onComplete: () => {
-									// unlock form here
-									this.isFormLocked = false;
-									this.formSubmitButton.style.pointerEvents = "auto";
+									this.isFormLocked = this.formController.unlockForm({
+										isFormLocked: true,
+										submitButton: this.formSubmitButton
+									});
 								}
 							}
 						);

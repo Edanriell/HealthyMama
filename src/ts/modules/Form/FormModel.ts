@@ -65,9 +65,19 @@ export class FormModel {
 		return true;
 	}
 
-	public clearValidationResult() {
-		// takes all inputs.length
-		// and creates the object
-		// and returns it
+	public clearValidationResults(
+		formInputsCount: number
+	): Array<{ isInputValid: boolean; inputIndex: number }> {
+		const validationResult = [];
+
+		for (let i = 0; i < formInputsCount; i++) {
+			validationResult.push({ isInputValid: false, inputIndex: i });
+		}
+
+		return validationResult;
+	}
+
+	public toggleIsFormLocked(isFormLocked: boolean): boolean {
+		return !isFormLocked;
 	}
 }

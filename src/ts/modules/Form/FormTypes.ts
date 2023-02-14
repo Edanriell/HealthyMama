@@ -12,3 +12,5 @@ export type Response = {
 	status: string,
 	message: string
 }
+
+// create proper types for all type unions

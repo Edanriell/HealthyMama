@@ -19,4 +19,10 @@ export class InputController {
 	): boolean {
 		return this.model.checkValidationResults(inputsValidationResults);
 	}
+
+	public clearInputsValidationResults(
+		formInputsCount: number
+	): Array<{ isInputValid: boolean; inputIndex: number }> {
+		return this.model.clearValidationResults(formInputsCount);
+	}
 }

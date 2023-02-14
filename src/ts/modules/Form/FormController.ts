@@ -15,4 +15,26 @@ export class FormController {
 	public async handleResponseReport(): Promise<Response> {
 		return await this.model.getResponseReport();
 	}
+
+	public lockForm({
+		isFormLocked,
+		submitButton
+	}: {
+		isFormLocked: boolean;
+		submitButton: HTMLButtonElement;
+	}): boolean {
+		submitButton.style.pointerEvents = "none";
+		return this.model.toggleIsFormLocked(isFormLocked);
+	}
+
+	public unlockForm({
+		isFormLocked,
+		submitButton
+	}: {
+		isFormLocked: boolean;
+		submitButton: HTMLButtonElement;
+	}): boolean {
+		submitButton.style.pointerEvents = "auto";
+		return this.model.toggleIsFormLocked(isFormLocked);
+	}
 }
