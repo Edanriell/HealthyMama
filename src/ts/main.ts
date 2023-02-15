@@ -62,7 +62,8 @@ window.addEventListener("DOMContentLoaded", () => {
 				inputName: "Номер телефона",
 				errorMessage: "Неверный номер телефона"
 			}
-		]
+		],
+		removeToastTimeout: 5000
 	});
 
 	burgerMenuView.mount();

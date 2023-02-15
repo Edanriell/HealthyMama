@@ -110,7 +110,7 @@ export class FormModel {
 			validationResult.push({
 				isInputValid: false,
 				inputIndex: i,
-				validationResultMessage: `Заполните поле ${formProperties[i].inputName}`
+				validationResultMessage: `Заполните поле: ${formProperties[i].inputName}`
 			});
 		}
 

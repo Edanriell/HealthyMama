@@ -5,6 +5,7 @@ import { FormController } from "./FormController";
 import { InputController } from "./InputController";
 
 import "./form.scss";
+import { time } from "modernizr";
 
 export class FormView implements IFormView {
 	formController: FormController;
@@ -26,13 +27,15 @@ export class FormView implements IFormView {
 	}>;
 	private spinner!: HTMLDivElement;
 	private toastsContainer!: HTMLDivElement;
+	private removeToastTimeout: number | null;
 
 	constructor({
 		root,
 		formController,
 		inputController,
 		formSubmitButton,
-		formInputs
+		formInputs,
+		removeToastTimeout
 	}: {
 		root: HTMLFormElement;
 		formController: FormController;
@@ -44,6 +47,7 @@ export class FormView implements IFormView {
 			errorMessage: string;
 			inputName: string;
 		}>;
+		removeToastTimeout?: number;
 	}) {
 		this.root = root;
 		this.formController = formController;
@@ -51,6 +55,8 @@ export class FormView implements IFormView {
 
 		this.formSubmitButton = formSubmitButton;
 		this.formInputs = formInputs;
+
+		this.removeToastTimeout = removeToastTimeout ?? null;
 
 		this.createSpinner();
 		this.createToastsContainer();
@@ -278,14 +284,42 @@ export class FormView implements IFormView {
 		if (!toasts) return;
 
 		toasts.forEach(toast => {
+			let timeout: NodeJS.Timeout | null = null;
+
+			if (this.removeToastTimeout) {
+				timeout = setTimeout(() => {
+					this.removeToastAfterTimeout(toast);
+					console.log("setTimeoutRuns");
+				}, this.removeToastTimeout);
+			}
+
 			toast.addEventListener("click", event => {
-				this.removeToastOnClick(event, toast);
+				this.removeToastOnClick(event, toast, timeout);
+				event = event;
 			});
 		});
 	}
 
-	private removeToastOnClick(event: unknown, toast: Element) {
+	private removeToastAfterTimeout(toast: Element): void {
+		gsap.fromTo(
+			toast,
+			{ opacity: 1, scale: 1 },
+			{
+				opacity: 0,
+				scale: 0.9,
+				duration: 0.25,
+				ease: "power2.out",
+				onComplete: () => {
+					toast?.remove();
+				}
+			}
+		);
+	}
+
+	private removeToastOnClick(event: unknown, toast: Element, timeout?: NodeJS.Timeout | null) {
 		const toastCloseButton = toast.querySelector("button");
+
+		if (timeout) clearTimeout(timeout);
 
 		if ((event as Event).target === toastCloseButton) {
 			gsap.fromTo(
