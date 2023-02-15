@@ -16,8 +16,7 @@ export class FormView implements IFormView {
 	private formInputs: Array<HTMLInputElement>;
 	private inputsValidationResults: Array<{ isInputValid: boolean; inputIndex: number }>;
 	private spinner!: HTMLDivElement;
-	private snackBar!: HTMLDivElement;
-	private snackBarToast!: HTMLDivElement;
+	private toastsContainer!: HTMLDivElement;
 
 	constructor({
 		root,
@@ -40,7 +39,7 @@ export class FormView implements IFormView {
 		this.formInputs = formInputs;
 
 		this.createSpinner();
-		this.createSnackBar();
+		this.createToastsContainer();
 
 		this.bindListeners();
 
@@ -59,9 +58,12 @@ export class FormView implements IFormView {
 		this.renderInvalidInputs(this.inputsValidationResults);
 		// Trash code here need to fix
 		for (let i = 0; i < 3; i++) {
-			this.renderToasts(`${i}`);
+			setTimeout(() => {
+				this.renderToasts(`${i}`);
+				this.bindToastListeners();
+			}, +`${i}000`);
 		}
-		this.bindToastListeners();
+		// this.bindToastListeners();
 		// Trash code here need to fix
 
 		if (!isAllInputsValid || this.isFormLocked) return;
@@ -99,6 +101,7 @@ export class FormView implements IFormView {
 			isInputValid: validationResult.isInputValid,
 			inputIndex: validationResult.inputIndex
 		};
+
 		console.log(this.inputsValidationResults);
 	};
 
@@ -198,52 +201,77 @@ export class FormView implements IFormView {
 		`;
 	}
 
-	// render method should be here somewhere
-	private createSnackBar(): void {
-		this.snackBar = document.createElement("div");
-		this.snackBar.classList.add("snack-bar");
+	private createToastsContainer(): void {
+		this.toastsContainer = document.createElement("div");
+		this.toastsContainer.classList.add("toasts", "toasts__container");
 	}
 
-	private createSnackBarToast({ index, text }: { index: number; text: string }): string {
-		// this.snackBarToast = document.createElement("div");
-		// this.snackBarToast.classList.add("snack-bar__toast");
-		// this.snackBarToast.setAttribute("data-toast-index", `${index}`);
+	// some parameters missing
+	private renderToasts(text: string): void {
+		const newToast = document.createElement("div");
+		newToast.classList.add("toasts__toast", "toast");
+		newToast.innerHTML = this.getNewToastContent({ index: 0, text });
+
+		this.toastsContainer.prepend(newToast);
+		gsap.fromTo(
+			newToast,
+			{ opacity: 0, translateY: 30 },
+			{
+				opacity: 1,
+				translateY: 0,
+				duration: 0.5,
+				ease: "power2.out"
+			}
+		);
+	}
+
+	private getNewToastContent({ index, text }: { index: number; text: string }): string {
 		return `
-			<div class="snack-bar__toast" data-toast-index="${index}">
-				<p>${text}</p>
-				<button type="button">Close</button>
+			<div class="toast__content" data-toast-index="${index}">
+				<p class="toast__text">${text}</p>
+				<button class="toast__close-button" type="button">
+					<span class="visually-hidden">Закрыть окно</span>
+					<svg class="toast__close-button-icon">
+						<use xlink:href="#xmark-solid" x="0" y="0"></use>
+					</svg>
+				</button>
 			</div>
 		`;
 	}
 
 	private bindToastListeners(): void {
-		const toasts = document.querySelectorAll(".snack-bar__toast");
+		const toasts = document.querySelectorAll(".toast");
+
 		if (!toasts) return;
+
 		toasts.forEach(toast => {
-			toast.addEventListener("click", (event) => {
-				this.removeToastOnClick(event, toast)
-			})
-		})
+			toast.addEventListener("click", event => {
+				this.removeToastOnClick(event, toast);
+			});
+		});
 	}
 
 	private removeToastOnClick(event: unknown, toast: Element) {
-		console.log((event as Event).target);
-		const toastParent = toast.parentElement;
 		const toastCloseButton = toast.querySelector("button");
+
 		if ((event as Event).target === toastCloseButton) {
-			toastParent?.remove();
+			gsap.fromTo(
+				toast,
+				{ opacity: 1, scale: 1 },
+				{
+					opacity: 0,
+					scale: 0.9,
+					duration: 0.25,
+					ease: "power2.out",
+					onComplete: () => {
+						toast?.remove();
+					}
+				}
+			);
 		}
 	}
 
-	// some parameters missing
-	private renderToasts(text: string): void {
-		const toastWrapper = document.createElement("div");
-		toastWrapper.innerHTML = this.createSnackBarToast({ index: 0, text });
-
-		this.snackBar.append(toastWrapper);
-	}
-
 	public mount(): void {
-		document.body.append(this.snackBar);
+		document.body.append(this.toastsContainer);
 	}
 }
