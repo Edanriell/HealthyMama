@@ -31,12 +31,15 @@ export class FormModel {
 		})
 			.then(() => {
 				this.responseReport = new Promise(resolve => {
-					resolve({ status: "123", message: "2123" });
+					resolve({ status: "success", message: "Данные успешно отправлены" });
 				});
 			})
 			.catch(() => {
 				this.responseReport = new Promise(reject => {
-					reject({ status: "00", message: "00" });
+					reject({
+						status: "failure",
+						message: "Не удалось отправить данные. Попробуйте еще раз позже."
+					});
 				});
 			})
 			.finally(() => {
@@ -48,16 +51,39 @@ export class FormModel {
 		return await this.responseReport;
 	}
 
-	public validateInput(
-		inputValue: string,
-		inputIndex: number
-	): { isInputValid: boolean; inputIndex: number } {
-		if (inputValue.length > 4) return { isInputValid: true, inputIndex: inputIndex };
-		return { isInputValid: false, inputIndex: inputIndex };
+	public validateInput({
+		value,
+		index,
+		inputProperties
+	}: {
+		value: string;
+		index: number;
+		inputProperties: Array<{
+			inputNode: HTMLInputElement;
+			regExp: RegExp;
+			errorMessage: string;
+		}>;
+	}): { isInputValid: boolean; inputIndex: number; validationResultMessage: string | null } {
+		const validationResult: boolean = inputProperties[index].regExp.test(value);
+		if (validationResult)
+			return {
+				isInputValid: true,
+				inputIndex: index,
+				validationResultMessage: "Ошибок нет"
+			};
+		return {
+			isInputValid: false,
+			inputIndex: index,
+			validationResultMessage: inputProperties[index].errorMessage
+		};
 	}
 
 	public checkValidationResults(
-		inputsValidationResults: Array<{ isInputValid: boolean; inputIndex: number }>
+		inputsValidationResults: Array<{
+			isInputValid: boolean;
+			inputIndex: number;
+			validationResultMessage: string | null;
+		}>
 	): boolean {
 		for (const validationResult of inputsValidationResults) {
 			if (validationResult.isInputValid === false) return false;
@@ -66,12 +92,26 @@ export class FormModel {
 	}
 
 	public clearValidationResults(
-		formInputsCount: number
-	): Array<{ isInputValid: boolean; inputIndex: number }> {
+		formInputsCount: number,
+		formProperties: Array<{
+			inputNode: HTMLInputElement;
+			regExp: RegExp;
+			errorMessage: string;
+			inputName: string;
+		}>
+	): Array<{
+		isInputValid: boolean;
+		inputIndex: number;
+		validationResultMessage: string | null;
+	}> {
 		const validationResult = [];
 
 		for (let i = 0; i < formInputsCount; i++) {
-			validationResult.push({ isInputValid: false, inputIndex: i });
+			validationResult.push({
+				isInputValid: false,
+				inputIndex: i,
+				validationResultMessage: `Заполните поле ${formProperties[i].inputName}`
+			});
 		}
 
 		return validationResult;

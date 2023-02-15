@@ -7,9 +7,6 @@ $breakpoints: (
 	desktop: 1024px
 );
 
-.text {
-}
-
 .text__main-title {
 	font-family: var(--font-family-normal-700);
 	@include minimum-size(font-size, var(--font-size-mobile-25), 7.8125vw);

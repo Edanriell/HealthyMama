@@ -13,8 +13,17 @@ export class FormView implements IFormView {
 
 	private isFormLocked: boolean = false;
 	private formSubmitButton: HTMLButtonElement;
-	private formInputs: Array<HTMLInputElement>;
-	private inputsValidationResults: Array<{ isInputValid: boolean; inputIndex: number }>;
+	private formInputs: Array<{
+		inputNode: HTMLInputElement;
+		regExp: RegExp;
+		errorMessage: string;
+		inputName: string;
+	}>;
+	private inputsValidationResults: Array<{
+		isInputValid: boolean;
+		inputIndex: number;
+		validationResultMessage: string | null;
+	}>;
 	private spinner!: HTMLDivElement;
 	private toastsContainer!: HTMLDivElement;
 
@@ -29,7 +38,12 @@ export class FormView implements IFormView {
 		formController: FormController;
 		inputController: InputController;
 		formSubmitButton: HTMLButtonElement;
-		formInputs: Array<HTMLInputElement>;
+		formInputs: Array<{
+			inputNode: HTMLInputElement;
+			regExp: RegExp;
+			errorMessage: string;
+			inputName: string;
+		}>;
 	}) {
 		this.root = root;
 		this.formController = formController;
@@ -43,9 +57,10 @@ export class FormView implements IFormView {
 
 		this.bindListeners();
 
-		this.inputsValidationResults = this.inputController.clearInputsValidationResults(
-			this.formInputs.length
-		);
+		this.inputsValidationResults = this.inputController.clearInputsValidationResults({
+			formInputsCount: this.formInputs.length,
+			formProperties: this.formInputs
+		});
 	}
 
 	private onSubmitClick = async (event: unknown): Promise<void> => {
@@ -56,15 +71,16 @@ export class FormView implements IFormView {
 		);
 
 		this.renderInvalidInputs(this.inputsValidationResults);
-		// Trash code here need to fix
-		for (let i = 0; i < 3; i++) {
-			setTimeout(() => {
-				this.renderToasts(`${i}`);
+
+		for (const validationResult of this.inputsValidationResults) {
+			if (!validationResult.isInputValid) {
+				this.renderToasts({
+					text: `${validationResult.validationResultMessage}`,
+					toastType: "failure"
+				});
 				this.bindToastListeners();
-			}, +`${i}000`);
+			}
 		}
-		// this.bindToastListeners();
-		// Trash code here need to fix
 
 		if (!isAllInputsValid || this.isFormLocked) return;
 
@@ -72,8 +88,6 @@ export class FormView implements IFormView {
 			isFormLocked: this.isFormLocked,
 			submitButton: this.formSubmitButton
 		});
-
-		console.log("start");
 
 		this.mountSpinner();
 
@@ -83,12 +97,18 @@ export class FormView implements IFormView {
 
 		const responseReport = await this.formController.handleResponseReport();
 
-		console.log(responseReport);
-		console.log("end");
+		this.renderToasts({
+			text: `${responseReport.message}`,
+			toastType: `${responseReport.status}`
+		});
+		this.bindToastListeners();
 
-		this.inputsValidationResults = this.inputController.clearInputsValidationResults(
-			this.formInputs.length
-		);
+		// console.log(responseReport);
+
+		this.inputsValidationResults = this.inputController.clearInputsValidationResults({
+			formInputsCount: this.formInputs.length,
+			formProperties: this.formInputs
+		});
 
 		this.unmountSpinner();
 	};
@@ -96,19 +116,24 @@ export class FormView implements IFormView {
 	private onInputChange = (event: unknown, inputIndex: number): void => {
 		const input = (event as Event).currentTarget;
 		const inputValue = (input as HTMLInputElement).value;
-		const validationResult = this.inputController.handleInputChange(inputValue, inputIndex);
+		const validationResult = this.inputController.handleInputChange({
+			value: inputValue,
+			index: inputIndex,
+			inputProperties: this.formInputs
+		});
 		this.inputsValidationResults[validationResult.inputIndex] = {
 			isInputValid: validationResult.isInputValid,
-			inputIndex: validationResult.inputIndex
+			inputIndex: validationResult.inputIndex,
+			validationResultMessage: validationResult.validationResultMessage
 		};
 
-		console.log(this.inputsValidationResults);
+		// console.log(this.inputsValidationResults);
 	};
 
 	private bindListeners(): void {
 		this.formSubmitButton.addEventListener("click", this.onSubmitClick);
 		this.formInputs.forEach((input, index) => {
-			input.addEventListener("input", event => {
+			input.inputNode.addEventListener("input", event => {
 				this.onInputChange(event, index);
 			});
 		});
@@ -119,9 +144,13 @@ export class FormView implements IFormView {
 	): void {
 		for (const validationResult of inputsValidationResults) {
 			if (validationResult.isInputValid === false) {
-				this.formInputs[validationResult.inputIndex].classList.add("invalid-input");
+				this.formInputs[validationResult.inputIndex].inputNode.classList.add(
+					"invalid-input"
+				);
 			} else if (validationResult.isInputValid === true) {
-				this.formInputs[validationResult.inputIndex].classList.remove("invalid-input");
+				this.formInputs[validationResult.inputIndex].inputNode.classList.remove(
+					"invalid-input"
+				);
 			}
 		}
 	}
@@ -206,10 +235,14 @@ export class FormView implements IFormView {
 		this.toastsContainer.classList.add("toasts", "toasts__container");
 	}
 
-	// some parameters missing
-	private renderToasts(text: string): void {
+	private renderToasts({ text, toastType }: { text: string; toastType: string }): void {
 		const newToast = document.createElement("div");
 		newToast.classList.add("toasts__toast", "toast");
+		if (toastType === "failure") {
+			newToast.classList.add("toast--style--error");
+		} else if (toastType === "success") {
+			newToast.classList.add("toast--style--success");
+		}
 		newToast.innerHTML = this.getNewToastContent({ index: 0, text });
 
 		this.toastsContainer.prepend(newToast);

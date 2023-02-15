@@ -50,8 +50,18 @@ window.addEventListener("DOMContentLoaded", () => {
 		inputController: inputController,
 		formSubmitButton: document.querySelector(".request-form__button")!,
 		formInputs: [
-			document.querySelector(".request-form__person-name-input")!,
-			document.querySelector(".request-form__person-phone-number-input")!
+			{
+				inputNode: document.querySelector(".request-form__person-name-input")!,
+				regExp: /^[a-zа-яё\s]+$/iu,
+				inputName: "Имя",
+				errorMessage: "Неверное имя"
+			},
+			{
+				inputNode: document.querySelector(".request-form__person-phone-number-input")!,
+				regExp: /^(\+)\d+$/,
+				inputName: "Номер телефона",
+				errorMessage: "Неверный номер телефона"
+			}
 		]
 	});
 
