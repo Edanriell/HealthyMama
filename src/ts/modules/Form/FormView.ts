@@ -4,7 +4,7 @@ import { IFormView } from "./FormTypes";
 import { FormController } from "./FormController";
 import { InputController } from "./InputController";
 
-import "./Form.scss";
+import "./form.scss";
 
 export class FormView implements IFormView {
 	formController: FormController;

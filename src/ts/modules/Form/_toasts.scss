@@ -1,0 +1,140 @@
+.toasts__container {
+	position: absolute;
+	bottom: 6.25vw;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	row-gap: 6.25vw;
+	z-index: 100;
+}
+
+.toast--style--error {
+	.toast__content {
+		background-color: #ff5157;
+	}
+
+	.toast__close-button {
+		background-color: #ff6876;
+
+		&:hover,
+		&:focus {
+			background-color: hsl(354, 47%, 53%);
+		}
+	}
+}
+
+.toast--style--success {
+	.toast__content {
+		background-color: #3abd9f;
+	}
+
+	.toast__close-button {
+		background-color: #44d1ad;
+
+		&:hover,
+		&:focus {
+			background-color: hsl(165, 52%, 41%);
+		}
+	}
+}
+
+.toast__content {
+	width: max(26rem, 81.25vw);
+	min-height: max(6rem, 18.75vw);
+	padding: 4.6875vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 9.375vw;
+	border-radius: 0.5rem;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.toast__text {
+	color: #fff;
+	font-family: var(--font-family-normal-400);
+	font-size: max(var(--font-size-mobile-14), 4.375vw);
+}
+
+.toast__close-button {
+	cursor: pointer;
+	width: 9.375vw;
+	height: 9.375vw;
+	border: white solid 0.15625vw;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.25s background-color ease;
+	flex-shrink: 0;
+
+	&:hover,
+	&:focus {
+	}
+}
+
+.toast__close-button-icon {
+	width: 5.625vw;
+	height: 5.625vw;
+	color: white;
+	pointer-events: none;
+}
+
+@media only screen and (min-width: 768px) {
+	.toasts__container {
+		bottom: 2.604166666666667vw;
+		row-gap: 2.604166666666667vw;
+	}
+
+	.toast__content {
+		width: max(32rem, 41.66666666666667vw);
+		min-height: max(6rem, 7.8125vw);
+		padding: 1.953125vw;
+		column-gap: 3.90625vw;
+	}
+
+	.toast__text {
+		font-size: max(var(--font-size-tablet-14), 1.8229166666666667vw);
+	}
+
+	.toast__close-button {
+		width: 3.90625vw;
+		height: 3.90625vw;
+		border: white solid 0.06510416666666666vw;
+	}
+
+	.toast__close-button-icon {
+		width: 2.34375vw;
+		height: 2.34375vw;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.toasts__container {
+		bottom: 1.953125vw;
+		row-gap: 1.953125vw;
+	}
+
+	.toast__content {
+		width: 27.34375vw;
+		min-height: 3.90625vw;
+		padding: 1.46484375vw;
+		column-gap: 2.9296875vw;
+	}
+
+	.toast__text {
+		font-size: 0.7291666666666666vw;
+	}
+
+	.toast__close-button {
+		width: 1.953125vw;
+		height: 1.953125vw;
+		border: white solid 0.048828125vw;
+	}
+
+	.toast__close-button-icon {
+		width: 1.171875vw;
+		height: 1.171875vw;
+	}
+}
