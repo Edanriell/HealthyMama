@@ -22,6 +22,10 @@
 			background-color: hsl(354, 47%, 53%);
 		}
 	}
+
+	.toast__primary-circle {
+		color: #ff5157;
+	}
 }
 
 .toast--style--success {
@@ -36,6 +40,10 @@
 		&:focus {
 			background-color: hsl(165, 52%, 41%);
 		}
+	}
+
+	.toast__primary-circle {
+		color: #3abd9f;
 	}
 }
 
@@ -57,11 +65,16 @@
 	font-size: max(var(--font-size-mobile-14), 4.375vw);
 }
 
+.toast__close-button-wrapper {
+	position: relative;
+}
+
 .toast__close-button {
 	cursor: pointer;
 	width: 9.375vw;
 	height: 9.375vw;
-	border: white solid 0.15625vw;
+	// border: white solid 0.15625vw;
+	border: transparent solid 0.15625vw;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -79,6 +92,27 @@
 	height: 5.625vw;
 	color: white;
 	pointer-events: none;
+}
+
+.toast__circles-wrapper {
+	width: 9.375vw; //
+	height: 9.375vw; //
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+.toast__primary-circle {
+	stroke-dashoffset: 0;
+	animation: circle-animation linear forwards;
+	pointer-events: none;
+}
+
+.toast__secondary-circle {
+	pointer-events: none;
+	color: #FFF;
 }
 
 @media only screen and (min-width: 768px) {
@@ -136,5 +170,16 @@
 	.toast__close-button-icon {
 		width: 1.171875vw;
 		height: 1.171875vw;
+	}
+}
+
+
+@keyframes circle-animation {
+	from {
+		stroke-dashoffset: 296;
+	}
+
+	to {
+		stroke-dashoffset: 0;
 	}
 }

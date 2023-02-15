@@ -5,7 +5,6 @@ import { FormController } from "./FormController";
 import { InputController } from "./InputController";
 
 import "./form.scss";
-import { time } from "modernizr";
 
 export class FormView implements IFormView {
 	formController: FormController;
@@ -268,12 +267,20 @@ export class FormView implements IFormView {
 		return `
 			<div class="toast__content" data-toast-index="${index}">
 				<p class="toast__text">${text}</p>
-				<button class="toast__close-button" type="button">
-					<span class="visually-hidden">Закрыть окно</span>
-					<svg class="toast__close-button-icon">
-						<use xlink:href="#xmark-solid" x="0" y="0"></use>
+				<div class="toast__close-button-wrapper">
+					<svg class="toast__circles-wrapper" viewBox="0 0 100 100">
+						<path class="toast__secondary-circle" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="currentColor" stroke-width="6" fill-opacity="0"></path>
+						<path class="toast__primary-circle" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="currentColor" stroke-width="8" fill-opacity="0" style="stroke-dasharray: 295.416, 295.416; animation-duration: ${
+							this.removeToastTimeout || 0
+						}ms"></path>
 					</svg>
-				</button>
+					<button class="toast__close-button" type="button">
+						<span class="visually-hidden">Закрыть окно</span>
+						<svg class="toast__close-button-icon">
+							<use xlink:href="#xmark-solid" x="0" y="0"></use>
+						</svg>
+					</button>
+				</div>
 			</div>
 		`;
 	}
