@@ -125,7 +125,9 @@ $breakpoints: (
 
 @include media(">=tablet") {
 	.products-slider {
-		@include minimum-size(padding-top, 4.8rem, 6.25vw);
+		// @include minimum-size(padding-top, 4.8rem, 6.25vw);
+		padding-top: max(4.8rem, 6.25vw) !important;
+		overflow: visible !important;
 	}
 
 	.products-slider--type--universal {
@@ -133,25 +135,26 @@ $breakpoints: (
 		position: relative;
 
 		.products-slider__wrapper {
-			@include flex(center, center, row);
-			@include minimum-size(
-				column-gap,
-				1.7rem,
-				2.213541666666667vw
-			); // will delete when hook up real slider
+			@include flex(center, flex-start, row);
+			// @include minimum-size(
+			// 	column-gap,
+			// 	1.7rem,
+			// 	2.213541666666667vw
+			// ); // will delete when hook up real slider
 		}
 
 		.products-slider__slide {
 			background-color: var(--color-primary-white);
 			border-radius: 1rem;
 			box-shadow: 0 0.4rem 8.3rem var(--color-neutral-eerie-black-transparent);
-			@include minimum-size(width, 66.3rem, 86.328125vw);
+			// flex-shrink: unset !important;
+			width: max(66.3rem, 86.328125vw) !important;
 
 			// Temporarily, will be removed when real slider will be hooked up.
-			&:nth-child(1),
-			&:nth-child(3) {
-				opacity: 0.3;
-			}
+			// &:nth-child(1),
+			// &:nth-child(3) {
+			// 	opacity: 0.3;
+			// }
 			// Temporarily, will be removed when real slider will be hooked up.
 		}
 
@@ -192,6 +195,7 @@ $breakpoints: (
 			position: absolute;
 			top: 50%;
 			left: 0;
+			z-index: 200;
 		}
 
 		.products-slider__previous-slide-button {

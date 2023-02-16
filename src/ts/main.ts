@@ -26,7 +26,7 @@ import { InputController } from "./modules/Form";
 import { FormModel } from "./modules/Form";
 
 import { MainSliderMobile, MainSliderUniversal } from "./modules/MainSlider";
-import { ProductsSliderMobile } from "./modules/ProductsSlider";
+import { ProductsSliderMobile, ProductsSliderUniversal } from "./modules/ProductsSlider";
 
 Swiper.use([Navigation, Autoplay, Keyboard, Mousewheel, EffectCreative, Pagination]);
 
@@ -82,8 +82,13 @@ window.addEventListener("load", () => {
 	const mainSliderMobile = new Swiper(".main-slider--type--mobile", MainSliderMobile);
 	const mainSliderUniversal = new Swiper(".main-slider--type--universal", MainSliderUniversal);
 	const productsSliderMobile = new Swiper(".products-slider--type--mobile", ProductsSliderMobile);
+	const productsSliderUniversal = new Swiper(
+		".products-slider--type--universal",
+		ProductsSliderUniversal
+	);
 
 	mainSliderMobile.init();
 	mainSliderUniversal.init();
 	productsSliderMobile.init();
+	productsSliderUniversal.init();
 });
