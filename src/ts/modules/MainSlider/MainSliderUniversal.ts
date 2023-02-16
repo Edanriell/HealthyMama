@@ -30,20 +30,21 @@ export const MainSliderUniversal: SwiperOptions = {
 			`;
 		}
 	},
+	speed: 500,
 	creativeEffect: {
 		prev: {
-			translate: ["100%", "-100%", -600],
+			translate: ["0px", "0px", -600],
 			opacity: 0,
 			origin: "center center",
-			rotate: [0, 0, 100],
-			scale: 0
+			rotate: [0, 0, 270],
+			scale: 0.6
 		},
 		next: {
-			translate: ["100%", "100%", -600],
+			translate: ["0px", "0px", -600],
 			opacity: 0,
 			origin: "center center",
-			rotate: [0, 0, -100],
-			scale: 0
+			rotate: [0, 0, -270],
+			scale: 0.6
 		}
 	}
 };

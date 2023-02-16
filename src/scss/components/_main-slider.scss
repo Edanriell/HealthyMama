@@ -175,6 +175,8 @@ $breakpoints: (
 		@include flex(center, flex-start, row-reverse);
 		min-width: 100%;
 		overflow: visible !important;
+		// @include minimum-size(width, 50.2rem, 65.36458333333334vw);
+		// height: max(62.9rem, 81.90104166666666vw) !important;
 
 		.main-slider__wrapper {
 			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
@@ -217,6 +219,7 @@ $breakpoints: (
 			left: 50%;
 			transform: translate(-46%, -46%);
 			z-index: 200;
+			pointer-events: none;
 		}
 
 		.main-slider__pagination {
@@ -226,6 +229,7 @@ $breakpoints: (
 
 		.main-slider__pagination-item {
 			position: relative;
+			pointer-events: auto;
 		}
 
 		.main-slider__pagination-item-0 {

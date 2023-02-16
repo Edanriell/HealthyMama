@@ -8,6 +8,7 @@ export const MainSliderMobile: SwiperOptions = {
 		disableOnInteraction: true,
 		pauseOnMouseEnter: true
 	},
+	speed: 500,
 	navigation: {
 		nextEl: ".main-slider__next-slide-button",
 		prevEl: ".main-slider__previous-slide-button"
