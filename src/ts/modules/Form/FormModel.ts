@@ -1,7 +1,14 @@
+import {
+	IFormModel,
+	InputsProperties,
+	InputsValidationResults,
+	InputValidationResult
+} from "./FormTypes";
+
 import { Response } from "./FormTypes";
 import { PostData } from "../../helpers/Requests";
 
-export class FormModel {
+export class FormModel implements IFormModel {
 	private host: string;
 	private port: number;
 	private database: string;
@@ -58,12 +65,8 @@ export class FormModel {
 	}: {
 		value: string;
 		index: number;
-		inputProperties: Array<{
-			inputNode: HTMLInputElement;
-			regExp: RegExp;
-			errorMessage: string;
-		}>;
-	}): { isInputValid: boolean; inputIndex: number; validationResultMessage: string | null } {
+		inputProperties: InputsProperties;
+	}): InputValidationResult {
 		const validationResult: boolean = inputProperties[index].regExp.test(value);
 		if (validationResult)
 			return {
@@ -78,13 +81,7 @@ export class FormModel {
 		};
 	}
 
-	public checkValidationResults(
-		inputsValidationResults: Array<{
-			isInputValid: boolean;
-			inputIndex: number;
-			validationResultMessage: string | null;
-		}>
-	): boolean {
+	public checkValidationResults(inputsValidationResults: InputsValidationResults): boolean {
 		for (const validationResult of inputsValidationResults) {
 			if (validationResult.isInputValid === false) return false;
 		}
@@ -93,28 +90,19 @@ export class FormModel {
 
 	public clearValidationResults(
 		formInputsCount: number,
-		formProperties: Array<{
-			inputNode: HTMLInputElement;
-			regExp: RegExp;
-			errorMessage: string;
-			inputName: string;
-		}>
-	): Array<{
-		isInputValid: boolean;
-		inputIndex: number;
-		validationResultMessage: string | null;
-	}> {
-		const validationResult = [];
+		formProperties: InputsProperties
+	): InputsValidationResults {
+		const validationResults = [];
 
 		for (let i = 0; i < formInputsCount; i++) {
-			validationResult.push({
+			validationResults.push({
 				isInputValid: false,
 				inputIndex: i,
 				validationResultMessage: `Заполните поле: ${formProperties[i].inputName}`
 			});
 		}
 
-		return validationResult;
+		return validationResults;
 	}
 
 	public toggleIsFormLocked(isFormLocked: boolean): boolean {

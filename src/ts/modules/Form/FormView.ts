@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-import { IFormView } from "./FormTypes";
+import { IFormView, InputsProperties, InputsValidationResults } from "./FormTypes";
 import { FormController } from "./FormController";
 import { InputController } from "./InputController";
 
@@ -13,17 +13,8 @@ export class FormView implements IFormView {
 
 	private isFormLocked: boolean = false;
 	private formSubmitButton: HTMLButtonElement;
-	private formInputs: Array<{
-		inputNode: HTMLInputElement;
-		regExp: RegExp;
-		errorMessage: string;
-		inputName: string;
-	}>;
-	private inputsValidationResults: Array<{
-		isInputValid: boolean;
-		inputIndex: number;
-		validationResultMessage: string | null;
-	}>;
+	private formInputs: InputsProperties;
+	private inputsValidationResults: InputsValidationResults;
 	private spinner!: HTMLDivElement;
 	private toastsContainer!: HTMLDivElement;
 	private removeToastTimeout: number | null;
@@ -40,12 +31,7 @@ export class FormView implements IFormView {
 		formController: FormController;
 		inputController: InputController;
 		formSubmitButton: HTMLButtonElement;
-		formInputs: Array<{
-			inputNode: HTMLInputElement;
-			regExp: RegExp;
-			errorMessage: string;
-			inputName: string;
-		}>;
+		formInputs: InputsProperties;
 		removeToastTimeout?: number;
 	}) {
 		this.root = root;
@@ -323,7 +309,11 @@ export class FormView implements IFormView {
 		);
 	}
 
-	private removeToastOnClick(event: unknown, toast: Element, timeout?: NodeJS.Timeout | null) {
+	private removeToastOnClick(
+		event: unknown,
+		toast: Element,
+		timeout?: NodeJS.Timeout | null
+	): void {
 		const toastCloseButton = toast.querySelector("button");
 
 		if (timeout) clearTimeout(timeout);

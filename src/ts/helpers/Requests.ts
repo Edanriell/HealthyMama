@@ -1,8 +1,6 @@
-type TFormData = {
-	[key: string]: FormDataEntryValue;
-};
+import { Data } from "./HelpersTypes";
 
-const GetData = async ({ url }: { url: string }) => {
+const GetData = async ({ url }: { url: string }): Promise<unknown> => {
 	const response = await fetch(url);
 	if (!response.ok) {
 		throw new Error(`Данные по адресу ${url} получить не удалось, статус: ${response.status}`);
@@ -18,7 +16,7 @@ const GetData = async ({ url }: { url: string }) => {
 	return response.json();
 };
 
-const PostData = async ({ url, data }: { url: string; data: TFormData }) => {
+const PostData = async ({ url, data }: { url: string; data: Data }): Promise<unknown> => {
 	const response = await fetch(url, {
 		method: "POST",
 		headers: {

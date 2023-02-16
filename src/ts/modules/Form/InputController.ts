@@ -1,6 +1,13 @@
+import {
+	IInputController,
+	InputsProperties,
+	InputsValidationResults,
+	InputValidationResult
+} from "./FormTypes";
+
 import { FormModel } from "./FormModel";
 
-export class InputController {
+export class InputController implements IInputController {
 	model: FormModel;
 
 	constructor(model: FormModel) {
@@ -14,22 +21,12 @@ export class InputController {
 	}: {
 		value: string;
 		index: number;
-		inputProperties: Array<{
-			inputNode: HTMLInputElement;
-			regExp: RegExp;
-			errorMessage: string;
-		}>;
-	}): { isInputValid: boolean; inputIndex: number; validationResultMessage: string | null } {
+		inputProperties: InputsProperties;
+	}): InputValidationResult {
 		return this.model.validateInput({ value, index, inputProperties });
 	}
 
-	public checkInputsValidationResults(
-		inputsValidationResults: Array<{
-			isInputValid: boolean;
-			inputIndex: number;
-			validationResultMessage: string | null;
-		}>
-	): boolean {
+	public checkInputsValidationResults(inputsValidationResults: InputsValidationResults): boolean {
 		return this.model.checkValidationResults(inputsValidationResults);
 	}
 
@@ -38,17 +35,8 @@ export class InputController {
 		formProperties
 	}: {
 		formInputsCount: number;
-		formProperties: Array<{
-			inputNode: HTMLInputElement;
-			regExp: RegExp;
-			errorMessage: string;
-			inputName: string;
-		}>;
-	}): Array<{
-		isInputValid: boolean;
-		inputIndex: number;
-		validationResultMessage: string | null;
-	}> {
+		formProperties: InputsProperties;
+	}): InputsValidationResults {
 		return this.model.clearValidationResults(formInputsCount, formProperties);
 	}
 }

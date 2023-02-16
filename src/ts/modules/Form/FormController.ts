@@ -1,7 +1,9 @@
+import { IFormController } from "./FormTypes";
+
 import { Response } from "./FormTypes";
 import { FormModel } from "./FormModel";
 
-export class FormController {
+export class FormController implements IFormController {
 	model: FormModel;
 
 	constructor(model: FormModel) {
