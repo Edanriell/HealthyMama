@@ -174,6 +174,7 @@ $breakpoints: (
 		position: relative;
 		@include flex(center, flex-start, row-reverse);
 		min-width: 100%;
+		overflow: visible !important;
 
 		.main-slider__wrapper {
 			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
@@ -186,10 +187,10 @@ $breakpoints: (
 
 		.main-slider__slide {
 			//Temporary
-			&:nth-child(2),
-			&:nth-child(3) {
-				display: none;
-			}
+			// &:nth-child(2),
+			// &:nth-child(3) {
+			// 	display: none;
+			// }
 			//Temporary
 		}
 
@@ -215,6 +216,7 @@ $breakpoints: (
 			top: 50%;
 			left: 50%;
 			transform: translate(-46%, -46%);
+			z-index: 200;
 		}
 
 		.main-slider__pagination {
@@ -223,10 +225,23 @@ $breakpoints: (
 		}
 
 		.main-slider__pagination-item {
+			position: relative;
+		}
+
+		.main-slider__pagination-item-0 {
 			cursor: pointer;
 			@include flex(center, flex-end, row);
 			@include minimum-size(column-gap, 1rem, 1.3020833333333335vw);
 			text-align: center;
+			position: absolute;
+			@include minimum-size(top, 6.5rem, 8.463541666666668vw);
+			@include minimum-size(right, 41.8rem, 54.427083333333336vw);
+			left: auto;
+			width: unset;
+
+			.main-slider__pagination-text {
+				@include minimum-size(width, 12.2rem, 15.885416666666666vw);
+			}
 
 			&::after {
 				position: relative;
@@ -240,12 +255,18 @@ $breakpoints: (
 				opacity: 0.53;
 			}
 
-			&:hover {
+			&:hover,
+			&:focus {
+				@include minimum-size(top, 6.5rem, 8.463541666666668vw);
+				@include minimum-size(right, 41.5rem, 54.036458333333336vw);
+				width: unset;
+
 				.main-slider__pagination-text {
 					font-family: var(--font-family-normal-600);
 					@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
 					@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
 					color: var(--color-neutral-baltic-sea);
+					@include minimum-size(width, 14.4rem, 18.75vw);
 				}
 
 				&::after {
@@ -262,29 +283,11 @@ $breakpoints: (
 			}
 		}
 
-		.main-slider__pagination-item-0 {
-			position: absolute;
-			@include minimum-size(top, 6.5rem, 8.463541666666668vw);
-			@include minimum-size(right, 41.8rem, 54.427083333333336vw);
-			left: auto;
-			width: unset;
-
-			.main-slider__pagination-text {
-				@include minimum-size(width, 12.2rem, 15.885416666666666vw);
-			}
-
-			&:hover {
-				@include minimum-size(top, 6.5rem, 8.463541666666668vw);
-				@include minimum-size(right, 41.5rem, 54.036458333333336vw);
-				width: unset;
-
-				.main-slider__pagination-text {
-					@include minimum-size(width, 14.4rem, 18.75vw);
-				}
-			}
-		}
-
 		.main-slider__pagination-item-1 {
+			cursor: pointer;
+			@include flex(center, flex-end, row);
+			@include minimum-size(column-gap, 1rem, 1.3020833333333335vw);
+			text-align: center;
 			position: absolute;
 			@include minimum-size(top, 23rem, 29.947916666666668vw);
 			@include minimum-size(right, 48.4rem, 63.020833333333336vw);
@@ -295,18 +298,51 @@ $breakpoints: (
 				@include minimum-size(width, 9.78rem, 12.734375vw);
 			}
 
-			&:hover {
+			&::after {
+				position: relative;
+				content: "";
+				@include minimum-size(width, 2.857rem, 3.7200520833333335vw);
+				@include minimum-size(height, 2.857rem, 3.7200520833333335vw);
+				display: block;
+				background-image: url("../images/main-slider-dot.svg");
+				background-size: 3.7200520833333335vw 3.7200520833333335vw;
+				z-index: 2;
+				opacity: 0.53;
+			}
+
+			&:hover,
+			&:focus {
 				@include minimum-size(top, 23rem, 29.947916666666668vw);
 				@include minimum-size(right, 47.3rem, 61.588541666666664vw);
 				width: unset;
 
 				.main-slider__pagination-text {
+					font-family: var(--font-family-normal-600);
+					@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
+					@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
+					color: var(--color-neutral-baltic-sea);
 					@include minimum-size(width, 8.7rem, 11.328125vw);
+				}
+
+				&::after {
+					position: relative;
+					content: "";
+					@include minimum-size(width, 5.055rem, 6.582031249999999vw);
+					@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 6.582031249999999vw 6.582031249999999vw;
+					z-index: 2;
+					opacity: 1;
 				}
 			}
 		}
 
 		.main-slider__pagination-item-2 {
+			cursor: pointer;
+			@include flex(center, flex-end, row);
+			@include minimum-size(column-gap, 1rem, 1.3020833333333335vw);
+			text-align: center;
 			position: absolute;
 			@include minimum-size(right, 42.5rem, 55.338541666666664vw);
 			@include minimum-size(top, 39.5rem, 51.432291666666664vw);
@@ -317,13 +353,42 @@ $breakpoints: (
 				@include minimum-size(width, 15.1rem, 19.661458333333336vw);
 			}
 
-			&:hover {
+			&::after {
+				position: relative;
+				content: "";
+				@include minimum-size(width, 2.857rem, 3.7200520833333335vw);
+				@include minimum-size(height, 2.857rem, 3.7200520833333335vw);
+				display: block;
+				background-image: url("../images/main-slider-dot.svg");
+				background-size: 3.7200520833333335vw 3.7200520833333335vw;
+				z-index: 2;
+				opacity: 0.53;
+			}
+
+			&:hover,
+			&:focus {
 				@include minimum-size(right, 40.5rem, 52.734375vw);
 				@include minimum-size(top, 39.5rem, 51.432291666666664vw);
 				width: unset;
 
 				.main-slider__pagination-text {
+					font-family: var(--font-family-normal-600);
+					@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
+					@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
+					color: var(--color-neutral-baltic-sea);
 					@include minimum-size(width, 10.1rem, 13.151041666666666vw);
+				}
+
+				&::after {
+					position: relative;
+					content: "";
+					@include minimum-size(width, 5.055rem, 6.582031249999999vw);
+					@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 6.582031249999999vw 6.582031249999999vw;
+					z-index: 2;
+					opacity: 1;
 				}
 			}
 		}
@@ -334,6 +399,7 @@ $breakpoints: (
 				@include minimum-size(font-size, var(--font-size-tablet-18), 2.34375vw);
 				@include minimum-size(line-height, 2.5rem, 3.2552083333333335vw);
 				color: var(--color-neutral-baltic-sea);
+				@include minimum-size(width, 14.4rem, 18.75vw);
 			}
 
 			.main-slider__pagination-item-0 {
@@ -343,6 +409,18 @@ $breakpoints: (
 
 				.main-slider__pagination-text {
 					@include minimum-size(width, 14.4rem, 18.75vw);
+				}
+
+				&::after {
+					position: relative;
+					content: "";
+					@include minimum-size(width, 5.055rem, 6.582031249999999vw);
+					@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 6.582031249999999vw 6.582031249999999vw;
+					z-index: 2;
+					opacity: 1;
 				}
 			}
 
@@ -354,6 +432,18 @@ $breakpoints: (
 				.main-slider__pagination-text {
 					@include minimum-size(width, 8.7rem, 11.328125vw);
 				}
+
+				&::after {
+					position: relative;
+					content: "";
+					@include minimum-size(width, 5.055rem, 6.582031249999999vw);
+					@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 6.582031249999999vw 6.582031249999999vw;
+					z-index: 2;
+					opacity: 1;
+				}
 			}
 
 			.main-slider__pagination-item-2 {
@@ -363,6 +453,18 @@ $breakpoints: (
 
 				.main-slider__pagination-text {
 					@include minimum-size(width, 10.1rem, 13.151041666666666vw);
+				}
+
+				&::after {
+					position: relative;
+					content: "";
+					@include minimum-size(width, 5.055rem, 6.582031249999999vw);
+					@include minimum-size(height, 5.055rem, 6.582031249999999vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 6.582031249999999vw 6.582031249999999vw;
+					z-index: 2;
+					opacity: 1;
 				}
 			}
 		}
@@ -414,10 +516,10 @@ $breakpoints: (
 
 		.main-slider__slide {
 			//Temporary
-			&:nth-child(2),
-			&:nth-child(3) {
-				display: none;
-			}
+			// &:nth-child(2),
+			// &:nth-child(3) {
+			// 	display: none;
+			// }
 			//Temporary
 		}
 
@@ -453,10 +555,23 @@ $breakpoints: (
 		}
 
 		.main-slider__pagination-item {
+			position: relative;
+		}
+
+		.main-slider__pagination-item-0 {
 			cursor: pointer;
 			@include flex(center, flex-end, row);
 			@include minimum-size(column-gap, 0.9895833333333333vw);
 			text-align: center;
+			position: absolute;
+			@include minimum-size(top, 3.385416666666667vw);
+			@include minimum-size(right, 21.666666666666668vw);
+			left: auto;
+			width: unset;
+
+			.main-slider__pagination-text {
+				@include minimum-size(width, 6.5625vw);
+			}
 
 			&::after {
 				position: relative;
@@ -470,12 +585,18 @@ $breakpoints: (
 				opacity: 0.53;
 			}
 
-			&:hover {
+			&:hover,
+			&:focus {
+				@include minimum-size(top, 3.385416666666667vw);
+				@include minimum-size(right, 21.614583333333336vw);
+				width: unset;
+
 				.main-slider__pagination-text {
 					font-family: var(--font-family-normal-600);
 					@include minimum-size(font-size, 0.9375vw);
 					@include minimum-size(line-height, 1.3020833333333335vw);
 					color: var(--color-neutral-baltic-sea);
+					@include minimum-size(width, 7.5vw);
 				}
 
 				&::after {
@@ -492,29 +613,11 @@ $breakpoints: (
 			}
 		}
 
-		.main-slider__pagination-item-0 {
-			position: absolute;
-			@include minimum-size(top, 3.385416666666667vw);
-			@include minimum-size(right, 21.666666666666668vw);
-			left: auto;
-			width: unset;
-
-			.main-slider__pagination-text {
-				@include minimum-size(width, 6.5625vw);
-			}
-
-			&:hover {
-				@include minimum-size(top, 3.385416666666667vw);
-				@include minimum-size(right, 21.614583333333336vw);
-				width: unset;
-
-				.main-slider__pagination-text {
-					@include minimum-size(width, 7.5vw);
-				}
-			}
-		}
-
 		.main-slider__pagination-item-1 {
+			cursor: pointer;
+			@include flex(center, flex-end, row);
+			@include minimum-size(column-gap, 0.9895833333333333vw);
+			text-align: center;
 			position: absolute;
 			@include minimum-size(top, 11.979166666666666vw);
 			@include minimum-size(right, 25.3125vw);
@@ -525,18 +628,51 @@ $breakpoints: (
 				@include minimum-size(width, 5.09375vw);
 			}
 
-			&:hover {
+			&::after {
+				position: relative;
+				content: "";
+				@include minimum-size(width, 1.4880208333333333vw);
+				@include minimum-size(height, 1.4880208333333333vw);
+				display: block;
+				background-image: url("../images/main-slider-dot.svg");
+				background-size: 1.4880208333333333vw 1.4880208333333333vw;
+				z-index: 2;
+				opacity: 0.53;
+			}
+
+			&:hover,
+			&:focus {
 				@include minimum-size(top, 11.979166666666666vw);
 				@include minimum-size(right, 24.739583333333336vw);
 				width: unset;
 
 				.main-slider__pagination-text {
+					font-family: var(--font-family-normal-600);
+					@include minimum-size(font-size, 0.9375vw);
+					@include minimum-size(line-height, 1.3020833333333335vw);
+					color: var(--color-neutral-baltic-sea);
 					@include minimum-size(width, 6.5625vw);
+				}
+
+				&::after {
+					position: relative;
+					content: "";
+					@include minimum-size(width, 2.6328124999999996vw);
+					@include minimum-size(height, 2.6328124999999996vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 2.6328124999999996vw 2.6328124999999996vw;
+					z-index: 2;
+					opacity: 1;
 				}
 			}
 		}
 
 		.main-slider__pagination-item-2 {
+			cursor: pointer;
+			@include flex(center, flex-end, row);
+			@include minimum-size(column-gap, 0.9895833333333333vw);
+			text-align: center;
 			position: absolute;
 			@include minimum-size(right, 22.5vw);
 			@include minimum-size(top, 20.572916666666664vw);
@@ -547,13 +683,42 @@ $breakpoints: (
 				@include minimum-size(width, 7.864583333333333vw);
 			}
 
-			&:hover {
+			&::after {
+				position: relative;
+				content: "";
+				@include minimum-size(width, 1.4880208333333333vw);
+				@include minimum-size(height, 1.4880208333333333vw);
+				display: block;
+				background-image: url("../images/main-slider-dot.svg");
+				background-size: 1.4880208333333333vw 1.4880208333333333vw;
+				z-index: 2;
+				opacity: 0.53;
+			}
+
+			&:hover,
+			&:focus {
 				@include minimum-size(right, 21.4vw);
 				@include minimum-size(top, 20.572916666666664vw);
 				width: unset;
 
 				.main-slider__pagination-text {
+					font-family: var(--font-family-normal-600);
+					@include minimum-size(font-size, 0.9375vw);
+					@include minimum-size(line-height, 1.3020833333333335vw);
+					color: var(--color-neutral-baltic-sea);
 					@include minimum-size(width, 10.052083333333334vw);
+				}
+
+				&::after {
+					position: relative;
+					content: "";
+					@include minimum-size(width, 2.6328124999999996vw);
+					@include minimum-size(height, 2.6328124999999996vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 2.6328124999999996vw 2.6328124999999996vw;
+					z-index: 2;
+					opacity: 1;
 				}
 			}
 		}
@@ -564,41 +729,72 @@ $breakpoints: (
 				@include minimum-size(font-size, 0.9375vw);
 				@include minimum-size(line-height, 1.3020833333333335vw);
 				color: var(--color-neutral-baltic-sea);
+			}
+
+			.main-slider__pagination-item-0 {
+				@include minimum-size(top, 3.385416666666667vw);
+				@include minimum-size(right, 21.614583333333336vw);
+				width: unset;
+
+				.main-slider__pagination-text {
+					@include minimum-size(width, 7.5vw);
+				}
 
 				&::after {
 					position: relative;
 					content: "";
-					width: 2.6328124999999996vw;
-					height: 2.6328124999999996vw;
+					@include minimum-size(width, 2.6328124999999996vw);
+					@include minimum-size(height, 2.6328124999999996vw);
 					display: block;
 					background-image: url("../images/main-slider-dot.svg");
 					background-size: 2.6328124999999996vw 2.6328124999999996vw;
 					z-index: 2;
+					opacity: 1;
 				}
 			}
 
-			.main-slider__pagination-item-0 {
-				position: absolute;
-				@include minimum-size(top, 3.3854166666666665vw);
-				@include minimum-size(right, 21.614583333333336vw);
-				@include minimum-size(width, 10.677083333333332vw);
-				left: auto;
-			}
-
 			.main-slider__pagination-item-1 {
-				position: absolute;
-				@include minimum-size(top, 11.979166666666668vw);
+				@include minimum-size(top, 11.979166666666666vw);
 				@include minimum-size(right, 24.739583333333336vw);
-				@include minimum-size(width, 7.552083333333333vw);
-				left: auto;
+				width: unset;
+
+				.main-slider__pagination-text {
+					@include minimum-size(width, 6.5625vw);
+				}
+
+				&::after {
+					position: relative;
+					content: "";
+					@include minimum-size(width, 2.6328124999999996vw);
+					@include minimum-size(height, 2.6328124999999996vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 2.6328124999999996vw 2.6328124999999996vw;
+					z-index: 2;
+					opacity: 1;
+				}
 			}
 
 			.main-slider__pagination-item-2 {
-				position: absolute;
-				@include minimum-size(right, 21.09375vw);
+				@include minimum-size(right, 21.4vw);
 				@include minimum-size(top, 20.572916666666664vw);
-				@include minimum-size(width, 8.802083333333334vw);
-				left: auto;
+				width: unset;
+
+				.main-slider__pagination-text {
+					@include minimum-size(width, 10.052083333333334vw);
+				}
+
+				&::after {
+					position: relative;
+					content: "";
+					@include minimum-size(width, 2.6328124999999996vw);
+					@include minimum-size(height, 2.6328124999999996vw);
+					display: block;
+					background-image: url("../images/main-slider-dot.svg");
+					background-size: 2.6328124999999996vw 2.6328124999999996vw;
+					z-index: 2;
+					opacity: 1;
+				}
 			}
 		}
 

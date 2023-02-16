@@ -19,15 +19,16 @@ export const ProductsSliderMobile: SwiperOptions = {
 	effect: "creative",
 	creativeEffect: {
 		prev: {
-			shadow: true,
 			translate: ["-100%", 0, -600],
 			opacity: 0,
-			origin: "center center"
+			origin: "center center",
+			scale: 0
 		},
 		next: {
 			translate: ["100%", 0, -600],
 			opacity: 0,
-			origin: "center center"
+			origin: "center center",
+			scale: 0
 		}
 	}
 };

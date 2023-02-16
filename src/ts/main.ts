@@ -3,7 +3,14 @@ import "swiper/css";
 
 import "./helpers/WebpCheck.ts";
 
-import Swiper, { Navigation, Autoplay, Keyboard, Mousewheel, EffectCreative } from "swiper";
+import Swiper, {
+	Navigation,
+	Autoplay,
+	Keyboard,
+	Mousewheel,
+	EffectCreative,
+	Pagination
+} from "swiper";
 
 import { BurgerMenuView } from "./modules/BurgerMenu";
 import { BurgerMenuController } from "./modules/BurgerMenu";
@@ -18,10 +25,10 @@ import { FormController } from "./modules/Form";
 import { InputController } from "./modules/Form";
 import { FormModel } from "./modules/Form";
 
-import { MainSliderMobile } from "./modules/MainSlider";
+import { MainSliderMobile, MainSliderUniversal } from "./modules/MainSlider";
 import { ProductsSliderMobile } from "./modules/ProductsSlider";
 
-Swiper.use([Navigation, Autoplay, Keyboard, Mousewheel, EffectCreative]);
+Swiper.use([Navigation, Autoplay, Keyboard, Mousewheel, EffectCreative, Pagination]);
 
 window.addEventListener("DOMContentLoaded", () => {
 	const burgerMenuModel: BurgerMenuModel = new BurgerMenuModel({});
@@ -73,8 +80,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("load", () => {
 	const mainSliderMobile = new Swiper(".main-slider--type--mobile", MainSliderMobile);
+	const mainSliderUniversal = new Swiper(".main-slider--type--universal", MainSliderUniversal);
 	const productsSliderMobile = new Swiper(".products-slider--type--mobile", ProductsSliderMobile);
 
 	mainSliderMobile.init();
+	mainSliderUniversal.init();
 	productsSliderMobile.init();
 });
