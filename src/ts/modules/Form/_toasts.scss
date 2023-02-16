@@ -1,5 +1,5 @@
 .toasts__container {
-	position: absolute;
+	position: fixed;
 	bottom: 6.25vw;
 	left: 50%;
 	transform: translateX(-50%);
@@ -16,6 +16,7 @@
 
 	.toast__close-button {
 		background-color: #ff6876;
+		border: #ff5157 solid 0.15625vw;
 
 		&:hover,
 		&:focus {
@@ -23,7 +24,8 @@
 		}
 	}
 
-	.toast__primary-circle {
+	.toast__secondary-circle {
+		pointer-events: none;
 		color: #ff5157;
 	}
 }
@@ -35,6 +37,7 @@
 
 	.toast__close-button {
 		background-color: #44d1ad;
+		border: #3abd9f solid 0.15625vw;
 
 		&:hover,
 		&:focus {
@@ -43,6 +46,11 @@
 	}
 
 	.toast__primary-circle {
+		color: #3abd9f;
+	}
+
+	.toast__secondary-circle {
+		pointer-events: none;
 		color: #3abd9f;
 	}
 }
@@ -95,8 +103,8 @@
 }
 
 .toast__circles-wrapper {
-	width: 9.375vw; //
-	height: 9.375vw; //
+	width: 9.375vw;
+	height: 9.375vw;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -106,13 +114,12 @@
 
 .toast__primary-circle {
 	stroke-dashoffset: 0;
-	animation: circle-animation linear forwards;
+	animation: circle-animation linear reverse forwards;
 	pointer-events: none;
 }
 
-.toast__secondary-circle {
-	pointer-events: none;
-	color: #FFF;
+.toast__primary-circle {
+	color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -142,6 +149,11 @@
 		width: 2.34375vw;
 		height: 2.34375vw;
 	}
+
+	.toast__circles-wrapper {
+		width: 3.90625vw;
+		height: 3.90625vw;
+	}
 }
 
 @media only screen and (min-width: 1024px) {
@@ -162,8 +174,8 @@
 	}
 
 	.toast__close-button {
-		width: 1.953125vw;
-		height: 1.953125vw;
+		width: 2.1484375vw;
+		height: 2.1484375vw;
 		border: white solid 0.048828125vw;
 	}
 
@@ -171,12 +183,16 @@
 		width: 1.171875vw;
 		height: 1.171875vw;
 	}
-}
 
+	.toast__circles-wrapper {
+		width: 2.05078125vw;
+		height: 2.05078125vw;
+	}
+}
 
 @keyframes circle-animation {
 	from {
-		stroke-dashoffset: 296;
+		stroke-dashoffset: -296;
 	}
 
 	to {

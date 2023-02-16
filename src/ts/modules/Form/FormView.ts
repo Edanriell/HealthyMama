@@ -269,8 +269,8 @@ export class FormView implements IFormView {
 				<p class="toast__text">${text}</p>
 				<div class="toast__close-button-wrapper">
 					<svg class="toast__circles-wrapper" viewBox="0 0 100 100">
-						<path class="toast__secondary-circle" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="currentColor" stroke-width="6" fill-opacity="0"></path>
-						<path class="toast__primary-circle" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="currentColor" stroke-width="8" fill-opacity="0" style="stroke-dasharray: 295.416, 295.416; animation-duration: ${
+						<path class="toast__secondary-circle" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="currentColor" stroke-width="8" fill-opacity="0"></path>
+						<path class="toast__primary-circle" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="currentColor" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 295.416, 295.416; animation-duration: ${
 							this.removeToastTimeout || 0
 						}ms"></path>
 					</svg>
