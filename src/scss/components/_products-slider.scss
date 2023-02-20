@@ -135,7 +135,8 @@ $breakpoints: (
 		position: relative;
 
 		.products-slider__wrapper {
-			@include flex(center, flex-start, row);
+			///////////////////
+			// @include flex(center, flex-start, row);
 			// @include minimum-size(
 			// 	column-gap,
 			// 	1.7rem,
@@ -285,6 +286,7 @@ $breakpoints: (
 @include media(">=desktop") {
 	.products-slider {
 		@include minimum-size(padding-top, 4.427083333333334vw);
+		z-index: 100 !important;
 	}
 
 	.products-slider--type--universal {
@@ -292,8 +294,9 @@ $breakpoints: (
 		position: relative;
 
 		.products-slider__wrapper {
-			@include flex(center, center, row);
-			@include minimum-size(column-gap, 1.7rem, 0.8854166666666666vw);
+			////////////////////////
+			// @include flex(center, center, row);
+			// @include minimum-size(column-gap, 1.7rem, 0.8854166666666666vw);
 		}
 
 		.products-slider__slide {
@@ -301,12 +304,13 @@ $breakpoints: (
 			border-radius: 1rem;
 			box-shadow: 0 0.4rem 8.3rem var(--color-neutral-eerie-black-transparent);
 			@include minimum-size(width, 34.583333333333336vw);
+			width: 34.53125vw !important;
 
 			// Temporarily, will be removed when real slider will be hooked up.
-			&:nth-child(1),
-			&:nth-child(3) {
-				opacity: 0.3;
-			}
+			// &:nth-child(1),
+			// &:nth-child(3) {
+			// 	opacity: 0.3;
+			// }
 			// Temporarily, will be removed when real slider will be hooked up.
 		}
 
@@ -347,12 +351,14 @@ $breakpoints: (
 			position: absolute;
 			top: 50%;
 			left: 50%;
+			transform: translateY(50%);
+			@include minimum-size(height, 2.7604166666666665vw);
 		}
 
 		.products-slider__previous-slide-button {
 			position: absolute;
 			top: 0;
-			@include minimum-size(left, -20.9vw); // fix
+			@include minimum-size(left, -21vw); // fix
 			@include minimum-size(width, 2.7604166666666665vw);
 			@include minimum-size(height, 2.7604166666666665vw);
 			border-radius: 50%;
@@ -361,6 +367,7 @@ $breakpoints: (
 			border: 0.0625vw solid var(--color-accent-jade-green);
 			border-radius: 8.125vw;
 			border-width: 0.2604166667vw;
+			z-index: 200;
 
 			&:hover,
 			&:focus {
@@ -400,6 +407,7 @@ $breakpoints: (
 			border: 0.15625vw solid var(--color-accent-jade-green);
 			border-radius: 8.125vw;
 			border-width: 0.2604166667vw;
+			z-index: 200;
 
 			&:hover,
 			&:focus {
