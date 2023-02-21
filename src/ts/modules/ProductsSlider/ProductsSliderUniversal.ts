@@ -1,6 +1,8 @@
 import { SwiperOptions } from "swiper";
+import EffectOpacity from "./plugins/EffectOpacity";
 
 export const ProductsSliderUniversal: SwiperOptions = {
+	modules: [EffectOpacity],
 	slidesPerView: "auto",
 	loop: true,
 	autoplay: {
@@ -22,8 +24,7 @@ export const ProductsSliderUniversal: SwiperOptions = {
 	},
 	breakpoints: {
 		1024: {
-			spaceBetween: 17,
-			mousewheel: true
+			spaceBetween: 17
 		}
 	}
 };
