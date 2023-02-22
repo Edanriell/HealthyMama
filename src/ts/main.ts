@@ -1,6 +1,11 @@
 import "../scss/style.scss";
 import "swiper/css";
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger)
+
 import "./helpers/WebpCheck.ts";
 
 import Swiper, {
@@ -31,6 +36,29 @@ import { ProductsSliderMobile, ProductsSliderUniversal } from "./modules/Product
 Swiper.use([Navigation, Autoplay, Keyboard, Mousewheel, EffectCreative, Pagination]);
 
 window.addEventListener("DOMContentLoaded", () => {
+	  gsap.to(".mother-and-child-parallax-image__main-image-wrapper", {
+		yPercent: 30,
+		ease: "none",
+		scrollTrigger: {
+		  trigger: ".delivery-advantages",
+		  start: "top bottom", // the default values
+		  end: "bottom top",
+		  scrub: true
+		},
+	  });
+
+	  gsap.to(".mother-and-child-parallax-image__tree-image-wrapper", {
+		yPercent: -60,
+		ease: "none",
+		scrollTrigger: {
+		  trigger: ".delivery-advantages",
+		  start: "top bottom", // the default values
+		  end: "bottom top",
+		  scrub: true
+		},
+	  });
+
+
 	const burgerMenuModel: BurgerMenuModel = new BurgerMenuModel({});
 	const burgerMenuController: BurgerMenuController = new BurgerMenuController(burgerMenuModel);
 	const burgerMenuView: BurgerMenuView = new BurgerMenuView({
