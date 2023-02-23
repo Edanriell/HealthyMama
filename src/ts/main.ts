@@ -4,7 +4,7 @@ import "swiper/css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 import "./helpers/WebpCheck.ts";
 
@@ -36,28 +36,43 @@ import { ProductsSliderMobile, ProductsSliderUniversal } from "./modules/Product
 Swiper.use([Navigation, Autoplay, Keyboard, Mousewheel, EffectCreative, Pagination]);
 
 window.addEventListener("DOMContentLoaded", () => {
-	  gsap.to(".mother-and-child-parallax-image__main-image-wrapper", {
-		yPercent: 30,
+	gsap.to(".mother-and-child-parallax-image__main-image-wrapper", {
+		yPercent: -12,
 		ease: "none",
 		scrollTrigger: {
-		  trigger: ".delivery-advantages",
-		  start: "top bottom", // the default values
-		  end: "bottom top",
-		  scrub: true
-		},
-	  });
+			trigger: ".delivery-advantages",
+			start: "top center", // the default values
+			end: "center center",
+			scrub: true
+			//   markers: {startColor: "green", endColor: "red", fontSize: "12px"}
+		}
+	});
 
-	  gsap.to(".mother-and-child-parallax-image__tree-image-wrapper", {
-		yPercent: -60,
+	gsap.to(".mother-and-child-parallax-image__tree-image-wrapper", {
+		yPercent: 10,
 		ease: "none",
 		scrollTrigger: {
-		  trigger: ".delivery-advantages",
-		  start: "top bottom", // the default values
-		  end: "bottom top",
-		  scrub: true
-		},
-	  });
+			trigger: ".delivery-advantages",
+			start: "center center", // the default values
+			end: "bottom center",
+			scrub: true,
+			markers: { startColor: "blue", endColor: "pink", fontSize: "12px" }
+		}
+	});
 
+	/*
+		[
+			{
+				targetElementSelector: string,
+				yCoordinateValue: number,
+				easeType?: string = "none",
+				triggerElementSelector: string,
+				animationStartPosition?: string,
+				animationEndPosition?: string,
+				markers?: object = null
+			}
+		]
+	*/
 
 	const burgerMenuModel: BurgerMenuModel = new BurgerMenuModel({});
 	const burgerMenuController: BurgerMenuController = new BurgerMenuController(burgerMenuModel);

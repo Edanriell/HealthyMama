@@ -1,8 +1,8 @@
 import { SwiperOptions } from "swiper";
-import EffectOpacity from "./plugins/EffectOpacity";
+import OpacityEffect from "./plugins/OpacityEffect";
 
 export const ProductsSliderUniversal: SwiperOptions = {
-	modules: [EffectOpacity],
+	modules: [OpacityEffect],
 	slidesPerView: "auto",
 	loop: true,
 	autoplay: {
