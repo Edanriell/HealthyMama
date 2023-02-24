@@ -30,50 +30,16 @@ import { FormController } from "./modules/Form";
 import { InputController } from "./modules/Form";
 import { FormModel } from "./modules/Form";
 
+import { SimpleParallaxView } from "./modules/SimpleParallax";
+import { SimpleParallaxController } from "./modules/SimpleParallax";
+import { SimpleParallaxModel } from "./modules/SimpleParallax";
+
 import { MainSliderMobile, MainSliderUniversal } from "./modules/MainSlider";
 import { ProductsSliderMobile, ProductsSliderUniversal } from "./modules/ProductsSlider";
 
 Swiper.use([Navigation, Autoplay, Keyboard, Mousewheel, EffectCreative, Pagination]);
 
 window.addEventListener("DOMContentLoaded", () => {
-	gsap.to(".mother-and-child-parallax-image__main-image-wrapper", {
-		yPercent: -12,
-		ease: "none",
-		scrollTrigger: {
-			trigger: ".delivery-advantages",
-			start: "top center", // the default values
-			end: "center center",
-			scrub: true
-			//   markers: {startColor: "green", endColor: "red", fontSize: "12px"}
-		}
-	});
-
-	gsap.to(".mother-and-child-parallax-image__tree-image-wrapper", {
-		yPercent: 10,
-		ease: "none",
-		scrollTrigger: {
-			trigger: ".delivery-advantages",
-			start: "center center", // the default values
-			end: "bottom center",
-			scrub: true,
-			markers: { startColor: "blue", endColor: "pink", fontSize: "12px" }
-		}
-	});
-
-	/*
-		[
-			{
-				targetElementSelector: string,
-				yCoordinateValue: number,
-				easeType?: string = "none",
-				triggerElementSelector: string,
-				animationStartPosition?: string,
-				animationEndPosition?: string,
-				markers?: object = null
-			}
-		]
-	*/
-
 	const burgerMenuModel: BurgerMenuModel = new BurgerMenuModel({});
 	const burgerMenuController: BurgerMenuController = new BurgerMenuController(burgerMenuModel);
 	const burgerMenuView: BurgerMenuView = new BurgerMenuView({
@@ -116,9 +82,39 @@ window.addEventListener("DOMContentLoaded", () => {
 		removeToastTimeout: 5000
 	});
 
+	const motherAndChildParallaxModel: SimpleParallaxModel = new SimpleParallaxModel();
+	const motherAndChildParallaxController: SimpleParallaxController = new SimpleParallaxController(
+		motherAndChildParallaxModel
+	);
+	const motherAndChildParallaxView: SimpleParallaxView = new SimpleParallaxView({
+		root: document.querySelector(".delivery-advantages")!,
+		controller: motherAndChildParallaxController,
+		options: [
+			{
+				targetElement: document.querySelector(
+					".mother-and-child-parallax-image__main-image-wrapper"
+				)!,
+				yCoordinateValue: -12.5,
+				easeType: "none",
+				animationStartPosition: "top center",
+				animationEndPosition: "center center"
+			},
+			{
+				targetElement: document.querySelector(
+					".mother-and-child-parallax-image__tree-image-wrapper"
+				)!,
+				yCoordinateValue: 10.5,
+				easeType: "none",
+				animationStartPosition: "center center",
+				animationEndPosition: "bottom center"
+			}
+		]
+	});
+
 	burgerMenuView.mount();
 	modalView.mount();
 	formView.mount();
+	motherAndChildParallaxView.mount();
 });
 
 window.addEventListener("load", () => {
