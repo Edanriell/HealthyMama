@@ -94,7 +94,7 @@ window.addEventListener("DOMContentLoaded", () => {
 				targetElement: document.querySelector(
 					".mother-and-child-parallax-image__main-image-wrapper"
 				)!,
-				yCoordinateValue: -12.5,
+				yCoordinateValue: -14,
 				easeType: "none",
 				animationStartPosition: "top center",
 				animationEndPosition: "center center"
@@ -103,7 +103,36 @@ window.addEventListener("DOMContentLoaded", () => {
 				targetElement: document.querySelector(
 					".mother-and-child-parallax-image__tree-image-wrapper"
 				)!,
-				yCoordinateValue: 10.5,
+				yCoordinateValue: 12,
+				easeType: "none",
+				animationStartPosition: "center center",
+				animationEndPosition: "bottom center"
+			}
+		]
+	});
+
+	const imageGalleryParallaxModel: SimpleParallaxModel = new SimpleParallaxModel();
+	const imageGalleryParallaxController: SimpleParallaxController = new SimpleParallaxController(
+		imageGalleryParallaxModel
+	);
+	const imageGalleryParallaxView: SimpleParallaxView = new SimpleParallaxView({
+		root: document.querySelector(".instagram-images")!,
+		controller: imageGalleryParallaxController,
+		options: [
+			{
+				targetElement: document.querySelectorAll(
+					".image-gallery__parallax-effect--type--upwards"
+				)!,
+				yCoordinateValue: -25,
+				easeType: "none",
+				animationStartPosition: "center center",
+				animationEndPosition: "bottom center"
+			},
+			{
+				targetElement: document.querySelectorAll(
+					".image-gallery__parallax-effect--type--downwards"
+				)!,
+				yCoordinateValue: 25,
 				easeType: "none",
 				animationStartPosition: "center center",
 				animationEndPosition: "bottom center"
@@ -115,6 +144,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	modalView.mount();
 	formView.mount();
 	motherAndChildParallaxView.mount();
+	imageGalleryParallaxView.mount();
 });
 
 window.addEventListener("load", () => {

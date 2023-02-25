@@ -8,7 +8,7 @@ export type Marker = {
 };
 
 export type ScrollParallaxOptions = {
-	targetElement: HTMLElement;
+	targetElement: Element | NodeListOf<Element>;
 	yCoordinateValue: number;
 	easeType?: string;
 	animationStartPosition?: string;
@@ -37,5 +37,11 @@ export interface ISimpleParallaxController {
 }
 
 export interface ISimpleParallaxModel {
-	scrollParallax({ element, root }: { element: ScrollParallaxOptions; root: HTMLElement }): void;
+	scrollParallax({
+		element,
+		root
+	}: {
+		element: ScrollParallaxOptions;
+		root: HTMLElement;
+	}): void;
 }
