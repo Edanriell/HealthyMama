@@ -8,7 +8,7 @@ import {
 import { FormModel } from "./FormModel";
 
 export class InputController implements IInputController {
-	model: FormModel;
+	public model: FormModel;
 
 	constructor(model: FormModel) {
 		this.model = model;

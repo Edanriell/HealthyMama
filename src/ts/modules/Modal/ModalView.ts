@@ -3,8 +3,8 @@ import { ModalController } from "./ModalController";
 import "./modal.scss";
 
 export class ModalView implements IModalView {
-	root: HTMLElement;
-	controller: ModalController;
+	public root: HTMLElement;
+	public controller: ModalController;
 
 	private modal!: HTMLDivElement;
 	private modalUnderlay!: HTMLDivElement;

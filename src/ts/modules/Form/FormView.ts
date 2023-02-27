@@ -7,9 +7,9 @@ import { InputController } from "./InputController";
 import "./Styles/form.scss";
 
 export class FormView implements IFormView {
-	formController: FormController;
-	inputController: InputController;
-	root: HTMLFormElement;
+	public formController: FormController;
+	public inputController: InputController;
+	public root: HTMLFormElement;
 
 	private isFormLocked: boolean = false;
 	private formSubmitButton: HTMLButtonElement;

@@ -2,7 +2,7 @@ import { BurgerMenuModel } from "./BurgerMenuModel";
 import { IBurgerMenuController } from "./BurgerMenuTypes";
 
 export class BurgerMenuController implements IBurgerMenuController {
-	model: BurgerMenuModel;
+	public model: BurgerMenuModel;
 
 	constructor(model: BurgerMenuModel) {
 		this.model = model;

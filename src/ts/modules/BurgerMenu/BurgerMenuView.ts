@@ -3,8 +3,8 @@ import { IBurgerMenuView } from "./BurgerMenuTypes";
 import "./burger-menu.scss";
 
 export class BurgerMenuView implements IBurgerMenuView {
-	controller: BurgerMenuController;
-	root: HTMLElement;
+	public controller: BurgerMenuController;
+	public root: HTMLElement;
 
 	private mobileNavigation!: HTMLDivElement;
 	private mobileNavigationBurger!: HTMLDivElement;

@@ -4,7 +4,7 @@ import { Response } from "./FormTypes";
 import { FormModel } from "./FormModel";
 
 export class FormController implements IFormController {
-	model: FormModel;
+	public model: FormModel;
 
 	constructor(model: FormModel) {
 		this.model = model;
