@@ -34,6 +34,10 @@ import { SimpleParallaxView } from "./modules/SimpleParallax";
 import { SimpleParallaxController } from "./modules/SimpleParallax";
 import { SimpleParallaxModel } from "./modules/SimpleParallax";
 
+import { ScrollToTopView } from "./modules/ScrollToTop/ScrollToTopView";
+import { ScrollToTopController } from "./modules/ScrollToTop/ScrollToTopController";
+import { ScrollToTopModel } from "./modules/ScrollToTop/ScrollToTopModel";
+
 import { MainSliderMobile, MainSliderUniversal } from "./modules/MainSlider";
 import { ProductsSliderMobile, ProductsSliderUniversal } from "./modules/ProductsSlider";
 
@@ -140,11 +144,19 @@ window.addEventListener("DOMContentLoaded", () => {
 		]
 	});
 
+	const scrollToTopModel = new ScrollToTopModel();
+	const scrollToTopController = new ScrollToTopController(scrollToTopModel);
+	const scrollToTopView = new ScrollToTopView({
+		root: document.querySelector("body")!,
+		controller: scrollToTopController
+	});
+
 	burgerMenuView.mount();
 	modalView.mount();
 	formView.mount();
 	motherAndChildParallaxView.mount();
 	imageGalleryParallaxView.mount();
+	scrollToTopView.mount();
 });
 
 window.addEventListener("load", () => {

@@ -1,4 +1,5 @@
 import { ScrollToTopController } from "./ScrollToTopController";
+import "./scrollToTop.scss";
 
 export class ScrollToTopView {
 	public root: HTMLElement;
@@ -15,14 +16,18 @@ export class ScrollToTopView {
 
 	private createButton(): void {
 		this.button = document.createElement("div");
-		this.button.classList.add("scroll-to-top__button-wrapper");
+		this.button.classList.add("scroll-to-top");
 		this.button.innerHTML = `
 			<button class="scroll-to-top__button" type="button">
-				// Icon
+				<svg class="scroll-to-top__icon">
+					<use xlink:href="#arrow-up" x="0" y="0"></use>
+				</svg>
 				<span class="visually-hidden">Вернуться в начало<span>
 			</button>
 		`
 	}
 
-	public mount(): void {}
+	public mount(): void {
+		this.root.appendChild(this.button);
+	}
 }
