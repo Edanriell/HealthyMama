@@ -12,6 +12,16 @@ export class ScrollToTopView {
 		this.controller = controller;
 
 		this.createButton();
+
+		this.bindListeners();
+	}
+
+	private onScrollClick = (): void => {
+		this.controller.handleScroll();
+	}
+
+	private bindListeners(): void {
+		this.button.addEventListener("click", this.onScrollClick);
 	}
 
 	private createButton(): void {

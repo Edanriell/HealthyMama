@@ -6,4 +6,8 @@ export class ScrollToTopController {
 	constructor(model: ScrollToTopModel) {
 		this.model = model;
 	}
+
+	public handleScroll(): void {
+		this.model.scrollToTop();
+	}
 }
