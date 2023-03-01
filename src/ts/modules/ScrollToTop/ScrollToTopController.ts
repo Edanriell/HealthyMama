@@ -7,7 +7,7 @@ export class ScrollToTopController {
 		this.model = model;
 	}
 
-	public handleScroll(): void {
-		this.model.scrollToTop();
+	public handleScroll(event: unknown): void {
+		this.model.scrollToTop(event);
 	}
 }
