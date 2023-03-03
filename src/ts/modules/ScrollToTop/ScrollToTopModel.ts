@@ -1,14 +1,27 @@
 export class ScrollToTopModel {
-	private element: HTMLElement = document.documentElement;
-	private body: HTMLElement = document.body;
+	private documentElement: HTMLElement = document.documentElement;
+	private documentBody: HTMLElement = document.body;
+	private smoothScrollSpeed: number;
 
-	public scrollToTop(event: unknown): void {
-		let scrollTop = Math.round(this.body.scrollTop || this.element.scrollTop);
-		const hash = (document.querySelector(".scroll-to-top") as HTMLAnchorElement).hash;
+	#buttonSelector: string = ".scroll-to-top";
+	#timeInterval: number = 1;
+
+	constructor({ smoothScrollSpeed }: { smoothScrollSpeed: number }) {
+		this.smoothScrollSpeed = smoothScrollSpeed;
+	}
+
+	public calculateScroll(event: unknown): void {
+		(event as Event).preventDefault();
+
+		const scrollTop: number = Math.round(
+			this.documentElement.scrollTop || this.documentBody.scrollTop
+		);
+		const hash: string = (document.querySelector(this.#buttonSelector) as HTMLAnchorElement)
+			.hash;
+
 		if (hash !== "") {
-			(event as Event).preventDefault();
-			let hashElement = (document.querySelector(hash)! as HTMLElement);
-			let hashElementTop = 0;
+			let hashElement: HTMLAnchorElement = document.querySelector(hash)! as HTMLAnchorElement;
+			let hashElementTop: number = 0;
 
 			while (hashElement.offsetParent) {
 				hashElementTop += hashElement.offsetTop;
@@ -16,32 +29,33 @@ export class ScrollToTopModel {
 			}
 
 			hashElementTop = Math.round(hashElementTop);
-			this.smoothScroll(scrollTop, hashElementTop, hash);
+			this.smoothScroll({ from: scrollTop, to: hashElementTop, hash: hash });
 		}
 	}
 
-	private smoothScroll(from: number, to: number, hash: string): void {
-		let timeInterval = 1;
+	private smoothScroll({ from, to, hash }: { from: number; to: number; hash: string }): void {
 		let prevScrollTop: number;
 		let speed: number;
 
 		if (to > from) {
-			speed = 35;
+			speed = this.smoothScrollSpeed;
 		} else {
-			speed = -35;
+			speed = -this.smoothScrollSpeed;
 		}
 
-		this.body.scrollTop += 100;
-		this.element.scrollTop += 100;
+		this.documentBody.scrollTop += 100;
+		this.documentElement.scrollTop += 100;
 
-		let move = setInterval(() => {
-			let scrollTop = Math.round(this.body.scrollTop || this.element.scrollTop);
+		const move: NodeJS.Timer = setInterval(() => {
+			const scrollTop: number = Math.round(
+				this.documentBody.scrollTop || this.documentElement.scrollTop
+			);
+
 			if (
 				prevScrollTop === scrollTop ||
 				(to > from && scrollTop >= to) ||
 				(to < from && scrollTop <= to)
 			) {
-				console.log(true);
 				clearInterval(move);
 				history.replaceState(
 					history.state,
@@ -49,10 +63,10 @@ export class ScrollToTopModel {
 					location.href.replace(/#.*$/g, "") + hash
 				);
 			} else {
-				this.body.scrollTop += speed;
-				this.element.scrollTop += speed;
+				this.documentBody.scrollTop += speed;
+				this.documentElement.scrollTop += speed;
 				prevScrollTop = scrollTop;
 			}
-		}, timeInterval);
+		}, this.#timeInterval);
 	}
 }

@@ -8,6 +8,6 @@ export class ScrollToTopController {
 	}
 
 	public handleScroll(event: unknown): void {
-		this.model.scrollToTop(event);
+		this.model.calculateScroll(event);
 	}
 }

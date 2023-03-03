@@ -144,11 +144,14 @@ window.addEventListener("DOMContentLoaded", () => {
 		]
 	});
 
-	const scrollToTopModel = new ScrollToTopModel();
+	const scrollToTopModel = new ScrollToTopModel({
+		smoothScrollSpeed: 45
+	});
 	const scrollToTopController = new ScrollToTopController(scrollToTopModel);
 	const scrollToTopView = new ScrollToTopView({
 		root: document.querySelector("body")!,
-		controller: scrollToTopController
+		controller: scrollToTopController,
+		buttonTriggerHeight: 1200
 	});
 
 	burgerMenuView.mount();

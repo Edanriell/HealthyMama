@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+
 import { ScrollToTopController } from "./ScrollToTopController";
 import "./scrollToTop.scss";
 
@@ -6,10 +8,22 @@ export class ScrollToTopView {
 	public controller: ScrollToTopController;
 
 	private button!: HTMLAnchorElement;
+	private buttonTriggerHeight: number;
 
-	constructor({ root, controller }: { root: HTMLElement; controller: ScrollToTopController }) {
+	#isLocked: boolean = false;
+
+	constructor({
+		root,
+		controller,
+		buttonTriggerHeight
+	}: {
+		root: HTMLElement;
+		controller: ScrollToTopController;
+		buttonTriggerHeight: number;
+	}) {
 		this.root = root;
 		this.controller = controller;
+		this.buttonTriggerHeight = buttonTriggerHeight;
 
 		this.createButton();
 
@@ -17,19 +31,28 @@ export class ScrollToTopView {
 	}
 
 	private onScrollClick = (event: unknown): void => {
-		this.controller.handleScroll(event);
-		// console.log(this);
-		// console.log((this as unknown as HTMLAnchorElement).hash);
+		if (!this.#isLocked) {
+			this.#isLocked = true;
+			this.button.style.pointerEvents = "none";
+			this.controller.handleScroll(event);
+		}
 	};
 
 	private bindListeners(): void {
 		this.button.addEventListener("click", this.onScrollClick);
+		document.addEventListener("scroll", () => {
+			if (this.buttonTriggerHeight >= window.scrollY) {
+				this.displayButton();
+			} else {
+				this.hideButton();
+			}
+		});
 	}
 
 	private createButton(): void {
 		this.button = document.createElement("a");
 		this.button.classList.add("scroll-to-top");
-		this.button.href = "#up"
+		this.button.href = "#up";
 		this.button.innerHTML = `
 			<div class="scroll-to-top__button">
 				<svg class="scroll-to-top__icon">
@@ -38,6 +61,14 @@ export class ScrollToTopView {
 				<span class="visually-hidden">Вернуться в начало<span>
 			</div>
 		`;
+		this.button.style.display = "none";
+	}
+
+	private displayButton(): void {}
+
+	private hideButton(): void {
+		this.#isLocked = false;
+		this.button.style.pointerEvents = "auto";
 	}
 
 	public mount(): void {
