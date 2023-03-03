@@ -1,4 +1,6 @@
-export class ScrollToTopModel {
+import { IScrollToTopModel } from "./ScrollToTopTypes";
+
+export class ScrollToTopModel implements IScrollToTopModel {
 	private documentElement: HTMLElement = document.documentElement;
 	private documentBody: HTMLElement = document.body;
 	private smoothScrollSpeed: number;

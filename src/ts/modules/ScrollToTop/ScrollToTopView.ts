@@ -1,9 +1,10 @@
 import { gsap } from "gsap";
 
+import { IScrollToTopView } from "./ScrollToTopTypes";
 import { ScrollToTopController } from "./ScrollToTopController";
 import "./scrollToTop.scss";
 
-export class ScrollToTopView {
+export class ScrollToTopView implements IScrollToTopView {
 	public root: HTMLElement;
 	public controller: ScrollToTopController;
 
