@@ -144,14 +144,14 @@ window.addEventListener("DOMContentLoaded", () => {
 		]
 	});
 
-	const scrollToTopModel = new ScrollToTopModel({
+	const scrollToTopModel: ScrollToTopModel = new ScrollToTopModel({
 		smoothScrollSpeed: 45
 	});
-	const scrollToTopController = new ScrollToTopController(scrollToTopModel);
-	const scrollToTopView = new ScrollToTopView({
+	const scrollToTopController: ScrollToTopController = new ScrollToTopController(scrollToTopModel);
+	const scrollToTopView: ScrollToTopView = new ScrollToTopView({
 		root: document.querySelector("body")!,
 		controller: scrollToTopController,
-		buttonTriggerHeight: 1200
+		buttonTriggerHeight: 2000
 	});
 
 	burgerMenuView.mount();
@@ -163,10 +163,10 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("load", () => {
-	const mainSliderMobile = new Swiper(".main-slider--type--mobile", MainSliderMobile);
-	const mainSliderUniversal = new Swiper(".main-slider--type--universal", MainSliderUniversal);
-	const productsSliderMobile = new Swiper(".products-slider--type--mobile", ProductsSliderMobile);
-	const productsSliderUniversal = new Swiper(
+	const mainSliderMobile: Swiper = new Swiper(".main-slider--type--mobile", MainSliderMobile);
+	const mainSliderUniversal: Swiper = new Swiper(".main-slider--type--universal", MainSliderUniversal);
+	const productsSliderMobile: Swiper = new Swiper(".products-slider--type--mobile", ProductsSliderMobile);
+	const productsSliderUniversal: Swiper = new Swiper(
 		".products-slider--type--universal",
 		ProductsSliderUniversal
 	);

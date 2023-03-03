@@ -11,6 +11,7 @@ export class ScrollToTopView {
 	private buttonTriggerHeight: number;
 
 	#isLocked: boolean = false;
+	#isShowed: boolean = false;
 
 	constructor({
 		root,
@@ -41,7 +42,7 @@ export class ScrollToTopView {
 	private bindListeners(): void {
 		this.button.addEventListener("click", this.onScrollClick);
 		document.addEventListener("scroll", () => {
-			if (this.buttonTriggerHeight >= window.scrollY) {
+			if (this.buttonTriggerHeight <= window.scrollY) {
 				this.displayButton();
 			} else {
 				this.hideButton();
@@ -64,11 +65,38 @@ export class ScrollToTopView {
 		this.button.style.display = "none";
 	}
 
-	private displayButton(): void {}
+	private displayButton(): void {
+		if (!this.#isShowed) {
+			this.#isShowed = true;
+			gsap.fromTo(
+				this.button,
+				{ opacity: 0, translateY: 60, display: "none" },
+				{ opacity: 1, translateY: 0, display: "block", duration: 0.5, ease: "power2.out" }
+			);
+		}
+	}
 
 	private hideButton(): void {
-		this.#isLocked = false;
-		this.button.style.pointerEvents = "auto";
+		if (this.#isShowed) {
+			this.#isShowed = false;
+			gsap.fromTo(
+				this.button,
+				{ opacity: 1, translateY: 0, display: "block" },
+				{
+					opacity: 0,
+					translateY: 60,
+					display: "none",
+					duration: 0.5,
+					ease: "power2.out",
+					onComplete: () => {
+						if (this.#isLocked) {
+							this.#isLocked = false;
+							this.button.style.pointerEvents = "auto";
+						}
+					}
+				}
+			);
+		}
 	}
 
 	public mount(): void {
