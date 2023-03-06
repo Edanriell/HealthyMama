@@ -33,7 +33,7 @@ export class FallingElementsView {
 			position: absolute;
 			z-index: 200;
 			top: 0;
-			left: ${this.controller.randomizePosition({ minValue: 40, maxValue: 43 })};
+			left: ${this.controller.randomizePosition({ minValue: 1, maxValue: 100 })};
 			width: 100%;
 			height: 100%;
 		`;
@@ -48,13 +48,17 @@ export class FallingElementsView {
 		return svgPathWrapper;
 	}
 
+	// 5 delete
+	// 2 delete
+	// 8 delete
 	private falling(): void {
 		gsap.to((this.elements[0] as HTMLElement[])[0], {
-			duration: 12,
-			repeat: 12,
+			duration: 20,
+			repeat: 20,
 			repeatDelay: 3,
-			yoyo: true,
-			ease: "power1.inOut",
+			// yoyo: true,
+			opacity: 0,
+			ease: "power2.out",
 			motionPath: {
 				path: ".svg-path-1__path",
 				align: ".svg-path-1__path",

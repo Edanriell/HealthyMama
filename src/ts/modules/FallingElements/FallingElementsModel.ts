@@ -1,7 +1,9 @@
-export class FallingElementsModel {
-	private paths: Array<string>;
+import { Path } from "./FallingElementsTypes";
 
-	constructor({ paths }: { paths: Array<string> }) {
+export class FallingElementsModel {
+	private paths: Array<Path>;
+
+	constructor({ paths }: { paths: Array<Path> }) {
 		this.paths = paths;
 	}
 
@@ -16,15 +18,13 @@ export class FallingElementsModel {
 		return `${randomNumber}%`;
 	}
 
-	// chooseRandomSvgPath(): string
-	// for const path of paths
-	// return svg path
-
-	public generateRandomSvgPath(): string {
-
+	public chooseRandomSvgPath(): string {
+		const randomNumber: number = Math.floor(Math.random() * this.paths.length);
+		console.log(randomNumber);
+		console.log(this.paths[randomNumber]);
 		return `
-			<svg class="svg-path-1" width="268" height="100%" viewBox="0 0 268 1075" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path class="svg-path-1__path" d="M163 1C163 1 211 167 163 263.5C115 360 -13.4395 376.797 2.00002 481.5C19.2242 598.306 239.33 516.145 264.5 631.5C292.875 761.546 12.4223 742.039 25.5 874.5C37.1514 992.515 254 1074.5 254 1074.5" stroke="black"/>
+			<svg class="svg-path-1" width="${this.paths[randomNumber].pathWidth}" height="100%" viewBox="0 0 ${this.paths[randomNumber].pathWidth} ${this.paths[randomNumber].pathHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path class="svg-path-1__path" d="${this.paths[randomNumber].path}" stroke="black"/>
 			</svg>
 		`;
 	}

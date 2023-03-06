@@ -18,6 +18,6 @@ export class FallingElementsController {
 	}
 
 	public randomizeSvgPath(): string {
-		return this.model.generateRandomSvgPath();
+		return this.model.chooseRandomSvgPath();
 	}
 }
