@@ -163,123 +163,24 @@ window.addEventListener("DOMContentLoaded", () => {
 	const fallingLeafsHeroModel: FallingElementsModel = new FallingElementsModel({
 		paths: [
 			{
-				pathWidth: 268,
-				pathHeight: 1075,
-				path: `
-					M163 1
-					C163 1 211 167 163 263.5
-					C115 360 -13.4395 376.797 2.00002 481.5
-					C19.2242 598.306 239.33 516.145 264.5 631.5
-					C292.875 761.546 12.4223 742.039 25.5 874.5
-					C37.1514 992.515 254 1074.5 254 1074.5
-				`
-			},
-			{
-				pathWidth: 539,
-				pathHeight: 1077,
-				path: `
-					M285 1
-					C17.2266 164.096 -13.9999 375.5 5.99999 495.5
-					C25.9999 615.5 297.939 693.58 485 820.5
-					C672.061 947.42 304.5 1076 304.5 1076
-				`
-			},
-			{
-				pathWidth: 350,
-				pathHeight: 1070,
-				path: `
-					M157 1
-					C157 1 194.5 110 128.5 206.5
-					C62.4996 303 281.411 331.913 148 440.5
-					C14.5879 549.087 62.4996 637 62.4996 637
-					C62.4996 637 119.491 783.977 183.5 753
-					C385.38 683.656 373.056 615.698 301.5 483
-					C200.456 341.061 101.644 362.45 62.4996 426
-					C-105.993 867.869 102.358 947.693 301.5 1069
-				`
-			},
-			{
-				pathWidth: 255,
-				pathHeight: 1073,
-				path: `
-					M47.4999 1
-					C141.353 198.594 135 349.5 126 469
-					C117 588.5 -16.5003 611.5 2.99988 733
-					C22.5001 854.5 108.365 973.494 254.5 1072.5
-				`
-			},
-			{
-				pathWidth: 379,
-				pathHeight: 1071,
-				path: `
-					M243.5 1
-					C306.229 98.2472 465.13 157.592 317 263.5
-					C168.87 369.408 -119 787 55.9999 913.5
-					C231 1040 223.18 1025.25 317 1070.5
-				`
-			},
-			{
-				pathWidth: 246,
-				pathHeight: 1073,
-				path: `
-					M145.5 1
-					C220.73 82.8516 203.39 188.144 145.5 243.5
-					C47.8588 332.791 13.0001 347.5 11.5001 422.5
-					C10.0001 497.5 58.8599 555.162 124 581
-					C189.14 606.838 226.254 508.658 236.5 438.5
-					C249.204 351.506 267 215 124 243.5
-					C-18.9999 272 170.5 527.5 215.5 668.5
-					C260.5 809.5 101.665 929.043 1.00006 1072.5
-				`
-			},
-			{
-				pathWidth: 325,
-				pathHeight: 1078,
-				path: `
-					M132.5 0.5
-					C67.3854 96.1359 29.5 148.5 81 257.5
-					C132.5 366.5 281.705 363.13 282.5 480.5
-					C283.422 616.626 8.56455 568.023 15 704
-					C21.6793 845.13 322.511 751.715 323.5 893
-					C324.517 1038.17 0.5 1077 0.5 1077
-				`
-			},
-			{
-				pathWidth: 266,
-				pathHeight: 1074,
-				path: `
-					M158 0.5
-					C158 0.5 301.865 291.142 233 459
-					C207.901 520.178 141.465 534.39 140 600.5
-					C138.273 678.473 242.347 683.396 261.5 759
-					C300.695 913.718 0.5 1073.5 0.5 1073.5
-				`
-			},
-			{
-				pathWidth: 492,
-				pathHeight: 1074,
-				path: `
-					M138 1
-					C138 1 13.9194 154.731 14.4999 270.5
-					C15.1258 395.294 200.377 436.08 161 554.5
-					C134.359 634.619 -10.5 617 1.99995 701
-					C14.4999 785 138 726.5 138 812
-					C138 897.5 46.5868 864.895 14.4999 920.5
-					C-83.2166 1089.84 491.5 1072.5 491.5 1072.5
-				`
-			},
-			{
-				pathWidth: 404,
-				pathHeight: 1074,
-				path: `
-					M305 0.5
-					C387.942 103.668 358.615 180.43 342.5 288
-					C326.385 395.57 321 534 196 618
-					C71.0001 702 16.0566 550.554 3.00002 452
-					C-10.0519 353.481 48.4081 260.267 146 241.5
-					C239.034 223.61 289.563 297.636 353 368
-					C548.252 584.569 108.5 1073.5 108.5 1073.5
-				`
+				pathSize: "desktop",
+				{
+					pathProps: {
+						easeType: "power2.out",
+						timeToFall: 1.5,
+						pathWidth: 557,
+						pathHeight: 1075
+					},
+					path: `
+						M322.5 0.5
+						C322.5 0.5 335.988 75.0281 322.5 119.5
+						C293.528 215.024 143.66 169.833 112 264.5
+						C59.3612 421.895 473.072 251.697 510 413.5
+						C553.296 603.206 79.3007 427.699 57 621
+						C32.3147 834.971 544.044 641.914 555.5 857
+						C567.864 1089.14 1 1073.5 1 1073.5
+					`
+				},
 			},
 		]
 	});
@@ -290,25 +191,34 @@ window.addEventListener("DOMContentLoaded", () => {
 		root: document.querySelector(".hero")!,
 		controller: fallingLeafsHeroController,
 		elements: [
-			[
-				document.querySelector(".animated-dropping-leafs__desktop-leaf-1")!,
-				document.querySelector(".animated-dropping-leafs__desktop-leaf-2")!,
-				document.querySelector(".animated-dropping-leafs__desktop-leaf-3")!,
-				document.querySelector(".animated-dropping-leafs__desktop-leaf-4")!,
-				document.querySelector(".animated-dropping-leafs__desktop-leaf-5")!,
-				document.querySelector(".animated-dropping-leafs__desktop-leaf-6")!
-			],
-			[
-				document.querySelector(".animated-dropping-leafs__tablet-leaf-1")!,
-				document.querySelector(".animated-dropping-leafs__tablet-leaf-2")!,
-				document.querySelector(".animated-dropping-leafs__tablet-leaf-3")!,
-				document.querySelector(".animated-dropping-leafs__tablet-leaf-4")!
-			],
-			[
-				document.querySelector(".animated-dropping-leafs__mobile-leaf-1")!,
-				document.querySelector(".animated-dropping-leafs__mobile-leaf-2")!,
-				document.querySelector(".animated-dropping-leafs__mobile-leaf-3")!
-			]
+			{
+				elementsSize: "desktop",
+				elements: [
+					document.querySelector(".animated-dropping-leafs__desktop-leaf-1")!,
+					document.querySelector(".animated-dropping-leafs__desktop-leaf-2")!,
+					document.querySelector(".animated-dropping-leafs__desktop-leaf-3")!,
+					document.querySelector(".animated-dropping-leafs__desktop-leaf-4")!,
+					document.querySelector(".animated-dropping-leafs__desktop-leaf-5")!,
+					document.querySelector(".animated-dropping-leafs__desktop-leaf-6")!
+				],
+			},
+			{
+				elementsSize: "tablet",
+				elements: [
+					document.querySelector(".animated-dropping-leafs__tablet-leaf-1")!,
+					document.querySelector(".animated-dropping-leafs__tablet-leaf-2")!,
+					document.querySelector(".animated-dropping-leafs__tablet-leaf-3")!,
+					document.querySelector(".animated-dropping-leafs__tablet-leaf-4")!
+				],
+			},
+			{
+				elementsSize: "mobile",
+				elements: [
+					document.querySelector(".animated-dropping-leafs__mobile-leaf-1")!,
+					document.querySelector(".animated-dropping-leafs__mobile-leaf-2")!,
+					document.querySelector(".animated-dropping-leafs__mobile-leaf-3")!
+				],
+			}
 		]
 	});
 
