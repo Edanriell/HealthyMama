@@ -1,14 +1,21 @@
-export type Elements = Array<HTMLElement> | Array<Array<HTMLElement>>;
+export type Elements = {
+	elementsSize: ElementSize;
+	elements: Array<{
+		timeToFall: number;
+		easeType: string;
+		element: HTMLElement;
+	}>;
+};
 
 export type Path = {
-	pathSize: string;
-	pathProps?: PathProps;
-	path: string;
+	pathSize: ElementSize;
+	svgPath: {
+		pathProps?: PathProps;
+		path: string;
+	};
 };
 
 export type PathProps = {
-	easeType?: string;
-	timeToFall?: number;
 	pathWidth?: number;
 	pathHeight?: number;
 };

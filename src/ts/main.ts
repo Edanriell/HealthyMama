@@ -164,10 +164,8 @@ window.addEventListener("DOMContentLoaded", () => {
 		paths: [
 			{
 				pathSize: "desktop",
-				{
+				svgPath: {
 					pathProps: {
-						easeType: "power2.out",
-						timeToFall: 1.5,
 						pathWidth: 557,
 						pathHeight: 1075
 					},
@@ -180,8 +178,8 @@ window.addEventListener("DOMContentLoaded", () => {
 						C32.3147 834.971 544.044 641.914 555.5 857
 						C567.864 1089.14 1 1073.5 1 1073.5
 					`
-				},
-			},
+				}
+			}
 		]
 	});
 	const fallingLeafsHeroController: FallingElementsController = new FallingElementsController(
@@ -194,30 +192,82 @@ window.addEventListener("DOMContentLoaded", () => {
 			{
 				elementsSize: "desktop",
 				elements: [
-					document.querySelector(".animated-dropping-leafs__desktop-leaf-1")!,
-					document.querySelector(".animated-dropping-leafs__desktop-leaf-2")!,
-					document.querySelector(".animated-dropping-leafs__desktop-leaf-3")!,
-					document.querySelector(".animated-dropping-leafs__desktop-leaf-4")!,
-					document.querySelector(".animated-dropping-leafs__desktop-leaf-5")!,
-					document.querySelector(".animated-dropping-leafs__desktop-leaf-6")!
-				],
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-1")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-2")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-3")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-4")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-5")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-6")!
+					}
+				]
 			},
 			{
 				elementsSize: "tablet",
 				elements: [
-					document.querySelector(".animated-dropping-leafs__tablet-leaf-1")!,
-					document.querySelector(".animated-dropping-leafs__tablet-leaf-2")!,
-					document.querySelector(".animated-dropping-leafs__tablet-leaf-3")!,
-					document.querySelector(".animated-dropping-leafs__tablet-leaf-4")!
-				],
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__tablet-leaf-1")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__tablet-leaf-2")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__tablet-leaf-3")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__tablet-leaf-4")!
+					}
+				]
 			},
 			{
 				elementsSize: "mobile",
 				elements: [
-					document.querySelector(".animated-dropping-leafs__mobile-leaf-1")!,
-					document.querySelector(".animated-dropping-leafs__mobile-leaf-2")!,
-					document.querySelector(".animated-dropping-leafs__mobile-leaf-3")!
-				],
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__mobile-leaf-1")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__mobile-leaf-2")!
+					},
+					{
+						timeToFall: 1.5,
+						easeType: "power2.out",
+						element: document.querySelector(".animated-dropping-leafs__mobile-leaf-3")!
+					}
+				]
 			}
 		]
 	});

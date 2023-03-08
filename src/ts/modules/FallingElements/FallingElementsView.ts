@@ -10,7 +10,7 @@ export class FallingElementsView {
 	public root: HTMLElement;
 	public controller: FallingElementsController;
 
-	private elements: Elements;
+	private elements: Array<Elements>;
 
 	constructor({
 		root,
@@ -19,7 +19,7 @@ export class FallingElementsView {
 	}: {
 		root: HTMLElement;
 		controller: FallingElementsController;
-		elements: Elements;
+		elements: Array<Elements>;
 	}) {
 		this.root = root;
 		this.controller = controller;
