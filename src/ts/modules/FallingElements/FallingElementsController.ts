@@ -1,5 +1,5 @@
 import { FallingElementsModel } from "./FallingElementsModel";
-
+import { ElementSize } from "./FallingElementsTypes";
 export class FallingElementsController {
 	public model: FallingElementsModel;
 
@@ -7,17 +7,16 @@ export class FallingElementsController {
 		this.model = model;
 	}
 
-	public randomizePosition({
-		minValue,
-		maxValue
+	public handleSvgPathCreation({
+		elementsSize,
+		index
 	}: {
-		minValue: number;
-		maxValue: number;
+		elementsSize: ElementSize;
+		index: number;
 	}): string {
-		return this.model.generateRandomPosition({ minValue, maxValue });
-	}
-
-	public randomizeSvgPath(): string {
-		return this.model.chooseRandomSvgPath();
+		return this.model.createRandomSvgPath({
+			elementsSize,
+			index
+		});
 	}
 }

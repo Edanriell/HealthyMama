@@ -9,10 +9,10 @@ export type Elements = {
 
 export type Path = {
 	pathSize: ElementSize;
-	svgPath: {
+	svgPaths: Array<{
 		pathProps?: PathProps;
 		path: string;
-	};
+	}>;
 };
 
 export type PathProps = {

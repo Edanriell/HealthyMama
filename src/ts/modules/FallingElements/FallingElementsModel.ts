@@ -1,4 +1,4 @@
-import { Path } from "./FallingElementsTypes";
+import { Path, ElementSize } from "./FallingElementsTypes";
 
 export class FallingElementsModel {
 	private paths: Array<Path>;
@@ -7,25 +7,23 @@ export class FallingElementsModel {
 		this.paths = paths;
 	}
 
-	public generateRandomPosition({
-		minValue,
-		maxValue
+	public createRandomSvgPath({
+		elementsSize,
+		index
 	}: {
-		minValue: number;
-		maxValue: number;
+		elementsSize: ElementSize;
+		index: number;
 	}): string {
-		const randomNumber: number = Math.random() * (maxValue - minValue) + minValue;
-		return `${randomNumber}%`;
-	}
-
-	public chooseRandomSvgPath(): string {
-		const randomNumber: number = Math.floor(Math.random() * this.paths.length);
-		console.log(randomNumber);
-		console.log(this.paths[randomNumber]);
-		return `
-			<svg class="svg-path-1" width="${this.paths[randomNumber].pathProps?.pathWidth}" height="100%" viewBox="0 0 ${this.paths[randomNumber].pathProps?.pathWidth} ${this.paths[randomNumber].pathProps?.pathHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path class="svg-path-1__path" d="${this.paths[randomNumber].path}" stroke="black"/>
-			</svg>
-		`;
+		const svgPaths = this.paths.filter(path => path.pathSize === elementsSize); // filter out and re assign this.paths = paths
+		for (const paths of svgPaths) {
+			// console.log(paths.svgPaths);
+			// const randomNumber: number = Math.floor(Math.random() * paths.svgPaths.length);
+			return `
+				<svg class="svg-path-${elementsSize}-${index}" width="${paths.svgPaths[0].pathProps?.pathWidth}" height="100%" viewBox="0 0 ${paths.svgPaths[0].pathProps?.pathWidth} ${paths.svgPaths[0].pathProps?.pathHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="svg-path-${elementsSize}-${index}__path" d="${paths.svgPaths[0].path}" stroke="black"/>
+				</svg>
+			`;
+		}
+		return "";
 	}
 }

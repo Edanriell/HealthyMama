@@ -164,21 +164,63 @@ window.addEventListener("DOMContentLoaded", () => {
 		paths: [
 			{
 				pathSize: "desktop",
-				svgPath: {
-					pathProps: {
-						pathWidth: 557,
-						pathHeight: 1075
-					},
-					path: `
-						M322.5 0.5
-						C322.5 0.5 335.988 75.0281 322.5 119.5
-						C293.528 215.024 143.66 169.833 112 264.5
-						C59.3612 421.895 473.072 251.697 510 413.5
-						C553.296 603.206 79.3007 427.699 57 621
-						C32.3147 834.971 544.044 641.914 555.5 857
-						C567.864 1089.14 1 1073.5 1 1073.5
-					`
-				}
+				svgPaths: [
+					{
+						pathProps: {
+							pathWidth: 557,
+							pathHeight: 1075
+						},
+						path: `
+							M322.5 0.5
+							C322.5 0.5 335.988 75.0281 322.5 119.5
+							C293.528 215.024 143.66 169.833 112 264.5
+							C59.3612 421.895 473.072 251.697 510 413.5
+							C553.296 603.206 79.3007 427.699 57 621
+							C32.3147 834.971 544.044 641.914 555.5 857
+							C567.864 1089.14 1 1073.5 1 1073.5
+						`
+					}
+				]
+			},
+			{
+				pathSize: "tablet",
+				svgPaths: [
+					{
+						pathProps: {
+							pathWidth: 557,
+							pathHeight: 1075
+						},
+						path: `
+							M322.5 0.5
+							C322.5 0.5 335.988 75.0281 322.5 119.5
+							C293.528 215.024 143.66 169.833 112 264.5
+							C59.3612 421.895 473.072 251.697 510 413.5
+							C553.296 603.206 79.3007 427.699 57 621
+							C32.3147 834.971 544.044 641.914 555.5 857
+							C567.864 1089.14 1 1073.5 1 1073.5
+						`
+					}
+				]
+			},
+			{
+				pathSize: "mobile",
+				svgPaths: [
+					{
+						pathProps: {
+							pathWidth: 557,
+							pathHeight: 1075
+						},
+						path: `
+							M322.5 0.5
+							C322.5 0.5 335.988 75.0281 322.5 119.5
+							C293.528 215.024 143.66 169.833 112 264.5
+							C59.3612 421.895 473.072 251.697 510 413.5
+							C553.296 603.206 79.3007 427.699 57 621
+							C32.3147 834.971 544.044 641.914 555.5 857
+							C567.864 1089.14 1 1073.5 1 1073.5
+						`
+					}
+				]
 			}
 		]
 	});
@@ -188,37 +230,37 @@ window.addEventListener("DOMContentLoaded", () => {
 	const fallingLeafsHeroView: FallingElementsView = new FallingElementsView({
 		root: document.querySelector(".hero")!,
 		controller: fallingLeafsHeroController,
-		elements: [
+		htmlElements: [
 			{
 				elementsSize: "desktop",
 				elements: [
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-1")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-2")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-3")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-4")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-5")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__desktop-leaf-6")!
 					}
@@ -228,22 +270,22 @@ window.addEventListener("DOMContentLoaded", () => {
 				elementsSize: "tablet",
 				elements: [
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__tablet-leaf-1")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__tablet-leaf-2")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__tablet-leaf-3")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__tablet-leaf-4")!
 					}
@@ -253,17 +295,17 @@ window.addEventListener("DOMContentLoaded", () => {
 				elementsSize: "mobile",
 				elements: [
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__mobile-leaf-1")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__mobile-leaf-2")!
 					},
 					{
-						timeToFall: 1.5,
+						timeToFall: 50,
 						easeType: "power2.out",
 						element: document.querySelector(".animated-dropping-leafs__mobile-leaf-3")!
 					}
