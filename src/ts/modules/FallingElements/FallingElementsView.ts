@@ -60,13 +60,6 @@ export class FallingElementsView {
 					repeat: -1,
 					repeatDelay: 0.25,
 					ease: `${elements[index].easeType}`,
-					// onStart: () => {
-					// 	gsap.fromTo(
-					// 		elements[index].element,
-					// 		{ opacity: 0 },
-					// 		{ opacity: 0.3, duration: 0.25, ease: `${elements[index].easeType}` }
-					// 	);
-					// },
 					opacity: 0,
 					motionPath: {
 						path: `.svg-path-${elementsSize}-${index}__path`,
