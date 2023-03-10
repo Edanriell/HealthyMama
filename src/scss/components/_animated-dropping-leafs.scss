@@ -17,14 +17,17 @@ $breakpoints: (
 }
 
 .animated-dropping-leafs--size--desktop {
+	z-index: 200;
 	display: none;
 }
 
 .animated-dropping-leafs--size--tablet {
+	z-index: 200;
 	display: none;
 }
 
 .animated-dropping-leafs--size--mobile {
+	z-index: 200;
 	display: block;
 	position: absolute;
 	top: 0;

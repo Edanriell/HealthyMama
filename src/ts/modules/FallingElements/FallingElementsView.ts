@@ -34,11 +34,16 @@ export class FallingElementsView {
 			for (let index = 0; index < elements.length; index++) {
 				const svgPathWrapper = document.createElement("div");
 				svgPathWrapper.classList.add(`svg-path-${elementsSize}-${index}__wrapper`); // svg-path-${number}__wrapper
+
+				// new method
+				const randomNumber = Math.floor(Math.random() * (76 - 1) + 1);
+
+				console.log(randomNumber);
 				svgPathWrapper.style.cssText = `
 					position: absolute;
 					z-index: 200;
 					top: 0;
-					left: 50%;
+					left: ${randomNumber}%;
 					width: 100%;
 					height: 100%;
 				`;

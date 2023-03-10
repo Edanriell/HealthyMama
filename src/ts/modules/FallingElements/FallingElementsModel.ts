@@ -2,9 +2,15 @@ import { Path, ElementSize } from "./FallingElementsTypes";
 
 export class FallingElementsModel {
 	private paths: Array<Path>;
+	private desktopPaths: Array<Path>;
+	private tabletPaths: Array<Path>;
+	private mobilePaths: Array<Path>;
 
 	constructor({ paths }: { paths: Array<Path> }) {
 		this.paths = paths;
+		this.desktopPaths = this.paths.filter(path => path.pathSize === "desktop");
+		this.tabletPaths = this.paths.filter(path => path.pathSize === "tablet");
+		this.mobilePaths = this.paths.filter(path => path.pathSize === "mobile");
 	}
 
 	public createRandomSvgPath({
@@ -14,14 +20,34 @@ export class FallingElementsModel {
 		elementsSize: ElementSize;
 		index: number;
 	}): string {
-		const svgPaths = this.paths.filter(path => path.pathSize === elementsSize); // filter out and re assign this.paths = paths
-		for (const paths of svgPaths) {
-			return `
-				<svg class="svg-path-${elementsSize}-${index}" width="${paths.svgPaths[0].pathProps?.pathWidth}" height="100%" viewBox="0 0 ${paths.svgPaths[0].pathProps?.pathWidth} ${paths.svgPaths[0].pathProps?.pathHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path class="svg-path-${elementsSize}-${index}__path" d="${paths.svgPaths[0].path}" stroke="black"/>
-				</svg>
-			`;
+		let svgPaths: Array<Path> = [];
+		let svgSize: string = "";
+
+		console.log(this.desktopPaths[0].svgPaths);
+
+		if (elementsSize === "desktop") {
+			svgPaths = this.desktopPaths;
+			svgSize = "desktop";
+		} else if (elementsSize === "tablet") {
+			svgPaths = this.tabletPaths;
+			svgSize = "tablet";
+		} else if (elementsSize === "mobile") {
+			svgPaths = this.mobilePaths;
+			svgSize = "mobile";
 		}
-		return "";
+
+		const randomNumber: number = Math.floor(Math.random() * svgPaths[0].svgPaths.length);
+		// console.log(randomNumber);
+		// console.log(svgPaths[0].svgPaths[randomNumber]);
+		const currentPath = svgPaths[0].svgPaths[randomNumber]; // type missin
+		// console.log(currentPath);
+
+		const newPath: string = `
+			<svg class="svg-path-${elementsSize}-${index}" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path class="svg-path-${elementsSize}-${index}__path" d="${currentPath.path}" stroke="black"/>
+			</svg>
+		`;
+
+		return newPath;
 	}
 }
