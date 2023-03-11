@@ -37,10 +37,7 @@ export class FallingElementsModel {
 		}
 
 		const randomNumber: number = Math.floor(Math.random() * svgPaths[0].svgPaths.length);
-		// console.log(randomNumber);
-		// console.log(svgPaths[0].svgPaths[randomNumber]);
 		const currentPath = svgPaths[0].svgPaths[randomNumber]; // type missin
-		// console.log(currentPath);
 
 		const newPath: string = `
 			<svg class="svg-path-${elementsSize}-${index}" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
