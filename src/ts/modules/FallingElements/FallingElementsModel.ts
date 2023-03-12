@@ -13,6 +13,16 @@ export class FallingElementsModel {
 		this.mobilePaths = this.paths.filter(path => path.pathSize === "mobile");
 	}
 
+	public generateRandomNumberInRange({
+		minimumValue,
+		maximumValue
+	}: {
+		minimumValue: number;
+		maximumValue: number;
+	}): number {
+		return Math.floor(Math.random() * (maximumValue - minimumValue) + minimumValue);
+	}
+
 	public createRandomSvgPath({
 		elementsSize,
 		index
@@ -22,8 +32,6 @@ export class FallingElementsModel {
 	}): string {
 		let svgPaths: Array<Path> = [];
 		let svgSize: string = "";
-
-		console.log(this.desktopPaths[0].svgPaths);
 
 		if (elementsSize === "desktop") {
 			svgPaths = this.desktopPaths;
@@ -40,7 +48,7 @@ export class FallingElementsModel {
 		const currentPath = svgPaths[0].svgPaths[randomNumber]; // type missin
 
 		const newPath: string = `
-			<svg class="svg-path-${elementsSize}-${index}" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg class="svg-path-${elementsSize}-${index}" width="${currentPath.pathProps?.pathWidth}" height="100%" viewBox="0 0 ${currentPath.pathProps?.pathWidth} ${currentPath.pathProps?.pathHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path class="svg-path-${elementsSize}-${index}__path" d="${currentPath.path}" stroke="black"/>
 			</svg>
 		`;

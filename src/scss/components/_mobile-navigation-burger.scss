@@ -20,7 +20,7 @@ $bar-color: var(--color-accent-jade-green);
 	color: $bar-color;
 	@include minimum-size(width, 3.8rem, 11.875vw);
 	@include minimum-size(height, 0.6rem, 1.875vw);
-	z-index: 100;
+	z-index: 720;
 	position: relative;
 }
 

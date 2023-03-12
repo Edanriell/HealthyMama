@@ -11,6 +11,7 @@ $breakpoints: (
 }
 
 .animated-dropping-leafs__animated-leaf-wrapper {
+	position: absolute;
 }
 
 .animated-dropping-leafs__animated-leaf {
@@ -19,11 +20,15 @@ $breakpoints: (
 .animated-dropping-leafs--size--desktop {
 	z-index: 200;
 	display: none;
+	pointer-events: none;
+	user-select: none;
 }
 
 .animated-dropping-leafs--size--tablet {
 	z-index: 200;
 	display: none;
+	pointer-events: none;
+	user-select: none;
 }
 
 .animated-dropping-leafs--size--mobile {
@@ -32,6 +37,8 @@ $breakpoints: (
 	position: absolute;
 	top: 0;
 	left: 0;
+	pointer-events: none;
+	user-select: none;
 
 	.animated-dropping-leafs__animated-leaf-wrapper:nth-child(1) {
 		position: absolute;

@@ -1,8 +1,12 @@
 export type Elements = {
 	elementsSize: ElementSize;
 	elements: Array<{
-		timeToFall: number;
-		easeType: string;
+		timeToFall?: number;
+		delay?: number,
+		repeatDelay?: number,
+		easeType?: string;
+		showPath?: boolean;
+		repeat?: "infinity" | number;
 		element: HTMLElement;
 	}>;
 };

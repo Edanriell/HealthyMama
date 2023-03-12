@@ -7,6 +7,16 @@ export class FallingElementsController {
 		this.model = model;
 	}
 
+	public handleGenerateRandomNumberInRange({
+		minimumValue,
+		maximumValue
+	}: {
+		minimumValue: number;
+		maximumValue: number;
+	}): number {
+		return this.model.generateRandomNumberInRange({ minimumValue, maximumValue });
+	}
+
 	public handleSvgPathCreation({
 		elementsSize,
 		index

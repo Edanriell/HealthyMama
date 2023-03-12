@@ -10,6 +10,7 @@ $breakpoints: (
 .main-slider {
 	// @include minimum-size(padding-top, 9.9rem, 30.9375vw);
 	padding-top: max(9.9rem, 30.9375vw) !important;
+	z-index: 400 !important;
 }
 
 .main-slider--type--universal {
@@ -163,6 +164,7 @@ $breakpoints: (
 		// @include minimum-size(padding-top, 3.6rem, 4.6875vw);
 		margin-left: auto;
 		padding-top: max(3.6rem, 4.6875vw) !important;
+		position: relative;
 	}
 
 	.main-slider--type--mobile {
@@ -209,6 +211,10 @@ $breakpoints: (
 			height: inherit;
 			object-fit: contain;
 			vertical-align: middle;
+			// border-bottom-left-radius: 50%;
+			// border-bottom-right-radius: 50%;
+			border-radius: 50%;
+			// background-color: red;
 		}
 
 		.main-slider__pagination-wrapper {

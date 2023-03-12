@@ -373,7 +373,7 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 	private toggleZIndex(state: string, elements: (HTMLElement | null)[]): void {
 		if (state === "false") {
 			elements.forEach(element => {
-				if (element) element.style.zIndex = "100";
+				if (element) element.style.zIndex = "720";
 			});
 		} else {
 			elements.forEach(element => {

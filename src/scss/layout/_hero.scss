@@ -31,10 +31,12 @@ $hero-section-background-color: transparent;
 .hero__wrapper {
 	// @include flex(flex-start, flex-start, column);
 	// This line breaks slider
+	position: relative;
 }
 
 .hero__main-content {
 	@include flex(flex-start, flex-start, column);
+	z-index: 300;
 }
 
 .hero__main-title {

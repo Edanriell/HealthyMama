@@ -10,14 +10,14 @@
     background-color: var(--color-accent-jade-green);
     width: 100vw;
     height: 100vh;
-    z-index: 90;
+    z-index: 510;
     display: none;
 }
 
 .mobile-navigation__content {
     position: relative;
     background-color: var(--clr-secondary-snow-white2);
-    z-index: 90;
+    z-index: 520;
     padding-top: 7.5rem;
     padding-bottom: 3.5rem;
     display: none;

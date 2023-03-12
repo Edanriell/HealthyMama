@@ -13,6 +13,7 @@ $breakpoints: (
 	background-color: $background-color-section-reasons-eat-properly;
 	@include minimum-size(padding-top, 5.7rem, 17.8125vw);
 	position: relative;
+	z-index: 400;
 }
 
 .reasons-eat-properly__wrapper {
