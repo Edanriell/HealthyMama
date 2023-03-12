@@ -101,7 +101,7 @@ export class FallingElementsView {
 						delay: elements[index].delay ?? randomDelay,
 						repeatDelay: elements[index].repeatDelay ?? randomRepeatDelay,
 						opacity: 0,
-						scale: 1,
+						scale: 1.4,
 						display: "block",
 						motionPath: {
 							path: `.svg-path-${elementsSize}-${index}__path`,
@@ -109,7 +109,7 @@ export class FallingElementsView {
 							alignOrigin: [0.5, 0.5],
 							autoRotate: true,
 							start: 0,
-							end: 0.9
+							end: 0.8
 						}
 					}
 				);
