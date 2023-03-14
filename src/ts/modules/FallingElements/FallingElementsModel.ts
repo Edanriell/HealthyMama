@@ -1,16 +1,28 @@
-import { Path, ElementSize } from "./FallingElementsTypes";
+import { Path, ElementSize, PathProps } from "./FallingElementsTypes";
 
 export class FallingElementsModel {
 	private paths: Array<Path>;
-	private desktopPaths: Array<Path>;
-	private tabletPaths: Array<Path>;
-	private mobilePaths: Array<Path>;
+	private desktopPaths: Array<{
+		pathId: string;
+		pathProps?: PathProps;
+		path: string;
+	}>;
+	private tabletPaths: Array<{
+		pathId: string;
+		pathProps?: PathProps;
+		path: string;
+	}>;
+	private mobilePaths: Array<{
+		pathId: string;
+		pathProps?: PathProps;
+		path: string;
+	}>;
 
 	constructor({ paths }: { paths: Array<Path> }) {
 		this.paths = paths;
-		this.desktopPaths = this.paths.filter(path => path.pathSize === "desktop");
-		this.tabletPaths = this.paths.filter(path => path.pathSize === "tablet");
-		this.mobilePaths = this.paths.filter(path => path.pathSize === "mobile");
+		this.desktopPaths = this.paths.filter(path => path.pathSize === "desktop")[0].svgPaths;
+		this.tabletPaths = this.paths.filter(path => path.pathSize === "tablet")[0].svgPaths;
+		this.mobilePaths = this.paths.filter(path => path.pathSize === "mobile")[0].svgPaths;
 	}
 
 	public generateRandomNumberInRange({
@@ -30,7 +42,11 @@ export class FallingElementsModel {
 		elementsSize: ElementSize;
 		index: number;
 	}): string {
-		let svgPaths: Array<Path> = [];
+		let svgPaths: Array<{
+			pathId: string;
+			pathProps?: PathProps;
+			path: string;
+		}> = [];
 		let svgSize: string = "";
 
 		if (elementsSize === "desktop") {
@@ -44,8 +60,8 @@ export class FallingElementsModel {
 			svgSize = "mobile";
 		}
 
-		const randomNumber: number = Math.floor(Math.random() * svgPaths[0].svgPaths.length);
-		const currentPath = svgPaths[0].svgPaths[randomNumber]; // type missin
+		const randomNumber: number = Math.floor(Math.random() * svgPaths.length);
+		const currentPath = svgPaths[randomNumber]; // type missin
 
 		const newPath: string = `
 			<svg class="svg-path-${elementsSize}-${index}" width="${currentPath.pathProps?.pathWidth}" height="100%" viewBox="0 0 ${currentPath.pathProps?.pathWidth} ${currentPath.pathProps?.pathHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,6 +69,19 @@ export class FallingElementsModel {
 			</svg>
 		`;
 
+		if (svgSize === "desktop") {
+			this.desktopPaths = svgPaths.filter(path => path.pathId !== currentPath.pathId);
+		} else if (svgSize === "tablet") {
+			this.tabletPaths = svgPaths.filter(path => path.pathId !== currentPath.pathId);
+		} else if (svgSize === "mobile") {
+			this.mobilePaths = svgPaths.filter(path => path.pathId !== currentPath.pathId);
+		}
+
+		console.log(svgPaths);
+
 		return newPath;
+
+		// check script logic and fix paths !
+
 	}
 }

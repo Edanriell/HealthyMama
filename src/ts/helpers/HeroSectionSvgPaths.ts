@@ -4,6 +4,7 @@ export const desktopSvgPaths = {
 	pathSize: "desktop",
 	svgPaths: [
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 557,
 				pathHeight: 1075
@@ -19,6 +20,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 262,
 				pathHeight: 1063
@@ -31,6 +33,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 433,
 				pathHeight: 1069
@@ -43,6 +46,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 491,
 				pathHeight: 1072
@@ -55,6 +59,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 420,
 				pathHeight: 1072
@@ -67,6 +72,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 422,
 				pathHeight: 1069
@@ -80,6 +86,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 645,
 				pathHeight: 1078
@@ -93,6 +100,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 385,
 				pathHeight: 1066
@@ -105,6 +113,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 755,
 				pathHeight: 1068
@@ -118,6 +127,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 245,
 				pathHeight: 1065
@@ -131,6 +141,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 478,
 				pathHeight: 1067
@@ -144,6 +155,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 876,
 				pathHeight: 1069
@@ -156,6 +168,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 656,
 				pathHeight: 1067
@@ -168,6 +181,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 573,
 				pathHeight: 1067
@@ -181,6 +195,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 506,
 				pathHeight: 1069
@@ -193,6 +208,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 698,
 				pathHeight: 1072
@@ -206,6 +222,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 216,
 				pathHeight: 1069
@@ -218,6 +235,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 629,
 				pathHeight: 1062
@@ -230,6 +248,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 435,
 				pathHeight: 1067
@@ -242,6 +261,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 286,
 				pathHeight: 1071
@@ -254,6 +274,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 605,
 				pathHeight: 1073
@@ -266,6 +287,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 455,
 				pathHeight: 1069
@@ -279,6 +301,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 357,
 				pathHeight: 1067
@@ -292,6 +315,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 825,
 				pathHeight: 1070
@@ -305,6 +329,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 469,
 				pathHeight: 1072
@@ -318,6 +343,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 294,
 				pathHeight: 1074
@@ -330,6 +356,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 1067,
 				pathHeight: 1059
@@ -342,6 +369,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 339,
 				pathHeight: 1069
@@ -355,6 +383,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 504,
 				pathHeight: 1071
@@ -367,6 +396,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 847,
 				pathHeight: 1067
@@ -379,6 +409,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 794,
 				pathHeight: 1072
@@ -391,6 +422,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 1413,
 				pathHeight: 1070
@@ -403,6 +435,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 459,
 				pathHeight: 1069
@@ -415,6 +448,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 1107,
 				pathHeight: 1076
@@ -426,6 +460,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 210,
 				pathHeight: 1066
@@ -438,6 +473,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 703,
 				pathHeight: 1065
@@ -451,6 +487,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 1268,
 				pathHeight: 1069
@@ -463,6 +500,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 1248,
 				pathHeight: 1063
@@ -475,6 +513,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 820,
 				pathHeight: 1073
@@ -486,6 +525,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 511,
 				pathHeight: 1065
@@ -499,6 +539,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 918,
 				pathHeight: 1063
@@ -510,6 +551,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 301,
 				pathHeight: 1065
@@ -522,6 +564,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 491,
 				pathHeight: 1057
@@ -534,6 +577,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 300,
 				pathHeight: 1069
@@ -547,6 +591,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 562,
 				pathHeight: 1072
@@ -559,6 +604,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 141,
 				pathHeight: 1061
@@ -571,6 +617,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 451,
 				pathHeight: 1061
@@ -584,6 +631,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 626,
 				pathHeight: 1063
@@ -595,6 +643,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 515,
 				pathHeight: 1070
@@ -608,6 +657,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 583,
 				pathHeight: 1067
@@ -619,6 +669,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 550,
 				pathHeight: 1077
@@ -631,6 +682,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 688,
 				pathHeight: 1063
@@ -642,6 +694,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 612,
 				pathHeight: 1060
@@ -654,6 +707,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 568,
 				pathHeight: 1059
@@ -665,6 +719,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 579,
 				pathHeight: 1077
@@ -676,6 +731,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 624,
 				pathHeight: 1063
@@ -688,6 +744,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 485,
 				pathHeight: 1074
@@ -700,6 +757,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 667,
 				pathHeight: 1077
@@ -711,6 +769,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 462,
 				pathHeight: 1070
@@ -723,6 +782,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 1022,
 				pathHeight: 1070
@@ -735,6 +795,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 278,
 				pathHeight: 1065
@@ -746,6 +807,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 396,
 				pathHeight: 1064
@@ -757,6 +819,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 338,
 				pathHeight: 1066
@@ -769,6 +832,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 414,
 				pathHeight: 1072
@@ -781,6 +845,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 516,
 				pathHeight: 1071
@@ -793,6 +858,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 461,
 				pathHeight: 1068
@@ -805,6 +871,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 809,
 				pathHeight: 1074
@@ -816,6 +883,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 461,
 				pathHeight: 1074
@@ -827,6 +895,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 175,
 				pathHeight: 1073
@@ -839,6 +908,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 335,
 				pathHeight: 1066
@@ -851,6 +921,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 391,
 				pathHeight: 1072
@@ -864,6 +935,7 @@ export const desktopSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 512,
 				pathHeight: 1068
@@ -883,6 +955,7 @@ export const tabletSvgPaths = {
 	pathSize: "tablet",
 	svgPaths: [
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 577,
 				pathHeight: 1193
@@ -896,6 +969,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 355,
 				pathHeight: 1182
@@ -909,6 +983,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 350,
 				pathHeight: 1189
@@ -922,6 +997,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 198,
 				pathHeight: 1190
@@ -935,6 +1011,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 353,
 				pathHeight: 1189
@@ -948,6 +1025,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 350,
 				pathHeight: 1188
@@ -961,6 +1039,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 213,
 				pathHeight: 1189
@@ -974,6 +1053,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 257,
 				pathHeight: 1190
@@ -987,6 +1067,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 270,
 				pathHeight: 1189
@@ -1000,6 +1081,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 370,
 				pathHeight: 1190
@@ -1013,6 +1095,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 349,
 				pathHeight: 1192
@@ -1025,6 +1108,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 385,
 				pathHeight: 1192
@@ -1038,6 +1122,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 283,
 				pathHeight: 1189
@@ -1052,6 +1137,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 508,
 				pathHeight: 1194
@@ -1065,6 +1151,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 384,
 				pathHeight: 1192
@@ -1078,6 +1165,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 450,
 				pathHeight: 1194
@@ -1089,6 +1177,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 329,
 				pathHeight: 1186
@@ -1100,6 +1189,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 401,
 				pathHeight: 1187
@@ -1112,6 +1202,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 327,
 				pathHeight: 1186
@@ -1124,6 +1215,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 279,
 				pathHeight: 1179
@@ -1136,6 +1228,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 573,
 				pathHeight: 1183
@@ -1147,6 +1240,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 595,
 				pathHeight: 1190
@@ -1158,6 +1252,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 289,
 				pathHeight: 1186
@@ -1169,6 +1264,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 255,
 				pathHeight: 1187
@@ -1182,6 +1278,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 459,
 				pathHeight: 1185
@@ -1196,6 +1293,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 439,
 				pathHeight: 1185
@@ -1209,6 +1307,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 535,
 				pathHeight: 1185
@@ -1222,6 +1321,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 533,
 				pathHeight: 1188
@@ -1235,6 +1335,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 433,
 				pathHeight: 1196
@@ -1247,6 +1348,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 544,
 				pathHeight: 1190
@@ -1261,6 +1363,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 472,
 				pathHeight: 1177
@@ -1272,6 +1375,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 586,
 				pathHeight: 1183
@@ -1283,6 +1387,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 460,
 				pathHeight: 1182
@@ -1296,6 +1401,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 379,
 				pathHeight: 1189
@@ -1308,6 +1414,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 283,
 				pathHeight: 1186
@@ -1321,6 +1428,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 312,
 				pathHeight: 1179
@@ -1334,6 +1442,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 604,
 				pathHeight: 1190
@@ -1348,6 +1457,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 386,
 				pathHeight: 1187
@@ -1361,6 +1471,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 436,
 				pathHeight: 1194
@@ -1374,6 +1485,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 316,
 				pathHeight: 1189
@@ -1387,6 +1499,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 363,
 				pathHeight: 1191
@@ -1399,6 +1512,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 452,
 				pathHeight: 1190
@@ -1412,6 +1526,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 532,
 				pathHeight: 1189
@@ -1426,6 +1541,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 324,
 				pathHeight: 1198
@@ -1438,6 +1554,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 535,
 				pathHeight: 1184
@@ -1451,6 +1568,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 362,
 				pathHeight: 1185
@@ -1462,6 +1580,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 201,
 				pathHeight: 1189
@@ -1474,6 +1593,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 461,
 				pathHeight: 1194
@@ -1486,6 +1606,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 407,
 				pathHeight: 1186
@@ -1498,6 +1619,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 300,
 				pathHeight: 1188
@@ -1510,6 +1632,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 467,
 				pathHeight: 1186
@@ -1523,6 +1646,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 521,
 				pathHeight: 1194
@@ -1535,6 +1659,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 312,
 				pathHeight: 1193
@@ -1547,6 +1672,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 283,
 				pathHeight: 1181
@@ -1559,6 +1685,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 530,
 				pathHeight: 1186
@@ -1571,6 +1698,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 306,
 				pathHeight: 1182
@@ -1582,6 +1710,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 381,
 				pathHeight: 1189
@@ -1594,6 +1723,7 @@ export const tabletSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 479,
 				pathHeight: 1193
@@ -1613,6 +1743,7 @@ export const mobileSvgPaths = {
 	pathSize: "mobile",
 	svgPaths: [
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 157,
 				pathHeight: 931
@@ -1626,6 +1757,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 166,
 				pathHeight: 930
@@ -1639,6 +1771,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 214,
 				pathHeight: 934
@@ -1652,6 +1785,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 178,
 				pathHeight: 934
@@ -1665,6 +1799,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 199,
 				pathHeight: 931
@@ -1679,6 +1814,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 246,
 				pathHeight: 931
@@ -1693,6 +1829,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 270,
 				pathHeight: 931
@@ -1705,6 +1842,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 193,
 				pathHeight: 936
@@ -1719,6 +1857,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 234,
 				pathHeight: 933
@@ -1733,6 +1872,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 145,
 				pathHeight: 935
@@ -1747,6 +1887,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 255,
 				pathHeight: 933
@@ -1760,6 +1901,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 170,
 				pathHeight: 931
@@ -1773,6 +1915,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 196,
 				pathHeight: 936
@@ -1786,6 +1929,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 159,
 				pathHeight: 935
@@ -1799,6 +1943,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 259,
 				pathHeight: 932
@@ -1812,6 +1957,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 189,
 				pathHeight: 828
@@ -1826,6 +1972,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 186,
 				pathHeight: 831
@@ -1840,6 +1987,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 198,
 				pathHeight: 824
@@ -1853,6 +2001,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 180,
 				pathHeight: 820
@@ -1867,6 +2016,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 200,
 				pathHeight: 832
@@ -1881,6 +2031,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 200,
 				pathHeight: 835
@@ -1894,6 +2045,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 203,
 				pathHeight: 935
@@ -1908,6 +2060,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 224,
 				pathHeight: 834
@@ -1920,6 +2073,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 143,
 				pathHeight: 849
@@ -1933,6 +2087,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 207,
 				pathHeight: 846
@@ -1946,6 +2101,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 213,
 				pathHeight: 857
@@ -1959,6 +2115,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 166,
 				pathHeight: 860
@@ -1972,6 +2129,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 186,
 				pathHeight: 844
@@ -1984,6 +2142,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 231,
 				pathHeight: 863
@@ -1998,6 +2157,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 245,
 				pathHeight: 860
@@ -2012,6 +2172,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 214,
 				pathHeight: 855
@@ -2025,6 +2186,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 122,
 				pathHeight: 842
@@ -2038,6 +2200,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 229,
 				pathHeight: 836
@@ -2051,6 +2214,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 221,
 				pathHeight: 828
@@ -2064,6 +2228,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 174,
 				pathHeight: 826
@@ -2078,6 +2243,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 163,
 				pathHeight: 834
@@ -2092,6 +2258,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 248,
 				pathHeight: 848
@@ -2105,6 +2272,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 202,
 				pathHeight: 839
@@ -2118,6 +2286,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 266,
 				pathHeight: 852
@@ -2132,6 +2301,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 203,
 				pathHeight: 826
@@ -2145,6 +2315,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 202,
 				pathHeight: 837
@@ -2158,6 +2329,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 194,
 				pathHeight: 850
@@ -2172,6 +2344,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 153,
 				pathHeight: 842
@@ -2185,6 +2358,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 217,
 				pathHeight: 837
@@ -2198,6 +2372,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 214,
 				pathHeight: 846
@@ -2210,6 +2385,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 158,
 				pathHeight: 848
@@ -2223,6 +2399,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 224,
 				pathHeight: 853
@@ -2236,6 +2413,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 218,
 				pathHeight: 836
@@ -2248,6 +2426,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 177,
 				pathHeight: 837
@@ -2261,6 +2440,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 180,
 				pathHeight: 852
@@ -2274,6 +2454,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 244,
 				pathHeight: 835
@@ -2287,6 +2468,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 197,
 				pathHeight: 846
@@ -2300,6 +2482,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 173,
 				pathHeight: 833
@@ -2312,6 +2495,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 211,
 				pathHeight: 834
@@ -2323,6 +2507,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 178,
 				pathHeight: 822
@@ -2334,6 +2519,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 179,
 				pathHeight: 837
@@ -2347,6 +2533,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 219,
 				pathHeight: 829
@@ -2359,6 +2546,7 @@ export const mobileSvgPaths = {
 			`
 		},
 		{
+			pathId: uuidv4(),
 			pathProps: {
 				pathWidth: 213,
 				pathHeight: 822

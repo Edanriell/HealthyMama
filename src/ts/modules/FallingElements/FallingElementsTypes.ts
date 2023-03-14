@@ -14,6 +14,7 @@ export type Elements = {
 export type Path = {
 	pathSize: ElementSize;
 	svgPaths: Array<{
+		pathId: string,
 		pathProps?: PathProps;
 		path: string;
 	}>;
