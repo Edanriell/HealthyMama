@@ -66,8 +66,8 @@ export class FallingElementsView {
 		for (const { elementsSize, elements } of this.htmlElements) {
 			for (let index = 0; index < elements.length; index++) {
 				const randomDuration: number = this.controller.handleGenerateRandomNumberInRange({
-					minimumValue: 20,
-					maximumValue: 40
+					minimumValue: 15,
+					maximumValue: 45
 				});
 				const randomDelay: number = this.controller.handleGenerateRandomNumberInRange({
 					minimumValue: 1,
@@ -75,8 +75,8 @@ export class FallingElementsView {
 				});
 				const randomRepeatDelay: number = this.controller.handleGenerateRandomNumberInRange(
 					{
-						minimumValue: 1,
-						maximumValue: 2
+						minimumValue: 10,
+						maximumValue: 31
 					}
 				);
 
