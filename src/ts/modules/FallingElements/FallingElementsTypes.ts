@@ -1,9 +1,9 @@
 export type Elements = {
-	elementsSize: ElementSize;
+	elementsSize: ElementsSize;
 	elements: Array<{
 		timeToFall?: number;
-		delay?: number,
-		repeatDelay?: number,
+		delay?: number;
+		repeatDelay?: number;
 		easeType?: string;
 		showPath?: boolean;
 		repeat?: "infinity" | number;
@@ -11,13 +11,15 @@ export type Elements = {
 	}>;
 };
 
+export type Paths = {
+	pathSize: ElementsSize;
+	svgPaths: Array<Path>;
+};
+
 export type Path = {
-	pathSize: ElementSize;
-	svgPaths: Array<{
-		pathId: string,
-		pathProps?: PathProps;
-		path: string;
-	}>;
+	pathId: string;
+	pathProps?: PathProps;
+	path: string;
 };
 
 export type PathProps = {
@@ -25,4 +27,4 @@ export type PathProps = {
 	pathHeight?: number;
 };
 
-export type ElementSize = "desktop" | "tablet" | "mobile";
+export type ElementsSize = "desktop" | "tablet" | "mobile";

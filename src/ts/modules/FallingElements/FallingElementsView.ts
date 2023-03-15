@@ -5,7 +5,6 @@ import { FallingElementsController } from "./FallingElementsController";
 import { Elements } from "./FallingElementsTypes";
 
 gsap.registerPlugin(MotionPathPlugin);
-
 export class FallingElementsView {
 	public root: HTMLElement;
 	public controller: FallingElementsController;

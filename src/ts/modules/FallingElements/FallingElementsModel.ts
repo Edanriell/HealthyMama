@@ -1,24 +1,12 @@
-import { Path, ElementSize, PathProps } from "./FallingElementsTypes";
+import { Paths, Path, ElementsSize, PathProps } from "./FallingElementsTypes";
 
 export class FallingElementsModel {
-	private paths: Array<Path>;
-	private desktopPaths: Array<{
-		pathId: string;
-		pathProps?: PathProps;
-		path: string;
-	}>;
-	private tabletPaths: Array<{
-		pathId: string;
-		pathProps?: PathProps;
-		path: string;
-	}>;
-	private mobilePaths: Array<{
-		pathId: string;
-		pathProps?: PathProps;
-		path: string;
-	}>;
+	private paths: Array<Paths>;
+	private desktopPaths: Array<Path>;
+	private tabletPaths: Array<Path>;
+	private mobilePaths: Array<Path>;
 
-	constructor({ paths }: { paths: Array<Path> }) {
+	constructor({ paths }: { paths: Array<Paths> }) {
 		this.paths = paths;
 		this.desktopPaths = this.paths.filter(path => path.pathSize === "desktop")[0].svgPaths;
 		this.tabletPaths = this.paths.filter(path => path.pathSize === "tablet")[0].svgPaths;
@@ -39,14 +27,10 @@ export class FallingElementsModel {
 		elementsSize,
 		index
 	}: {
-		elementsSize: ElementSize;
+		elementsSize: ElementsSize;
 		index: number;
 	}): string {
-		let svgPaths: Array<{
-			pathId: string;
-			pathProps?: PathProps;
-			path: string;
-		}> = [];
+		let svgPaths: Array<Path> = [];
 		let svgSize: string = "";
 
 		if (elementsSize === "desktop") {
@@ -61,7 +45,7 @@ export class FallingElementsModel {
 		}
 
 		const randomNumber: number = Math.floor(Math.random() * svgPaths.length);
-		const currentPath = svgPaths[randomNumber]; // type missin
+		const currentPath: Path = svgPaths[randomNumber];
 
 		const newPath: string = `
 			<svg class="svg-path-${elementsSize}-${index}" width="${currentPath.pathProps?.pathWidth}" height="100%" viewBox="0 0 ${currentPath.pathProps?.pathWidth} ${currentPath.pathProps?.pathHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,8 +64,5 @@ export class FallingElementsModel {
 		console.log(svgPaths);
 
 		return newPath;
-
-		// check script logic and fix paths !
-
 	}
 }

@@ -51,7 +51,7 @@ import {
 	mobileSvgPaths as heroSectionMobileSvgPaths
 } from "./helpers/HeroSectionSvgPaths";
 
-import { Elements, Path } from "./modules/FallingElements/FallingElementsTypes";
+import { Elements, Paths } from "./modules/FallingElements/FallingElementsTypes";
 
 Swiper.use([Navigation, Autoplay, Keyboard, Mousewheel, EffectCreative, Pagination]);
 
@@ -170,9 +170,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	const fallingLeafsHeroModel: FallingElementsModel = new FallingElementsModel({
 		paths: [
-			heroSectionDesktopSvgPaths as Path,
-			heroSectionTabletSvgPaths as Path,
-			heroSectionMobileSvgPaths as Path
+			heroSectionDesktopSvgPaths as Paths,
+			heroSectionTabletSvgPaths as Paths,
+			heroSectionMobileSvgPaths as Paths
 		]
 	});
 	const fallingLeafsHeroController: FallingElementsController = new FallingElementsController(

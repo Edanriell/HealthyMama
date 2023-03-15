@@ -1,5 +1,6 @@
 import { FallingElementsModel } from "./FallingElementsModel";
-import { ElementSize } from "./FallingElementsTypes";
+import { ElementsSize } from "./FallingElementsTypes";
+
 export class FallingElementsController {
 	public model: FallingElementsModel;
 
@@ -21,7 +22,7 @@ export class FallingElementsController {
 		elementsSize,
 		index
 	}: {
-		elementsSize: ElementSize;
+		elementsSize: ElementsSize;
 		index: number;
 	}): string {
 		return this.model.createRandomSvgPath({
