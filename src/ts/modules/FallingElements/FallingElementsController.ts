@@ -1,7 +1,7 @@
 import { FallingElementsModel } from "./FallingElementsModel";
-import { ElementsSize } from "./FallingElementsTypes";
+import { ElementsSize, IFallingElementsController } from "./FallingElementsTypes";
 
-export class FallingElementsController {
+export class FallingElementsController implements IFallingElementsController {
 	public model: FallingElementsModel;
 
 	constructor(model: FallingElementsModel) {

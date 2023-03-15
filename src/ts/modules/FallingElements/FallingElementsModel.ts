@@ -1,6 +1,6 @@
-import { Paths, Path, ElementsSize, PathProps } from "./FallingElementsTypes";
+import { Paths, Path, ElementsSize, IFallingElementsModel } from "./FallingElementsTypes";
 
-export class FallingElementsModel {
+export class FallingElementsModel implements IFallingElementsModel {
 	private paths: Array<Paths>;
 	private desktopPaths: Array<Path>;
 	private tabletPaths: Array<Path>;
@@ -60,8 +60,6 @@ export class FallingElementsModel {
 		} else if (svgSize === "mobile") {
 			this.mobilePaths = svgPaths.filter(path => path.pathId !== currentPath.pathId);
 		}
-
-		console.log(svgPaths);
 
 		return newPath;
 	}

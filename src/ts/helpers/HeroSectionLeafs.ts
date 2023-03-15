@@ -201,6 +201,24 @@ export const leafsDesktop = {
 		},
 		{
 			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-66")!
+		},
+		{
+			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-67")!
+		},
+		{
+			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-68")!
+		},
+		{
+			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-69")!
+		},
+		{
+			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-70")!
+		},
+		{
+			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-71")!
+		},
+		{
+			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-72")!
 		}
 	]
 };

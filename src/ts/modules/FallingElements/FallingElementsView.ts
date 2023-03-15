@@ -2,10 +2,10 @@ import { gsap } from "gsap";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 
 import { FallingElementsController } from "./FallingElementsController";
-import { Elements } from "./FallingElementsTypes";
+import { Elements, IFallingElementsView } from "./FallingElementsTypes";
 
 gsap.registerPlugin(MotionPathPlugin);
-export class FallingElementsView {
+export class FallingElementsView implements IFallingElementsView {
 	public root: HTMLElement;
 	public controller: FallingElementsController;
 
@@ -33,8 +33,8 @@ export class FallingElementsView {
 			for (let index = 0; index < elements.length; index++) {
 				const randomLeftCoordinates: number =
 					this.controller.handleGenerateRandomNumberInRange({
-						minimumValue: 0,
-						maximumValue: 76
+						minimumValue: -20,
+						maximumValue: 81
 					});
 
 				const svgPathWrapper = document.createElement("div");
@@ -65,17 +65,17 @@ export class FallingElementsView {
 		for (const { elementsSize, elements } of this.htmlElements) {
 			for (let index = 0; index < elements.length; index++) {
 				const randomDuration: number = this.controller.handleGenerateRandomNumberInRange({
-					minimumValue: 15,
-					maximumValue: 45
+					minimumValue: 14,
+					maximumValue: 54
 				});
 				const randomDelay: number = this.controller.handleGenerateRandomNumberInRange({
 					minimumValue: 1,
-					maximumValue: 51
+					maximumValue: 41
 				});
 				const randomRepeatDelay: number = this.controller.handleGenerateRandomNumberInRange(
 					{
-						minimumValue: 10,
-						maximumValue: 31
+						minimumValue: 1,
+						maximumValue: 41
 					}
 				);
 
@@ -100,7 +100,7 @@ export class FallingElementsView {
 						delay: elements[index].delay ?? randomDelay,
 						repeatDelay: elements[index].repeatDelay ?? randomRepeatDelay,
 						opacity: 0,
-						scale: 1.4,
+						scale: 1.2,
 						display: "block",
 						motionPath: {
 							path: `.svg-path-${elementsSize}-${index}__path`,
