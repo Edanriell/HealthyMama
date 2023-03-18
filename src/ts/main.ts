@@ -37,6 +37,10 @@ import { FallingElementsView } from "./modules/FallingElements/FallingElementsVi
 import { FallingElementsController } from "./modules/FallingElements/FallingElementsController";
 import { FallingElementsModel } from "./modules/FallingElements/FallingElementsModel";
 
+import { HoverAnimationView } from "./modules/HoverAnimation/HoverAnimationView";
+import { HoverAnimationController } from "./modules/HoverAnimation/HoverAnimationController";
+import { HoverAnimationModel } from "./modules/HoverAnimation/HoverAnimationModel";
+
 import { MainSliderMobile, MainSliderUniversal } from "./modules/MainSlider";
 import { ProductsSliderMobile, ProductsSliderUniversal } from "./modules/ProductsSlider";
 
@@ -169,6 +173,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	const fallingLeafsHeroModel: FallingElementsModel = new FallingElementsModel({
+		chooseUniquePathsOnly: true,
 		paths: [
 			heroSectionDesktopSvgPaths as Paths,
 			heroSectionTabletSvgPaths as Paths,
@@ -195,6 +200,53 @@ window.addEventListener("DOMContentLoaded", () => {
 	imageGalleryParallaxView.mount();
 	scrollToTopView.mount();
 	fallingLeafsHeroView.mount();
+
+	const burgerMenuElementsHoverEffectModel: HoverAnimationModel = new HoverAnimationModel({
+		cssVariables: [
+			{
+				variableName: "--navigation-link-opacity",
+				variableValue: {
+					start: 1,
+					end: 0
+				},
+				animationProperties: {
+					start: {
+						duration: 0.5,
+						ease: "power2.out"
+					},
+					end: {
+						duration: 0.5,
+						ease: "power2.out"
+					}
+				}
+			},
+			{
+				variableName: "--navigation-link-transform",
+				variableValue: {
+					start: "translateY(5px)",
+					end: "translateY(10px)"
+				},
+				animationProperties: {
+					start: {
+						duration: 0.5,
+						ease: "power2.out"
+					},
+					end: {
+						duration: 0.5,
+						ease: "power2.out"
+					}
+				}
+			}
+		]
+	});
+	const burgerMenuElementsHoverEffectController: HoverAnimationController =
+		new HoverAnimationController(burgerMenuElementsHoverEffectModel);
+	const burgerMenuElementsHoverEffectView: HoverAnimationView = new HoverAnimationView({
+		root: document.querySelectorAll(".mobile-navigation__link")!,
+		controller: burgerMenuElementsHoverEffectController
+	});
+
+	burgerMenuElementsHoverEffectView.mount();
 });
 
 window.addEventListener("load", () => {

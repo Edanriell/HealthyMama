@@ -9,7 +9,7 @@ export class BurgerMenuView implements IBurgerMenuView {
 	private mobileNavigation!: HTMLDivElement;
 	private mobileNavigationBurger!: HTMLDivElement;
 
-	constructor({root, controller} : {root: HTMLElement, controller: BurgerMenuController}) {
+	constructor({ root, controller }: { root: HTMLElement; controller: BurgerMenuController }) {
 		this.root = root;
 		this.controller = controller;
 
@@ -19,12 +19,22 @@ export class BurgerMenuView implements IBurgerMenuView {
 		this.bindListeners();
 	}
 
-	private onToggleClick = (event: { currentTarget: any; }) => {
+	private onToggleClick = (event: { currentTarget: any }): void => {
 		this.controller.handleToggle(event.currentTarget);
 	};
 
+	private animateBurgerOnMouseEnter = (): void => {
+		this.controller.handleBurgerOnMouseEnterAnimation();
+	}
+
+	private animateBurgerOnMouseLeave = (): void => {
+		this.controller.handleBurgerOnMouseLeaveAnimation();
+	}
+
 	private bindListeners(): void {
 		this.mobileNavigationBurger.addEventListener("click", this.onToggleClick);
+		this.mobileNavigationBurger.addEventListener("mouseenter", this.animateBurgerOnMouseEnter);
+		this.mobileNavigationBurger.addEventListener("mouseleave", this.animateBurgerOnMouseLeave);
 	}
 
 	private createMobileNavigationBurger(): void {

@@ -23,4 +23,12 @@ export class BurgerMenuController implements IBurgerMenuController {
 				throw new Error("Unknown menu state, should be true or false.");
 		}
 	}
+
+	public handleBurgerOnMouseEnterAnimation(): void {
+		this.model.onMouseEnterBurgerAnimation();
+	}
+
+	public handleBurgerOnMouseLeaveAnimation(): void {
+		this.model.onMouseLeaveBurgerAnimation();
+	}
 }

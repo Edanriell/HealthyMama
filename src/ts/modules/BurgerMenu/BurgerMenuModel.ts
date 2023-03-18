@@ -431,4 +431,24 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 			);
 		});
 	}
+
+	public onMouseEnterBurgerAnimation(): void {
+		const burger = document.querySelector(this.burgerSelector);
+		const [burgerBar1, burgerBar2, burgerBar3] =
+			burger?.children as unknown as Array<HTMLElement>;
+
+		gsap.to(burgerBar1, {scale: 1.1, duration: 0.5, ease: "power2.out"});
+		gsap.to(burgerBar2, {scale: 0.9, duration: 0.5, ease: "power2.out"});
+		gsap.to(burgerBar3, {scale: 1.1, duration: 0.5, ease: "power2.out"});
+	}
+
+	public onMouseLeaveBurgerAnimation(): void {
+		const burger = document.querySelector(this.burgerSelector);
+		const [burgerBar1, burgerBar2, burgerBar3] =
+			burger?.children as unknown as Array<HTMLElement>;
+
+		gsap.to(burgerBar1, {scale: 1, duration: 0.5, ease: "power2.out"});
+		gsap.to(burgerBar2, {scale: 1, duration: 0.5, ease: "power2.out"});
+		gsap.to(burgerBar3, {scale: 1, duration: 0.5, ease: "power2.out"});
+	}
 }
