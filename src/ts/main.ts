@@ -246,7 +246,104 @@ window.addEventListener("DOMContentLoaded", () => {
 		controller: burgerMenuElementsHoverEffectController
 	});
 
+	const mainButtonHoverEffectModel: HoverAnimationModel = new HoverAnimationModel({
+		cssVariables: [
+			{
+				variableName: "--button-background-color",
+				variableValue: {
+					start: "hsl(0, 0%, 100%)",
+					end: "hsl(145, 63%, 42%)"
+				},
+				animationProperties: {
+					start: {
+						duration: 0.5,
+						ease: "power2.out"
+					},
+					end: {
+						duration: 0.5,
+						ease: "power2.out"
+					}
+				}
+			},
+			{
+				variableName: "--button-border-color",
+				variableValue: {
+					start: "hsl(145, 63%, 42%)",
+					end: "hsl(0, 0%, 100%)"
+				},
+				animationProperties: {
+					start: {
+						duration: 0.5,
+						ease: "power2.out"
+					},
+					end: {
+						duration: 0.5,
+						ease: "power2.out"
+					}
+				}
+			},
+			{
+				variableName: "--button-box-shadow",
+				variableValue: {
+					start: "none",
+					end: "0 0 0 0.1rem hsla(202, 77%, 42%, 0.11)"
+				},
+				animationProperties: {
+					start: {
+						duration: 0.5,
+						ease: "power2.out"
+					},
+					end: {
+						duration: 0.5,
+						ease: "power2.out"
+					}
+				}
+			},
+			{
+				variableName: "--button-text-color",
+				variableValue: {
+					start: "hsl(145, 63%, 42%)",
+					end: "hsl(0, 0%, 100%)"
+				},
+				animationProperties: {
+					start: {
+						duration: 0.5,
+						ease: "power2.out"
+					},
+					end: {
+						duration: 0.5,
+						ease: "power2.out"
+					}
+				}
+			},
+			{
+				variableName: "--button-icon-background-color",
+				variableValue: {
+					start: "hsl(145, 56%, 66%)",
+					end: "hsl(145, 55%, 46%)"
+				},
+				animationProperties: {
+					start: {
+						duration: 0.5,
+						ease: "power2.out"
+					},
+					end: {
+						duration: 0.5,
+						ease: "power2.out"
+					}
+				}
+			},
+		]
+	});
+	const mainButtonHoverEffectController: HoverAnimationController =
+		new HoverAnimationController(mainButtonHoverEffectModel);
+	const mainButtonHoverEffectView: HoverAnimationView = new HoverAnimationView({
+		root: document.querySelectorAll(".button")!,
+		controller: mainButtonHoverEffectController
+	});
+
 	burgerMenuElementsHoverEffectView.mount();
+	mainButtonHoverEffectView.mount();
 });
 
 window.addEventListener("load", () => {
