@@ -10,13 +10,14 @@ $breakpoints: (
 }
 
 .politics-and-agreement__item {
+	--politics-and-agreement-item-opacity: 45%;
+	opacity: var(--politics-and-agreement-item-opacity);
 }
 
 .politics-and-agreement__link {
 }
 
 .politics-and-agreement__link-text {
-	opacity: 45%;
 }
 
 @include media(">=tablet") {
@@ -24,13 +25,13 @@ $breakpoints: (
 	}
 
 	.politics-and-agreement__item {
+		opacity: 100% !important;
 	}
 
 	.politics-and-agreement__link {
 	}
 
 	.politics-and-agreement__link-text {
-		opacity: 100%;
 	}
 }
 

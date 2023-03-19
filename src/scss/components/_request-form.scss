@@ -25,21 +25,23 @@ $breakpoints: (
 }
 
 .request-form__input {
+	--request-form-input-background-color: var(--color-accent-off-green);
+	--request-form-input-border-color: var(--color-primary-white);
 	font-family: var(--font-family-normal-400);
 	@include minimum-size(font-size, var(--font-size-mobile-14), 4.375vw);
 	@include minimum-size(line-height, 2rem, 6.25vw);
 	@include minimum-size(width, 27.9rem, 87.1875vw);
 	@include minimum-size(height, 5.1rem, 15.937499999999998vw);
-	background-color: var(--color-accent-off-green);
+	background-color: var(--request-form-input-background-color);
 	border-radius: 6.5rem;
 	@include minimum-size(padding-left, 3.115rem, 9.734375vw);
 	@include minimum-size(padding-right, 3.115rem, 9.734375vw);
-	border: 0.15625vw solid var(--color-primary-white);
+	border: 0.15625vw solid var(--request-form-input-border-color);
 	border-width: 1.5625vw;
 	appearance: none;
 	outline: none;
 	z-index: 20;
-	transition: 0.5s background-color ease, 0.5s color ease, 0.5s border-color ease;
+	// transition: 0.5s background-color ease, 0.5s color ease, 0.5s border-color ease;
 
 	&::placeholder {
 		margin: 0;
@@ -51,8 +53,10 @@ $breakpoints: (
 	}
 
 	&:hover {
-		background-color: var(--color-primary-white);
-		border-color: var(--color-accent-jade-green);
+		// background-color: var(--color-primary-white);
+		// border-color: var(--color-accent-jade-green);
+		background-color: var(--request-form-input-background-color);
+		border-color: var(--request-form-input-border-color);
 	}
 
 	&:focus {
@@ -92,13 +96,15 @@ $breakpoints: (
 	}
 
 	.request-form__input {
+		--request-form-input-background-color: var(--color-accent-off-green);
+		--request-form-input-border-color: var(--color-primary-white);
 		@include minimum-size(font-size, var(--font-size-tablet-14), 1.8229166666666667vw);
 		@include minimum-size(line-height, 2rem, 2.604166666666667vw);
 		@include minimum-size(width, 40.3rem, 52.473958333333336vw);
 		@include minimum-size(height, 6.7rem, 8.723958333333332vw);
 		@include minimum-size(padding-left, 4.5rem, 5.859375vw);
 		@include minimum-size(padding-right, 4.5rem, 5.859375vw);
-		border: 0.06510416666666666vw solid var(--color-primary-white);
+		border: 0.06510416666666666vw solid var(--request-form-input-border-color);
 		border-width: 0.6510416666666667vw;
 
 		&::placeholder {
@@ -107,12 +113,18 @@ $breakpoints: (
 		}
 
 		&:hover {
+			// background-color: var(--color-primary-white);
+			// border-color: var(--color-accent-jade-green);
+			background-color: var(--request-form-input-background-color);
+			border-color: var(--request-form-input-border-color);
 		}
 
 		&:focus {
+			border-color: var(--color-accent-jade-green);
 		}
 
 		&:focus::placeholder {
+			opacity: 0;
 		}
 	}
 
@@ -145,13 +157,15 @@ $breakpoints: (
 	}
 
 	.request-form__input {
+		--request-form-input-background-color: var(--color-accent-off-green);
+		--request-form-input-border-color: var(--color-primary-white);
 		@include minimum-size(font-size, 0.7291666666666666vw);
 		@include minimum-size(line-height, 1.0416666666666665vw);
 		@include minimum-size(width, 20.989583333333332vw);
 		@include minimum-size(height, 3.4895833333333335vw);
 		@include minimum-size(padding-left, 2.34375vw);
 		@include minimum-size(padding-right, 2.34375vw);
-		border: 0.026041666666666668vw solid var(--color-primary-white);
+		border: 0.026041666666666668vw solid var(--request-form-input-border-color);
 		border-width: 0.26041666666666663vw;
 
 		&::placeholder {
@@ -160,12 +174,18 @@ $breakpoints: (
 		}
 
 		&:hover {
+			// background-color: var(--color-primary-white);
+			// border-color: var(--color-accent-jade-green);
+			background-color: var(--request-form-input-background-color);
+			border-color: var(--request-form-input-border-color);
 		}
 
 		&:focus {
+			border-color: var(--color-accent-jade-green);
 		}
 
 		&:focus::placeholder {
+			opacity: 0;
 		}
 	}
 

@@ -26,15 +26,31 @@ export class HoverAnimationView implements IHoverAnimationView {
 		this.controller.handleMouseLeaveAnimation(event);
 	};
 
+	private onFocusAnimation = (event: unknown): void => {
+		this.controller.handleMouseEnterAnimation(event);
+	};
+
+	private onBlurAnimation = (event: unknown): void => {
+		this.controller.handleMouseLeaveAnimation(event);
+	};
+
 	private bindListeners(): void {
 		if ((this.root as NodeListOf<Element>).length > 0) {
 			for (const element of Object.values(this.root)) {
 				element.addEventListener("mouseenter", this.onMouseEnterAnimation);
 				element.addEventListener("mouseleave", this.onMouseLeaveAnimation);
+				element.addEventListener("focus", this.onFocusAnimation); //
+				element.addEventListener("blur", this.onBlurAnimation); //
+				element.addEventListener("focusin", this.onFocusAnimation); //
+				element.addEventListener("focusout", this.onBlurAnimation); //
 			}
 		} else {
 			(this.root as Element).addEventListener("mouseenter", this.onMouseEnterAnimation);
 			(this.root as Element).addEventListener("mouseleave", this.onMouseLeaveAnimation);
+			(this.root as Element).addEventListener("focus", this.onFocusAnimation); //
+			(this.root as Element).addEventListener("blur", this.onBlurAnimation); //
+			(this.root as Element).addEventListener("focusin", this.onFocusAnimation); //
+			(this.root as Element).addEventListener("focusout", this.onBlurAnimation); //
 		}
 	}
 

@@ -22,7 +22,7 @@ export const MainSliderUniversal: SwiperOptions = {
 		bulletActiveClass: "main-slider__pagination-item--state--active",
 		renderBullet: function (index, className) {
 			return `
-				<li class="main-slider__pagination-item ${className}" tabindex=0>
+				<li class="main-slider__pagination-item ${className}">
 					<div class="main-slider__pagination-item-${index}">
 						<p class="main-slider__pagination-text">${sliderSlideNames[index]}</p>
 					</div>

@@ -86,7 +86,7 @@ $breakpoints: (
 	.button {
 		@include minimum-size(width, 24.5rem, 31.901041666666668vw);
 		@include minimum-size(min-height, 6.7rem, 8.723958333333332vw);
-		border: 0.06510416666666666vw solid var(--color-primary-white);
+		border: 0.06510416666666666vw solid var(--button-border-color);
 		border-radius: 8.463541666666668vw;
 		border-width: 0.6510416666666667vw;
 	}
@@ -112,7 +112,7 @@ $breakpoints: (
 	.button {
 		@include minimum-size(width, 12.760416666666666vw);
 		@include minimum-size(min-height, 3.4895833333333335vw);
-		border: 0.026041666666666668vw solid var(--color-primary-white);
+		border: 0.026041666666666668vw solid var(--button-border-color);
 		border-radius: 3.3854166666666665vw;
 		border-width: 0.26041666666666663vw;
 	}

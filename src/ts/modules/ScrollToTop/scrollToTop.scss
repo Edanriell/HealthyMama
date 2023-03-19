@@ -7,6 +7,9 @@
 }
 
 .scroll-to-top__button {
+	--scroll-to-top-button-background-color: var(--color-accent-jade-green);
+	--scroll-to-top-button-border-color: var(--color-primary-white);
+	--scroll-to-top-button-icon-color: hsl(0, 0%, 100%);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -15,19 +18,22 @@
 	height: 17.1875vw;
 	background-color: red;
 	cursor: pointer;
-	border: 0.15625vw solid var(--color-primary-white);
+	border: 0.15625vw solid var(--scroll-to-top-button-border-color);
 	border-width: 1.5625vw;
-	background-color: var(--color-accent-jade-green);
+	background-color: var(--scroll-to-top-button-background-color);
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
 		rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
 	&:hover,
 	&:focus {
-		background-color: var(--color-primary-white);
-		border-color: var(--color-accent-jade-green);
+		// background-color: var(--color-primary-white);
+		// border-color: var(--color-accent-jade-green);
+		background-color: var(--scroll-to-top-button-background-color);
+		border-color: var(--scroll-to-top-button-border-color);
 
 		.scroll-to-top__icon {
-			color: var(--color-accent-jade-green);
+			// color: var(--color-accent-jade-green);
+			color: var(--scroll-to-top-button-icon-color);
 		}
 	}
 
@@ -51,7 +57,7 @@
 	.scroll-to-top__button {
 		width: 8.463541666666668vw;
 		height: 8.463541666666668vw;
-		border: 0.06510416666666666vw solid var(--color-primary-white);
+		border: 0.06510416666666666vw solid var(--scroll-to-top-button-border-color);
 		border-width: 0.6510416666666667vw;
 	}
 
@@ -70,7 +76,7 @@
 	.scroll-to-top__button {
 		width: 3.3854166666666665vw;
 		height: 3.3854166666666665vw;
-		border: 0.026041666666666668vw solid var(--color-primary-white);
+		border: 0.026041666666666668vw solid var(--scroll-to-top-button-border-color);
 		border-width: 0.26041666666666663vw;
 	}
 

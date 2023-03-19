@@ -95,10 +95,16 @@ $breakpoints: (
 	}
 
 	.products-slider__previous-slide-button {
+		--products-slider-previous-slide-button-transform: scale(1);
 		cursor: pointer;
 		position: absolute;
 		top: 0;
 		left: 0;
+		transform: var(--products-slider-previous-slide-button-transform);
+
+		&:hover {
+			transform: var(--products-slider-previous-slide-button-transform);
+		}
 	}
 
 	.products-slider__arrow-left-icon {
@@ -109,10 +115,16 @@ $breakpoints: (
 	}
 
 	.products-slider__next-slide-button {
+		--products-slider-next-slide-button-transform: scale(1);
 		cursor: pointer;
 		position: absolute;
 		top: 0;
 		right: 0;
+		transform: var(--products-slider-next-slide-button-transform);
+
+		&:hover {
+			transform: var(--products-slider-next-slide-button-transform);
+		}
 	}
 
 	.products-slider__arrow-right-icon {
@@ -200,25 +212,32 @@ $breakpoints: (
 		}
 
 		.products-slider__previous-slide-button {
+			--products-slider-previous-slide-button-background-color: var(--color-accent-jade-green);
+			--products-slider-previous-slide-button-border-color: var(--color-accent-jade-green);
+			--products-slider-previous-slide-button-icon-color: var(--color-primary-white);
 			position: absolute;
 			top: 0;
 			@include minimum-size(right, 3.2rem, 4.166666666666666vw);
 			@include minimum-size(width, 5.3rem, 6.901041666666667vw);
 			@include minimum-size(height, 5.3rem, 6.901041666666667vw);
 			border-radius: 50%;
-			background-color: var(--color-accent-jade-green);
+			background-color: var(--products-slider-previous-slide-button-background-color);
 			cursor: pointer;
-			border: 0.15625vw solid var(--color-accent-jade-green);
+			border: 0.15625vw solid var(--products-slider-previous-slide-button-border-color);
 			border-radius: 20.3125vw;
 			border-width: 0.5rem;
+			// transition: all 0.5s ease;
 
 			&:hover,
 			&:focus {
-				background-color: var(--color-primary-white);
-				border-color: var(--color-accent-jade-green);
+				// background-color: var(--color-primary-white);
+				// border-color: var(--color-accent-jade-green);
+				background-color: var(--products-slider-previous-slide-button-background-color);
+				border-color: var(--products-slider-previous-slide-button-border-color);
 
 				.products-slider__arrow-left-icon {
-					color: var(--color-accent-jade-green);
+					// color: var(--color-accent-jade-green);
+					color: var(--products-slider-previous-slide-button-icon-color);
 				}
 			}
 
@@ -362,20 +381,20 @@ $breakpoints: (
 			@include minimum-size(width, 2.7604166666666665vw);
 			@include minimum-size(height, 2.7604166666666665vw);
 			border-radius: 50%;
-			background-color: var(--color-accent-jade-green);
+			background-color: var(--products-slider-previous-slide-button-background-color);
 			cursor: pointer;
-			border: 0.0625vw solid var(--color-accent-jade-green);
+			border: 0.0625vw solid var(--products-slider-previous-slide-button-border-color);
 			border-radius: 8.125vw;
 			border-width: 0.2604166667vw;
 			z-index: 200;
 
 			&:hover,
 			&:focus {
-				background-color: var(--color-primary-white);
-				border-color: var(--color-accent-jade-green);
+				background-color: var(--products-slider-previous-slide-button-background-color);
+				border-color: var(--products-slider-previous-slide-button-border-color);
 
 				.products-slider__arrow-left-icon {
-					color: var(--color-accent-jade-green);
+					color: var(--products-slider-previous-slide-button-icon-color);
 				}
 			}
 

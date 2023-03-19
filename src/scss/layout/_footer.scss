@@ -20,6 +20,7 @@ $footer-background-color: var(--color-accent-jade-green);
 
 .footer__logotype {
 	@include minimum-size(margin-bottom, 3rem, 9.375vw);
+	display: inline-block;
 }
 
 .footer__logotype-text-content {
