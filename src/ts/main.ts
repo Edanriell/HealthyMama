@@ -173,7 +173,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	});
 
 	const fallingLeafsHeroModel: FallingElementsModel = new FallingElementsModel({
-		chooseUniquePathsOnly: true,
+		uniquePathsOnly: true,
 		paths: [
 			heroSectionDesktopSvgPaths as Paths,
 			heroSectionTabletSvgPaths as Paths,
@@ -763,7 +763,7 @@ window.addEventListener("DOMContentLoaded", () => {
 						ease: "power2.out"
 					}
 				}
-			},
+			}
 		]
 	});
 	const mainNavigationLinkHoverEffectController: HoverAnimationController =
@@ -773,66 +773,165 @@ window.addEventListener("DOMContentLoaded", () => {
 		controller: mainNavigationLinkHoverEffectController
 	});
 
-	const productsSliderPreviousSlideButtonUniversalHoverEffectModel: HoverAnimationModel = new HoverAnimationModel({
-		cssVariables: [
-			{
-				variableName: "--products-slider-previous-slide-button-background-color",
-				variableValue: {
-					start: "hsl(0, 0%, 100%)",
-					end: "hsl(145, 63%, 42%)"
-				},
-				animationProperties: {
-					start: {
-						duration: 0.5,
-						ease: "power2.out"
+	const productsSliderPreviousSlideButtonUniversalHoverEffectModel: HoverAnimationModel =
+		new HoverAnimationModel({
+			cssVariables: [
+				{
+					variableName: "--products-slider-previous-slide-button-background-color",
+					variableValue: {
+						start: "hsl(0, 0%, 100%)",
+						end: "hsl(145, 63%, 42%)"
 					},
-					end: {
-						duration: 0.5,
-						ease: "power2.out"
+					animationProperties: {
+						start: {
+							duration: 0.5,
+							ease: "power2.out"
+						},
+						end: {
+							duration: 0.5,
+							ease: "power2.out"
+						}
+					}
+				},
+				{
+					variableName: "--products-slider-previous-slide-button-border-color",
+					variableValue: {
+						start: "hsl(145, 63%, 42%)",
+						end: "hsl(145, 63%, 42%)"
+					},
+					animationProperties: {
+						start: {
+							duration: 0.5,
+							ease: "power2.out"
+						},
+						end: {
+							duration: 0.5,
+							ease: "power2.out"
+						}
+					}
+				},
+				{
+					variableName: "--products-slider-previous-slide-button-icon-color",
+					variableValue: {
+						start: "hsl(145, 63%, 42%)",
+						end: "hsl(0, 0%, 100%)"
+					},
+					animationProperties: {
+						start: {
+							duration: 0.5,
+							ease: "power2.out"
+						},
+						end: {
+							duration: 0.5,
+							ease: "power2.out"
+						}
 					}
 				}
-			},
-			{
-				variableName: "--products-slider-previous-slide-button-border-color",
-				variableValue: {
-					start: "hsl(145, 63%, 42%)",
-					end: "hsl(145, 63%, 42%)"
-				},
-				animationProperties: {
-					start: {
-						duration: 0.5,
-						ease: "power2.out"
-					},
-					end: {
-						duration: 0.5,
-						ease: "power2.out"
-					}
-				}
-			},
-			{
-				variableName: "--products-slider-previous-slide-button-icon-color",
-				variableValue: {
-					start: "hsl(145, 63%, 42%)",
-					end: "hsl(0, 0%, 100%)"
-				},
-				animationProperties: {
-					start: {
-						duration: 0.5,
-						ease: "power2.out"
-					},
-					end: {
-						duration: 0.5,
-						ease: "power2.out"
-					}
-				}
-			},
-		]
-	});
+			]
+		});
 	const productsSliderPreviousSlideButtonUniversalHoverEffectController: HoverAnimationController =
 		new HoverAnimationController(productsSliderPreviousSlideButtonUniversalHoverEffectModel);
-	const productsSliderPreviousSlideButtonUniversalHoverEffectView: HoverAnimationView = new HoverAnimationView({
-		root: document.querySelectorAll(".products-slider__previous-slide-button-universal")!,
-		controller: productsSliderPreviousSlideButtonUniversalHoverEffectController
+	const productsSliderPreviousSlideButtonUniversalHoverEffectView: HoverAnimationView =
+		new HoverAnimationView({
+			root: document.querySelectorAll(".products-slider__previous-slide-button-universal")!,
+			controller: productsSliderPreviousSlideButtonUniversalHoverEffectController
+		});
+
+	const productsSliderNextSlideButtonUniversalHoverEffectModel: HoverAnimationModel =
+		new HoverAnimationModel({
+			cssVariables: [
+				{
+					variableName: "--products-slider-next-slide-button-background-color",
+					variableValue: {
+						start: "hsl(0, 0%, 100%)",
+						end: "hsl(145, 63%, 42%)"
+					},
+					animationProperties: {
+						start: {
+							duration: 0.5,
+							ease: "power2.out"
+						},
+						end: {
+							duration: 0.5,
+							ease: "power2.out"
+						}
+					}
+				},
+				{
+					variableName: "--products-slider-next-slide-button-border-color",
+					variableValue: {
+						start: "hsl(145, 63%, 42%)",
+						end: "hsl(145, 63%, 42%)"
+					},
+					animationProperties: {
+						start: {
+							duration: 0.5,
+							ease: "power2.out"
+						},
+						end: {
+							duration: 0.5,
+							ease: "power2.out"
+						}
+					}
+				},
+				{
+					variableName: "--products-slider-next-slide-button-icon-color",
+					variableValue: {
+						start: "hsl(145, 63%, 42%)",
+						end: "hsl(0, 0%, 100%)"
+					},
+					animationProperties: {
+						start: {
+							duration: 0.5,
+							ease: "power2.out"
+						},
+						end: {
+							duration: 0.5,
+							ease: "power2.out"
+						}
+					}
+				}
+			]
+		});
+	const productsSliderNextSlideButtonUniversalHoverEffectController: HoverAnimationController =
+		new HoverAnimationController(productsSliderNextSlideButtonUniversalHoverEffectModel);
+	const productsSliderNextSlideButtonUniversalHoverEffectView: HoverAnimationView =
+		new HoverAnimationView({
+			root: document.querySelectorAll(".products-slider__next-slide-button-universal")!,
+			controller: productsSliderNextSlideButtonUniversalHoverEffectController
+		});
+
+	const modalCloseButtonIconModel: HoverAnimationModel = new HoverAnimationModel({
+		cssVariables: [
+			{
+				variableName: "--modal-close-button-icon-background-color",
+				variableValue: {
+					start: "rgb(172, 10, 10)",
+					end: "rgba(0,0,0,0.15)"
+				},
+				animationProperties: {
+					start: {
+						duration: 1.5,
+						rotate: "90deg",
+						scale: 1.2,
+						ease: "elastic.out(1, 0.3)"
+					},
+					end: {
+						duration: 1.5,
+						rotate: "0deg",
+						scale: 1,
+						ease: "power2.out"
+					}
+				}
+			}
+		]
+	});
+	const modalCloseButtonIconController: HoverAnimationController = new HoverAnimationController(
+		modalCloseButtonIconModel
+	);
+	const modalCloseButtonIconView: HoverAnimationView = new HoverAnimationView({
+		root: document.querySelectorAll(".modal__close-button-icon")!,
+		controller: modalCloseButtonIconController
 	});
 
 	burgerMenuElementsHoverEffectView.mount();
@@ -847,6 +946,8 @@ window.addEventListener("DOMContentLoaded", () => {
 	politicsAndAgreementItemHoverEffectView.mount();
 	mainNavigationLinkHoverEffectView.mount();
 	productsSliderPreviousSlideButtonUniversalHoverEffectView.mount();
+	productsSliderNextSlideButtonUniversalHoverEffectView.mount();
+	modalCloseButtonIconView.mount();
 });
 
 window.addEventListener("load", () => {

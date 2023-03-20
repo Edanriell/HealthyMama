@@ -8,15 +8,15 @@ export class FallingElementsModel implements IFallingElementsModel {
 
 	constructor({
 		paths,
-		chooseUniquePathsOnly = false
+		uniquePathsOnly = false
 	}: {
 		paths: Array<Paths>;
-		chooseUniquePathsOnly?: boolean;
+		uniquePathsOnly?: boolean;
 	}) {
 		this.desktopPaths = paths.filter(path => path.pathSize === "desktop")[0].svgPaths || [];
 		this.tabletPaths = paths.filter(path => path.pathSize === "tablet")[0].svgPaths || [];
 		this.mobilePaths = paths.filter(path => path.pathSize === "mobile")[0].svgPaths || [];
-		this.chooseUniquePathsOnly = chooseUniquePathsOnly;
+		this.chooseUniquePathsOnly = uniquePathsOnly;
 	}
 
 	public generateRandomNumberInRange({

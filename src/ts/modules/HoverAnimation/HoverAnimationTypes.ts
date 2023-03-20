@@ -29,6 +29,8 @@ export interface IHoverAnimationController {
 
 	handleMouseEnterAnimation(event: unknown): void;
 	handleMouseLeaveAnimation(event: unknown): void;
+	handleFocusAnimation(event: unknown): void;
+	handleBlurAnimation(event: unknown): void;
 }
 
 export interface IHoverAnimationModel {

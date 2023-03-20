@@ -43,7 +43,7 @@ export class FallingElementsView implements IFallingElementsView {
 				svgPathWrapper.style.cssText = `
 					position: absolute;
 					z-index: 200;
-					top: 0;
+					top: -10%;
 					left: ${randomLeftCoordinates}%;
 					width: 100%;
 					height: 100%;

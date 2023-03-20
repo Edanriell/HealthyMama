@@ -225,7 +225,6 @@ $breakpoints: (
 			vertical-align: middle;
 			// border-bottom-left-radius: 50%;
 			// border-bottom-right-radius: 50%;
-			border-radius: 50%;
 			// background-color: red;
 		}
 
@@ -568,6 +567,7 @@ $breakpoints: (
 			object-fit: contain;
 			vertical-align: middle;
 			z-index: 1;
+			border-radius: 50%;
 		}
 
 		.main-slider__pagination-wrapper {

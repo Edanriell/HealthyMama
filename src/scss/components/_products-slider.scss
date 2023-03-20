@@ -258,25 +258,28 @@ $breakpoints: (
 		}
 
 		.products-slider__next-slide-button {
+			--products-slider-next-slide-button-background-color: var(--color-accent-jade-green);
+			--products-slider-next-slide-button-border-color: var(--color-accent-jade-green);
+			--products-slider-next-slide-button-icon-color: var(--color-primary-white);
 			position: absolute;
 			top: 0;
 			@include minimum-size(left, 57.8rem, 75.26041666666666vw);
 			@include minimum-size(width, 5.3rem, 6.901041666666667vw);
 			@include minimum-size(height, 5.3rem, 6.901041666666667vw);
 			border-radius: 50%;
-			background-color: var(--color-accent-jade-green);
+			background-color: var(--products-slider-next-slide-button-background-color);
 			cursor: pointer;
-			border: 0.15625vw solid var(--color-accent-jade-green);
+			border: 0.15625vw solid var(--products-slider-next-slide-button-border-color);
 			border-radius: 20.3125vw;
 			border-width: 0.5rem;
 
 			&:hover,
 			&:focus {
-				background-color: var(--color-primary-white);
-				border-color: var(--color-accent-jade-green);
+				background-color: var(--products-slider-next-slide-button-background-color);
+				border-color: var(--products-slider-next-slide-button-border-color);
 
 				.products-slider__arrow-right-icon {
-					color: var(--color-accent-jade-green);
+					color: var(--products-slider-next-slide-button-icon-color);
 				}
 			}
 
@@ -421,20 +424,20 @@ $breakpoints: (
 			@include minimum-size(width, 2.7604166666666665vw);
 			@include minimum-size(height, 2.7604166666666665vw);
 			border-radius: 50%;
-			background-color: var(--color-accent-jade-green);
+			background-color: var(--products-slider-next-slide-button-background-color);
 			cursor: pointer;
-			border: 0.15625vw solid var(--color-accent-jade-green);
+			border: 0.15625vw solid var(--products-slider-next-slide-button-border-color);
 			border-radius: 8.125vw;
 			border-width: 0.2604166667vw;
 			z-index: 200;
 
 			&:hover,
 			&:focus {
-				background-color: var(--color-primary-white);
-				border-color: var(--color-accent-jade-green);
+				background-color: var(--products-slider-next-slide-button-background-color);
+				border-color: var(--products-slider-next-slide-button-border-color);
 
 				.products-slider__arrow-right-icon {
-					color: var(--color-accent-jade-green);
+					color: var(--products-slider-next-slide-button-icon-color);
 				}
 			}
 

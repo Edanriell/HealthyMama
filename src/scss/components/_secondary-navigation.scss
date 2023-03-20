@@ -1,3 +1,12 @@
+@use "../abstracts/mixins" as *;
+@use "../vendors/include-media" as *;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1024px
+);
+
 .secondary-navigation {
 }
 
@@ -26,4 +35,16 @@
 }
 
 .secondary-navigation__link {
+}
+
+@include media(">=tablet") {
+	.secondary-navigation__link {
+		@include minimum-size(font-size, 1.34rem, 1.7447916666666667vw);
+	}
+}
+
+@include media(">=desktop") {
+	.secondary-navigation__link {
+		@include minimum-size(font-size, 0.7291666666666666vw);
+	}
 }

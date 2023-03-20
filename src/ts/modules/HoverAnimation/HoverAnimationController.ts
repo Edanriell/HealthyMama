@@ -15,4 +15,12 @@ export class HoverAnimationController implements IHoverAnimationController {
 	public handleMouseLeaveAnimation(event: unknown): void {
 		this.model.mouseLeaveAnimation(event);
 	}
+
+	public handleFocusAnimation(event: unknown): void {
+		this.model.mouseEnterAnimation(event);
+	}
+
+	public handleBlurAnimation(event: unknown): void {
+		this.model.mouseLeaveAnimation(event);
+	}
 }

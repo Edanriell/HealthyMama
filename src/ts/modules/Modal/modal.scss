@@ -39,7 +39,7 @@
 }
 
 .modal-form__field {
-	margin-bottom: 3.125vw;
+	margin-bottom: 3.4vw;
 }
 
 .modal-form__input {
@@ -59,14 +59,14 @@
 }
 
 .modal__close-button-icon {
-	width: 9.375vw;
-	height: 9.375vw;
-	color: rgba(0,0,0,0.15);
+	--modal-close-button-icon-background-color: rgba(0, 0, 0, 0.15);
+	width: 10.375vw;
+	height: 10.375vw;
+	color: var(--modal-close-button-icon-background-color);
 	transition: 0.15s color ease;
 
 	&:hover {
-		color: rgb(172, 10, 10);
-		transition: 0.25s color ease;
+		color: var(--modal-close-button-icon-background-color);
 	}
 }
 
