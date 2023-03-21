@@ -28,7 +28,8 @@ $breakpoints: (
 		background-color: #fff;
 	}
 
-	&:hover::after {
+	&:hover::after,
+	&:focus::after {
 		opacity: var(--secondary-navigation-link-opacity);
 		transform: var(--secondary-navigation-link-transform);
 	}

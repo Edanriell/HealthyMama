@@ -12,6 +12,11 @@ $breakpoints: (
 .politics-and-agreement__item {
 	--politics-and-agreement-item-opacity: 45%;
 	opacity: var(--politics-and-agreement-item-opacity);
+
+	&:hover,
+	&:focus {
+		opacity: var(--politics-and-agreement-item-opacity);
+	}
 }
 
 .politics-and-agreement__link {

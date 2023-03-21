@@ -13,7 +13,10 @@ export default function EffectOpacity({
 		const allSliderSlides = swiper.slides;
 		const currentActiveSlide: Element = swiper.slides[swiper.activeIndex];
 
+		if (!allSliderSlides || !currentActiveSlide) return;
+
 		allSliderSlides.forEach(slide => {
+			console.log(slide);
 			gsap.to(slide, { opacity: 0.3, duration: 0.5, ease: "power2.out" });
 		});
 
@@ -27,6 +30,8 @@ export default function EffectOpacity({
 	on("slideChange", swiper => {
 		const currentActiveSlide: Element = swiper.slides[swiper.activeIndex];
 		const previousActiveSlide: Element = swiper.slides[swiper.previousIndex];
+
+		if (!currentActiveSlide || !previousActiveSlide) return;
 
 		gsap.fromTo(
 			currentActiveSlide,

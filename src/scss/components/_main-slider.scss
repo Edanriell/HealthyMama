@@ -228,6 +228,8 @@ $breakpoints: (
 			// background-color: red;
 		}
 
+		// Founded issue with main-slider tablet
+
 		.main-slider__pagination-wrapper {
 			@include minimum-size(width, 50.2rem, 65.36458333333334vw);
 			@include minimum-size(height, 50.2rem, 65.36458333333334vw);

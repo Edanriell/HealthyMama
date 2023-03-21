@@ -1,13 +1,13 @@
 .invalid-input {
-	background-color: var(--color-accent-off-red);
+	background-color: var(--color-accent-off-red) !important;
 
 	&:hover,
 	&:focus {
-		border-color: var(--color-accent-jade-red);
-		background-color: var(--color-accent-off-red);
+		border-color: var(--color-accent-jade-red) !important;
+		background-color: var(--color-accent-off-red) !important;
 	}
 
 	&::placeholder {
-		color: var(--color-accent-red-surf);
+		color: var(--color-accent-red-surf) !important;
 	}
 }
