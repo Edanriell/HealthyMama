@@ -41,6 +41,11 @@ import { HoverAnimationView } from "./modules/HoverAnimation/HoverAnimationView"
 import { HoverAnimationController } from "./modules/HoverAnimation/HoverAnimationController";
 import { HoverAnimationModel } from "./modules/HoverAnimation/HoverAnimationModel";
 
+import { TooltipView } from "./modules/Tooltip/TooltipView";
+import { TooltipController } from "./modules/Tooltip/TooltipController";
+import { TooltipModel } from "./modules/Tooltip/TooltipModel";
+import { TooltipDirection } from "./modules/Tooltip/TooltipTypes";
+
 import { MainSliderMobile, MainSliderUniversal } from "./modules/MainSlider";
 import { ProductsSliderMobile, ProductsSliderUniversal } from "./modules/ProductsSlider";
 
@@ -193,6 +198,21 @@ window.addEventListener("DOMContentLoaded", () => {
 		]
 	});
 
+	const tooltipModel: TooltipModel = new TooltipModel();
+	const tooltipController: TooltipController = new TooltipController(tooltipModel);
+	const tooltipView: TooltipView = new TooltipView({
+		root: document.querySelectorAll("[data-tooltip]"),
+		controller: tooltipController,
+		tooltips: [
+			{
+				tooltipDataId: 1,
+				tooltipText: "Открыть ссылку в новом окне",
+				direction: TooltipDirection.Top,
+				isSelectable: false
+			}
+		]
+	});
+
 	burgerMenuView.mount();
 	modalView.mount();
 	formView.mount();
@@ -200,6 +220,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	imageGalleryParallaxView.mount();
 	scrollToTopView.mount();
 	fallingLeafsHeroView.mount();
+	tooltipView.mount();
 
 	const burgerMenuElementsHoverEffectModel: HoverAnimationModel = new HoverAnimationModel({
 		cssVariables: [
