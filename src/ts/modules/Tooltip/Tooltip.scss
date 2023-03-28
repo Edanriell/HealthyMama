@@ -1,30 +1,61 @@
 .tooltip {
 	display: none;
 	position: absolute;
-	top: -60px;
+	// top: -64px;
+	top: -20.3125vw;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: hsl(0deg, 0%, 0%);;
+	background-color: hsl(0deg, 0%, 0%);
 	border-radius: 1rem;
-	width: 140px;
-	padding: 8px;
+	// width: 140px;
+	width: 50vw;
+	// padding: 8px;
+	padding: 2.5vw;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 	z-index: 1;
 	pointer-events: none;
 	// user-select: none;
-	color: #FFF;
+	color: #fff;
 
 	&::after {
 		content: "";
-		width: 20px;
-		height: 20px;
+		width: 6.25vw;
+		height: 6.25vw;
+		// width: 20px;
+		// height: 20px;
 		display: block;
-		background-color: hsl(0deg, 0%, 0%);;
+		background-color: hsl(0deg, 0%, 0%);
 		position: absolute;
 		bottom: -14%;
 		left: 50%;
 		z-index: -1;
 		transform: translateX(-50%) rotate(45deg);
 		box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.tooltip {
+		top: -8.463541666666668vw;
+		width: 20.833333333333336vw;
+		padding: 1.0416666666666665vw;
+
+		&::after {
+			width: 2.604166666666667vw;
+			height: 2.604166666666667vw;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.tooltip {
+		top: -3.3854166666666665vw;
+		width: 8.333333333333332vw;
+		padding: 0.4166666666666667vw;
+
+		&::after {
+			width: 1.0416666666666665vw;
+			height: 1.0416666666666665vw;
+		}
 	}
 }

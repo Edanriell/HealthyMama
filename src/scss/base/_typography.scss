@@ -113,6 +113,7 @@ $breakpoints: (
 .text--style--underlined {
 	position: relative;
 	cursor: pointer;
+	transition: color 0.5s ease;
 
 	&::after {
 		content: "";
@@ -125,6 +126,15 @@ $breakpoints: (
 		height: auto;
 		pointer-events: none;
 		user-select: none;
+		transition: border-color 0.5s ease;
+	}
+
+	&:hover {
+		color: hsl(145deg, 63%, 42%);
+	}
+
+	&:hover::after {
+		border-color: hsl(145deg, 63%, 42%);
 	}
 }
 

@@ -62,6 +62,7 @@ export class TooltipModel {
 				break;
 		}
 	}
+
 	public hideTooltip(tooltip: HTMLSpanElement, direction: TooltipDirection) {
 		switch (direction) {
 			case TooltipDirection.Top:
