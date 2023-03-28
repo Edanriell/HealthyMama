@@ -6,62 +6,116 @@ export class TooltipView {
 	public controller: TooltipController;
 	public root: NodeListOf<Element>;
 
-	private tooltips: Tooltips;
+	private tooltipsData: Tooltips;
+	private tooltips: Array<HTMLSpanElement> = [];
+	private tooltipDataAttribute: string = "data-tooltip-id";
 
 	constructor({
 		root,
 		controller,
-		tooltips
+		tooltipsData
 	}: {
 		root: NodeListOf<Element>;
 		controller: TooltipController;
-		tooltips: Tooltips;
+		tooltipsData: Tooltips;
 	}) {
 		this.root = root;
 		this.controller = controller;
-		this.tooltips = tooltips;
+		this.tooltipsData = tooltipsData;
 
 		this.createTooltips();
-		// this.setDataAttribute();
 
-		// this.bindListeners();
+		this.setRootStyles();
+
+		this.bindListeners();
 	}
 
-	// showOnMouseEnter = (): void => {
-	// 	this.controller.handleShowOnMouseEnter(this.tooltip, this.direction);
-	// };
+	showOnMouseEnter = (event: unknown): void => {
+		console.log("enter");
+		const triggerElement = (event as Event).currentTarget;
+		console.log(triggerElement);
+		console.log((event as Event).target);
+		const targetTooltip = this.tooltips.filter(tooltip => {
+			const tooltipDataId = tooltip.getAttribute(this.tooltipDataAttribute);
+			const triggerElementDataId = (triggerElement as HTMLSpanElement)?.getAttribute(
+				this.tooltipDataAttribute
+			);
+			return tooltipDataId === triggerElementDataId;
+		});
+		const targetTooltipData = this.tooltipsData.filter(tooltipData => {
+			return (
+				tooltipData.tooltipDataId ===
+				Number((triggerElement as HTMLSpanElement).getAttribute(this.tooltipDataAttribute))
+			);
+		});
+		this.controller.handleShowOnMouseEnter(targetTooltip[0], targetTooltipData[0].direction);
+	};
 
-	// hideOnMouseLeave = (): void => {
-	// 	this.controller.handleHideOnMouseLeave(this.tooltip, this.direction);
-	// };
+	hideOnMouseLeave = (event: unknown): void => {
+		console.log("leave");
+		const triggerElement = (event as Event).currentTarget;
+		console.log(triggerElement);
+		console.log((event as Event).target);
+		const targetTooltip = this.tooltips.filter(tooltip => {
+			const tooltipDataId = tooltip.getAttribute(this.tooltipDataAttribute);
+			const triggerElementDataId = (triggerElement as HTMLSpanElement)?.getAttribute(
+				this.tooltipDataAttribute
+			);
+			return tooltipDataId === triggerElementDataId;
+		});
+		const targetTooltipData = this.tooltipsData.filter(tooltipData => {
+			return (
+				tooltipData.tooltipDataId ===
+				Number((triggerElement as HTMLSpanElement).getAttribute(this.tooltipDataAttribute))
+			);
+		});
+		this.controller.handleHideOnMouseLeave(targetTooltip[0], targetTooltipData[0].direction);
+	};
 
-	// bindListeners(): void {
-	// 	this.root.addEventListener("mouseenter", this.showOnMouseEnter);
-	// 	this.root.addEventListener("mouseleave", this.hideOnMouseLeave);
-	// }
+	bindListeners(): void {
+		this.root.forEach(rootElement => {
+			rootElement.addEventListener("mouseenter", this.showOnMouseEnter);
+		});
+		this.root.forEach(rootElement => {
+			rootElement.addEventListener("mouseleave", this.hideOnMouseLeave);
+		});
+	}
 
-	// setDataAttribute(): void {
-	// 	for (const elements of this.root) {
-	// 		elements.element.setAttribute(dataId);
-	// 	}
-	// }
+	setRootStyles(): void {
+		for (const rootElement of this.root) {
+			(rootElement as HTMLElement).style.cssText = `
+				position: relative;
+				width: auto;
+				height: auto;
+				display: inline-block;
+			`
+		}
+	}
 
 	createTooltips(): void {
-		// filter root tooltips and get ids from this.tooltips
-		// then create
-		// let targetTooltip;
-		// for (const elements of this.root) {
-		// }
+		for (const tooltip of this.tooltipsData) {
+			const newTooltip = this.createTooltip(tooltip.tooltipText, tooltip.tooltipDataId);
+			this.tooltips.push(newTooltip);
+		}
 	}
 
-	createTooltip(text: string): HTMLSpanElement {
+	createTooltip(text: string, dataAttributeValue: number): HTMLSpanElement {
 		const tooltip = document.createElement("span");
 		tooltip.classList.add("tooltip");
+		tooltip.setAttribute(this.tooltipDataAttribute, `${dataAttributeValue}`);
 		tooltip.innerText = text;
 		return tooltip;
 	}
 
 	mount(): void {
-		// this.root.append(this.tooltip);
+		this.root.forEach(rootElement => {
+			const targetTooltipDataId = rootElement.getAttribute(this.tooltipDataAttribute);
+			const targetTooltip = this.tooltips.filter(tooltip => {
+				const tooltipDataId = tooltip.getAttribute(this.tooltipDataAttribute);
+				return tooltipDataId === targetTooltipDataId;
+			});
+			if (!targetTooltip) return;
+			rootElement.append(targetTooltip[0]);
+		});
 	}
 }

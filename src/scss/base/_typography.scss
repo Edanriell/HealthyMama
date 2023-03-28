@@ -123,6 +123,8 @@ $breakpoints: (
 		left: 0;
 		width: 100%;
 		height: auto;
+		pointer-events: none;
+		user-select: none;
 	}
 }
 

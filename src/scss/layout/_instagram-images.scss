@@ -25,6 +25,13 @@ $instagram-images-section-background-color: var(--color-primary-white);
 	position: relative;
 }
 
+.instagram-images__link {
+	position: relative;
+	width: auto;
+	display: inline-block;
+	height: auto;
+}
+
 @include media(">=tablet") {
 	.instagram-images {
 		@include minimum-size(padding-top, 22.6rem, 29.427083333333332vw);

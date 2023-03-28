@@ -203,7 +203,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	const tooltipView: TooltipView = new TooltipView({
 		root: document.querySelectorAll("[data-tooltip]"),
 		controller: tooltipController,
-		tooltips: [
+		tooltipsData: [
 			{
 				tooltipDataId: 1,
 				tooltipText: "Открыть ссылку в новом окне",
