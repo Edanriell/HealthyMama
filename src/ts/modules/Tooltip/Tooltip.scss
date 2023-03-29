@@ -13,8 +13,8 @@
 	padding: 2.5vw;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 	z-index: 1;
-	pointer-events: none;
-	// user-select: none;
+	// pointer-events: none;
+	user-select:text;
 	color: #fff;
 
 	&::after {
