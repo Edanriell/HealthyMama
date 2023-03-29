@@ -222,6 +222,35 @@ window.addEventListener("DOMContentLoaded", () => {
 	fallingLeafsHeroView.mount();
 	tooltipView.mount();
 
+	const modalFormModel: FormModel = new FormModel({
+		databaseName: "personalized-menu-request"
+	});
+	const modalFormController: FormController = new FormController(modalFormModel);
+	const modalFormInputController: InputController = new InputController(modalFormModel);
+	const modalFormView: FormView = new FormView({
+		root: document.querySelector(".modal-form")!,
+		formController: modalFormController,
+		inputController: modalFormInputController,
+		formSubmitButton: document.querySelector(".modal-form__submit-button")!,
+		formInputs: [
+			{
+				inputNode: document.querySelector(".modal-form__person-name-input")!,
+				regExp: /^[a-zа-яё\s]+$/iu,
+				inputName: "Имя",
+				errorMessage: "Неверное имя"
+			},
+			{
+				inputNode: document.querySelector(".modal-form__person-phone-number-input")!,
+				regExp: /^(\+)\d+$/,
+				inputName: "Номер телефона",
+				errorMessage: "Неверный номер телефона"
+			}
+		],
+		removeToastTimeout: 5000
+	});
+
+	modalFormView.mount();
+
 	const burgerMenuElementsHoverEffectModel: HoverAnimationModel = new HoverAnimationModel({
 		cssVariables: [
 			{

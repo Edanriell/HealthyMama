@@ -31,10 +31,7 @@ export class TooltipView {
 	}
 
 	showOnMouseEnter = (event: unknown): void => {
-		console.log("enter");
 		const triggerElement = (event as Event).currentTarget;
-		// console.log(triggerElement);
-		console.log((event as Event).target);
 		const targetTooltip = this.tooltips.filter(tooltip => {
 			const tooltipDataId = tooltip.getAttribute(this.tooltipDataAttribute);
 			const triggerElementDataId = (triggerElement as HTMLSpanElement)?.getAttribute(
@@ -52,10 +49,7 @@ export class TooltipView {
 	};
 
 	hideOnMouseLeave = (event: unknown): void => {
-		console.log("leave");
 		const triggerElement = (event as Event).currentTarget;
-		// console.log(triggerElement);
-		console.log((event as Event).target);
 		const targetTooltip = this.tooltips.filter(tooltip => {
 			const tooltipDataId = tooltip.getAttribute(this.tooltipDataAttribute);
 			const triggerElementDataId = (triggerElement as HTMLSpanElement)?.getAttribute(

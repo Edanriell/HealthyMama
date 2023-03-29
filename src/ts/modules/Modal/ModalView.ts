@@ -164,10 +164,9 @@ export class ModalView implements IModalView {
 			<input
 				type="text"
 				autocomplete="on"
-				required
 				name="person-name"
 				placeholder="Ваше имя"
-				class="request-form__input request-form__person-name-input modal-form__input"
+				class="request-form__input request-form__person-name-input modal-form__input modal-form__person-name-input"
 				id="person-name"
 			/>
 		</div>
@@ -176,10 +175,9 @@ export class ModalView implements IModalView {
 			<input
 				type="text"
 				autocomplete="on"
-				required
 				name="person-phone-number"
 				placeholder="Ваш телефон"
-				class="request-form__input request-form__person-phone-number-input modal-form__input"
+				class="request-form__input request-form__person-phone-number-input modal-form__input modal-form__person-phone-number-input"
 				id="person-phone-number"
 			/>
 		</div>

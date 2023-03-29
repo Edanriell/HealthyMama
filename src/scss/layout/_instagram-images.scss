@@ -12,6 +12,7 @@ $instagram-images-section-background-color: var(--color-primary-white);
 .instagram-images {
 	background-color: $instagram-images-section-background-color;
 	@include minimum-size(padding-top, 10.8rem, 33.75vw);
+	overflow: hidden;
 }
 
 .instagram-images__wrapper {

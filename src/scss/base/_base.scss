@@ -21,7 +21,7 @@ body {
 	background-size: 100vw auto;
 	background-color: $body-background-color;
 	min-height: 100vh;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	@include retina-image("../images/header-background-mobile@2x.png");
 }
 
