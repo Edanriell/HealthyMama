@@ -82,7 +82,7 @@ export class TooltipView {
 				width: auto;
 				height: auto;
 				display: inline-block;
-			`
+			`;
 		}
 	}
 

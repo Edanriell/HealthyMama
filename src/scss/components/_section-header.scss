@@ -15,13 +15,7 @@ $breakpoints: (
 	@include minimum-size(margin-bottom, 1.6rem, 5vw);
 }
 
-.section-header__text {
-}
-
 @include media(">=tablet") {
-	.section-header {
-	}
-
 	.section-header__title {
 		@include minimum-size(margin-bottom, 2.2rem, 2.864583333333333vw);
 	}

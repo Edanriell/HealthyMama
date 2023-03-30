@@ -20,9 +20,6 @@ $header-background-color: transparent;
 	@include flex(center, space-between, row);
 }
 
-.header__navigation {
-}
-
 @include media(">=tablet") {
 	.header {
 		@include minimum-size(padding-top, 4.4rem, 5.729166666666666vw);

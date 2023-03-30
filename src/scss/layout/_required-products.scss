@@ -16,29 +16,14 @@ $required-products-section-background-color: var(--color-primary-white);
 	@include minimum-size(padding-bottom, 5.7rem, 17.8125vw);
 }
 
-.required-products__wrapper {
-}
-
 .required-products__title {
 	text-align: center;
-}
-
-.required-products__slider {
 }
 
 @include media(">=tablet") {
 	.required-products {
 		@include minimum-size(padding-top, 22.1rem, 28.776041666666668vw);
 		@include minimum-size(padding-bottom, 10.5rem, 13.671875vw);
-	}
-
-	.required-products__wrapper {
-	}
-
-	.required-products__title {
-	}
-
-	.required-products__slider {
 	}
 }
 
@@ -102,9 +87,6 @@ $required-products-section-background-color: var(--color-primary-white);
 				),
 				url("../images/required-products-section-background-pattern@2x.webp");
 		}
-	}
-
-	.required-products__wrapper {
 	}
 
 	.required-products__title {

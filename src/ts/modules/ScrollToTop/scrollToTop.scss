@@ -25,13 +25,10 @@
 
 	&:hover,
 	&:focus {
-		// background-color: var(--color-primary-white);
-		// border-color: var(--color-accent-jade-green);
 		background-color: var(--scroll-to-top-button-background-color);
 		border-color: var(--scroll-to-top-button-border-color);
 
 		.scroll-to-top__icon {
-			// color: var(--color-accent-jade-green);
 			color: var(--scroll-to-top-button-icon-color);
 		}
 	}

@@ -25,7 +25,6 @@ body {
 	@include retina-image("../images/header-background-mobile@2x.png");
 }
 
-// If browser supports webp images, we use them instead of png images.
 .webp body {
 	background-image: url("../images/header-background-mobile@1x.webp");
 	@include retina-image("../images/header-background-mobile@2x.webp");
@@ -50,7 +49,6 @@ body {
 		@include retina-image("../images/header-background-tablet@2x.png");
 	}
 
-	// If browser supports webp images, we use them instead of png images.
 	.webp body {
 		background-image: url("../images/header-background-tablet@1x.webp");
 		@include retina-image("../images/header-background-tablet@2x.webp");
@@ -63,7 +61,6 @@ body {
 		@include retina-image("../images/header-background-desktop@2x.png");
 	}
 
-	// If browser supports webp images, we use them instead of png images.
 	.webp body {
 		background-image: url("../images/header-background-desktop@1x.webp");
 		@include retina-image("../images/header-background-desktop@2x.webp");

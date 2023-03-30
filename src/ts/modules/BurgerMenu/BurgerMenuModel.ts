@@ -207,7 +207,7 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 			{ rotate: 0, translateY: 0 },
 			{
 				rotate: 0,
-				translateY: 11,
+				translateY: "3.4375000000000004vw",
 				color: this.activeBurgerColor,
 				duration: 0.6,
 				ease: this.easeType,
@@ -233,7 +233,7 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 			{ rotate: 0, translateY: 0 },
 			{
 				rotate: 0,
-				translateY: -11,
+				translateY: "-3.4375000000000004vw",
 				color: this.activeBurgerColor,
 				duration: 0.6,
 				ease: this.easeType,
@@ -314,7 +314,7 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 				ease: this.easeType,
 				onStart: () => {
 					this.toggleBodyOverflow(state);
-				},
+				}
 			}
 		);
 	}
@@ -409,12 +409,12 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 		const menu = document.querySelector(".navigation__mobile-navigation-burger");
 		const state: string | null = (menu as HTMLElement).getAttribute("data-menu-open");
 
-			if (state === "false") {
-				(menu as HTMLElement).setAttribute("data-menu-open", "true");
-			} else {
-				(menu as HTMLElement).setAttribute("data-menu-open", "false");
-			}
-			return this;
+		if (state === "false") {
+			(menu as HTMLElement).setAttribute("data-menu-open", "true");
+		} else {
+			(menu as HTMLElement).setAttribute("data-menu-open", "false");
+		}
+		return this;
 	}
 
 	public animateMenuContent(burgerMenuElementsSelectors: Array<string>): this {
@@ -437,9 +437,9 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 		const [burgerBar1, burgerBar2, burgerBar3] =
 			burger?.children as unknown as Array<HTMLElement>;
 
-		gsap.to(burgerBar1, {scale: 1.1, duration: 0.5, ease: "power2.out"});
-		gsap.to(burgerBar2, {scale: 0.9, duration: 0.5, ease: "power2.out"});
-		gsap.to(burgerBar3, {scale: 1.1, duration: 0.5, ease: "power2.out"});
+		gsap.to(burgerBar1, { scale: 1.1, duration: 0.5, ease: "power2.out" });
+		gsap.to(burgerBar2, { scale: 0.9, duration: 0.5, ease: "power2.out" });
+		gsap.to(burgerBar3, { scale: 1.1, duration: 0.5, ease: "power2.out" });
 	}
 
 	public onMouseLeaveBurgerAnimation(): void {
@@ -447,8 +447,8 @@ export class BurgerMenuModel implements IBurgerMenuModel {
 		const [burgerBar1, burgerBar2, burgerBar3] =
 			burger?.children as unknown as Array<HTMLElement>;
 
-		gsap.to(burgerBar1, {scale: 1, duration: 0.5, ease: "power2.out"});
-		gsap.to(burgerBar2, {scale: 1, duration: 0.5, ease: "power2.out"});
-		gsap.to(burgerBar3, {scale: 1, duration: 0.5, ease: "power2.out"});
+		gsap.to(burgerBar1, { scale: 1, duration: 0.5, ease: "power2.out" });
+		gsap.to(burgerBar2, { scale: 1, duration: 0.5, ease: "power2.out" });
+		gsap.to(burgerBar3, { scale: 1, duration: 0.5, ease: "power2.out" });
 	}
 }

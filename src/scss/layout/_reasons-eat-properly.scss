@@ -20,9 +20,6 @@ $breakpoints: (
 	@include flex(center, center, column-reverse);
 }
 
-.reasons-eat-properly__lead-nutritionist {
-}
-
 .reasons-eat-properly__main-reasons {
 	@include minimum-size(padding-bottom, 2.9rem, 9.0625vw);
 }

@@ -37,11 +37,5 @@ export interface ISimpleParallaxController {
 }
 
 export interface ISimpleParallaxModel {
-	scrollParallax({
-		element,
-		root
-	}: {
-		element: ScrollParallaxOptions;
-		root: HTMLElement;
-	}): void;
+	scrollParallax({ element, root }: { element: ScrollParallaxOptions; root: HTMLElement }): void;
 }

@@ -9,10 +9,10 @@
 	box-sizing: border-box;
 	border-radius: 3rem;
 	box-shadow: rgba(0, 0, 0, 16%) 0 10px 36px 0, rgba(0, 0, 0, 6%) 0 0 0 1px;
-	padding-top: 18.75vw;
-	padding-bottom: 18.75vw;
-	padding-left: 6.25vw;
-	padding-right: 6.25vw;
+	padding-top: 10.75vw;
+	padding-bottom: 10.75vw;
+	padding-left: 7.25vw;
+	padding-right: 7.25vw;
 }
 
 .modal__underlay {
@@ -27,15 +27,13 @@
 }
 
 .modal__header {
-	margin-bottom: 9.375vw;
+	margin-bottom: 6vw;
+	margin-top: 6vw;
 }
 
 .modal__title {
 	font-size: 7.8125vw;
 	text-align: center;
-}
-
-.modal__content {
 }
 
 .modal-form__field {
@@ -72,11 +70,11 @@
 
 @media only screen and (min-width: 768px) {
 	.modal {
-		width: 36.45833333333333vw;
-		padding-top: 7.8125vw;
-		padding-bottom: 7.8125vw;
-		padding-left: 2.604166666666667vw;
-		padding-right: 2.604166666666667vw;
+		width: 48.458333vw;
+		padding-top: 1.8125vw;
+		padding-bottom: 6.8125vw;
+		padding-left: 4.604167vw;
+		padding-right: 4.604167vw;
 	}
 
 	.modal__header {
@@ -108,19 +106,20 @@
 
 @media only screen and (min-width: 1024px) {
 	.modal {
-		width: 27.34375vw;
-		padding-top: 5.859375vw;
-		padding-bottom: 5.859375vw;
-		padding-left: 1.953125vw;
-		padding-right: 1.953125vw;
+		width: 20.34375vw;
+		padding-top: 0.859375vw;
+		padding-bottom: 4.859375vw;
+		padding-left: 0.953125vw;
+		padding-right: 0.953125vw;
 	}
 
 	.modal__header {
-		margin-bottom: 2.9296875vw;
+		margin-bottom: 1.929688vw;
+		margin-top: 4vw;
 	}
 
 	.modal__title {
-		font-size: 2.44140625vw;
+		font-size: 1.8vw;
 	}
 
 	.modal-form__field {
@@ -137,7 +136,7 @@
 	}
 
 	.modal__close-button-icon {
-		width: 2.9296875vw;
-		height: 2.9296875vw;
+		width: 2.5vw;
+		height: 2.5vw;
 	}
 }

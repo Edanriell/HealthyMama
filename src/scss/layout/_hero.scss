@@ -30,8 +30,6 @@ $hero-section-background-color: transparent;
 }
 
 .hero__wrapper {
-	// @include flex(flex-start, flex-start, column);
-	// This line breaks slider
 	position: relative;
 }
 
@@ -52,15 +50,6 @@ $hero-section-background-color: transparent;
 	@include minimum-size(padding-right, 2.2rem, 6.875000000000001vw);
 }
 
-.hero__button {
-}
-
-.hero__main-slider {
-}
-
-.hero__animated-dropping-leafs {
-}
-
 @include media(">=tablet") {
 	.hero {
 		@include minimum-size(padding-top, 9.2rem, 11.979166666666668vw);
@@ -77,15 +66,6 @@ $hero-section-background-color: transparent;
 		@include minimum-size(margin-bottom, 5.2rem, 6.770833333333333vw);
 		@include minimum-size(padding-left, 13.4rem, 17.447916666666664vw);
 		@include minimum-size(padding-right, 13.4rem, 17.447916666666664vw);
-	}
-
-	.hero__button {
-	}
-
-	.hero__main-slider {
-	}
-
-	.hero__animated-dropping-leafs {
 	}
 }
 
@@ -148,11 +128,5 @@ $hero-section-background-color: transparent;
 	.hero__button {
 		margin-right: auto;
 		margin-left: 0;
-	}
-
-	.hero__main-slider {
-	}
-
-	.hero__animated-dropping-leafs {
 	}
 }

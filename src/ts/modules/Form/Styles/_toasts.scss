@@ -81,7 +81,6 @@
 	cursor: pointer;
 	width: 9.375vw;
 	height: 9.375vw;
-	// border: white solid 0.15625vw;
 	border: transparent solid 0.15625vw;
 	border-radius: 50%;
 	display: flex;
@@ -89,10 +88,6 @@
 	justify-content: center;
 	transition: 0.25s background-color ease;
 	flex-shrink: 0;
-
-	&:hover,
-	&:focus {
-	}
 }
 
 .toast__close-button-icon {
@@ -163,9 +158,9 @@
 	}
 
 	.toast__content {
-		width: 27.34375vw;
-		min-height: 3.90625vw;
-		padding: 1.46484375vw;
+		width: 19vw;
+		min-height: 3vw;
+		padding: 1vw;
 		column-gap: 2.9296875vw;
 	}
 

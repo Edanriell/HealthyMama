@@ -15,9 +15,6 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 	@include minimum-size(padding-bottom, 7.6rem, 23.75vw);
 }
 
-.personalized-menu-request__wrapper {
-}
-
 .personalized-menu-request__section-header {
 	text-align: center;
 }
@@ -85,12 +82,6 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 		}
 	}
 
-	.personalized-menu-request__wrapper {
-	}
-
-	.personalized-menu-request__section-header {
-	}
-
 	.personalized-menu-request__request-form {
 		@include minimum-size(row-gap, 2.2rem, 2.864583333333333vw);
 	}
@@ -147,12 +138,6 @@ $personalized-menu-request-section-background-color: var(--color-primary-white);
 				linear-gradient(314.5deg, #f6f9ff 35.34%, rgba(246, 249, 255, 0) 99.32%),
 				url("../images/personalized-menu-request-section-background-pattern-desktop@2x.webp");
 		}
-	}
-
-	.personalized-menu-request__wrapper {
-	}
-
-	.personalized-menu-request__section-header {
 	}
 
 	.personalized-menu-request__request-form {

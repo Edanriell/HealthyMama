@@ -50,7 +50,7 @@ $breakpoints: (
 			height: 0.15rem;
 			opacity: var(--main-navigation-link-opacity);
 			transform: var(--main-navigation-link-transform);
-			background-color: #F3F3F3;
+			background-color: #f3f3f3;
 		}
 
 		&:hover::after {
@@ -60,7 +60,6 @@ $breakpoints: (
 
 		&:hover,
 		&:focus {
-			// color: var(--color-accent-jade-green);
 			color: var(--main-navigation-link-text-color);
 		}
 	}
@@ -69,11 +68,5 @@ $breakpoints: (
 @include media(">=desktop") {
 	.main-navigation {
 		padding-right: 10.885416666666666vw;
-	}
-
-	.main-navigation__item {
-	}
-
-	.main-navigation__link {
 	}
 }

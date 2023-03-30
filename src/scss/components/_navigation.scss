@@ -8,18 +8,12 @@ $breakpoints: (
 	desktop-large: 1550px
 );
 
-.navigation {
-}
-
 .navigation__main-navigation {
 	position: relative;
 }
 
 .navigation__mobile-navigation-burger {
 	position: relative;
-}
-
-.navigation__mobile-navigation {
 }
 
 @include media(">=tablet") {

@@ -25,11 +25,11 @@ export class BurgerMenuView implements IBurgerMenuView {
 
 	private animateBurgerOnMouseEnter = (): void => {
 		this.controller.handleBurgerOnMouseEnterAnimation();
-	}
+	};
 
 	private animateBurgerOnMouseLeave = (): void => {
 		this.controller.handleBurgerOnMouseLeaveAnimation();
-	}
+	};
 
 	private bindListeners(): void {
 		this.mobileNavigationBurger.addEventListener("click", this.onToggleClick);

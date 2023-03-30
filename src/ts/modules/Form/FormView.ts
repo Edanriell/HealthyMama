@@ -94,8 +94,6 @@ export class FormView implements IFormView {
 		});
 		this.bindToastListeners();
 
-		// console.log(responseReport);
-
 		this.inputsValidationResults = this.inputController.clearInputsValidationResults({
 			formInputsCount: this.formInputs.length,
 			formProperties: this.formInputs
@@ -117,8 +115,6 @@ export class FormView implements IFormView {
 			inputIndex: validationResult.inputIndex,
 			validationResultMessage: validationResult.validationResultMessage
 		};
-
-		// console.log(this.inputsValidationResults);
 	};
 
 	private bindListeners(): void {
@@ -148,13 +144,14 @@ export class FormView implements IFormView {
 
 	private mountSpinner(): void {
 		for (const element of this.formSubmitButton.children) {
+			const buttonIcon = element.classList.contains("button__arrow-icon-wrapper");
 			gsap.fromTo(
 				element,
-				{ opacity: 1, scale: 1, translateY: 0 },
+				{ opacity: 1, scale: 1, translateY: buttonIcon ? "-50%" : 0 },
 				{
 					opacity: 0,
 					scale: 1,
-					translateY: 10,
+					translateY: "-100%",
 					duration: 0.5,
 					ease: "power2.out",
 					onComplete: () => {
@@ -187,13 +184,14 @@ export class FormView implements IFormView {
 
 					for (const element of this.formSubmitButton.children) {
 						(element as HTMLElement).style.display = "flex";
+						const buttonIcon = element.classList.contains("button__arrow-icon-wrapper");
 						gsap.fromTo(
 							element,
-							{ opacity: 0, scale: 1, translateY: -10 },
+							{ opacity: 0, scale: 1, translateY: "-100%" },
 							{
 								opacity: 1,
 								scale: 1,
-								translateY: 0,
+								translateY: buttonIcon ? "-50%" : 0,
 								duration: 0.5,
 								ease: "power2.out",
 								onComplete: () => {

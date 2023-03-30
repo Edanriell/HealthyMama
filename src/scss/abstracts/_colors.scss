@@ -1,33 +1,33 @@
 $colors: (
 	primary: (
-		"black": hsl(0, 0%, 0%), // #000000
-		"white": hsl(0, 0%, 100%), // #FFFFFF
-		),
+		"black": hsl(0, 0%, 0%),
+		"white": hsl(0, 0%, 100%)
+	),
 	secondary: (
-		"pattens-blue": hsl(202, 94%, 94%), // #E0F3FE
-		),
+		"pattens-blue": hsl(202, 94%, 94%)
+	),
 	accent: (
-		"jade-green": hsl(145, 63%, 42%), // #27AE60
-		"medium-sea-green": hsl(145, 55%, 46%), // #35B86C
-		"grey-teal": hsl(145, 18%, 51%), // #6C997F
-		"off-green": hsl(144, 48%, 94%), // #E8F7EE
-		"surf": hsl(144, 35%, 78%), // #B2DAC2
-		"medium-sea-green-transparent": hsla(145, 63%, 42%, 0.2), // rgba(40, 175, 96, 0.2)
+		"jade-green": hsl(145, 63%, 42%),
+		"medium-sea-green": hsl(145, 55%, 46%),
+		"grey-teal": hsl(145, 18%, 51%),
+		"off-green": hsl(144, 48%, 94%),
+		"surf": hsl(144, 35%, 78%),
+		"medium-sea-green-transparent": hsla(145, 63%, 42%, 0.2),
 		"jade-red": hsl(0, 63%, 42%),
 		"off-red": hsl(4, 48%, 94%),
-		"red-surf": hsl(0, 36%, 78%),
+		"red-surf": hsl(0, 36%, 78%)
 	),
 	neutral: (
-		"baltic-sea": hsl(0, 0%, 17%), // #2B2B2B
-		"pale-slate": hsl(0, 0%, 75%), // #BFBFBF
-		"cyan-cornflower-blue": hsla(202, 77%, 42%, 0.11), // rgba(25, 130, 189, 0.11)
-		"pewter-blue": hsla(109, 100%, 19%, 0.212), // rgba(18, 97, 0, 0.212)
-		"eerie-black": hsla(0, 0%, 12%, 0.071), // rgba(31, 31, 31, 0.071)
-		"cyan-cornflower-blue-transparent": hsla(202, 77%, 42%, 0.18), // rgba(25, 129, 190, 0.18);
-		"royal-green-transparent": hsla(109, 100%, 19%, 0.212), // rgba(18, 97, 0, 0.212)
-		"eerie-black-transparent": hsla(0, 0%, 12%, 0.071), // rgba(30, 30, 30, 0.07)
+		"baltic-sea": hsl(0, 0%, 17%),
+		"pale-slate": hsl(0, 0%, 75%),
+		"cyan-cornflower-blue": hsla(202, 77%, 42%, 0.11),
+		"pewter-blue": hsla(109, 100%, 19%, 0.212),
+		"eerie-black": hsla(0, 0%, 12%, 0.071),
+		"cyan-cornflower-blue-transparent": hsla(202, 77%, 42%, 0.18),
+		"royal-green-transparent": hsla(109, 100%, 19%, 0.212),
+		"eerie-black-transparent": hsla(0, 0%, 12%, 0.071)
 	),
 	accent-hover: (
-		"medium-aquamarine": hsl(145, 56%, 66%), // #7ad9a2
+		"medium-aquamarine": hsl(145, 56%, 66%)
 	)
 );

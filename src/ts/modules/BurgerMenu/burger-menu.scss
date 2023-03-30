@@ -1,6 +1,6 @@
 .mobile-navigation {
 	display: block;
-	margin-top: 50vw;
+	margin-top: 30vw;
 }
 
 .mobile-navigation__underlay {
@@ -49,5 +49,15 @@
 	&:hover::after {
 		opacity: var(--navigation-link-opacity);
 		transform: var(--navigation-link-transform);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.mobile-navigation {
+		display: none;
+	}
+
+	.mobile-navigation__underlay {
+		display: none !important;
 	}
 }

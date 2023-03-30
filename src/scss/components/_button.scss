@@ -29,20 +29,15 @@ $breakpoints: (
 	z-index: 350;
 
 	&:hover {
-		// background-color: var(--color-primary-white);
-		// border-color: var(--color-accent-jade-green);
-		// box-shadow: none;
 		background-color: var(--button-background-color);
 		border-color: var(--button-border-color);
 		box-shadow: var(--button-box-shadow);
 
 		.button__text {
-			// color: var(--color-accent-jade-green);
 			color: var(--button-text-color);
 		}
 
 		.button__arrow-icon-wrapper {
-			// background-color: var(--color-accent-hover-medium-aquamarine);
 			background-color: var(--button-icon-background-color);
 		}
 
@@ -61,7 +56,6 @@ $breakpoints: (
 		}
 
 		.button__arrow-icon-wrapper {
-			// background-color: var(--color-accent-hover-medium-aquamarine);
 			background-color: var(--button-icon-background-color);
 		}
 	}

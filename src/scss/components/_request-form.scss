@@ -18,12 +18,6 @@ $breakpoints: (
 	overflow: hidden;
 }
 
-.request-form__input-label {
-}
-
-.request-form__person-name-input-label {
-}
-
 .request-form__input {
 	--request-form-input-background-color: var(--color-accent-off-green);
 	--request-form-input-border-color: var(--color-primary-white);
@@ -41,7 +35,6 @@ $breakpoints: (
 	appearance: none;
 	outline: none;
 	z-index: 20;
-	// transition: 0.5s background-color ease, 0.5s color ease, 0.5s border-color ease;
 
 	&::placeholder {
 		margin: 0;
@@ -53,8 +46,6 @@ $breakpoints: (
 	}
 
 	&:hover {
-		// background-color: var(--color-primary-white);
-		// border-color: var(--color-accent-jade-green);
 		background-color: var(--request-form-input-background-color);
 		border-color: var(--request-form-input-border-color);
 	}
@@ -68,15 +59,6 @@ $breakpoints: (
 	}
 }
 
-.request-form__person-name-input {
-}
-
-.request-form__person-phone-number-input-label {
-}
-
-.request-form__person-phone-number-input {
-}
-
 .request-form__button {
 	@include minimum-size(margin-top, 1.1rem, 1.4322916666666665vw);
 }
@@ -84,15 +66,6 @@ $breakpoints: (
 @include media(">=tablet") {
 	.request-form {
 		@include minimum-size(margin-top, 7.2rem, 9.375vw);
-	}
-
-	.request-form__form-field {
-	}
-
-	.request-form__input-label {
-	}
-
-	.request-form__person-name-input-label {
 	}
 
 	.request-form__input {
@@ -113,8 +86,6 @@ $breakpoints: (
 		}
 
 		&:hover {
-			// background-color: var(--color-primary-white);
-			// border-color: var(--color-accent-jade-green);
 			background-color: var(--request-form-input-background-color);
 			border-color: var(--request-form-input-border-color);
 		}
@@ -128,15 +99,6 @@ $breakpoints: (
 		}
 	}
 
-	.request-form__person-name-input {
-	}
-
-	.request-form__person-phone-number-input-label {
-	}
-
-	.request-form__person-phone-number-input {
-	}
-
 	.request-form__button {
 		@include minimum-size(margin-top, 0);
 	}
@@ -145,15 +107,6 @@ $breakpoints: (
 @include media(">=desktop") {
 	.request-form {
 		@include minimum-size(margin-top, 3.3854166666666665vw);
-	}
-
-	.request-form__form-field {
-	}
-
-	.request-form__input-label {
-	}
-
-	.request-form__person-name-input-label {
 	}
 
 	.request-form__input {
@@ -174,8 +127,6 @@ $breakpoints: (
 		}
 
 		&:hover {
-			// background-color: var(--color-primary-white);
-			// border-color: var(--color-accent-jade-green);
 			background-color: var(--request-form-input-background-color);
 			border-color: var(--request-form-input-border-color);
 		}
@@ -187,15 +138,6 @@ $breakpoints: (
 		&:focus::placeholder {
 			opacity: 0;
 		}
-	}
-
-	.request-form__person-name-input {
-	}
-
-	.request-form__person-phone-number-input-label {
-	}
-
-	.request-form__person-phone-number-input {
 	}
 
 	.request-form__button {

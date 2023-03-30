@@ -6,9 +6,6 @@ $breakpoints: (
 	desktop: 1024px
 );
 
-.politics-and-agreement {
-}
-
 .politics-and-agreement__item {
 	--politics-and-agreement-item-opacity: 45%;
 	opacity: var(--politics-and-agreement-item-opacity);
@@ -19,26 +16,8 @@ $breakpoints: (
 	}
 }
 
-.politics-and-agreement__link {
-}
-
-.politics-and-agreement__link-text {
-}
-
 @include media(">=tablet") {
-	.politics-and-agreement {
-	}
-
 	.politics-and-agreement__item {
 		opacity: 100% !important;
 	}
-
-	.politics-and-agreement__link {
-	}
-
-	.politics-and-agreement__link-text {
-	}
-}
-
-@include media(">=desktop") {
 }

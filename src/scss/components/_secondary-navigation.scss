@@ -7,9 +7,6 @@ $breakpoints: (
 	desktop: 1024px
 );
 
-.secondary-navigation {
-}
-
 .secondary-navigation__item {
 	--secondary-navigation-link-opacity: 0;
 	--secondary-navigation-link-transform: translateY(10px);
@@ -33,9 +30,6 @@ $breakpoints: (
 		opacity: var(--secondary-navigation-link-opacity);
 		transform: var(--secondary-navigation-link-transform);
 	}
-}
-
-.secondary-navigation__link {
 }
 
 @include media(">=tablet") {

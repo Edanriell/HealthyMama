@@ -15,9 +15,6 @@ $footer-background-color: var(--color-accent-jade-green);
 	@include minimum-size(padding-bottom, 5rem, 15.625vw);
 }
 
-.footer__wrapper {
-}
-
 .footer__logotype {
 	@include minimum-size(margin-bottom, 3rem, 9.375vw);
 	display: inline-block;
@@ -42,9 +39,6 @@ $footer-background-color: var(--color-accent-jade-green);
 	.footer {
 		@include minimum-size(padding-top, 5rem, 6.510416666666667vw);
 		@include minimum-size(padding-bottom, 7.1rem, 9.244791666666668vw);
-	}
-
-	.footer__wrapper {
 	}
 
 	.footer__logotype {
