@@ -186,7 +186,7 @@ $breakpoints: (
 			--products-slider-previous-slide-button-icon-color: var(--color-primary-white);
 			position: absolute;
 			top: 0;
-			@include minimum-size(right, 3.2rem, 4.166666666666666vw);
+			@include minimum-size(right, 4.2rem, 5.338541666666666vw);
 			@include minimum-size(width, 5.3rem, 6.901041666666667vw);
 			@include minimum-size(height, 5.3rem, 6.901041666666667vw);
 			border-radius: 50%;
@@ -228,7 +228,7 @@ $breakpoints: (
 			--products-slider-next-slide-button-icon-color: var(--color-primary-white);
 			position: absolute;
 			top: 0;
-			@include minimum-size(left, 57.8rem, 75.26041666666666vw);
+			@include minimum-size(left, 57rem, 74.21875vw);
 			@include minimum-size(width, 5.3rem, 6.901041666666667vw);
 			@include minimum-size(height, 5.3rem, 6.901041666666667vw);
 			border-radius: 50%;

@@ -56,6 +56,17 @@ import {
 	mobileSvgPaths as heroSectionMobileSvgPaths
 } from "./helpers/HeroSectionSvgPaths";
 
+import {
+	leafsDesktop as reasonsEatProperlySectionDesktopLeafs,
+	leafsTablet as reasonsEatProperlySectionTabletLeafs,
+	leafsMobile as reasonsEatProperlySectionMobileLeafs
+} from "./helpers/ReasonsEatProperlySectionLeafs";
+import {
+	desktopSvgPaths as reasonsEatProperlySectionDesktopSvgPaths,
+	tabletSvgPaths as reasonsEatProperlySectionTabletSvgPaths,
+	mobileSvgPaths as reasonsEatProperlySectionMobileSvgPaths
+} from "./helpers/ReasonsEatProperlySectionSvgPaths";
+
 import { InitializeHoverAnimations } from "./helpers/Animations";
 
 import { Elements, Paths } from "./modules/FallingElements/FallingElementsTypes";
@@ -196,6 +207,27 @@ window.addEventListener("DOMContentLoaded", () => {
 		]
 	});
 
+	const fallingLeafsReasonsEatProperlyModel: FallingElementsModel = new FallingElementsModel({
+		uniquePathsOnly: true,
+		paths: [
+			reasonsEatProperlySectionDesktopSvgPaths as Paths,
+			reasonsEatProperlySectionTabletSvgPaths as Paths,
+			reasonsEatProperlySectionMobileSvgPaths as Paths
+		]
+	});
+	const fallingLeafsReasonsEatProperlyController: FallingElementsController = new FallingElementsController(
+		fallingLeafsReasonsEatProperlyModel
+	);
+	const fallingLeafsReasonsEatProperlyView: FallingElementsView = new FallingElementsView({
+		root: document.querySelector(".reasons-eat-properly")!,
+		controller: fallingLeafsReasonsEatProperlyController,
+		htmlElements: [
+			reasonsEatProperlySectionDesktopLeafs as Elements,
+			reasonsEatProperlySectionTabletLeafs as Elements,
+			reasonsEatProperlySectionMobileLeafs as Elements
+		]
+	});
+
 	const tooltipModel: TooltipModel = new TooltipModel();
 	const tooltipController: TooltipController = new TooltipController(tooltipModel);
 	const tooltipView: TooltipView = new TooltipView({
@@ -218,6 +250,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	imageGalleryParallaxView.mount();
 	scrollToTopView.mount();
 	fallingLeafsHeroView.mount();
+	// fallingLeafsReasonsEatProperlyView.mount();
 	tooltipView.mount();
 
 	const modalFormModel: FormModel = new FormModel({
