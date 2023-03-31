@@ -145,13 +145,14 @@ export class FormView implements IFormView {
 	private mountSpinner(): void {
 		for (const element of this.formSubmitButton.children) {
 			const buttonIcon = element.classList.contains("button__arrow-icon-wrapper");
+
 			gsap.fromTo(
 				element,
-				{ opacity: 1, scale: 1, translateY: buttonIcon ? "-50%" : 0 },
+				{ opacity: 1, scale: 1, transform: buttonIcon ? "translateY(-50%)" : "translateY(0)" },
 				{
 					opacity: 0,
 					scale: 1,
-					translateY: "-100%",
+					transform: "translateY(-100%)",
 					duration: 0.5,
 					ease: "power2.out",
 					onComplete: () => {
@@ -185,13 +186,14 @@ export class FormView implements IFormView {
 					for (const element of this.formSubmitButton.children) {
 						(element as HTMLElement).style.display = "flex";
 						const buttonIcon = element.classList.contains("button__arrow-icon-wrapper");
+
 						gsap.fromTo(
 							element,
-							{ opacity: 0, scale: 1, translateY: "-100%" },
+							{ opacity: 0, scale: 1, transform: "translateY(-100%)" },
 							{
 								opacity: 1,
 								scale: 1,
-								translateY: buttonIcon ? "-50%" : 0,
+								transform: buttonIcon ? "translateY(-50%)" : "translateY(0)",
 								duration: 0.5,
 								ease: "power2.out",
 								onComplete: () => {
@@ -280,7 +282,6 @@ export class FormView implements IFormView {
 			if (this.removeToastTimeout) {
 				timeout = setTimeout(() => {
 					this.removeToastAfterTimeout(toast);
-					console.log("setTimeoutRuns");
 				}, this.removeToastTimeout);
 			}
 

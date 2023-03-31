@@ -16,7 +16,6 @@ export default function EffectOpacity({
 		if (!allSliderSlides || !currentActiveSlide) return;
 
 		allSliderSlides.forEach(slide => {
-			console.log(slide);
 			gsap.to(slide, { opacity: 0.3, duration: 0.5, ease: "power2.out" });
 		});
 
