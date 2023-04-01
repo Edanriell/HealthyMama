@@ -219,7 +219,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		fallingLeafsReasonsEatProperlyModel
 	);
 	const fallingLeafsReasonsEatProperlyView: FallingElementsView = new FallingElementsView({
-		root: document.querySelector(".reasons-eat-properly__wrapper")!,
+		root: document.querySelector(".reasons-eat-properly__leafs")!,
 		controller: fallingLeafsReasonsEatProperlyController,
 		htmlElements: [
 			reasonsEatProperlySectionDesktopLeafs as Elements,

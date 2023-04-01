@@ -9,6 +9,17 @@ $breakpoints: (
 	desktop: 1024px
 );
 
+.reasons-eat-properly__leafs {
+	width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-color: var(--color-accent-jade-green);
+}
+
 .reasons-eat-properly {
 	background-color: $background-color-section-reasons-eat-properly;
 	@include minimum-size(padding-top, 5.7rem, 17.8125vw);

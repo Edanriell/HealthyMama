@@ -53,7 +53,7 @@ export class FallingElementsView implements IFallingElementsView {
 					z-index: 200;
 					top: ${currentElement.topCoordinate ? currentElement.topCoordinate : 0}%;
 					left: ${randomLeftCoordinate}%;
-					width: 100%;
+					width: auto !important;
 					height: 100%;
 					visibility: ${currentElement.showPath ? "visible" : "hidden"};
 					pointer-events: none;
