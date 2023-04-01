@@ -1,7 +1,7 @@
 import { TooltipModel } from "./TooltipModel";
-import { TooltipDirection } from "./TooltipTypes";
+import { TooltipDirection, ITooltipController } from "./TooltipTypes";
 
-export class TooltipController {
+export class TooltipController implements ITooltipController {
 	public model: TooltipModel;
 
 	constructor(model: TooltipModel) {

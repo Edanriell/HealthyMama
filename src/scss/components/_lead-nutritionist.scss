@@ -11,6 +11,7 @@ $breakpoints: (
 
 .lead-nutritionist {
 	@include minimum-size(margin-bottom, -8.3rem, -25.937500000000004vw);
+	z-index: 999;
 }
 
 .lead-nutritionist__wrapper {

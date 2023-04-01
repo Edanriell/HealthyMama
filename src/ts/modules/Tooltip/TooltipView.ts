@@ -1,8 +1,8 @@
 import { TooltipController } from "./TooltipController";
-import { Tooltips } from "./TooltipTypes";
+import { Tooltips, ITooltipView } from "./TooltipTypes";
 import "./Tooltip.scss";
 
-export class TooltipView {
+export class TooltipView implements ITooltipView {
 	public controller: TooltipController;
 	public root: NodeListOf<Element>;
 
@@ -30,7 +30,7 @@ export class TooltipView {
 		this.bindListeners();
 	}
 
-	showOnMouseEnter = (event: unknown): void => {
+	private showOnMouseEnter = (event: unknown): void => {
 		const triggerElement = (event as Event).currentTarget;
 		const targetTooltip = this.tooltips.filter(tooltip => {
 			const tooltipDataId = tooltip.getAttribute(this.tooltipDataAttribute);
@@ -48,7 +48,7 @@ export class TooltipView {
 		this.controller.handleShowOnMouseEnter(targetTooltip[0], targetTooltipData[0].direction);
 	};
 
-	hideOnMouseLeave = (event: unknown): void => {
+	private hideOnMouseLeave = (event: unknown): void => {
 		const triggerElement = (event as Event).currentTarget;
 		const targetTooltip = this.tooltips.filter(tooltip => {
 			const tooltipDataId = tooltip.getAttribute(this.tooltipDataAttribute);
@@ -66,7 +66,7 @@ export class TooltipView {
 		this.controller.handleHideOnMouseLeave(targetTooltip[0], targetTooltipData[0].direction);
 	};
 
-	bindListeners(): void {
+	private bindListeners(): void {
 		this.root.forEach(rootElement => {
 			rootElement.addEventListener("mouseenter", this.showOnMouseEnter, true);
 		});
@@ -75,7 +75,7 @@ export class TooltipView {
 		});
 	}
 
-	setRootStyles(): void {
+	private setRootStyles(): void {
 		for (const rootElement of this.root) {
 			(rootElement as HTMLElement).style.cssText = `
 				position: relative;
@@ -86,14 +86,14 @@ export class TooltipView {
 		}
 	}
 
-	createTooltips(): void {
+	private createTooltips(): void {
 		for (const tooltip of this.tooltipsData) {
 			const newTooltip = this.createTooltip(tooltip.tooltipText, tooltip.tooltipDataId);
 			this.tooltips.push(newTooltip);
 		}
 	}
 
-	createTooltip(text: string, dataAttributeValue: number): HTMLSpanElement {
+	private createTooltip(text: string, dataAttributeValue: number): HTMLSpanElement {
 		const tooltip = document.createElement("span");
 		tooltip.classList.add("tooltip");
 		tooltip.setAttribute(this.tooltipDataAttribute, `${dataAttributeValue}`);
@@ -101,7 +101,7 @@ export class TooltipView {
 		return tooltip;
 	}
 
-	mount(): void {
+	public mount(): void {
 		this.root.forEach(rootElement => {
 			const targetTooltipDataId = rootElement.getAttribute(this.tooltipDataAttribute);
 			const targetTooltip = this.tooltips.filter(tooltip => {

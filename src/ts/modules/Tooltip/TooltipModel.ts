@@ -1,8 +1,8 @@
 import { gsap } from "gsap";
-import { TooltipDirection } from "./TooltipTypes";
+import { TooltipDirection, ITooltipModel } from "./TooltipTypes";
 
-export class TooltipModel {
-	public showTooltip(tooltip: HTMLSpanElement, direction: TooltipDirection) {
+export class TooltipModel implements ITooltipModel {
+	public showTooltip(tooltip: HTMLSpanElement, direction: TooltipDirection): void {
 		switch (direction) {
 			case TooltipDirection.Top:
 				gsap.fromTo(
@@ -63,7 +63,7 @@ export class TooltipModel {
 		}
 	}
 
-	public hideTooltip(tooltip: HTMLSpanElement, direction: TooltipDirection) {
+	public hideTooltip(tooltip: HTMLSpanElement, direction: TooltipDirection): void {
 		switch (direction) {
 			case TooltipDirection.Top:
 				gsap.fromTo(

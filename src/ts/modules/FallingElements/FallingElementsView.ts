@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 
 import { FallingElementsController } from "./FallingElementsController";
-import { Elements, IFallingElementsView } from "./FallingElementsTypes";
+import { Elements, Element, IFallingElementsView } from "./FallingElementsTypes";
 
 gsap.registerPlugin(MotionPathPlugin);
 export class FallingElementsView implements IFallingElementsView {
@@ -31,30 +31,38 @@ export class FallingElementsView implements IFallingElementsView {
 	private createSvgElements(): void {
 		for (const { elementsSize, elements } of this.htmlElements) {
 			for (let index = 0; index < elements.length; index++) {
-				const randomLeftCoordinates: number =
+				const currentElement: Element = elements[index];
+
+				const randomLeftCoordinate: number =
 					this.controller.handleGenerateRandomNumberInRange({
-						minimumValue: -20,
-						maximumValue: 81
+						minimumValue: currentElement.leftCoordinates
+							? currentElement.leftCoordinates[0]
+							: -20,
+						maximumValue: currentElement.leftCoordinates
+							? currentElement.leftCoordinates[1]
+							: 81
 					});
 
 				const svgPathWrapper = document.createElement("div");
-				svgPathWrapper.classList.add(`svg-path-${elementsSize}-${index}__wrapper`);
+				svgPathWrapper.classList.add(
+					`svg-path-${elementsSize}-${currentElement.id}__wrapper`
+				);
 
 				svgPathWrapper.style.cssText = `
 					position: absolute;
 					z-index: 200;
-					top: -10%;
-					left: ${randomLeftCoordinates}%;
+					top: ${currentElement.topCoordinate ? currentElement.topCoordinate : 0}%;
+					left: ${randomLeftCoordinate}%;
 					width: 100%;
 					height: 100%;
-					visibility: ${elements[index].showPath ? "visible" : "hidden"};
+					visibility: ${currentElement.showPath ? "visible" : "hidden"};
 					pointer-events: none;
 					user-select: none;
 				`;
 
 				svgPathWrapper.innerHTML = this.controller.handleSvgPathCreation({
 					elementsSize,
-					index
+					id: currentElement.id
 				});
 				this.svgElements.push(svgPathWrapper);
 			}
@@ -64,6 +72,8 @@ export class FallingElementsView implements IFallingElementsView {
 	private animateElements(): void {
 		for (const { elementsSize, elements } of this.htmlElements) {
 			for (let index = 0; index < elements.length; index++) {
+				const currentElement: Element = elements[index];
+
 				const randomDuration: number = this.controller.handleGenerateRandomNumberInRange({
 					minimumValue: 14,
 					maximumValue: 54
@@ -79,36 +89,44 @@ export class FallingElementsView implements IFallingElementsView {
 					}
 				);
 
-				gsap.set(elements[index].element, { opacity: 0, display: "none" });
+				gsap.set(currentElement.element, { opacity: 0, display: "none" });
 
 				gsap.fromTo(
-					elements[index].element,
+					currentElement.element,
 					{
 						opacity: 1,
 						scale: 0,
 						display: "none"
 					},
 					{
-						duration: elements[index].timeToFall ?? randomDuration,
+						duration: currentElement.timeToFall ?? randomDuration,
 						repeat: +`${
-							elements[index].repeat === "infinity" ||
-							elements[index].repeat === undefined
+							currentElement.repeat === "infinity" ||
+							currentElement.repeat === undefined
 								? -1
-								: elements[index].repeat
+								: currentElement.repeat
 						}`,
-						ease: `${elements[index].easeType}` || "none",
-						delay: elements[index].delay ?? randomDelay,
-						repeatDelay: elements[index].repeatDelay ?? randomRepeatDelay,
+						ease: `${currentElement.easeType}` || "none",
+						delay: currentElement.delay ?? randomDelay,
+						repeatDelay: currentElement.repeatDelay ?? randomRepeatDelay,
 						opacity: 0,
 						scale: 1.2,
 						display: "block",
 						motionPath: {
-							path: `.svg-path-${elementsSize}-${index}__path`,
-							align: `.svg-path-${elementsSize}-${index}__path`,
+							path: `.svg-path-${elementsSize}-${currentElement.id}__path`,
+							align: `.svg-path-${elementsSize}-${currentElement.id}__path`,
 							alignOrigin: [0.5, 0.5],
 							autoRotate: true,
-							start: 0,
-							end: 0.8
+							start: +`${
+								currentElement.pathAnimationStart
+									? currentElement.pathAnimationStart
+									: 0
+							}`,
+							end: +`${
+								currentElement.pathAnimationEnd
+									? currentElement.pathAnimationEnd
+									: 0.8
+							}`
 						}
 					}
 				);

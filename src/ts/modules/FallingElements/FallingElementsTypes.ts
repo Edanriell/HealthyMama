@@ -3,15 +3,22 @@ import { FallingElementsModel } from "./FallingElementsModel";
 
 export type Elements = {
 	elementsSize: ElementsSize;
-	elements: Array<{
-		timeToFall?: number;
-		delay?: number;
-		repeatDelay?: number;
-		easeType?: string;
-		showPath?: boolean;
-		repeat?: "infinity" | number;
-		element: HTMLElement;
-	}>;
+	elements: Array<Element>;
+};
+
+export type Element = {
+	timeToFall?: number;
+	delay?: number;
+	repeatDelay?: number;
+	easeType?: string;
+	showPath?: boolean;
+	topCoordinate?: number;
+	pathAnimationStart?: number;
+	pathAnimationEnd?: number;
+	leftCoordinates?: Array<number>;
+	repeat?: "infinity" | number;
+	element: HTMLElement;
+	id: string;
 };
 
 export type Paths = {
@@ -51,10 +58,10 @@ export interface IFallingElementsController {
 	}): number;
 	handleSvgPathCreation({
 		elementsSize,
-		index
+		id
 	}: {
 		elementsSize: ElementsSize;
-		index: number;
+		id: string;
 	}): string;
 }
 
@@ -68,9 +75,9 @@ export interface IFallingElementsModel {
 	}): number;
 	createRandomSvgPath({
 		elementsSize,
-		index
+		id
 	}: {
 		elementsSize: ElementsSize;
-		index: number;
+		id: string;
 	}): string;
 }

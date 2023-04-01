@@ -219,7 +219,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		fallingLeafsReasonsEatProperlyModel
 	);
 	const fallingLeafsReasonsEatProperlyView: FallingElementsView = new FallingElementsView({
-		root: document.querySelector(".reasons-eat-properly")!,
+		root: document.querySelector(".reasons-eat-properly__wrapper")!,
 		controller: fallingLeafsReasonsEatProperlyController,
 		htmlElements: [
 			reasonsEatProperlySectionDesktopLeafs as Elements,
@@ -246,11 +246,11 @@ window.addEventListener("DOMContentLoaded", () => {
 	burgerMenuView.mount();
 	modalView.mount();
 	formView.mount();
-	motherAndChildParallaxView.mount();
-	imageGalleryParallaxView.mount();
+	// motherAndChildParallaxView.mount();
+	// imageGalleryParallaxView.mount();
 	scrollToTopView.mount();
 	fallingLeafsHeroView.mount();
-	// fallingLeafsReasonsEatProperlyView.mount();
+	fallingLeafsReasonsEatProperlyView.mount();
 	tooltipView.mount();
 
 	const modalFormModel: FormModel = new FormModel({

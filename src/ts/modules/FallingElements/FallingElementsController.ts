@@ -20,14 +20,14 @@ export class FallingElementsController implements IFallingElementsController {
 
 	public handleSvgPathCreation({
 		elementsSize,
-		index
+		id
 	}: {
 		elementsSize: ElementsSize;
-		index: number;
+		id: string;
 	}): string {
 		return this.model.createRandomSvgPath({
 			elementsSize,
-			index
+			id
 		});
 	}
 }

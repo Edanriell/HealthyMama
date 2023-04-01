@@ -31,10 +31,10 @@ export class FallingElementsModel implements IFallingElementsModel {
 
 	public createRandomSvgPath({
 		elementsSize,
-		index
+		id
 	}: {
 		elementsSize: ElementsSize;
-		index: number;
+		id: string;
 	}): string {
 		let svgPaths: Array<Path> = [];
 		let svgSize: string = "";
@@ -54,8 +54,8 @@ export class FallingElementsModel implements IFallingElementsModel {
 		const currentPath: Path = svgPaths[randomNumber];
 
 		const newPath: string = `
-			<svg class="svg-path-${elementsSize}-${index}" width="${currentPath.pathProps?.pathWidth}" height="100%" viewBox="0 0 ${currentPath.pathProps?.pathWidth} ${currentPath.pathProps?.pathHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path class="svg-path-${elementsSize}-${index}__path" d="${currentPath.path}" stroke="black"/>
+			<svg class="svg-path-${elementsSize}-${id}" width="${currentPath.pathProps?.pathWidth}" height="100%" viewBox="0 0 ${currentPath.pathProps?.pathWidth} ${currentPath.pathProps?.pathHeight}" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path class="svg-path-${elementsSize}-${id}__path" d="${currentPath.path}" stroke="black"/>
 			</svg>
 		`;
 
