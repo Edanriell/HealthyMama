@@ -246,8 +246,8 @@ window.addEventListener("DOMContentLoaded", () => {
 	burgerMenuView.mount();
 	modalView.mount();
 	formView.mount();
-	// motherAndChildParallaxView.mount();
-	// imageGalleryParallaxView.mount();
+	motherAndChildParallaxView.mount();
+	imageGalleryParallaxView.mount();
 	scrollToTopView.mount();
 	fallingLeafsHeroView.mount();
 	fallingLeafsReasonsEatProperlyView.mount();
