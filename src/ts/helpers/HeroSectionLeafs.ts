@@ -219,79 +219,79 @@ export const leafsDesktop = {
 		{
 			id: uuidv4(),
 			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-54")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-55")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-56")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-57")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-58")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-59")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-60")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-61")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-62")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-63")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-64")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-65")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-66")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-67")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-68")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-69")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-70")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-71")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__desktop-leaf-72")!
 		}
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-55")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-56")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-57")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-58")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-59")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-60")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-61")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-62")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-63")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-64")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-65")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-66")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-67")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-68")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-69")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-70")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-71")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__desktop-leaf-72")!
+		// }
 	]
 };
 
@@ -417,111 +417,111 @@ export const leafsTablet = {
 		{
 			id: uuidv4(),
 			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-30")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-31")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-32")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-33")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-34")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-35")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-36")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-37")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-38")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-39")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-40")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-41")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-42")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-43")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-44")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-45")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-46")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-47")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-48")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-49")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-50")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-51")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-52")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-53")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-54")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-55")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__tablet-leaf-56")!
 		}
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-31")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-32")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-33")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-34")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-35")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-36")!
+		// }
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-37")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-38")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-39")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-40")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-41")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-42")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-43")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-44")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-45")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-46")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-47")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-48")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-49")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-50")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-51")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-52")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-53")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-54")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-55")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__tablet-leaf-56")!
+		// }
 	]
 };
 
@@ -647,78 +647,78 @@ export const leafsMobile = {
 		{
 			id: uuidv4(),
 			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-30")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-31")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-32")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-33")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-34")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-35")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-36")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-37")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-38")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-39")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-40")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-41")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-42")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-43")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-44")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-45")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-46")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-47")!
-		},
-		{
-			id: uuidv4(),
-			element: document.querySelector(".animated-dropping-leafs__mobile-leaf-48")!
 		}
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-31")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-32")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-33")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-34")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-35")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-36")!
+		// }
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-37")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-38")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-39")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-40")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-41")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-42")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-43")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-44")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-45")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-46")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-47")!
+		// },
+		// {
+		// 	id: uuidv4(),
+		// 	element: document.querySelector(".animated-dropping-leafs__mobile-leaf-48")!
+		// }
 	]
 };
